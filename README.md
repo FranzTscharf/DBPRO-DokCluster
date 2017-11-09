@@ -21,7 +21,9 @@ Installation procedure
 
 After installing the required components, check out the source:
 ```
-git clone https://github.com/TU-Berlin-SNET/open-service-compendium --recursive
+git clone https://github.com/FranzTscharf/DBPRO-DokCluster.git
+cd DBPRO-DokCluster
+./run.sh
 ```
 
 More
