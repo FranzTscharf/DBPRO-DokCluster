@@ -3,7 +3,7 @@ DBPRO-DokCluster
 [![Build Status](https://travis-ci.org/FranzTscharf/DBPRO-DokCluster.svg?branch=master)](https://travis-ci.org/FranzTscharf/DBPRO-DokCluster)
 
 Development of a Document Clustering System with carrot2 and elasticsearch
-This Project is co-managed by the faculty of Informatic at the technical University of Berlin
+This Project is co-managed by the faculty of Informatic Technologie at the Technical University of Berlin
 
 Installation
 ============
