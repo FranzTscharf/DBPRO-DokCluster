@@ -31,6 +31,21 @@ cd DBPRO-DokCluster
 More
 ====
 
+This Project uses a few different Tools.
+----------------------
+
+The Overview of the different tools.
+
+1. [Kibana]
+(https://www.elastic.co/products/kibana)
+2. [elasticsearch]
+(https://www.elastic.co/)
+3. [carrot2]
+(https://project.carrot2.org/)
+4. [zotero]
+(https://www.zotero.org/)
+5. [Carrot2 plugin for ElasticSearch]
+(https://github.com/carrot2/elasticsearch-carrot2)
 More documentation will follow.
 
 License
