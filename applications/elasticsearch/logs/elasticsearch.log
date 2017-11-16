@@ -264,3 +264,84 @@ Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [
 [2017-11-09T20:30:20,249][INFO ][o.e.d.z.ZenDiscovery     ] [LGNx4mW] failed to send join request to master [{LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300}], reason [RemoteTransportException[[LGNx4mW][127.0.0.1:9300][internal:discovery/zen/join]]; nested: IllegalArgumentException[can't add node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{KwPc7NcmSaOfBXwZMCn9Fg}{127.0.0.1}{127.0.0.1:9301}, found existing node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300} with the same id but is a different node instance]; ]
 [2017-11-09T20:30:23,265][INFO ][o.e.d.z.ZenDiscovery     ] [LGNx4mW] failed to send join request to master [{LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300}], reason [RemoteTransportException[[LGNx4mW][127.0.0.1:9300][internal:discovery/zen/join]]; nested: IllegalArgumentException[can't add node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{KwPc7NcmSaOfBXwZMCn9Fg}{127.0.0.1}{127.0.0.1:9301}, found existing node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300} with the same id but is a different node instance]; ]
 [2017-11-09T20:30:26,282][INFO ][o.e.d.z.ZenDiscovery     ] [LGNx4mW] failed to send join request to master [{LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300}], reason [RemoteTransportException[[LGNx4mW][127.0.0.1:9300][internal:discovery/zen/join]]; nested: IllegalArgumentException[can't add node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{KwPc7NcmSaOfBXwZMCn9Fg}{127.0.0.1}{127.0.0.1:9301}, found existing node {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{rSloKaoyTuCrFvOOwuQd3Q}{127.0.0.1}{127.0.0.1:9300} with the same id but is a different node instance]; ]
+[2017-11-16T19:16:14,472][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-16T19:16:14,554][INFO ][o.e.e.NodeEnvironment    ] [LGNx4mW] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [99.3gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-11-16T19:16:14,555][INFO ][o.e.e.NodeEnvironment    ] [LGNx4mW] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-11-16T19:16:14,575][INFO ][o.e.n.Node               ] node name [LGNx4mW] derived from node ID [LGNx4mWcSYGPrXQ-GQTkGg]; set [node.name] to override
+[2017-11-16T19:16:14,575][INFO ][o.e.n.Node               ] version[5.5.2], pid[14964], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-11-16T19:16:14,576][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [aggs-matrix-stats]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [ingest-common]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [lang-expression]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [lang-groovy]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [lang-mustache]
+[2017-11-16T19:16:15,789][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [lang-painless]
+[2017-11-16T19:16:15,790][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [parent-join]
+[2017-11-16T19:16:15,790][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [percolator]
+[2017-11-16T19:16:15,790][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [reindex]
+[2017-11-16T19:16:15,790][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [transport-netty3]
+[2017-11-16T19:16:15,790][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded module [transport-netty4]
+[2017-11-16T19:16:15,791][INFO ][o.e.p.PluginsService     ] [LGNx4mW] loaded plugin [elasticsearch-carrot2]
+[2017-11-16T19:16:17,690][INFO ][o.e.d.DiscoveryModule    ] [LGNx4mW] using discovery type [zen]
+[2017-11-16T19:16:18,795][INFO ][o.e.n.Node               ] initialized
+[2017-11-16T19:16:18,795][INFO ][o.e.n.Node               ] [LGNx4mW] starting ...
+[2017-11-16T19:16:18,796][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-16T19:16:19,287][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-11-16T19:16:19,288][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-11-16T19:16:19,288][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-16T19:16:19,477][INFO ][o.e.t.TransportService   ] [LGNx4mW] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-16T19:16:19,490][WARN ][o.e.b.BootstrapChecks    ] [LGNx4mW] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-11-16T19:16:22,542][INFO ][o.e.c.s.ClusterService   ] [LGNx4mW] new_master {LGNx4mW}{LGNx4mWcSYGPrXQ-GQTkGg}{Y93J3nG0Tger2m1s3i9vpA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-11-16T19:16:22,562][INFO ][o.e.h.n.Netty4HttpServerTransport] [LGNx4mW] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-16T19:16:22,562][INFO ][o.e.n.Node               ] [LGNx4mW] started
+[2017-11-16T19:16:22,775][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[.kibana/jva_URUARtiPCdLLqeZKvQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:22,775][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[test/v08CXuJ2QgmJ9BAkXpMP5A]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:22,775][INFO ][o.e.g.GatewayService     ] [LGNx4mW] recovered [2] indices into cluster_state
+[2017-11-16T19:16:22,895][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[.kibana/jva_URUARtiPCdLLqeZKvQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:22,895][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[test/v08CXuJ2QgmJ9BAkXpMP5A]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,096][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[.kibana/jva_URUARtiPCdLLqeZKvQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,097][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[test/v08CXuJ2QgmJ9BAkXpMP5A]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,117][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[.kibana/jva_URUARtiPCdLLqeZKvQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,117][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[test/v08CXuJ2QgmJ9BAkXpMP5A]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,119][INFO ][o.e.c.r.a.AllocationService] [LGNx4mW] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[test][0]] ...]).
+[2017-11-16T19:16:23,130][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[.kibana/jva_URUARtiPCdLLqeZKvQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:16:23,130][WARN ][o.e.g.DanglingIndicesState] [LGNx4mW] [[test/v08CXuJ2QgmJ9BAkXpMP5A]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-16T19:17:40,776][INFO ][o.e.n.Node               ] [LGNx4mW] stopping ...
+[2017-11-16T19:17:40,820][INFO ][o.e.n.Node               ] [LGNx4mW] stopped
+[2017-11-16T19:17:40,820][INFO ][o.e.n.Node               ] [LGNx4mW] closing ...
+[2017-11-16T19:17:40,827][INFO ][o.e.n.Node               ] [LGNx4mW] closed
+[2017-11-16T19:18:17,220][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-16T19:18:17,288][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [99.3gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-11-16T19:18:17,288][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-11-16T19:18:17,290][INFO ][o.e.n.Node               ] node name [uHB_sEH] derived from node ID [uHB_sEHmTSOCwn_vt8uocw]; set [node.name] to override
+[2017-11-16T19:18:17,290][INFO ][o.e.n.Node               ] version[5.5.2], pid[16151], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-11-16T19:18:17,290][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-11-16T19:18:18,333][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [aggs-matrix-stats]
+[2017-11-16T19:18:18,333][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [ingest-common]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-expression]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-groovy]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-mustache]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-painless]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [parent-join]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [percolator]
+[2017-11-16T19:18:18,334][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [reindex]
+[2017-11-16T19:18:18,335][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty3]
+[2017-11-16T19:18:18,335][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty4]
+[2017-11-16T19:18:18,335][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded plugin [elasticsearch-carrot2]
+[2017-11-16T19:18:20,178][INFO ][o.e.d.DiscoveryModule    ] [uHB_sEH] using discovery type [zen]
+[2017-11-16T19:18:21,044][INFO ][o.e.n.Node               ] initialized
+[2017-11-16T19:18:21,045][INFO ][o.e.n.Node               ] [uHB_sEH] starting ...
+[2017-11-16T19:18:21,049][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-16T19:18:21,557][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-11-16T19:18:21,558][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-11-16T19:18:21,558][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-16T19:18:21,725][INFO ][o.e.t.TransportService   ] [uHB_sEH] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-16T19:18:21,738][WARN ][o.e.b.BootstrapChecks    ] [uHB_sEH] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-11-16T19:18:24,786][INFO ][o.e.c.s.ClusterService   ] [uHB_sEH] new_master {uHB_sEH}{uHB_sEHmTSOCwn_vt8uocw}{_-WHCdaITNS-I1BhNx8V0A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-11-16T19:18:24,802][INFO ][o.e.h.n.Netty4HttpServerTransport] [uHB_sEH] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-16T19:18:24,803][INFO ][o.e.n.Node               ] [uHB_sEH] started
+[2017-11-16T19:18:24,822][INFO ][o.e.g.GatewayService     ] [uHB_sEH] recovered [0] indices into cluster_state
+[2017-11-16T19:18:44,163][INFO ][o.e.n.Node               ] [uHB_sEH] stopping ...
+[2017-11-16T19:18:44,180][INFO ][o.e.n.Node               ] [uHB_sEH] stopped
+[2017-11-16T19:18:44,181][INFO ][o.e.n.Node               ] [uHB_sEH] closing ...
+[2017-11-16T19:18:44,193][INFO ][o.e.n.Node               ] [uHB_sEH] closed
