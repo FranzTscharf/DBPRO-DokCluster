@@ -34,7 +34,7 @@ More
 Tools
 ----------------------
 
-The Overview of the different Tools, which are uses in the context of the Project.
+For More Infromations look at the documentation of the Tools.
 
 1. [Kibana]
 (https://www.elastic.co/products/kibana)
@@ -46,8 +46,9 @@ The Overview of the different Tools, which are uses in the context of the Projec
 (https://www.zotero.org/)
 5. [Carrot2 plugin for ElasticSearch]
 (https://github.com/carrot2/elasticsearch-carrot2)
+6. [json-to-es-bulk]
+(https://github.com/mradamlacey/json-to-es-bulk)
 
-More documentation will follow.
 
 License
 =======
