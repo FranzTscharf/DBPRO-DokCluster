@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Search</title>
+        
+        <script
+              src="http://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form action="http://localhost:9200/zotero/entry/_search_with_clusters" method="get" accept-charset="utf-8" id="test">
+            <input type="text" value="search" name="q" id="search-with-cluster"/>
+            <input type="hidden" value="100" name="size" id="size"/>
+            <input type="hidden" value="_source.title" name="field_mapping_title" id="field_mapping_title"/>
+            <input type="hidden" value="_source.abstract" name="field_mapping_content" id="field_mapping_content"/>
+            <button type="submit" id="submit-button">Submit</button>
+
+        </form>
+<script charset="utf-8">
+$(document).ready(function(){
+
+        $("#submit-button").click(function(event){
+        event.preventDefault();
+        $.ajax({
+            method: "GET",
+            url : "http://localhost:9200/zotero/entry/_search_with_clusters",
+            data : $("#test").serialize(),
+            success: function(data){
+                console.log(data)
+                }
+            });
+        });
+    });
+</script>
+    </body>
+</html>
