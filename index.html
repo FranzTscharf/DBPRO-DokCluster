@@ -9,14 +9,16 @@
               crossorigin="anonymous"></script>
     </head>
     <body>
+        <script src="carrotsearch.foamtree.js"></script>
         <form action="http://localhost:9200/zotero/entry/_search_with_clusters" method="get" accept-charset="utf-8" id="test">
-            <input type="text" value="search" name="q" id="search-with-cluster"/>
+            <input type="text" value="digital" name="q" id="search-with-cluster"/>
             <input type="hidden" value="100" name="size" id="size"/>
             <input type="hidden" value="_source.title" name="field_mapping_title" id="field_mapping_title"/>
             <input type="hidden" value="_source.abstract" name="field_mapping_content" id="field_mapping_content"/>
             <button type="submit" id="submit-button">Submit</button>
 
         </form>
+            <div id="foamtree-area" style="width:900px;height:900px"></div>
 <script charset="utf-8">
 $(document).ready(function(){
 
@@ -27,7 +29,31 @@ $(document).ready(function(){
             url : "http://localhost:9200/zotero/entry/_search_with_clusters",
             data : $("#test").serialize(),
             success: function(data){
-                console.log(data)
+                var groups_arr = [];
+                var doc_group = [];
+                data.clusters.forEach(function(cluster){
+                    cluster.documents.forEach(function(document_obj){
+                        var obj = {
+                        label: document_obj,
+                        weight : 2
+                        };
+                        doc_group.push(obj);
+                    });
+                    var cluster_obj = {
+                        label: cluster.label,
+                        weight: cluster.score,
+                        groups: doc_group
+                    }
+                    doc_group = [];
+                    groups_arr.push(cluster_obj);
+                
+                });
+                var foamtree = new CarrotSearchFoamTree({
+                    id: "foamtree-area",
+                    dataObject:{
+                        groups: groups_arr
+                        }
+                    });
                 }
             });
         });
