@@ -1,4 +1,4 @@
-function place_seach_graphic() {
+function place_seach_graphic(event) {
     event.preventDefault();
     $.ajax({
         method: "GET",
@@ -25,7 +25,7 @@ function place_seach_graphic() {
                 groups_arr.push(cluster_obj);
 
             });
-            var foamtree = new CarrotSearchFoamTree({
+            foamtree.set({
                 id: "foamtree-area",
                 dataObject:{
                     groups: groups_arr
@@ -34,3 +34,9 @@ function place_seach_graphic() {
         }
     });
 }
+$(document).ready(function(){
+    foamtree = new CarrotSearchFoamTree({
+        id: "foamtree-area"
+    });
+
+});
