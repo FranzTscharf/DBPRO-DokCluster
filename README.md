@@ -36,18 +36,12 @@ Tools
 
 For More Infromations look at the documentation of the Tools.
 
-1. [Kibana]
-(https://www.elastic.co/products/kibana)
-2. [elasticsearch]
-(https://www.elastic.co/)
-3. [carrot2]
-(https://project.carrot2.org/)
-4. [zotero]
-(https://www.zotero.org/)
-5. [Carrot2 plugin for ElasticSearch]
-(https://github.com/carrot2/elasticsearch-carrot2)
-6. [json-to-es-bulk]
-(https://github.com/mradamlacey/json-to-es-bulk)
+1. [Kibana](https://www.elastic.co/products/kibana)
+2. [elasticsearch](https://www.elastic.co/)
+3. [carrot2](https://project.carrot2.org/)
+4. [zotero](https://www.zotero.org/)
+5. [Carrot2 plugin for ElasticSearch](https://github.com/carrot2/elasticsearch-carrot2)
+6. [json-to-es-bulk](https://github.com/mradamlacey/json-to-es-bulk)
 
 
 License
