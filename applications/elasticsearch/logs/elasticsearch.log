@@ -814,3 +814,37 @@ java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different ty
 [2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
 [2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
 [2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-12-07T16:40:00,077][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-07T16:40:00,117][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/henrik/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) [elasticsearch-5.5.2.jar:5.5.2]
+[2017-12-07T16:40:00,122][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/henrik/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:127) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.5.2.jar:5.5.2]
+Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/Users/henrik/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) ~[elasticsearch-5.5.2.jar:5.5.2]
+	... 6 more
