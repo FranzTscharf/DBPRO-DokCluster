@@ -15,7 +15,9 @@ function create_foam_tree(cluster_data){
         cluster.documents.forEach(function(document_obj){
             var obj = {
                 label: find_responding_document(cluster_data,document_obj),
-                weight : 2
+                weight : 2,
+                isEntry: true,
+                entryId : document_obj
             };
             doc_group.push(obj);
         });
@@ -32,6 +34,11 @@ function create_foam_tree(cluster_data){
         id: "foamtree-area",
         dataObject:{
             groups: groups_arr
+        },
+        onGroupDoubleClick: function(event){
+            if(event.group.isEntry){
+                get_document_metadata(event.group.entryId);
+            }
         }
     });
 }
@@ -51,3 +58,24 @@ $(document).ready(function(){
 
 });
 
+function get_document_metadata(entryId){
+    $.ajax({
+        method: "GET",
+        url : "http://localhost:9200/zotero/entry/"+entryId,
+        /* url request hidden Data fields with id #...*/
+        success: function(data){
+            $("#metadata_table").empty()
+            $("#metadata_table").append(`
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                `)
+            $.each(data._source, function(key, value){
+                $("#metadata_table").append(
+                    "<tr><td>"+key+"</td><td>"+value+"</td></tr>"
+                )
+            });
+        }
+    })
+}
