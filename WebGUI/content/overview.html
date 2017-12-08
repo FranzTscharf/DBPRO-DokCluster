@@ -17,11 +17,11 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./overview.html">Overview</a>
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./overview.html">Overview<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -29,7 +29,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0" id="search_form">
                     <input class="form-control mr-sm-2" type="text" name="q" id="search-with-cluster" value="digital">
-                    <button class="btn btn-outline-success my-2 my-sm-0" name="button_nav_search" id="button_nav_search" onclick="set_search_graphic(event)" type="button">Search</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" name="button_nav_search" id="button_nav_search" onclick="set_kibana_graphic(event)" type="button">Search</button>
                     <input type="hidden" value="100" name="size" id="size"/>
                     <input type="hidden" value="_source.title" name="field_mapping_title" id="field_mapping_title"/>
                     <input type="hidden" value="_source.abstract" name="field_mapping_content" id="field_mapping_content"/>
@@ -40,24 +40,10 @@
             <div class="container-fluid" style="margin-top: 15px;">
             <div class="card mb-3">
                 <div class="card-header">
-                    Featured
+                    Source Overview
                 </div>
-                <div class="body">
-                    <div class="row">
-                    <div class="col">
-                    <div id="foamtree-area" style="width:600px;height:600px"></div>
-                    </div>
-                    <div class="col">
-                    <div id="entry-table">
-                        <table id="metadata_table">
-                            <tr id="header-row-metadata">
-                                <th>Key</th>
-                                <th>Value</th>
-                            </tr>
-                        </table>
-                    </div>
-                    </div>
-                    </div>
+                <div class="card-block">
+                    <iframe frameBorder="0" src="http://localhost:5601/app/kibana#/visualize/edit/1ce28b10-dc2c-11e7-8db8-29752a64449e?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:tools)),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:type.keyword,order:desc,orderBy:'1',size:2000),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!f,legendPosition:right),title:'Source+Typ+Pie+Chart',type:pie))" height="600" width="600"></iframe>
                 </div>
             </div>
 

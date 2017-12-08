@@ -1,4 +1,14 @@
-function place_seach_graphic(event) {
+/**
+ * Dokument Loads
+ *
+ */
+$(document).ready(function(){
+    foamtree = new CarrotSearchFoamTree({
+        id: "foamtree-area"
+    });
+});
+
+function set_search_graphic(event) {
     event.preventDefault();
     $.ajax({
         method: "GET",
@@ -51,12 +61,6 @@ function find_responding_document(server_response,document_id){
     });
     return return_value;
 }
-$(document).ready(function(){
-    foamtree = new CarrotSearchFoamTree({
-        id: "foamtree-area"
-    });
-
-});
 
 function get_document_metadata(entryId){
     $.ajax({
@@ -78,4 +82,11 @@ function get_document_metadata(entryId){
             });
         }
     })
+}
+
+function set_kibana_graphic(event) {
+
+    //#!TODO set src in the iframe with the search input text
+    //var test = document.getElementById('#search-with-cluster').value;
+    //alert(test);
 }
