@@ -1567,3 +1567,100 @@
 [2017-12-07T20:19:38,310][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFrom]
 [2017-12-07T20:19:38,311][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [display]
 [2017-12-07T20:19:38,311][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:30:05,117][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [buildNum]
+[2017-12-10T15:31:31,521][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:31:31,521][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2017-12-10T15:31:31,524][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2017-12-10T15:31:31,524][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2017-12-10T15:31:31,525][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2017-12-10T15:31:31,525][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2017-12-10T15:31:31,527][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:31:31,528][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2017-12-10T15:31:31,528][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2017-12-10T15:31:31,528][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2017-12-10T15:31:31,528][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2017-12-10T15:31:31,529][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2017-12-10T15:31:50,100][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:31:51,590][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:31:53,492][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:32:08,844][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:32:08,845][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2017-12-10T15:32:08,846][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:32:08,846][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:32:08,847][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2017-12-10T15:32:08,848][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:32:08,849][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:32:08,850][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2017-12-10T15:32:08,850][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:32:08,851][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:32:08,851][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2017-12-10T15:32:08,851][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:34:49,841][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:35:11,280][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:35:11,281][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:35:11,281][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [columns]
+[2017-12-10T15:35:11,282][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sort]
+[2017-12-10T15:35:11,282][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:35:11,286][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:35:11,286][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:35:11,287][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [columns]
+[2017-12-10T15:35:11,287][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sort]
+[2017-12-10T15:35:11,287][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:35:19,409][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:35:37,027][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:36:57,054][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:39:08,577][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:45:03,319][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [buildNum]
+[2017-12-10T15:45:09,220][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:45:09,221][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2017-12-10T15:45:09,222][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2017-12-10T15:45:09,222][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2017-12-10T15:45:09,223][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2017-12-10T15:45:09,223][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2017-12-10T15:45:09,225][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:45:09,225][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2017-12-10T15:45:09,230][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2017-12-10T15:45:09,231][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2017-12-10T15:45:09,232][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2017-12-10T15:45:09,232][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2017-12-10T15:45:16,889][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:45:21,849][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:45:24,237][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:45:25,791][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2017-12-10T15:45:29,788][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:45:29,789][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2017-12-10T15:45:29,789][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:45:29,789][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:45:29,790][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2017-12-10T15:45:29,790][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:45:29,792][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:45:29,792][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2017-12-10T15:45:29,793][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:45:29,793][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:45:29,794][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2017-12-10T15:45:29,794][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:45:30,490][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:46:18,772][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:46:18,773][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:46:18,773][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [panelsJSON]
+[2017-12-10T15:46:18,773][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [optionsJSON]
+[2017-12-10T15:46:18,774][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:46:18,774][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeTo]
+[2017-12-10T15:46:18,774][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFrom]
+[2017-12-10T15:46:18,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [display]
+[2017-12-10T15:46:18,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:46:18,777][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2017-12-10T15:46:18,777][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2017-12-10T15:46:18,778][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [panelsJSON]
+[2017-12-10T15:46:18,778][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [optionsJSON]
+[2017-12-10T15:46:18,779][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2017-12-10T15:46:18,779][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeTo]
+[2017-12-10T15:46:18,779][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFrom]
+[2017-12-10T15:46:18,780][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [display]
+[2017-12-10T15:46:18,780][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2017-12-10T15:47:06,517][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:47:10,974][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:47:42,780][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:47:46,478][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:49:09,907][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2017-12-10T15:49:59,297][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
