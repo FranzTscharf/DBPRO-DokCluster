@@ -1664,4 +1664,7 @@
 [2017-12-10T15:47:46,478][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 [2017-12-10T15:49:09,907][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 [2017-12-10T15:49:59,297][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+<<<<<<< HEAD
 [2017-12-10T16:31:44,028][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+=======
+>>>>>>> kibana_pie_chart
