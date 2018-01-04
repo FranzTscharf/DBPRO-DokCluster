@@ -1,7 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d0a29f9-11c2-406a-996d-b04d2587afd8" name="Default" comment="" />
+    <list default="true" id="3d0a29f9-11c2-406a-996d-b04d2587afd8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/big/img1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/big/img1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/custom-select.png" afterPath="$PROJECT_DIR$/target/classes/static/images/custom-select.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/favicon.png" afterPath="$PROJECT_DIR$/target/classes/static/images/favicon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/logo-icon.png" afterPath="$PROJECT_DIR$/target/classes/static/images/logo-icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/logo-text.png" afterPath="$PROJECT_DIR$/target/classes/static/images/logo-text.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/2.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/3.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/4.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/5.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/6.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/7.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/8.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/d1.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/d1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/d2.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/d2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/d3.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/d3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/d4.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/d4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/d5.jpg" afterPath="$PROJECT_DIR$/target/classes/static/images/users/d5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/images/users/profile.png" afterPath="$PROJECT_DIR$/target/classes/static/images/users/profile.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont-old.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont-old.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff2" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff2" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.eot" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.ttf" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.woff" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spring-boot-web-application-example-0.0.1-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/spring-boot-web-application-example-0.0.1-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/spring-boot-web-application-example-0.0.1-SNAPSHOT.war.original" afterPath="$PROJECT_DIR$/target/spring-boot-web-application-example-0.0.1-SNAPSHOT.war.original" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/animate.css" afterPath="$PROJECT_DIR$/target/classes/static/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/colors/default-dark.css" afterPath="$PROJECT_DIR$/target/classes/static/css/colors/default-dark.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/icons/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/target/classes/static/css/icons/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/icons/font-awesome/old/css/font-awesome.css" afterPath="$PROJECT_DIR$/target/classes/static/css/icons/font-awesome/old/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/icons/simple-line-icons/css/simple-line-icons.css" afterPath="$PROJECT_DIR$/target/classes/static/css/icons/simple-line-icons/css/simple-line-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/icons/themify-icons/themify-icons.css" afterPath="$PROJECT_DIR$/target/classes/static/css/icons/themify-icons/themify-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/common.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/dashboard.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/error-pages.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/error-pages.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/form-pages.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/form-pages.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/google-vector-map.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/google-vector-map.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/icon-page.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/icon-page.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/other-pages.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/other-pages.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/pages.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/pages.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/pagination.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/pagination.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/perfect-scrollbar.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/perfect-scrollbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/pages/table-pages.css" afterPath="$PROJECT_DIR$/target/classes/static/css/pages/table-pages.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/spinners.css" afterPath="$PROJECT_DIR$/target/classes/static/css/spinners.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/custom.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/custom.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/dashboard.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/perfect-scrollbar.jquery.min.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/perfect-scrollbar.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/sidebarmenu.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/sidebarmenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/js/extensions/waves.js" afterPath="$PROJECT_DIR$/target/classes/static/js/extensions/waves.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.min.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-grid.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap-reboot.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/css/bootstrap.min.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/popper.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/popper.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/popper.min.js.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/bootstrap/js/popper.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/c3-master/c3.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/c3-master/c3.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/c3-master/c3.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/c3-master/c3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist-init.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist-init.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist-init.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist-init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.js.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/chartist.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/scss/chartist.scss" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/scss/chartist.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/scss/settings/_chartist-settings.scss" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-js/dist/scss/settings/_chartist-settings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/.gitignore" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/CHANGELOG.md" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/Gruntfile.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/README.md" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/bower.json" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/package.json" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/css/chartist-plugin-tooltip.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/css/chartist-plugin-tooltip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/css/chartist-plugin-tooltip.css.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/css/chartist-plugin-tooltip.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/scripts/chartist-plugin-tooltip.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/scripts/chartist-plugin-tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/scss/chartist-plugin-tooltip.scss" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/src/scss/chartist-plugin-tooltip.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/aliases.yml" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/aliases.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/clean.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/clean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/copy.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/copy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/jasmine.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/jasmine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/jshint.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/jshint.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/sass.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/sass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/uglify.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/uglify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/umd.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/tasks/umd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/.jshintrc" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/runner.html" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/runner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/spec/spec-tooltip.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/chartist-plugin-tooltip-master/test/spec/spec-tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/API.md" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/API.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/CHANGES.md" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/CHANGES.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/LICENSE" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/README.md" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.min-v4.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.min-v4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.min.js.map" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/gmaps.min.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/jquery.gmaps.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/jquery.gmaps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.controls.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.controls.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.core.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.events.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.geofences.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.geofences.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.geometry.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.geometry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.layers.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.layers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.map_types.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.map_types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.markers.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.markers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.native_extensions.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.native_extensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.overlays.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.overlays.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.routes.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.static.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.static.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.streetview.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.streetview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.styles.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.styles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.utils.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/gmaps/lib/gmaps.utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/jquery/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/css/perfect-scrollbar.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/css/perfect-scrollbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/css/perfect-scrollbar.min.css" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.min.js" afterPath="$PROJECT_DIR$/target/classes/static/plugins/perfect-scrollbar/js/perfect-scrollbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/app.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/app.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/colors/default-dark.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/colors/default-dark.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/grid.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/grid.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/screen-reader.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/screen-reader.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.bower.json" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.gitignore" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.npmignore" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/HELP-US-OUT.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/bower.json" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/css/font-awesome.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/animated.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/core.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/extras.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/extras.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/fixed-width.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/font-awesome.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/icons.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/larger.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/list.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/mixins.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/path.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/spinning.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/spinning.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/stacked.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/variables.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_animated.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_core.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_extras.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_extras.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_icons.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_larger.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_list.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_mixins.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_path.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_spinning.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_spinning.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_stacked.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_variables.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/old/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_screen-reader.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-arrows-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-basic-elaboration-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-ecommerce-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-music-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-software-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/fonts/linea-weather-10.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/linea-icons/linea.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/material-design-iconic-font.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/material-design-iconic-font.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/material-design-iconic-font.min.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/material-design-iconic-font.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/materialdesignicons.min.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/css/materialdesignicons.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/Material-Design-Iconic-Font.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/material-design-iconic-font/fonts/materialdesignicons-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/css/simple-line-icons.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/css/simple-line-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/fonts/Simple-Line-Icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/less/simple-line-icons.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/less/simple-line-icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/scss/simple-line-icons.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/simple-line-icons/scss/simple-line-icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.svg" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/fonts/themify.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/ie7/ie7.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/ie7/ie7.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/ie7/ie7.js" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/ie7/ie7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/themify-icons.css" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/themify-icons.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/themify-icons.less" afterPath="$PROJECT_DIR$/target/classes/static/scss/icons/themify-icons/themify-icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/button-page.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/button-page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/common.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/common.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/dashboard.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/dashboard.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/error-pages.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/error-pages.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/form-pages.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/form-pages.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/google-vector-map.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/google-vector-map.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/icon-page.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/icon-page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/other-pages.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/other-pages.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/pages.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/pages.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/pagination.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/pagination.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/perfect-scrollbar.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/perfect-scrollbar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/table-pages.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/table-pages.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/pages/widget-page.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/pages/widget-page.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/prepros-6.config" afterPath="$PROJECT_DIR$/target/classes/static/scss/prepros-6.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/responsive.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/responsive.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/sidebar.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/sidebar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/style.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/variable.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/variable.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/activity.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/activity.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/blog.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/blog.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/calendar.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/calendar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/carousel.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/carousel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/chat-widget.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/chat-widget.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/comment.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/comment.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/common-widget.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/common-widget.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/contact.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/contact.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/feed.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/feed.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/msg-box.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/msg-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/profile.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/profile.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/social.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/social.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/steamline.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/steamline.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/to-do.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/to-do.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/topbar-mail.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/topbar-mail.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/weather-widget.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/weather-widget.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/scss/widgets/widgets.scss" afterPath="$PROJECT_DIR$/target/classes/static/scss/widgets/widgets.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,28 +328,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/project/webgui/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sidebar.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view-fragments/sidebar.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +337,9 @@
         <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -97,13 +396,14 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
-    <option name="y" value="149" />
+    <option name="x" value="16" />
+    <option name="y" value="321" />
     <option name="width" value="1241" />
     <option name="height" value="704" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -117,6 +417,30 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
+              <item name="spring-boot-web-application-example" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
+              <item name="spring-boot-web-application-example" type="616d4139:PackageViewModuleNode" />
+              <item name="com.project.webgui" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
+              <item name="spring-boot-web-application-example" type="616d4139:PackageViewModuleNode" />
+              <item name="com.project.webgui" type="1f31426a:PackageElementNode" />
+              <item name="controller" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,90 +459,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webgui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="webgui" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view-fragments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DokClusterWebGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -257,27 +501,6 @@
               <item name="DokClusterWebGUI" type="cbb8eebc:String" user="DokClusterWebGUI" />
               <item name="src/main" type="cbb8eebc:String" user="src/main" />
               <item name="webapp/WEB-INF/views" type="cbb8eebc:String" user="webapp/WEB-INF/views" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DokClusterWebGUI" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DokClusterWebGUI" type="616d4139:PackageViewModuleNode" />
-              <item name="com.project.webgui" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="DokClusterWebGUI" type="58d84e3e:PackageViewProjectNode" />
-              <item name="DokClusterWebGUI" type="616d4139:PackageViewModuleNode" />
-              <item name="static" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -326,19 +549,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Unnamed">
+  <component name="RunManager" selected="Spring Boot.ApplicationBoot">
     <configuration name="ApplicationBoot" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ApplicationBoot" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="DokClusterWebGUI" />
-      <envs />
-    </configuration>
-    <configuration name="Unnamed" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.project.webgui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.webgui.ApplicationBoot" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <module name="DokClusterWebGUI" />
+      <module name="spring-boot-web-application-example" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -381,18 +603,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="spring-boot-web-application-example" />
-      <envs />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -409,6 +619,7 @@
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.webgui.ApplicationBoot" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <module name="DokClusterWebGUI" />
       <envs />
@@ -440,10 +651,18 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.ApplicationBoot" />
-    </list>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="spring-boot-web-application-example" />
+      <envs />
+    </configuration>
     <recent_temporary>
       <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Spring Boot.ApplicationBoot" />
@@ -471,15 +690,18 @@
       <workItem from="1514122319890" duration="762000" />
       <workItem from="1514132682655" duration="859000" />
       <workItem from="1515008433146" duration="406000" />
-      <workItem from="1515083145509" duration="3486000" />
+      <workItem from="1515083145509" duration="3609000" />
+      <workItem from="1515086859894" duration="93000" />
+      <workItem from="1515086955231" duration="1000" />
+      <workItem from="1515086969339" duration="175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13909000" />
+    <option name="totallyTimeSpent" value="14301000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="149" width="1241" height="704" extended-state="0" />
+    <frame x="16" y="321" width="1241" height="704" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -495,13 +717,14 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35303777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35303777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2885738" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29357797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -529,7 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -537,11 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -549,11 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,11 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="44" lean-forward="false" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,21 +912,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/project/webgui/ApplicationBoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-367">
           <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,18 +957,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/project/webgui/controller/IndexController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view-fragments/sidebar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view-fragments/sidebar.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/project/webgui/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="255">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/project/webgui/ApplicationBoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
