@@ -77,6 +77,7 @@
                                             <option value="3">April 2017</option>
                                         </select>
                                     </div>
+                                    <div id="foamtree-area" style="width:600px;height:600px"></div>
                                 </div>
                                 <div id="sales-overview2" class="p-relative" style="height:360px;"></div>
                             </div>

@@ -27,3 +27,4 @@
 <script src="/resources/plugins/c3-master/c3.min.js"></script>
 <!-- Chart JS -->
 <script src="/resources/js/extensions/dashboard.js"></script>
+<script src="/resources/js/requests/serialize.js"></script>
