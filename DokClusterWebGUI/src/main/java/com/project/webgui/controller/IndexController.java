@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class IndexController {
@@ -14,14 +15,10 @@ public class IndexController {
       return "index";
    }
 
-   @RequestMapping("/profil")
-   public String profil() {
-      return "profil";
+   @RequestMapping("/profile")
+   public ModelAndView profil() {
+      ModelAndView mvn = new ModelAndView("profile");
+      return mvn;
    }
 
-   @PostMapping("/hello")
-   public String sayHello(@RequestParam("name") String name, Model model) {
-      model.addAttribute("name", name);
-      return "hello";
-   }
 }

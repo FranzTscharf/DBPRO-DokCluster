@@ -1,35 +1,33 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: franztscharf
-  Date: 23.12.17
-  Time: 16:25
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title tiles:fragment="title">Messages : Create</title>
+<title>My Custom Login Page</title>
 </head>
-<body>
-<div tiles:fragment="content">
-    <form name="f" th:action="@{/login}" method="post">
-        <fieldset>
-            <legend>Please Login</legend>
-            <div th:if="${param.error}" class="alert alert-error">
-                Invalid username and password.
-            </div>
-            <div th:if="${param.logout}" class="alert alert-success">
-                You have been logged out.
-            </div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username"/>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password"/>
-            <div class="form-actions">
-                <button type="submit" class="btn">Log in</button>
-            </div>
-        </fieldset>
+<body style='margin:50px;'>
+  <h2>My Custom Login Page</h2>
+  <form action="/my-login" method="post">
+    	<c:if test="${param.error != null}">
+    		<p style='color:red'>
+    			Invalid username and password.
+    		</p>
+    	</c:if>
+    	<c:if test="${param.logout != null}">
+    		<p style='color:blue'>
+    			You have been logged out.
+    		</p>
+    	</c:if>
+    	<p>
+    		<label for="username">Username</label>
+    		<input type="text" id="username" name="username"/>
+    	</p>
+    	<p>
+    		<label for="password">Password</label>
+    		<input type="password" id="password" name="password"/>
+    	</p>
+    	<input type="hidden"
+    		name="${_csrf.parameterName}"
+    		value="${_csrf.token}"/>
+    	<button type="submit">Log in</button>
     </form>
-</div>
 </body>
 </html>

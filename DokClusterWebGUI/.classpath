@@ -10,6 +10,7 @@
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src/main/webapp"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
