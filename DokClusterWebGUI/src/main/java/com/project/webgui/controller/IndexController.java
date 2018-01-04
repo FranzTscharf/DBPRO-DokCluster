@@ -16,7 +16,7 @@ public class IndexController {
    }
 
    @RequestMapping("/profile")
-   public ModelAndView profil() {
+   public ModelAndView profile() {
       ModelAndView mvn = new ModelAndView("profile");
       return mvn;
    }
