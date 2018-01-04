@@ -21,4 +21,9 @@ public class IndexController {
       return mvn;
    }
 
+   @RequestMapping("/404")
+   public ModelAndView error404() {
+      ModelAndView mvn = new ModelAndView("error");
+      return mvn;
+   }
 }
