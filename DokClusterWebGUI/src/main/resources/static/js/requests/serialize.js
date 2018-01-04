@@ -7,14 +7,19 @@ $(document).ready(function(){
         id: "foamtree-area"
     });
 });
-
-function set_search_graphic(event) {
+    function set_search_graphic(search_str) {
+    var data = {
+        q : search_str,
+        field_mapping_title : "_source.title",
+        field_mapping_content : "_source.abstract",
+        size : "100"
+    }
     event.preventDefault();
     $.ajax({
         method: "GET",
         url : "http://localhost:9200/zotero/entry/_search_with_clusters",
         /* url request hidden Data fields with id #...*/
-        data : $("#search_form").serialize(),
+        data : data,
         success: create_foam_tree
     });
 }

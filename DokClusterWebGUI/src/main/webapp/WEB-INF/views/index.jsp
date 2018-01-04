@@ -69,17 +69,8 @@
                                     <div>
                                         <h3 class="card-title m-b-5"><span class="lstick"></span>Document Overview </h3>
                                     </div>
-                                    <div class="ml-auto">
-                                        <select class="custom-select b-0">
-                                            <option selected="">January 2017</option>
-                                            <option value="1">February 2017</option>
-                                            <option value="2">March 2017</option>
-                                            <option value="3">April 2017</option>
-                                        </select>
-                                    </div>
-                                    <div id="foamtree-area" style="width:600px;height:600px"></div>
                                 </div>
-                                <div id="sales-overview2" class="p-relative" style="height:360px;"></div>
+                                <div class="p-relative" style="height:360px;" id="foamtree-area" onload="set_search_graphic('digital');"></div>
                             </div>
                         </div>
                     </div>
