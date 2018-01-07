@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%@ include file="./../view-fragments/header.jsp" %>
+    <%@ include file="../../view-fragments/header.jsp" %>
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
@@ -23,7 +23,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar">
-            <%@ include file="./../view-fragments/topbar.jsp" %>
+            <%@ include file="../../view-fragments/topbar.jsp" %>
         </header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
@@ -32,7 +32,7 @@
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
         <aside class="left-sidebar">
-            <%@ include file="./../view-fragments/sidebar.jsp" %>
+            <%@ include file="../../view-fragments/sidebar.jsp" %>
         </aside>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
@@ -75,7 +75,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer">
-                <%@ include file="./../view-fragments/footer.jsp" %>
+                <%@ include file="../../view-fragments/footer.jsp" %>
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -91,7 +91,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <%@ include file="./../view-fragments/jqueryPagePlugins.jsp" %>
+    <%@ include file="../../view-fragments/jqueryPagePlugins.jsp" %>
 </body>
 
 </html>
