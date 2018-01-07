@@ -37,7 +37,7 @@
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <!-- ============================================================== -->
+
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
@@ -50,54 +50,92 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h3 class="text-themecolor">Overview of the Cluster </h3>
+                        <h3 class="text-themecolor">Profile</h3>
                     </div>
                     <div class="col-md-7 align-self-center">
+                        <a href="https://wrappixel.com/templates/adminpro/" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down"> Upgrade to Pro</a>
                     </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
-                <!-- Sales overview chart -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                <!-- Row -->
                 <div class="row">
-                    <div class="col-lg-9 col-md-12">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex">
-                                    <div>
-                                        <h3 class="card-title m-b-5"><span class="lstick"></span>Document Overview </h3>
+                                <center class="m-t-30"> <img src="../assets/images/users/5.jpg" class="img-circle" width="150" />
+                                    <h4 class="card-title m-t-10">Hanna Gover</h4>
+                                    <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium">254</font></a></div>
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium">54</font></a></div>
                                     </div>
-                                </div>
-                                <div class="p-relative" style="height:360px;" id="foamtree-area" onload="set_search_graphic('digital');"></div>
+                                </center>
                             </div>
                         </div>
                     </div>
-                    <!-- ============================================================== -->
-                    <!-- visit charts-->
-                    <!-- ============================================================== -->
-                    <div class="col-lg-3 col-md-12">
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title"><span class="lstick"></span>Dokument Index</h4>
-                                <div id="visitor" style="height:250px; width:100%;"></div>
-                                <table class="table vm font-14">
-                                    <tr>
-                                        <td class="b-0">Google</td>
-                                        <td class="text-right font-medium b-0">38.5%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Others</td>
-                                        <td class="text-right font-medium">30.8%</td>
-                                    </tr>
-                                </table>
+                                <form class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Full Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Johnathan Doe" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">Email</label>
+                                        <div class="col-md-12">
+                                            <input type="email" placeholder="johnathan@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Password</label>
+                                        <div class="col-md-12">
+                                            <input type="password" value="password" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Phone No</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Message</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-12">Select Country</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line">
+                                                <option>London</option>
+                                                <option>India</option>
+                                                <option>Usa</option>
+                                                <option>Canada</option>
+                                                <option>Thailand</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
+                    <!-- Column -->
                 </div>
+                <!-- Row -->
                 <!-- ============================================================== -->
-                <!-- End Page Content -->
+                <!-- End PAge Content -->
                 <!-- ============================================================== -->
             </div>
             <!-- ============================================================== -->
@@ -107,7 +145,7 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer">
-                <%@ include file="./../view-fragments/footer.jsp" %>
+                © 2017 Admin Pro by wrappixel.com
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
