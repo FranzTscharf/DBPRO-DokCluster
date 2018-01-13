@@ -20,9 +20,14 @@ public class IndexController {
       return mvn;
    }
 
-   @RequestMapping("/404")
+   @RequestMapping("404")
    public ModelAndView error404() {
-      ModelAndView mvn = new ModelAndView("content/hello");
+      ModelAndView mvn = new ModelAndView("content/error");
+      return mvn;
+   }
+   @RequestMapping("about")
+   public ModelAndView about() {
+      ModelAndView mvn = new ModelAndView("content/about");
       return mvn;
    }
 
