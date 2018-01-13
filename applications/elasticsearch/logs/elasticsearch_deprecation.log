@@ -1668,3 +1668,254 @@
 [2017-12-10T16:31:44,028][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 =======
 >>>>>>> kibana_pie_chart
+[2018-01-04T18:49:30,481][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:29:14,760][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:29:18,079][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:29:38,381][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:29:38,442][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:30:30,028][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:30:30,078][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:32:52,031][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:32:58,107][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:33:10,126][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:36:56,665][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:37:24,615][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:38:13,201][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:38:14,761][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:50:17,358][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [buildNum]
+[2018-01-04T19:50:21,852][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:50:21,856][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2018-01-04T19:50:21,859][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2018-01-04T19:50:21,860][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2018-01-04T19:50:21,860][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2018-01-04T19:50:21,861][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2018-01-04T19:50:21,865][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:50:21,866][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFieldName]
+[2018-01-04T19:50:21,867][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [intervalName]
+[2018-01-04T19:50:21,867][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fields]
+[2018-01-04T19:50:21,869][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sourceFilters]
+[2018-01-04T19:50:21,870][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [fieldFormatMap]
+[2018-01-04T19:50:53,929][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:50:56,363][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:51:08,112][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:51:08,112][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2018-01-04T19:51:08,113][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2018-01-04T19:51:08,113][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:51:08,113][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2018-01-04T19:51:08,113][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:51:08,115][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:51:08,115][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [visState]
+[2018-01-04T19:51:08,116][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2018-01-04T19:51:08,116][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:51:08,117][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [savedSearchId]
+[2018-01-04T19:51:08,122][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:51:08,760][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:51:27,923][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:51:37,909][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:52:20,893][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:53:11,887][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:11,887][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:11,888][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [columns]
+[2018-01-04T19:53:11,888][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sort]
+[2018-01-04T19:53:11,888][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:11,890][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:11,891][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:11,891][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [columns]
+[2018-01-04T19:53:11,891][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [sort]
+[2018-01-04T19:53:11,892][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:12,550][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:53:17,292][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:53:22,929][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:22,929][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:22,930][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [panelsJSON]
+[2018-01-04T19:53:22,930][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [optionsJSON]
+[2018-01-04T19:53:22,930][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2018-01-04T19:53:22,931][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeTo]
+[2018-01-04T19:53:22,931][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFrom]
+[2018-01-04T19:53:22,931][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [display]
+[2018-01-04T19:53:22,932][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:22,935][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:22,938][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:22,938][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [panelsJSON]
+[2018-01-04T19:53:22,939][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [optionsJSON]
+[2018-01-04T19:53:22,939][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [uiStateJSON]
+[2018-01-04T19:53:22,939][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeTo]
+[2018-01-04T19:53:22,940][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timeFrom]
+[2018-01-04T19:53:22,940][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [display]
+[2018-01-04T19:53:22,940][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:25,771][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:25,771][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:25,771][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_sheet]
+[2018-01-04T19:53:25,772][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_interval]
+[2018-01-04T19:53:25,772][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_other_interval]
+[2018-01-04T19:53:25,772][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:25,774][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [title]
+[2018-01-04T19:53:25,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [description]
+[2018-01-04T19:53:25,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_sheet]
+[2018-01-04T19:53:25,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_interval]
+[2018-01-04T19:53:25,775][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [timelion_other_interval]
+[2018-01-04T19:53:25,776][WARN ][o.e.d.i.m.StringFieldMapper$TypeParser] The [string] field is deprecated, please use [text] or [keyword] instead on [searchSourceJSON]
+[2018-01-04T19:53:26,009][WARN ][o.e.d.i.q.QueryParseContext] query malformed, empty clause found at [1:143]
+[2018-01-04T19:53:42,133][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:54:11,056][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:54:15,519][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:54:19,013][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:54:25,448][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:54:41,283][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:54:50,784][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:54:51,371][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:54:52,035][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:54:54,450][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-04T19:55:06,413][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:55:28,677][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:02,185][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:15,627][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:23,482][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:26,731][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:54,879][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:56:59,448][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T19:57:03,927][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:08:17,316][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:10:10,797][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:10:29,516][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:11:19,516][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:11:48,641][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:12:02,083][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:12:24,911][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:12:32,134][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:12:55,997][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:13:42,462][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:14:06,870][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-04T20:14:56,284][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:44:52,722][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:45:10,480][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:45:19,710][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:45:49,583][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:46:24,020][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:46:42,620][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:46:56,706][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:47:24,866][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:47:36,951][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:47:47,325][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:48:00,158][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:48:21,475][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:48:33,840][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:49:09,320][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:49:34,501][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:50:09,098][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:50:22,071][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:50:44,483][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:50:57,730][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:51:08,513][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:52:09,617][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:52:24,312][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:53:08,883][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:53:57,793][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:54:16,107][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:54:42,945][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:54:56,697][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:55:08,207][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:55:25,952][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:55:36,278][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:55:41,870][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:55:52,749][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:56:03,102][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:56:50,200][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:56:58,560][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:19,828][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:21,357][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:26,278][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:29,774][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:35,722][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:57:51,569][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:15,030][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:22,524][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:27,898][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:30,187][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:32,974][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:58:57,244][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:59:17,311][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:59:28,667][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:59:54,710][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T20:59:54,714][WARN ][o.e.d.c.ParseField       ] Deprecated field [type] used, replaced by [match_phrase and match_phrase_prefix query]
+[2018-01-08T20:59:59,809][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:01:52,998][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:22:25,911][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-08T21:23:09,340][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:23:14,586][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:23:25,931][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:23:57,530][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:24:13,245][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:24:27,220][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:24:42,453][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:25:26,381][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-08T21:25:26,951][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-08T21:25:31,888][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-08T21:26:23,574][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:26:31,275][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:26:44,279][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:26:44,280][WARN ][o.e.d.c.ParseField       ] Deprecated field [type] used, replaced by [match_phrase and match_phrase_prefix query]
+[2018-01-08T21:26:53,876][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:26:58,242][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:09,617][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:19,665][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:30,777][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:41,715][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:41,716][WARN ][o.e.d.c.ParseField       ] Deprecated field [type] used, replaced by [match_phrase and match_phrase_prefix query]
+[2018-01-08T21:27:48,865][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:54,644][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:27:54,644][WARN ][o.e.d.c.ParseField       ] Deprecated field [type] used, replaced by [match_phrase and match_phrase_prefix query]
+[2018-01-08T21:27:58,309][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:28:17,063][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:28:44,674][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:30:51,206][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:11,926][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:13,820][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:19,711][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:29,675][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:32,812][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:32,813][WARN ][o.e.d.c.ParseField       ] Deprecated field [type] used, replaced by [match_phrase and match_phrase_prefix query]
+[2018-01-08T21:31:36,340][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:39,843][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:31:45,636][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:32:00,379][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:32:15,212][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:32:38,857][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:32:51,003][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:32:55,479][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:33:05,748][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:33:28,532][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:33:35,423][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:33:45,900][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:34:03,535][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:34:08,720][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:34:37,963][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:34:47,676][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:35:25,950][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:35:35,865][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:35:49,447][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:35:58,472][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:09,710][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:12,170][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:17,912][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:24,501][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:31,792][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:36:44,462][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:37:11,621][WARN ][o.e.d.i.q.QueryParseContext] query malformed, empty clause found at [1:143]
+[2018-01-08T21:40:14,985][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:40:17,836][WARN ][o.e.d.i.q.QueryParseContext] query malformed, empty clause found at [1:143]
+[2018-01-08T21:40:35,993][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:43:26,566][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:43:27,982][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-08T21:54:54,230][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:38:44,098][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:38:52,037][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:39:39,254][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:00,203][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:11,087][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:12,348][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:15,050][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:27,328][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:52,490][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:40:56,418][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T13:41:14,317][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
