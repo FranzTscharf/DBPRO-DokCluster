@@ -2,9 +2,29 @@
  * Dokument Loads
  *
  */
+
 $(document).ready(function(){
     foamtree = new CarrotSearchFoamTree({
-        id: "foamtree-area"
+        id: "foamtree-area",
+        layout: "squarified",
+        groupMinDiameter: 0,
+        relaxationInitializer: "ordered",
+        groupGrowingEasing: "quadInOut",
+        groupBorderRadius: 0,
+        groupSelectionOutlineShadowColor: "hsla(295, 14%, 97%, 1)",
+        groupFillType: "plain",
+        groupStrokePlainLightnessShift: -20,
+        rainbowStartColor: "hsla(140, 77%, 29%, 1)",
+        rainbowEndColor: "hsla(252, 24%, 51%, 1)",
+        rolloutEasing: "squareInOut",
+        rolloutScalingStrength: -0.3,
+        rolloutRotationStrength: 0,
+        pullbackEasing: "squareInOut",
+        pullbackDuration: 2000,
+        pullbackScalingStrength: -0.3,
+        pullbackRotationStrength: 0,
+        pullbackPolygonDelay: 0.1,
+        attributionPosition: 45
     });
 });
     function set_search_graphic(search_str) {

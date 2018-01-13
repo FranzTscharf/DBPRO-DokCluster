@@ -5,13 +5,13 @@
     <div class="navbar-header">
         <a class="navbar-brand" href="index.html">
             <!-- Logo icon --><b>
-            <!--<img src="/resources/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+            <img src="/resources/images/logo-icon.png" style="margin-top: -7px;height: 30px;margin-left: 2px;" alt="homepage" class="dark-logo" />
         </b>
             <!--End Logo icon -->
             <!-- Logo text -->
             <span>
-                            <!--<img src="/resources/images/logo-text.png" alt="homepage" class="dark-logo" />-->
-                        </span>
+                <h2 style='display:inline;'>DokCluster</h2>
+            </span>
         </a>
     </div>
     <!-- ============================================================== -->
