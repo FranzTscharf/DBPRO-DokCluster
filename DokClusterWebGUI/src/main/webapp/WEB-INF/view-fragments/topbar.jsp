@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <nav class="navbar top-navbar navbar-expand-md navbar-light">
     <!-- ============================================================== -->
     <!-- Logo -->
@@ -41,7 +42,7 @@
             <!-- Profile -->
             <!-- ============================================================== -->
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-dark" href="#"><img src="/resources/images/users/henrik.png" alt="user" class="profile-pic" /></a>
+                <a class="nav-link waves-effect waves-dark" href="#"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" /></a>
             </li>
         </ul>
     </div>
