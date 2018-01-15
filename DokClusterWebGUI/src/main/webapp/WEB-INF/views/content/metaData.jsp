@@ -82,7 +82,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Meta Data from Carrot</h4>
+                                <h4 class="card-title"><span class="lstick"></span>Meta Data from Carrot</h4>
                                 <h6 class="card-subtitle">Information about the selected Node</h6>
                                 <div class="table-responsive" id="metadata_table">
                                     <table class="table">
