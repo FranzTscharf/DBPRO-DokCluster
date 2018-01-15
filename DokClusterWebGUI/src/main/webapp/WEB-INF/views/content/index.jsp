@@ -87,10 +87,10 @@
                                 <iframe id="kibanaOverviewiFrame" src="http://localhost:5601/app/kibana#/visualize/edit/592b1030-f886-11e7-b4ca-3f2a7b9f7c37?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(legendOpen:!f)),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:source.keyword,order:desc,orderBy:'1',size:5),schema:segment,type:terms),(enabled:!t,id:'3',params:(customInterval:'2h',extended_bounds:(),field:issued,interval:y,min_doc_count:1),schema:segment,type:date_histogram)),listeners:(),params:(addLegend:!t,addTooltip:!t,isDonut:!t,legendPosition:bottom),title:'Pie+Chart+of+sources+with+Yearly+overwiew',type:pie))" frameBorder="0" style="height: 350px; width: 100%; position: relative;"></iframe>
                                 <script>
                                     $(document).ready(function(){
-                                    $('#kibanaOverviewiFrame').on('load', function(){
-                                        $(".filter-bar").style.display = "none";
-                                        alert('loaded!');
-                                    });
+                                        $('#kibanaOverviewiFrame').on('load', function(){
+                                            $(".filter-bar").style.display = "none";
+                                            alert('loaded!');
+                                        });
                                     });
                                 </script>
                             </div>

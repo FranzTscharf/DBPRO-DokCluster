@@ -33,10 +33,7 @@
             <!-- Search -->
             <!-- ============================================================== -->
             <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                <form class="app-search" id="search_form" onkeypress="if(event.keyCode == 13)set_search_graphic($('#search-with-cluster').val());">
-                    <input type="hidden" value="100" name="size" id="size"/>
-                    <input type="hidden" value="_source.title" name="field_mapping_title" id="field_mapping_title"/>
-                    <input type="hidden" value="_source.abstract" name="field_mapping_content" id="field_mapping_content"/>
+                <form class="app-search" id="search_form" onkeypress="if(event.keyCode === 13){event.preventDefault();set_search_graphic($('#search-with-cluster').val());}">
                     <input type="text" class="form-control" placeholder="Search & enter" name="q" id="search-with-cluster"><a class="srh-btn"><i class="ti-close"></i></a>
                 </form>
             </li>
