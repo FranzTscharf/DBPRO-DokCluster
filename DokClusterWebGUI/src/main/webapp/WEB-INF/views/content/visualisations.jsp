@@ -64,15 +64,14 @@
                 <!-- Sales overview chart -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex">
-                                    <div>
-                                        <h3 class="card-title m-b-5"><span class="lstick"></span>Carrot Cluster</h3>
-                                    </div>
+                                <h4 class="card-title">Basic Table</h4>
+                                <h6 class="card-subtitle">Add class <code>.table</code></h6>
+                                <div class="table-responsive" id="metadata_table">
+                                    <iframe src="http://localhost:5601/app/kibana#/visualize/edit/3a879680-f886-11e7-b4ca-3f2a7b9f7c37?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(vis:(defaultColors:('0+-+13':'rgb(247,252,245)','13+-+25':'rgb(199,233,192)','25+-+38':'rgb(116,196,118)','38+-+50':'rgb(35,139,69)'))),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(customInterval:'2h',extended_bounds:(),field:issued,interval:y,min_doc_count:1),schema:segment,type:date_histogram),(enabled:!t,id:'3',params:(field:source.keyword,order:desc,orderBy:'1',size:5),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTooltip:!t,colorSchema:Greens,colorsNumber:4,colorsRange:!(),enableHover:!f,invertColors:!f,legendPosition:right,percentageMode:!f,setColorRange:!f,times:!(),valueAxes:!((id:ValueAxis-1,labels:(color:%23555,rotate:0,show:!f),scale:(defaultYExtents:!f,type:linear),show:!f,type:value))),title:'Heatmap+of+Sources+by+year',type:heatmap))" height="600" width="800"></iframe>
                                 </div>
-                                <div class="p-relative" style="height:360px;" id="foamtree-area"></div>
                             </div>
                         </div>
                     </div>
