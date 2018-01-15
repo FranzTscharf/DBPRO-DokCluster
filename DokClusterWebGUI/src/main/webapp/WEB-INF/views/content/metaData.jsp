@@ -83,13 +83,13 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Basic Table</h4>
-                                <h6 class="card-subtitle">Add class <code>.table</code></h6>
+                                <h4 class="card-title"><span class="lstick"></span>Meta Data from Carrot</h4>
+                                <h6 class="card-subtitle">Information about the selected Node</h6>
                                 <div class="table-responsive" id="metadata_table">
                                     <table class="table">
                                         <thead>
                                         <tr id="header-row-metadata">
-                                            <th>Key</th>
+                                            <th style="width: 20%">Key</th>
                                             <th>Value</th>
                                         </tr>
                                         </thead>
@@ -100,7 +100,6 @@
                             </div>
                         </div>
                     </div>
-
 
                 </div>
                 <!-- ============================================================== -->
