@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="/resources/images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/resources/images/logo-icon.png">
 <title>Dashboard DokCluster</title>
 <!-- Bootstrap Core CSS -->
 <link href="/resources/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">

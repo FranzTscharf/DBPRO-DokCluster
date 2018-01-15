@@ -44,7 +44,7 @@
             <!-- Profile -->
             <!-- ============================================================== -->
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-dark" href="#"><img src="/resources/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                <a class="nav-link waves-effect waves-dark" href="#"><img src="/resources/images/users/henrik.png" alt="user" class="profile-pic" /></a>
             </li>
         </ul>
     </div>
