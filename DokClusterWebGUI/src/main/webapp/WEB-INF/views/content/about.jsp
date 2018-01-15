@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <%@ include file="../../view-fragments/header.jsp" %>
 </head>
 
@@ -48,32 +49,50 @@
             <!-- ============================================================== -->
             <!-- Main wrapper - style you can find in pages.scss -->
             <!-- ============================================================== -->
-
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">about</h3>
+                </div>
+                <div class="col-md-7 align-self-center">
+                </div>
+            </div>
             <div class="card">
-                <class="card-body">
-                <h1>about</h1>
+                <div class="card-body">
 
-
-                <h1>Imprint</h1>
 
 
                 <div class="row">
                     <div class="col-sm-4">
 
                         <p>
-                            Franz Tscharf | Antonia Steinmann | Henrik Fröhls | Mark Paranski<br/>
+                            Franz Tscharf | Eric Schneider | Henrik Fröhls<br/>
                             c/o Technische Universität Berlin<br/>
                             Straße des 17. Juni 136<br/>
                             10623 Berlin<br/>
                         </p>
-                        <p><a href="mailto:team@smart-Meter.org">team@smart-Meter.org</a> (not active!)</p>
+                        <p><a href="mailto:team@dokcluster.org">team@dokcluster.org</a> (not active!)</p>
                     </div>
                     <div class="col-sm-8">
-                        <img src="../media/tu-berlin.png" class="img-responsive" alt="c/o TU Berlin" width="150"
-                             height="auto">
+                        <img src="resources/images/tu-berlin.png" alt="c/o TU Berlin" height="150"
+                             width="auto">
                     </div>
                 </div>
 
+                <h2>Authors</h2>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="resources/images/users/franz_quadrat.png" alt="Franz" width=100% style="border-radius: 50%">
+                        <p style="text-align: center; margin-top: 5px;">Franz Tscharf</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="resources/images/users/henrik_quadrat.png" alt="Henrik" width=100% style="border-radius: 50%">
+                        <p style="text-align: center; margin-top: 5px;">Henrik Fröhls</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="resources/images/users/eric_quadrat.jpg" alt="Eric" width=100% style="border-radius: 50%">
+                        <p style="text-align: center; margin-top: 5px;">Eric Schneider</p>
+                    </div>
+                </div>
                 <h2>Disclaimer</h2>
                 <h3>Accountability for content</h3><br/>The contents of our pages have been created with the utmost
                 care. However, we cannot guarantee the contents' accuracy, completeness or topicality. According to
