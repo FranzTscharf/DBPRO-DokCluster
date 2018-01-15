@@ -33,8 +33,7 @@ $(document).ready(function(){
         field_mapping_title : "_source.title",
         field_mapping_content : "_source.abstract",
         size : "100"
-    }
-    event.preventDefault();
+    };
     $.ajax({
         method: "GET",
         url : "http://localhost:9200/zotero/entry/_search_with_clusters",
@@ -93,25 +92,12 @@ function get_document_metadata(entryId){
         url : "http://localhost:9200/zotero/entry/"+entryId,
         /* url request hidden Data fields with id #...*/
         success: function(data){
-            $("#metadata_table").empty()
+            $("#metadata_table").empty();
             $("#metadata_table").append('<tr><th>Key</th><th>Value</th></tr>')
             $.each(data._source, function(key, value){
-                if(key === "author"){
-                    var names = "";
-                    for(obj of value){
-                        names += obj.family+ " "+ obj.given + ", "
-                    }
-                    var names_display = names.substring(0, names.length-2);
-                    console.log(names);
-                    $("#metadata_table").append(
-                        "<tr><td>"+key+"</td><td>"+names_display+"</td></tr>"
-                    )
-                }else{
-                    $("#metadata_table").append(
-                        "<tr><td>"+key+"</td><td>"+value+"</td></tr>"
-                    )
-                }
-                
+                $("#metadata_table").append(
+                    "<tr><td>"+key+"</td><td>"+value+"</td></tr>"
+                )
             });
         }
     })
