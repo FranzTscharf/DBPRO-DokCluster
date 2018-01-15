@@ -80,7 +80,7 @@ function create_foam_tree(cluster_data){
 function find_responding_document(server_response,document_id){
     var return_value;
     server_response.hits.hits.forEach(function(hit){
-            if(document_id === hit._source.id){
+            if(parseInt(document_id) === hit._source.id){
                return_value = hit._source.title;
             }
     });
@@ -106,16 +106,6 @@ function get_document_metadata(entryId){
                     $("#metadata_table").append(
                         "<tr><td>"+key+"</td><td>"+names_display+"</td></tr>"
                     )
-                }else if(key === "issued"){
-                    console.log(value["date-parts"]);
-                    var issue_date = "";
-                    for(obj of value["date-parts"][0]){
-                        issue_date += obj + "-";
-                    }
-                    var issue_date_display = issue_date.substring(0, issue_date.length-1);
-                    $("#metadata_table").append(
-                        "<tr><td>"+key+"</td><td>"+issue_date_display+"</td></tr>"
-                    );
                 }else{
                     $("#metadata_table").append(
                         "<tr><td>"+key+"</td><td>"+value+"</td></tr>"
