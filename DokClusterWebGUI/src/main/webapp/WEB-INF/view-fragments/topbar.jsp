@@ -33,7 +33,7 @@
             <!-- Search -->
             <!-- ============================================================== -->
             <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                <form class="app-search" id="search_form" onkeypress="if(event.keyCode === 13){event.preventDefault();set_search_graphic($('#search-with-cluster').val());}">
+                <form class="app-search" id="search_form" onkeypress="if(event.keyCode === 13){event.preventDefault();search_textfield_input($('#search-with-cluster').val());}">
                     <input type="text" class="form-control" placeholder="Search & enter" name="q" id="search-with-cluster"><a class="srh-btn"><i class="ti-close"></i></a>
                 </form>
             </li>

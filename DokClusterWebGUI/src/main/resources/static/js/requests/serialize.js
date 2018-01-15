@@ -27,7 +27,11 @@ $(document).ready(function(){
         attributionPosition: 45
     });
 });
-    function set_search_graphic(search_str) {
+function search_textfield_input(search_str) {
+    set_search_graphic(search_str);
+    set_kibana_graphic(search_str);
+}
+function set_search_graphic(search_str) {
     var data = {
         q : search_str,
         field_mapping_title : "_source.title",
@@ -103,9 +107,11 @@ function get_document_metadata(entryId){
     })
 }
 
-function set_kibana_graphic(event) {
+function set_kibana_graphic(search_str) {
 
-    //#!TODO set src in the iframe with the search input text
-    //var test = document.getElementById('#search-with-cluster').value;
-    //alert(test);
+    var iframe_src = $("#kibanaOverviewiFrame").attr("src");
+    console.log(iframe_src);
+    var new_iframe_src = iframe_src.replace(/query:'[\w*]+'/, "query:'"+search_str+"'");
+    console.log(new_iframe_src);
+    $('#kibanaOverviewiFrame').attr("src", new_iframe_src);
 }
