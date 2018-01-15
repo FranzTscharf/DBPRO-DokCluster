@@ -96,7 +96,7 @@ function get_document_metadata(entryId){
             $("#metadata_table").append('<tr><th>Key</th><th>Value</th></tr>')
             $.each(data._source, function(key, value){
                 $("#metadata_table").append(
-                    "<tr><td>"+key+"</td><td>"+value+"</td></tr>"
+                    "<tr><td style='width: 20%'>"+key+"</td><td>"+value+"</td></tr>"
                 )
             });
         }
