@@ -1,11 +1,24 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var _ = require('lodash');
-var Chainable = require('../lib/classes/chainable');
-var argType = require('../handlers/lib/arg_type.js');
+var _alter = require('../lib/alter.js');
 
-module.exports = new Chainable('condition', {
+var _alter2 = _interopRequireDefault(_alter);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+var _arg_type = require('../handlers/lib/arg_type.js');
+
+var _arg_type2 = _interopRequireDefault(_arg_type);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('condition', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -29,21 +42,21 @@ module.exports = new Chainable('condition', {
   help: 'Compares each point to a number, or the same point in another series using an operator, then sets its value' + 'to the result if the condition proves true, with an optional else.',
   aliases: ['if'],
   fn: function conditionFn(args) {
-    var config = args.byName;
-    return alter(args, function (eachSeries) {
-      var data = _.map(eachSeries.data, function (point, i) {
+    const config = args.byName;
+    return (0, _alter2.default)(args, function (eachSeries) {
+      const data = _lodash2.default.map(eachSeries.data, function (point, i) {
         function getNumber(source) {
-          if (argType(source) === 'number') return source;
-          if (argType(source) === 'null') return null;
-          if (argType(source) === 'seriesList') return source.list[0].data[i][1];
+          if ((0, _arg_type2.default)(source) === 'number') return source;
+          if ((0, _arg_type2.default)(source) === 'null') return null;
+          if ((0, _arg_type2.default)(source) === 'seriesList') return source.list[0].data[i][1];
           throw new Error('must be a number or a seriesList');
         }
 
-        var ifVal = getNumber(config['if']);
-        var thenVal = getNumber(config.then);
-        var elseVal = _.isUndefined(config['else']) ? point[1] : getNumber(config['else']);
+        const ifVal = getNumber(config.if);
+        const thenVal = getNumber(config.then);
+        const elseVal = _lodash2.default.isUndefined(config.else) ? point[1] : getNumber(config.else);
 
-        var newValue = (function () {
+        const newValue = function () {
           switch (config.operator) {
             case 'lt':
               return point[1] < ifVal ? thenVal : elseVal;
@@ -60,7 +73,7 @@ module.exports = new Chainable('condition', {
             default:
               throw new Error('Unknown operator');
           }
-        })();
+        }();
 
         return [point[0], newValue];
       });

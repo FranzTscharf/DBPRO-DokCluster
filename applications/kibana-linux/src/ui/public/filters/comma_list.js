@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 uiModules
 .get('kibana')
@@ -13,12 +13,12 @@ uiModules
    * @return {String}
    */
   return function (input, inclusive) {
-    let list = _.commaSeperatedList(input);
+    const list = _.commaSeperatedList(input);
     if (list.length < 2) {
       return list.join('');
     }
 
-    let conj = inclusive ? ' and ' : ' or ';
+    const conj = inclusive ? ' and ' : ' or ';
     return list.slice(0, -1).join(', ') + conj + _.last(list);
 
   };

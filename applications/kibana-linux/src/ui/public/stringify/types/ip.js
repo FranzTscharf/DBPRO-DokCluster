@@ -1,7 +1,8 @@
 import _ from 'lodash';
-import IndexPatternsFieldFormatProvider from 'ui/index_patterns/_field_format/field_format';
-export default function IpFormatProvider(Private) {
-  let FieldFormat = Private(IndexPatternsFieldFormatProvider);
+import { IndexPatternsFieldFormatProvider } from 'ui/index_patterns/_field_format/field_format';
+
+export function stringifyIp(Private) {
+  const FieldFormat = Private(IndexPatternsFieldFormatProvider);
 
   _.class(Ip).inherits(FieldFormat);
   function Ip(params) {
@@ -21,4 +22,4 @@ export default function IpFormatProvider(Private) {
   };
 
   return Ip;
-};
+}

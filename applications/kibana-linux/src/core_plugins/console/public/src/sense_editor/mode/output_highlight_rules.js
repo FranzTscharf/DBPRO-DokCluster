@@ -1,5 +1,5 @@
 let ace = require('ace');
-let ace_mode_json = require('ace/mode-json');
+require('ace/mode-json');
 let x_json = require('./x_json_highlight_rules');
 
 var oop = ace.require("ace/lib/oop");
@@ -12,6 +12,10 @@ var OutputJsonHighlightRules = function () {
   x_json.addToRules(this, 'start');
 
   this.$rules.start.unshift(
+    {
+      "token": "warning",
+      "regex": "#!.*$"
+    },
     {
       "token": "comment",
       "regex": "#.*$"

@@ -1,19 +1,26 @@
 'use strict';
 
-var argType = require('./arg_type');
-var _ = require('lodash');
+var _arg_type = require('./arg_type');
+
+var _arg_type2 = _interopRequireDefault(_arg_type);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function (functionDef) {
   return function validateArg(value, name, argDef) {
-    var type = argType(value);
-    var required = argDef.types;
-    var multi = argDef.multi;
-    var isCorrectType = (function () {
+    const type = (0, _arg_type2.default)(value);
+    const required = argDef.types;
+    const multi = argDef.multi;
+    const isCorrectType = function () {
       // If argument is not allow to be specified multiple times, we're dealing with a plain value for type
-      if (!multi) return _.contains(required, type);
+      if (!multi) return _lodash2.default.contains(required, type);
       // If it is, we'll get an array for type
-      return _.difference(type, required).length === 0;
-    })();
+      return _lodash2.default.difference(type, required).length === 0;
+    }();
 
     if (isCorrectType) return true;else return false;
 

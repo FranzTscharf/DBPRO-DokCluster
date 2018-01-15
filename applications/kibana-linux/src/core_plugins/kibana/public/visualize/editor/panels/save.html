@@ -17,8 +17,8 @@
   <button
     data-test-subj="saveVisualizationButton"
     type="submit"
-    class="btn btn-primary"
+    class="kuiButton kuiButton--primary"
   >
-    Save
+    {{ opts.isAddToDashMode() ? 'Save and Add to Dashboard' : 'Save'}}
   </button>
 </form>

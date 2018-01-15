@@ -1,14 +1,12 @@
 import _ from 'lodash';
-import angular from 'angular';
-import qs from 'ui/utils/query_string';
-import rison from 'rison-node';
-import StateManagementStateProvider from 'ui/state_management/state';
-import uiModules from 'ui/modules';
+import { QueryString } from 'ui/utils/query_string';
+import { StateProvider } from 'ui/state_management/state';
+import { uiModules } from 'ui/modules';
 
-let module = uiModules.get('kibana/global_state');
+const module = uiModules.get('kibana/global_state');
 
-function GlobalStateProvider(Private, $rootScope, $location) {
-  let State = Private(StateManagementStateProvider);
+export function GlobalStateProvider(Private) {
+  const State = Private(StateProvider);
 
   _.class(GlobalState).inherits(State);
   function GlobalState(defaults) {
@@ -19,7 +17,7 @@ function GlobalStateProvider(Private, $rootScope, $location) {
   GlobalState.prototype._persistAcrossApps = true;
 
   GlobalState.prototype.removeFromUrl = function (url) {
-    return qs.replaceParamInUrl(url, this._urlParam, null);
+    return QueryString.replaceParamInUrl(url, this._urlParam, null);
   };
 
   return new GlobalState();
@@ -28,4 +26,3 @@ function GlobalStateProvider(Private, $rootScope, $location) {
 module.service('globalState', function (Private) {
   return Private(GlobalStateProvider);
 });
-export default GlobalStateProvider;

@@ -1,6 +1,7 @@
 import d3 from 'd3';
 import dateMath from '@elastic/datemath';
-export default function TimeMarkerFactory() {
+
+export function VislibVisualizationsTimeMarkerProvider() {
 
   class TimeMarker {
     constructor(times, xScale, height) {
@@ -30,7 +31,7 @@ export default function TimeMarkerFactory() {
       return data.every(function (datum) {
         return (datum.ordered && datum.ordered.date);
       });
-    };
+    }
 
     render(selection) {
       const self = this;
@@ -64,8 +65,8 @@ export default function TimeMarkerFactory() {
         .attr('y1', self.height)
         .attr('y2', self.xScale.range()[0]);
       });
-    };
+    }
   }
 
   return TimeMarker;
-};
+}

@@ -1,8 +1,6 @@
 import _ from 'lodash';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import paginateControlsTemplate from 'ui/partials/paginate_controls.html';
-
-let PER_PAGE_DEFAULT = 10;
 
 uiModules.get('kibana')
 .directive('paginate', function ($parse, $compile) {
@@ -22,7 +20,7 @@ uiModules.get('kibana')
           $el.prepend($compile('<paginate-controls class="paginate-top">')($scope));
         }
 
-        let paginate = $scope.paginate;
+        const paginate = $scope.paginate;
 
         // add some getters to the controller powered by attributes
         paginate.getList = $parse(attrs.list);
@@ -41,9 +39,9 @@ uiModules.get('kibana')
       }
     },
     controllerAs: 'paginate',
-    controller: function ($scope) {
-      let self = this;
-      let ALL = 0;
+    controller: function ($scope, $document) {
+      const self = this;
+      const ALL = 0;
 
       self.sizeOptions = [
         { title: '10', value: 10 },
@@ -62,8 +60,7 @@ uiModules.get('kibana')
           self.perPageProp,
           self.otherWidthGetter
         ], function (vals, oldVals) {
-          let intChanges = vals[0] !== oldVals[0];
-          let extChanges = vals[1] !== oldVals[1];
+          const intChanges = vals[0] !== oldVals[0];
 
           if (intChanges) {
             if (!setPerPage(self.perPage)) {
@@ -98,18 +95,22 @@ uiModules.get('kibana')
         }
       };
 
+      self.goToTop = function goToTop() {
+        $document.scrollTop(0);
+      };
+
       self.renderList = function () {
         $scope.pages = [];
         if (!$scope.list) return;
 
-        let perPage = _.parseInt(self.perPage);
-        let count = perPage ? Math.ceil($scope.list.length / perPage) : 1;
+        const perPage = _.parseInt(self.perPage);
+        const count = perPage ? Math.ceil($scope.list.length / perPage) : 1;
 
         _.times(count, function (i) {
           let page;
 
           if (perPage) {
-            let start = perPage * i;
+            const start = perPage * i;
             page = $scope.list.slice(start, start + perPage);
           } else {
             page = $scope.list.slice(0);
@@ -121,6 +122,8 @@ uiModules.get('kibana')
           page.count = count;
           page.first = page.number === 1;
           page.last = page.number === count;
+          page.firstItem = (page.number - 1) * perPage + 1;
+          page.lastItem = Math.min(page.number * perPage, $scope.list.length);
 
           page.prev = $scope.pages[i - 1];
           if (page.prev) page.prev.next = page;
@@ -134,6 +137,10 @@ uiModules.get('kibana')
         } else {
           $scope.page = $scope.pages[0];
         }
+
+        if ($scope.page && $scope.onPageChanged) {
+          $scope.onPageChanged($scope.page);
+        }
       };
 
       self.changePage = function (page) {
@@ -144,7 +151,7 @@ uiModules.get('kibana')
 
         // setup the list of the other pages to link to
         $scope.otherPages = [];
-        let width = +self.otherWidthGetter($scope) || 5;
+        const width = +self.otherWidthGetter($scope) || 5;
         let left = page.i - Math.round((width - 1) / 2);
         let right = left + width - 1;
 
@@ -155,20 +162,24 @@ uiModules.get('kibana')
         }
 
         // shift extra right nums to left
-        let lastI = page.count - 1;
+        const lastI = page.count - 1;
         if (right > lastI) {
           right = lastI;
           left = right - width + 1;
         }
 
         for (let i = left; i <= right; i++) {
-          let other = $scope.pages[i];
+          const other = $scope.pages[i];
 
           if (!other) continue;
 
           $scope.otherPages.push(other);
           if (other.last) $scope.otherPages.containsLast = true;
           if (other.first) $scope.otherPages.containsFirst = true;
+        }
+
+        if ($scope.onPageChanged) {
+          $scope.onPageChanged($scope.page);
         }
       };
 

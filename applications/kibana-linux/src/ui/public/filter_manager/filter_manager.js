@@ -1,31 +1,31 @@
 import _ from 'lodash';
-import FilterBarQueryFilterProvider from 'ui/filter_bar/query_filter';
-import { buildInlineScriptForPhraseFilter } from './lib/phrase';
+import { FilterBarQueryFilterProvider } from 'ui/filter_bar/query_filter';
+import { getPhraseScript } from './lib/phrase';
 
 // Adds a filter to a passed state
-export default function (Private) {
-  let queryFilter = Private(FilterBarQueryFilterProvider);
-  let filterManager = {};
+export function FilterManagerProvider(Private) {
+  const queryFilter = Private(FilterBarQueryFilterProvider);
+  const filterManager = {};
 
   filterManager.add = function (field, values, operation, index) {
     values = _.isArray(values) ? values : [values];
-    let fieldName = _.isObject(field) ? field.name : field;
-    let filters = _.flatten([queryFilter.getAppFilters()]);
-    let newFilters = [];
+    const fieldName = _.isObject(field) ? field.name : field;
+    const filters = _.flatten([queryFilter.getAppFilters()]);
+    const newFilters = [];
 
-    let negate = (operation === '-');
+    const negate = (operation === '-');
 
     // TODO: On array fields, negating does not negate the combination, rather all terms
     _.each(values, function (value) {
       let filter;
-      let existing = _.find(filters, function (filter) {
+      const existing = _.find(filters, function (filter) {
         if (!filter) return;
 
         if (fieldName === '_exists_' && filter.exists) {
           return filter.exists.field === value;
         }
 
-        if (_.get(filter, 'query.match')) {
+        if (_.has(filter, 'query.match')) {
           return filter.query.match[fieldName] && filter.query.match[fieldName].query === value;
         }
 
@@ -45,10 +45,7 @@ export default function (Private) {
       switch (fieldName) {
         case '_exists_':
           filter = {
-            meta: {
-              negate: negate,
-              index: index
-            },
+            meta: { negate, index },
             exists: {
               field: value
             }
@@ -57,19 +54,11 @@ export default function (Private) {
         default:
           if (field.scripted) {
             filter = {
-              meta: { negate: negate, index: index, field: fieldName },
-              script: {
-                script: {
-                  inline: buildInlineScriptForPhraseFilter(field),
-                  lang: field.lang,
-                  params: {
-                    value: value
-                  }
-                }
-              }
+              meta: { negate, index, field: fieldName },
+              script: getPhraseScript(field, value)
             };
           } else {
-            filter = { meta: { negate: negate, index: index }, query: { match: {} } };
+            filter = { meta: { negate, index }, query: { match: {} } };
             filter.query.match[fieldName] = { query: value, type: 'phrase' };
           }
 
@@ -83,5 +72,4 @@ export default function (Private) {
   };
 
   return filterManager;
-};
-
+}

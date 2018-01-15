@@ -1,9 +1,29 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
+var _lodash = require('lodash');
 
-var Chainable = require('../lib/classes/chainable');
-module.exports = new Chainable('yaxis', {
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _alter = require('../lib/alter.js');
+
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const tickFormatters = {
+  'bits': 'bits',
+  'bits/s': 'bits/s',
+  'bytes': 'bytes',
+  'bytes/s': 'bytes/s',
+  'currency': 'currency(:ISO 4217 currency code)',
+  'percent': 'percent',
+  'custom': 'custom(:prefix:suffix)'
+};
+module.exports = new _chainable2.default('yaxis', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -31,10 +51,14 @@ module.exports = new Chainable('yaxis', {
     name: 'color',
     types: ['string', 'null'],
     help: 'Color of axis label'
+  }, {
+    name: 'units',
+    types: ['string', 'null'],
+    help: 'The function to use for formatting y-axis labels. One of: ' + _lodash2.default.values(tickFormatters).join(', ')
   }],
   help: 'Configures a variety of y-axis options, the most important likely being the ability to add an Nth (eg 2nd) y-axis',
   fn: function yaxisFn(args) {
-    return alter(args, function (eachSeries, yaxis, min, max, position, label, color) {
+    return (0, _alter2.default)(args, function (eachSeries, yaxis, min, max, position, label, color, units) {
       yaxis = yaxis || 1;
 
       eachSeries.yaxis = yaxis;
@@ -43,7 +67,7 @@ module.exports = new Chainable('yaxis', {
       eachSeries._global.yaxes = eachSeries._global.yaxes || [];
       eachSeries._global.yaxes[yaxis - 1] = eachSeries._global.yaxes[yaxis - 1] || {};
 
-      var myAxis = eachSeries._global.yaxes[yaxis - 1];
+      const myAxis = eachSeries._global.yaxes[yaxis - 1];
       myAxis.position = position || (yaxis % 2 ? 'left' : 'right');
       myAxis.min = min;
       myAxis.max = max;
@@ -51,6 +75,26 @@ module.exports = new Chainable('yaxis', {
       myAxis.axisLabel = label;
       myAxis.axisLabelColour = color;
       myAxis.axisLabelUseCanvas = true;
+
+      if (units) {
+        const unitTokens = units.split(':');
+        if (!tickFormatters[unitTokens[0]]) {
+          throw new Error(`${units} is not a supported unit type.`);
+        }
+        if (unitTokens[0] === 'currency') {
+          const threeLetterCode = /^[A-Za-z]{3}$/;
+          const currency = unitTokens[1];
+          if (currency && !threeLetterCode.test(currency)) {
+            throw new Error('Currency must be a three letter code');
+          }
+        }
+
+        myAxis.units = {
+          type: unitTokens[0],
+          prefix: unitTokens[1] || '',
+          suffix: unitTokens[2] || ''
+        };
+      }
 
       return eachSeries;
     });

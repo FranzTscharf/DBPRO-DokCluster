@@ -1,13 +1,24 @@
 'use strict';
 
-var _ = require('lodash');
-var fetch = require('node-fetch');
-var moment = require('moment');
-var worldbank = require('./worldbank.js');
-var Promise = require('bluebird');
-var Datasource = require('../lib/classes/datasource');
+var _lodash = require('lodash');
 
-module.exports = new Datasource('worldbank_indicators', {
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _worldbank = require('./worldbank.js');
+
+var _worldbank2 = _interopRequireDefault(_worldbank);
+
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+var _datasource = require('../lib/classes/datasource');
+
+var _datasource2 = _interopRequireDefault(_datasource);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _datasource2.default('worldbank_indicators', {
   args: [{
     name: 'country', // countries/all/indicators/SP.POP.TOTL
     types: ['string', 'null'],
@@ -18,22 +29,26 @@ module.exports = new Datasource('worldbank_indicators', {
     help: 'The indicator code to use. You\'ll have to look this up on data.worldbank.org.' + ' Often pretty obtuse. Eg SP.POP.TOTL is population'
   }],
   aliases: ['wbi'],
-  help: '\n    [experimental]\n    Pull data from http://data.worldbank.org/ using the country name and indicator. The worldbank provides\n    mostly yearly data, and often has no data for the current year. Try offset=-1y if you get no data for recent\n    time ranges.',
+  help: `
+    [experimental]
+    Pull data from http://data.worldbank.org/ using the country name and indicator. The worldbank provides
+    mostly yearly data, and often has no data for the current year. Try offset=-1y if you get no data for recent
+    time ranges.`,
   fn: function worldbankIndicators(args, tlConfig) {
-    var config = _.defaults(args.byName, {
+    const config = _lodash2.default.defaults(args.byName, {
       country: 'wld',
       indicator: 'SP.POP.TOTL'
     });
 
-    var countries = config.country.split(':');
-    var seriesLists = _.map(countries, function (country) {
-      var code = 'countries/' + country + '/indicators/' + config.indicator;
-      var wbArgs = [code];
+    const countries = config.country.split(':');
+    const seriesLists = _lodash2.default.map(countries, function (country) {
+      const code = 'countries/' + country + '/indicators/' + config.indicator;
+      const wbArgs = [code];
       wbArgs.byName = { code: code };
-      return worldbank.timelionFn(wbArgs, tlConfig);
+      return _worldbank2.default.timelionFn(wbArgs, tlConfig);
     });
 
-    return Promise.map(seriesLists, function (seriesList) {
+    return _bluebird2.default.map(seriesLists, function (seriesList) {
       return seriesList.list[0];
     }).then(function (list) {
       return {

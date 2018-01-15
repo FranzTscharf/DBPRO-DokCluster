@@ -1,13 +1,11 @@
 'use strict';
 
-var path = require('path');
-
 module.exports = function (kibana) {
-  var mainFile = 'plugins/timelion/app';
+  let mainFile = 'plugins/timelion/app';
 
-  var ownDescriptor = Object.getOwnPropertyDescriptor(kibana, 'autoload');
-  var protoDescriptor = Object.getOwnPropertyDescriptor(kibana.constructor.prototype, 'autoload');
-  var descriptor = ownDescriptor || protoDescriptor || {};
+  const ownDescriptor = Object.getOwnPropertyDescriptor(kibana, 'autoload');
+  const protoDescriptor = Object.getOwnPropertyDescriptor(kibana.constructor.prototype, 'autoload');
+  const descriptor = ownDescriptor || protoDescriptor || {};
   if (descriptor.get) {
     // the autoload list has been replaced with a getter that complains about
     // improper access, bypass that getter by seeing if it is defined
@@ -23,8 +21,8 @@ module.exports = function (kibana) {
         description: 'Time series expressions for everything',
         icon: 'plugins/timelion/icon.svg',
         main: mainFile,
-        injectVars: function injectVars(server, options) {
-          var config = server.config();
+        injectVars: function injectVars(server) {
+          const config = server.config();
           return {
             kbnIndex: config.get('kibana.index'),
             esShardTimeout: config.get('elasticsearch.shardTimeout'),
@@ -33,7 +31,8 @@ module.exports = function (kibana) {
         }
       },
       hacks: ['plugins/timelion/lib/panel_registry', 'plugins/timelion/panels/timechart/timechart'],
-      visTypes: ['plugins/timelion/vis']
+      visTypes: ['plugins/timelion/vis'],
+      mappings: require('./mappings.json')
     },
     init: require('./init.js')
   });

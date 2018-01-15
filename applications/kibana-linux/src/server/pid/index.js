@@ -1,7 +1,5 @@
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
 var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
@@ -16,25 +14,27 @@ var _bluebird2 = _interopRequireDefault(_bluebird);
 
 var _fs = require('fs');
 
-var writeFile = _bluebird2['default'].promisify(require('fs').writeFile);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = _bluebird2['default'].method(function (kbnServer, server, config) {
-  var path = config.get('pid.file');
+const writeFile = _bluebird2.default.promisify(require('fs').writeFile);
+
+module.exports = _bluebird2.default.method(function (kbnServer, server, config) {
+  const path = config.get('pid.file');
   if (!path) return;
 
-  var pid = String(process.pid);
+  const pid = String(process.pid);
 
-  return writeFile(path, pid, { flag: 'wx' })['catch'](function (err) {
+  return writeFile(path, pid, { flag: 'wx' }).catch(function (err) {
     if (err.code !== 'EEXIST') throw err;
 
-    var log = {
+    const log = {
       tmpl: 'pid file already exists at <%= path %>',
       path: path,
       pid: pid
     };
 
     if (config.get('pid.exclusive')) {
-      throw _boom2['default'].create(500, _lodash2['default'].template(log.tmpl)(log), log);
+      throw _boom2.default.create(500, _lodash2.default.template(log.tmpl)(log), log);
     } else {
       server.log(['pid', 'warning'], log);
     }
@@ -48,7 +48,7 @@ module.exports = _bluebird2['default'].method(function (kbnServer, server, confi
       pid: pid
     });
 
-    var clean = _lodash2['default'].once(function (code) {
+    const clean = _lodash2.default.once(function () {
       (0, _fs.unlinkSync)(path);
     });
 
@@ -61,8 +61,8 @@ module.exports = _bluebird2['default'].method(function (kbnServer, server, confi
       process.kill(process.pid, 'SIGINT');
     });
 
-    process.on('unhandledRejection', function (reason, promise) {
-      server.log(['warning'], 'Detected an unhandled Promise rejection.\n' + reason);
+    process.on('unhandledRejection', function (reason) {
+      server.log(['warning'], `Detected an unhandled Promise rejection.\n${reason}`);
     });
   });
 });

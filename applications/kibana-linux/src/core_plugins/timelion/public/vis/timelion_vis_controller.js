@@ -1,31 +1,25 @@
+import { FilterBarQueryFilterProvider } from 'ui/filter_bar/query_filter';
+import { uiModules } from 'ui/modules';
+import timezoneProvider from 'plugins/timelion/services/timezone';
+import { dashboardContextProvider } from 'plugins/kibana/dashboard/dashboard_context';
+import 'plugins/timelion/directives/chart/chart';
+import 'plugins/timelion/directives/interval/interval';
+import 'ui/state_management/app_state';
+
 define(function (require) {
-  require('plugins/timelion/directives/chart/chart');
-  require('plugins/timelion/directives/interval/interval');
-  require('plugins/timelion/directives/refresh_hack');
-  require('ui/state_management/app_state');
+  const _ = require('lodash');
+  const module = uiModules.get('kibana/timelion_vis', ['kibana']);
+  module.controller('TimelionVisController', function ($scope, $element, Private, Notifier, $http, $rootScope, timefilter) {
+    const queryFilter = Private(FilterBarQueryFilterProvider);
+    const timezone = Private(timezoneProvider)();
+    const dashboardContext = Private(dashboardContextProvider);
 
-  var _ = require('lodash');
-  var module = require('ui/modules').get('kibana/timelion_vis', ['kibana']);
-  module.controller('TimelionVisController', function (
-    $scope,
-    $element,
-    Private,
-    Notifier,
-    $http,
-    $rootScope,
-    timefilter,
-    getAppState
-  ) {
-    var queryFilter = Private(require('ui/filter_bar/query_filter'));
-    var timezone = Private(require('plugins/timelion/services/timezone'))();
-    var dashboardContext = Private(require('plugins/timelion/services/dashboard_context'));
-
-    var notify = new Notifier({
+    const notify = new Notifier({
       location: 'Timelion'
     });
 
     $scope.search = function run() {
-      var expression = $scope.vis.params.expression;
+      const expression = $scope.vis.params.expression;
       if (!expression) return;
 
       $http.post('../api/timelion/run', {
@@ -46,7 +40,7 @@ define(function (require) {
       })
       .error(function (resp) {
         $scope.sheet = [];
-        var err = new Error(resp.message);
+        const err = new Error(resp.message);
         err.stack = resp.stack;
         notify.error(err);
       });

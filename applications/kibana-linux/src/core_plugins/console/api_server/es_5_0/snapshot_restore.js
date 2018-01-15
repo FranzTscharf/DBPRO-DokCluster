@@ -1,12 +1,5 @@
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['type["\']s*:s*["\']fs'], ['type["\']\\s*:\\s*["\']fs']),
-    _templateObject2 = _taggedTemplateLiteral(['type["\']s*:s*["\']url'], ['type["\']\\s*:\\s*["\']url']),
-    _templateObject3 = _taggedTemplateLiteral(['type["\']s*:s*["\']s3'], ['type["\']\\s*:\\s*["\']s3']),
-    _templateObject4 = _taggedTemplateLiteral(['type["\']s*:s*["\']hdfs'], ['type["\']\\s*:\\s*["\']hdfs']);
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 module.exports = function (api) {
   api.addEndpointDescription('restore_snapshot', {
     methods: ['POST'],
@@ -52,29 +45,6 @@ module.exports = function (api) {
     patterns: ['_snapshot/_status', '_snapshot/{id}/_status', '_snapshot/{id}/{ids}/_status']
   });
 
-  function getRepositoryType(context, editor) {
-    var iter = editor.iterForCurrentLoc();
-    // for now just iterate back to the first "type" key
-    var t = iter.getCurrentToken();
-    var type;
-    while (t && t.type.indexOf("url") < 0) {
-      if (t.type === 'variable' && t.value === '"type"') {
-        t = editor.parser.nextNonEmptyToken(iter);
-        if (!t || t.type !== "punctuation.colon") {
-          // weird place to be in, but safe choice..
-          break;
-        }
-        t = editor.parser.nextNonEmptyToken(iter);
-        if (t && t.type === "string") {
-          type = t.value.replace(/"/g, '');
-        }
-        break;
-      }
-      t = editor.parser.prevNonEmptyToken(iter);
-    }
-    return type;
-  }
-
   api.addEndpointDescription('put_repository', {
     methods: ['PUT'],
     patterns: ['_snapshot/{id}'],
@@ -88,7 +58,7 @@ module.exports = function (api) {
         __one_of: [{
           //fs
           __condition: {
-            lines_regex: String.raw(_templateObject)
+            lines_regex: String.raw`type["']\s*:\s*["']fs`
           },
           __template: {
             location: "path"
@@ -101,7 +71,7 @@ module.exports = function (api) {
           max_snapshot_bytes_per_sec: "20mb"
         }, { // url
           __condition: {
-            lines_regex: String.raw(_templateObject2)
+            lines_regex: String.raw`type["']\s*:\s*["']url`
           },
           __template: {
             url: ""
@@ -110,7 +80,7 @@ module.exports = function (api) {
           concurrent_streams: 5
         }, { //s3
           __condition: {
-            lines_regex: String.raw(_templateObject3)
+            lines_regex: String.raw`type["']\s*:\s*["']s3`
           },
           __template: {
             bucket: ""
@@ -123,7 +93,7 @@ module.exports = function (api) {
           compress: { __one_of: [true, false] }
         }, { // hdfs
           __condition: {
-            lines_regex: String.raw(_templateObject4)
+            lines_regex: String.raw`type["']\s*:\s*["']hdfs`
           },
           __template: {
             path: ""

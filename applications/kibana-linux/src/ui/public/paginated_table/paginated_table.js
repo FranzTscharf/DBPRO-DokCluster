@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import AggConfigResult from 'ui/vis/agg_config_result';
 
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import paginatedTableTemplate from 'ui/paginated_table/paginated_table.html';
 uiModules
 .get('kibana')
@@ -15,7 +15,9 @@ uiModules
     scope: {
       rows: '=',
       columns: '=',
+      linkToTop: '=',
       perPage: '=?',
+      showBlankRows: '=?',
       sortHandler: '=?',
       sort: '=?',
       showSelector: '=?',
@@ -49,6 +51,14 @@ uiModules
         self.sort.direction = sortDirection;
         if ($scope.sort) {
           _.assign($scope.sort, self.sort);
+        }
+      };
+
+      self.rowsToShow = function (numRowsPerPage, actualNumRowsOnThisPage) {
+        if ($scope.showBlankRows === false) {
+          return actualNumRowsOnThisPage;
+        } else {
+          return numRowsPerPage;
         }
       };
 

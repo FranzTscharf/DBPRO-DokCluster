@@ -1,5 +1,6 @@
 import _ from 'lodash';
-export default function ResponseAggConfigProvider() {
+
+export function AggTypesMetricsGetResponseAggConfigClassProvider() {
 
   /**
    * Get the ResponseAggConfig class for an aggConfig,
@@ -30,7 +31,7 @@ export default function ResponseAggConfigProvider() {
       this.key = key;
       this.parentId = this.id;
 
-      let subId = String(key);
+      const subId = String(key);
       if (subId.indexOf('.') > -1) {
         this.id = this.parentId + '[\'' + subId.replace(/'/g, '\\\'') + '\']';
       } else {
@@ -46,4 +47,4 @@ export default function ResponseAggConfigProvider() {
 
     return ResponseAggConfig;
   }
-};
+}

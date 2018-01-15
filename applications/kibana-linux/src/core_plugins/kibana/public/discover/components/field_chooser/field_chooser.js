@@ -2,12 +2,13 @@ import 'ui/directives/css_truncate';
 import 'ui/directives/field_name';
 import 'ui/filters/unique';
 import 'plugins/kibana/discover/components/field_chooser/discover_field';
+import 'angular-ui-select';
 import _ from 'lodash';
 import $ from 'jquery';
 import rison from 'rison-node';
-import fieldCalculator from 'plugins/kibana/discover/components/field_chooser/lib/field_calculator';
-import IndexPatternsFieldListProvider from 'ui/index_patterns/_field_list';
-import uiModules from 'ui/modules';
+import { fieldCalculator } from 'plugins/kibana/discover/components/field_chooser/lib/field_calculator';
+import { IndexPatternsFieldListProvider } from 'ui/index_patterns/_field_list';
+import { uiModules } from 'ui/modules';
 import fieldChooserTemplate from 'plugins/kibana/discover/components/field_chooser/field_chooser.html';
 const app = uiModules.get('apps/discover');
 
@@ -25,7 +26,9 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
       state: '=',
       indexPattern: '=',
       indexPatternList: '=',
-      updateFilterInQuery: '=filter'
+      onAddField: '=',
+      onAddFilter: '=',
+      onRemoveField: '=',
     },
     template: fieldChooserTemplate,
     link: function ($scope) {
@@ -42,18 +45,19 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
       const filter = $scope.filter = {
         props: [
           'type',
-          'indexed',
-          'analyzed',
+          'aggregatable',
+          'searchable',
           'missing',
           'name'
         ],
         defaults: {
-          missing: true
+          missing: true,
+          type: 'any'
         },
         boolOpts: [
-          {label: 'any', value: undefined },
-          {label: 'yes', value: true },
-          {label: 'no', value: false }
+          { label: 'any', value: undefined },
+          { label: 'yes', value: true },
+          { label: 'no', value: false }
         ],
         toggleVal: function (name, def) {
           if (filter.vals[name] !== def) filter.vals[name] = def;
@@ -66,16 +70,16 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
           return field.display;
         },
         isFieldFiltered: function (field) {
-          const matchFilter = (filter.vals.type == null || field.type === filter.vals.type);
-          const isAnalyzed = (filter.vals.analyzed == null || field.analyzed === filter.vals.analyzed);
-          const isIndexed = (filter.vals.indexed == null || field.indexed === filter.vals.indexed);
+          const matchFilter = (filter.vals.type === 'any' || field.type === filter.vals.type);
+          const isAggregatable = (filter.vals.aggregatable == null || field.aggregatable === filter.vals.aggregatable);
+          const isSearchable = (filter.vals.searchable == null || field.searchable === filter.vals.searchable);
           const scriptedOrMissing = (!filter.vals.missing || field.scripted || field.rowCount > 0);
           const matchName = (!filter.vals.name || field.name.indexOf(filter.vals.name) !== -1);
 
           return !field.display
             && matchFilter
-            && isAnalyzed
-            && isIndexed
+            && isAggregatable
+            && isSearchable
             && scriptedOrMissing
             && matchName
           ;
@@ -96,11 +100,6 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
       $scope.$watchCollection('filter.vals', function () {
         filter.active = filter.getActive();
       });
-
-      $scope.toggle = function (fieldName) {
-        $scope.increaseFieldCounter(fieldName);
-        _.toggleInOut($scope.columns, fieldName);
-      };
 
       $scope.$watchMulti([
         '[]fieldCounts',
@@ -148,14 +147,14 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
         .commit();
 
         // include undefined so the user can clear the filter
-        $scope.fieldTypes = _.union([undefined], _.pluck(fields, 'type'));
+        $scope.fieldTypes = _.union(['any'], _.pluck(fields, 'type'));
       });
 
       $scope.increaseFieldCounter = function (fieldName) {
         $scope.indexPattern.popularizeField(fieldName, 1);
       };
 
-      $scope.vizLocation = function (field) {
+      function getVisualizeUrl(field) {
         if (!$scope.state) {return '';}
 
         let agg = {};
@@ -188,7 +187,7 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
             schema: 'segment',
             params: {
               field: field.name,
-              size: config.get('discover:aggs:terms:size', 20),
+              size: parseInt(config.get('discover:aggs:terms:size'), 10),
               orderBy: '2'
             }
           };
@@ -204,21 +203,26 @@ app.directive('discFieldChooser', function ($location, globalState, config, $rou
               type: type,
               aggs: [
                 agg,
-                {schema: 'metric', type: 'count', 'id': '2'}
+                { schema: 'metric', type: 'count', 'id': '2' }
               ]
             }
           })
         }));
-      };
+      }
 
-      $scope.details = function (field, recompute) {
+      $scope.computeDetails = function (field, recompute) {
         if (_.isUndefined(field.details) || recompute) {
-          field.details = fieldCalculator.getFieldValueCounts({
-            hits: $scope.hits,
-            field: field,
-            count: 5,
-            grouped: false
-          });
+          field.details = Object.assign(
+            {
+              visualizeUrl: field.visualizable ? getVisualizeUrl(field) : null,
+            },
+            fieldCalculator.getFieldValueCounts({
+              hits: $scope.hits,
+              field: field,
+              count: 5,
+              grouped: false
+            }),
+          );
           _.each(field.details.buckets, function (bucket) {
             bucket.display = field.format.convert(bucket.value);
           });

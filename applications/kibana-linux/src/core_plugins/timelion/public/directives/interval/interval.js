@@ -1,15 +1,18 @@
-var _ = require('lodash');
-var $ = require('jquery');
-var moment = require('moment');
+import _ from 'lodash';
+import $ from 'jquery';
 
-var app = require('ui/modules').get('apps/timelion', []);
-var html = require('./interval.html');
+const app = require('ui/modules').get('apps/timelion', []);
+import html from './interval.html';
 
-app.directive('timelionInterval', function ($compile, $timeout, timefilter) {
+app.directive('timelionInterval', function ($compile, $timeout) {
   return {
     restrict: 'E',
     scope: {
-      model: '=', // The interval model
+      // The interval model
+      model: '=',
+      // Differentiates between contexts, e.g. when this directive is used in the header in the
+      // Timelion app or in the sidebar in the Visualize app.
+      inHeader: '=',
     },
     template: html,
     link: function ($scope, $elem) {

@@ -1,9 +1,13 @@
 'use strict';
 
-var _ = require('lodash');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function unzipPairs(timeValObject) {
-  var paired = _.chain(timeValObject).pairs().map(function (point) {
+  const paired = _lodash2.default.chain(timeValObject).pairs().map(function (point) {
     return [parseInt(point[0], 10), point[1]];
   }).sortBy(function (point) {
     return point[0];

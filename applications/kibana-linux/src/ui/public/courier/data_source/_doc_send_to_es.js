@@ -7,13 +7,13 @@
 
 import _ from 'lodash';
 
-import errors from 'ui/errors';
-import RequestQueueProvider from 'ui/courier/_request_queue';
-import FetchProvider from 'ui/courier/fetch/fetch';
+import { VersionConflict, RequestFailure } from 'ui/errors';
+import { RequestQueueProvider } from 'ui/courier/_request_queue';
+import { FetchProvider } from 'ui/courier/fetch/fetch';
 
-export default function (Promise, Private, es, esAdmin, kbnIndex) {
-  let requestQueue = Private(RequestQueueProvider);
-  let courierFetch = Private(FetchProvider);
+export function DocSendToEsProvider(Promise, Private, es, esAdmin, kbnIndex) {
+  const requestQueue = Private(RequestQueueProvider);
+  const courierFetch = Private(FetchProvider);
 
   /**
    * Backend for doUpdate and doIndex
@@ -23,9 +23,9 @@ export default function (Promise, Private, es, esAdmin, kbnIndex) {
    * @param  {String} body - HTTP request body
    */
   return function (method, validateVersion, body, ignore) {
-    let doc = this;
+    const doc = this;
     // straight assignment will causes undefined values
-    let params = _.pick(this._state, ['id', 'type', 'index']);
+    const params = _.pick(this._state, ['id', 'type', 'index']);
     params.body = body;
     params.ignore = ignore || [409];
 
@@ -36,7 +36,7 @@ export default function (Promise, Private, es, esAdmin, kbnIndex) {
     const client = [].concat(params.index).includes(kbnIndex) ? esAdmin : es;
     return client[method](params)
     .then(function (resp) {
-      if (resp.status === 409) throw new errors.VersionConflict(resp);
+      if (resp.status === 409) throw new VersionConflict(resp);
 
       doc._storeVersion(resp._version);
       doc.id(resp._id);
@@ -59,13 +59,13 @@ export default function (Promise, Private, es, esAdmin, kbnIndex) {
       // notify pending request for this same document that we have updates
       docFetchProm.then(function (fetchResp) {
         // use the key to compair sources
-        let key = doc._versionKey();
+        const key = doc._versionKey();
 
         // clear the queue and filter out the removed items, pushing the
         // unmatched ones back in.
-        let respondTo = requestQueue.splice(0).filter(function (req) {
-          let isDoc = req.source._getType() === 'doc';
-          let keyMatches = isDoc && req.source._versionKey() === key;
+        const respondTo = requestQueue.splice(0).filter(function (req) {
+          const isDoc = req.source._getType() === 'doc';
+          const keyMatches = isDoc && req.source._versionKey() === key;
 
           // put some request back into the queue
           if (!keyMatches) {
@@ -85,7 +85,7 @@ export default function (Promise, Private, es, esAdmin, kbnIndex) {
     })
     .catch(function (err) {
       // cast the error
-      throw new errors.RequestFailure(err);
+      throw new RequestFailure(err);
     });
   };
-};
+}

@@ -1,8 +1,7 @@
 
-import modules from 'ui/modules';
-import angular from 'angular';
+import { uiModules } from 'ui/modules';
 
-modules.get('kibana')
+uiModules.get('kibana')
 .service('globalNavState', (localStorage, $rootScope) => {
   return {
     isOpen: () => {

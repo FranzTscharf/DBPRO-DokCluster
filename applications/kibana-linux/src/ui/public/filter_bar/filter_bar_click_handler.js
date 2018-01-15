@@ -1,12 +1,12 @@
 import _ from 'lodash';
-import dedupFilters from './lib/dedup_filters';
-import uniqFilters from './lib/uniq_filters';
-import findByParam from 'ui/utils/find_by_param';
+import { dedupFilters } from './lib/dedup_filters';
+import { uniqFilters } from './lib/uniq_filters';
+import { findByParam } from 'ui/utils/find_by_param';
 
-export default function (Notifier) {
+export function FilterBarClickHandlerProvider(Notifier) {
   return function ($state) {
     return function (event, simulate) {
-      let notify = new Notifier({
+      const notify = new Notifier({
         location: 'Filter bar'
       });
       let aggConfigResult;
@@ -23,14 +23,14 @@ export default function (Notifier) {
       }
 
       if (aggConfigResult) {
-        let isLegendLabel = !!event.point.values;
+        const isLegendLabel = !!event.point.values;
         let aggBuckets = _.filter(aggConfigResult.getPath(), { type: 'bucket' });
 
         // For legend clicks, use the last bucket in the path
         if (isLegendLabel) {
           // series data has multiple values, use aggConfig on the first
           // hierarchical data values is an object with the addConfig
-          let aggConfig = findByParam(event.point.values, 'aggConfig');
+          const aggConfig = findByParam(event.point.values, 'aggConfig');
           aggBuckets = aggBuckets.filter((result) => result.aggConfig && result.aggConfig === aggConfig);
         }
 
@@ -56,7 +56,7 @@ export default function (Notifier) {
           });
         }
 
-        filters = dedupFilters($state.filters, uniqFilters(filters));
+        filters = dedupFilters($state.filters, uniqFilters(filters), { negate: true });
         // We need to add a bunch of filter deduping here.
         if (!simulate) {
           $state.$newFilters = filters;
@@ -66,4 +66,5 @@ export default function (Notifier) {
       }
     };
   };
-};
+}
+

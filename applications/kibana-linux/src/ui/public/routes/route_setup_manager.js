@@ -1,6 +1,11 @@
 import _ from 'lodash';
 
-module.exports = class RouteSetupManager {
+// Throw this inside of an Angular route resolver after calling `kbnUrl.change`
+// so that the $router can observe the $location update. Otherwise, the location
+// route setup work will resovle before the route update occurs.
+export const WAIT_FOR_URL_CHANGE_TOKEN = new Error('WAIT_FOR_URL_CHANGE_TOKEN');
+
+export class RouteSetupManager {
   constructor() {
     this.setupWork = [];
     this.onSetupComplete = [];
@@ -30,7 +35,7 @@ module.exports = class RouteSetupManager {
    */
   doWork(Promise, $injector, userWork) {
 
-    let invokeEach = (arr, locals) => {
+    const invokeEach = (arr, locals) => {
       return Promise.map(arr, fn => {
         if (!fn) return;
         return $injector.invoke(fn, null, locals);
@@ -39,16 +44,16 @@ module.exports = class RouteSetupManager {
 
     // call each error handler in order, until one of them resolves
     // or we run out of handlers
-    let callErrorHandlers = (handlers, origError) => {
+    const callErrorHandlers = (handlers, origError) => {
       if (!_.size(handlers)) throw origError;
 
       // clone so we don't discard handlers or loose them
       handlers = handlers.slice(0);
 
-      let next = (err) => {
+      const next = (err) => {
         if (!handlers.length) throw err;
 
-        let handler = handlers.shift();
+        const handler = handlers.shift();
         if (!handler) return next(err);
 
         return Promise.try(function () {
@@ -66,14 +71,23 @@ module.exports = class RouteSetupManager {
     )
     .then(() => {
       // wait for the queue to fill up, then do all the work
-      let defer = Promise.defer();
+      const defer = Promise.defer();
       userWork.resolveWhenFull(defer);
 
       return defer.promise.then(() => Promise.all(userWork.doWork()));
+    })
+    .catch(error => {
+      if (error === WAIT_FOR_URL_CHANGE_TOKEN) {
+        // prevent moving forward, return a promise that never resolves
+        // so that the $router can observe the $location update
+        return Promise.halt();
+      }
+
+      throw error;
     })
     .then(
       () => invokeEach(this.onWorkComplete),
       err => callErrorHandlers(this.onWorkError, err)
     );
   }
-};
+}

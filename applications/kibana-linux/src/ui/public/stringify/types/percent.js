@@ -1,9 +1,10 @@
 import _ from 'lodash';
-import BoundToConfigObjProvider from 'ui/bound_to_config_obj';
-import StringifyTypesNumeralProvider from 'ui/stringify/types/_numeral';
-export default function PercentFormatProvider(Private) {
-  let BoundToConfigObj = Private(BoundToConfigObjProvider);
-  let Numeral = Private(StringifyTypesNumeralProvider);
+import { BoundToConfigObjProvider } from 'ui/bound_to_config_obj';
+import { StringifyTypesNumeralProvider } from 'ui/stringify/types/_numeral';
+
+export function stringifyPercent(Private) {
+  const BoundToConfigObj = Private(BoundToConfigObjProvider);
+  const Numeral = Private(StringifyTypesNumeralProvider);
 
   return Numeral.factory({
     id: 'percent',
@@ -21,4 +22,4 @@ export default function PercentFormatProvider(Private) {
       })
     }
   });
-};
+}

@@ -1,12 +1,11 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.DEV_SSL_KEY_PATH = exports.DEV_SSL_CERT_PATH = undefined;
 
 var _path = require('path');
 
-var DEV_SSL_CERT_PATH = (0, _path.resolve)(__dirname, '../../test/dev_certs/server.crt');
-exports.DEV_SSL_CERT_PATH = DEV_SSL_CERT_PATH;
-var DEV_SSL_KEY_PATH = (0, _path.resolve)(__dirname, '../../test/dev_certs/server.key');
-exports.DEV_SSL_KEY_PATH = DEV_SSL_KEY_PATH;
+const DEV_SSL_CERT_PATH = exports.DEV_SSL_CERT_PATH = (0, _path.resolve)(__dirname, '../../test/dev_certs/server.crt');
+const DEV_SSL_KEY_PATH = exports.DEV_SSL_KEY_PATH = (0, _path.resolve)(__dirname, '../../test/dev_certs/server.key');

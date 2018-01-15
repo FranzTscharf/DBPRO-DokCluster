@@ -1,8 +1,16 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var Chainable = require('../lib/classes/chainable');
-module.exports = new Chainable('hide', {
+var _alter = require('../lib/alter.js');
+
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('hide', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -13,7 +21,7 @@ module.exports = new Chainable('hide', {
   }],
   help: 'Hide the series by default',
   fn: function hideFn(args) {
-    return alter(args, function (eachSeries, hide) {
+    return (0, _alter2.default)(args, function (eachSeries, hide) {
       eachSeries._hide = hide == null ? true : hide;
       return eachSeries;
     });

@@ -1,17 +1,17 @@
 import _ from 'lodash';
 import html from 'ui/doc_table/doc_table.html';
-import getSort from 'ui/doc_table/lib/get_sort';
+import { getSort } from 'ui/doc_table/lib/get_sort';
 import 'ui/doc_table/doc_table.less';
 import 'ui/directives/truncated';
 import 'ui/directives/infinite_scroll';
 import 'ui/doc_table/components/table_header';
 import 'ui/doc_table/components/table_row';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
-
+import { getLimitedSearchResultsMessage } from './doc_table_strings';
 
 uiModules.get('kibana')
-.directive('docTable', function (config, Notifier, getAppState) {
+.directive('docTable', function (config, Notifier, getAppState, pagerFactory, $filter) {
   return {
     restrict: 'E',
     template: html,
@@ -23,17 +23,22 @@ uiModules.get('kibana')
       searchSource: '=?',
       infiniteScroll: '=?',
       filter: '=?',
+      filters: '=?',
+      onAddColumn: '=?',
+      onChangeSortOrder: '=?',
+      onMoveColumn: '=?',
+      onRemoveColumn: '=?',
     },
     link: function ($scope) {
-      let notify = new Notifier();
+      const notify = new Notifier();
       $scope.limit = 50;
       $scope.persist = {
         sorting: $scope.sorting,
         columns: $scope.columns
       };
 
-      let prereq = (function () {
-        let fns = [];
+      const prereq = (function () {
+        const fns = [];
 
         return function register(fn) {
           fns.push(fn);
@@ -50,6 +55,13 @@ uiModules.get('kibana')
           };
         };
       }());
+      const limitTo = $filter('limitTo');
+      const calculateItemsOnPage = () => {
+        $scope.pager.setTotalItems($scope.hits.length);
+        $scope.pageOfItems = limitTo($scope.hits, $scope.pager.pageSize, $scope.pager.startIndex);
+      };
+
+      $scope.limitedResultsWarning = getLimitedSearchResultsMessage(config.get('discover:sampleSize'));
 
       $scope.addRows = function () {
         $scope.limit += 50;
@@ -59,7 +71,7 @@ uiModules.get('kibana')
       $scope.$watch('columns', function (columns) {
         if (columns.length !== 0) return;
 
-        let $state = getAppState();
+        const $state = getAppState();
         $scope.columns.push('_source');
         if ($state) $state.replace();
       });
@@ -73,7 +85,7 @@ uiModules.get('kibana')
       });
 
 
-      $scope.$watch('searchSource', prereq(function (searchSource) {
+      $scope.$watch('searchSource', prereq(function () {
         if (!$scope.searchSource) return;
 
         $scope.indexPattern = $scope.searchSource.get('index');
@@ -102,6 +114,11 @@ uiModules.get('kibana')
           if ($scope.searchSource !== $scope.searchSource) return;
 
           $scope.hits = resp.hits.hits;
+          // We limit the number of returned results, but we want to show the actual number of hits, not
+          // just how many we retrieved.
+          $scope.totalHitCount = resp.hits.total;
+          $scope.pager = pagerFactory.create($scope.hits.length, 50, 1);
+          calculateItemsOnPage();
 
           return $scope.searchSource.onResults().then(onResults);
         }).catch(notify.fatal);
@@ -109,6 +126,20 @@ uiModules.get('kibana')
         $scope.searchSource.onError(notify.error).catch(notify.fatal);
       }));
 
+      $scope.pageOfItems = [];
+      $scope.onPageNext = () => {
+        $scope.pager.nextPage();
+        calculateItemsOnPage();
+      };
+
+      $scope.onPagePrevious = () => {
+        $scope.pager.previousPage();
+        calculateItemsOnPage();
+      };
+
+      $scope.shouldShowLimitedResultsWarning = () => (
+        !$scope.pager.hasNextPage && $scope.pager.totalItems < $scope.totalHitCount
+      );
     }
   };
 });

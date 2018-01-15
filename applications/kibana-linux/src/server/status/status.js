@@ -1,32 +1,16 @@
 'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _lodash = require('lodash');
-
-var _lodash2 = _interopRequireDefault(_lodash);
-
 var _states = require('./states');
 
 var _states2 = _interopRequireDefault(_states);
 
 var _events = require('events');
 
-var Status = (function (_EventEmitter) {
-  _inherits(Status, _EventEmitter);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function Status(id, server) {
-    _classCallCheck(this, Status);
-
-    _get(Object.getPrototypeOf(Status.prototype), 'constructor', this).call(this);
+class Status extends _events.EventEmitter {
+  constructor(id, server) {
+    super();
 
     if (!id || typeof id !== 'string') {
       throw new TypeError('Status constructor requires an `id` string');
@@ -40,7 +24,7 @@ var Status = (function (_EventEmitter) {
     this.on('change', function (previous, previousMsg) {
       this.since = new Date();
 
-      var tags = ['status', this.id, this.state === 'red' ? 'error' : 'info'];
+      const tags = ['status', this.id, this.state === 'red' ? 'error' : 'info'];
 
       server.log(tags, {
         tmpl: 'Status changed from <%= prevState %> to <%= state %><%= message ? " - " + message : "" %>',
@@ -52,54 +36,39 @@ var Status = (function (_EventEmitter) {
     });
   }
 
-  _createClass(Status, [{
-    key: 'toJSON',
-    value: function toJSON() {
-      return {
-        id: this.id,
-        state: this.state,
-        icon: _states2['default'].get(this.state).icon,
-        message: this.message,
-        since: this.since
-      };
+  toJSON() {
+    return {
+      id: this.id,
+      state: this.state,
+      icon: _states2.default.get(this.state).icon,
+      message: this.message,
+      since: this.since
+    };
+  }
+
+  on(eventName, handler) {
+    super.on(eventName, handler);
+
+    if (eventName === this.state) {
+      setImmediate(() => handler(this.state, this.message));
     }
-  }, {
-    key: 'on',
-    value: function on(eventName, handler) {
-      var _this = this;
+  }
 
-      _get(Object.getPrototypeOf(Status.prototype), 'on', this).call(this, eventName, handler);
-
-      if (eventName === this.state) {
-        setImmediate(function () {
-          return handler(_this.state, _this.message);
-        });
-      }
+  once(eventName, handler) {
+    if (eventName === this.state) {
+      setImmediate(() => handler(this.state, this.message));
+    } else {
+      super.once(eventName, handler);
     }
-  }, {
-    key: 'once',
-    value: function once(eventName, handler) {
-      var _this2 = this;
+  }
+}
 
-      if (eventName === this.state) {
-        setImmediate(function () {
-          return handler(_this2.state, _this2.message);
-        });
-      } else {
-        _get(Object.getPrototypeOf(Status.prototype), 'once', this).call(this, eventName, handler);
-      }
-    }
-  }]);
-
-  return Status;
-})(_events.EventEmitter);
-
-_states2['default'].all.forEach(function (state) {
+_states2.default.all.forEach(function (state) {
   Status.prototype[state.id] = function (message) {
     if (this.state === 'disabled') return;
 
-    var previous = this.state;
-    var previousMsg = this.message;
+    const previous = this.state;
+    const previousMsg = this.message;
 
     this.error = null;
     this.message = message || state.title;

@@ -7,17 +7,17 @@ import {
   getUnhashableStatesProvider,
   unhashUrl,
 } from 'ui/state_management/state_hashing';
-import Notifier from 'ui/notify/notifier';
+import { Notifier } from 'ui/notify/notifier';
 
-import urlShortenerProvider from '../lib/url_shortener';
+import { UrlShortenerProvider } from '../lib/url_shortener';
 
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import shareTemplate from 'ui/share/views/share.html';
 const app = uiModules.get('kibana');
 
 app.directive('share', function (Private) {
   const getUnhashableStates = Private(getUnhashableStatesProvider);
-  const urlShortener = Private(urlShortenerProvider);
+  const urlShortener = Private(UrlShortenerProvider);
 
   return {
     restrict: 'E',
@@ -28,7 +28,7 @@ app.directive('share', function (Private) {
     },
     template: shareTemplate,
     controllerAs: 'share',
-    controller: function ($scope, $document, $location, globalState) {
+    controller: function ($scope, $document, $location) {
       if ($scope.allowEmbed !== 'false' && $scope.allowEmbed !== undefined) {
         throw new Error('allowEmbed must be "false" or undefined');
       }
@@ -65,7 +65,7 @@ app.directive('share', function (Private) {
             },
           }),
         });
-      };
+      }
 
       function getSnapshotUrl() {
         const url = $location.absUrl();

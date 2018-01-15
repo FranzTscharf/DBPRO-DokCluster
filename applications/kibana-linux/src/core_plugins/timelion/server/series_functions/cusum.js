@@ -1,9 +1,20 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var _ = require('lodash');
-var Chainable = require('../lib/classes/chainable');
-module.exports = new Chainable('cusum', {
+var _alter = require('../lib/alter.js');
+
+var _alter2 = _interopRequireDefault(_alter);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('cusum', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -14,10 +25,10 @@ module.exports = new Chainable('cusum', {
   }],
   help: 'Return the cumulative sum of a series, starting at a base.',
   fn: function cusumFn(args) {
-    return alter(args, function (eachSeries, base) {
-      var pairs = eachSeries.data;
-      var total = base || 0;
-      eachSeries.data = _.map(pairs, function (point, i) {
+    return (0, _alter2.default)(args, function (eachSeries, base) {
+      const pairs = eachSeries.data;
+      let total = base || 0;
+      eachSeries.data = _lodash2.default.map(pairs, function (point) {
         total += point[1];
         return [point[0], total];
       });

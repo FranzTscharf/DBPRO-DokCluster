@@ -1,21 +1,24 @@
-import { saveAs } from '@spalger/filesaver';
+import { saveAs } from '@elastic/filesaver';
 import { extend, find, flattenDeep, partialRight, pick, pluck, sortBy } from 'lodash';
 import angular from 'angular';
-import registry from 'plugins/kibana/management/saved_object_registry';
+import { savedObjectManagementRegistry } from 'plugins/kibana/management/saved_object_registry';
 import objectIndexHTML from 'plugins/kibana/management/sections/objects/_objects.html';
 import 'ui/directives/file_upload';
 import uiRoutes from 'ui/routes';
-import uiModules from 'ui/modules';
-
-const MAX_SIZE = Math.pow(2, 31) - 1;
+import { uiModules } from 'ui/modules';
 
 uiRoutes
 .when('/management/kibana/objects', {
   template: objectIndexHTML
 });
 
+uiRoutes
+.when('/management/kibana/objects/:service', {
+  redirectTo: '/management/kibana/objects'
+});
+
 uiModules.get('apps/management')
-.directive('kbnManagementObjects', function (kbnIndex, Notifier, Private, kbnUrl, Promise) {
+.directive('kbnManagementObjects', function (kbnIndex, Notifier, Private, kbnUrl, Promise, confirmModal) {
   return {
     restrict: 'E',
     controllerAs: 'managementObjectsController',
@@ -35,7 +38,7 @@ uiModules.get('apps/management')
       };
 
       const getData = function (filter) {
-        const services = registry.all().map(function (obj) {
+        const services = savedObjectManagementRegistry.all().map(function (obj) {
           const service = $injector.get(obj.service);
           return service.find(filter).then(function (data) {
             return {
@@ -51,8 +54,7 @@ uiModules.get('apps/management')
 
         $q.all(services).then(function (data) {
           $scope.services = sortBy(data, 'title');
-          let tab = $scope.services[0];
-          if ($state.tab) $scope.currentTab = tab = find($scope.services, {title: $state.tab});
+          if ($state.tab) $scope.currentTab = find($scope.services, { title: $state.tab });
 
           $scope.$watch('state.tab', function (tab) {
             if (!tab) $scope.changeTab($scope.services[0]);
@@ -100,17 +102,28 @@ uiModules.get('apps/management')
 
       // TODO: Migrate all scope methods to the controller.
       $scope.bulkDelete = function () {
-        $scope.currentTab.service.delete(pluck($scope.selectedItems, 'id'))
-        .then(refreshData)
-        .then(function () {
-          $scope.selectedItems.length = 0;
-        })
-        .catch(error => notify.error(error));
+        function doBulkDelete() {
+          $scope.currentTab.service.delete(pluck($scope.selectedItems, 'id'))
+            .then(refreshData)
+            .then(function () {
+              $scope.selectedItems.length = 0;
+            })
+            .catch(error => notify.error(error));
+        }
+
+        const confirmModalOptions = {
+          confirmButtonText: `Delete ${$scope.currentTab.title}`,
+          onConfirm: doBulkDelete
+        };
+        confirmModal(
+          `Are you sure you want to delete the selected ${$scope.currentTab.title}? This action is irreversible!`,
+          confirmModalOptions
+        );
       };
 
       // TODO: Migrate all scope methods to the controller.
       $scope.bulkExport = function () {
-        const objs = $scope.selectedItems.map(partialRight(extend, {type: $scope.currentTab.type}));
+        const objs = $scope.selectedItems.map(partialRight(extend, { type: $scope.currentTab.type }));
         retrieveAndExportDocs(objs);
       };
 
@@ -127,7 +140,7 @@ uiModules.get('apps/management')
         if (!objs.length) return notify.error('No saved objects to export.');
         esAdmin.mget({
           index: kbnIndex,
-          body: {docs: objs.map(transformToMget)}
+          body: { docs: objs.map(transformToMget) }
         })
         .then(function (response) {
           saveToFile(response.docs.map(partialRight(pick, '_id', '_type', '_source')));
@@ -136,11 +149,11 @@ uiModules.get('apps/management')
 
       // Takes an object and returns the associated data needed for an mget API request
       function transformToMget(obj) {
-        return {_id: obj.id, _type: obj.type};
+        return { _id: obj.id, _type: obj.type };
       }
 
       function saveToFile(results) {
-        const blob = new Blob([angular.toJson(results, true)], {type: 'application/json'});
+        const blob = new Blob([angular.toJson(results, true)], { type: 'application/json' });
         saveAs(blob, 'export.json');
       }
 
@@ -151,32 +164,81 @@ uiModules.get('apps/management')
           docs = JSON.parse(fileContents);
         } catch (e) {
           notify.error('The file could not be processed.');
+          return;
         }
 
-        return Promise.map(docs, function (doc) {
-          const { service } = find($scope.services, { type: doc._type }) || {};
+        // make sure we have an array, show an error otherwise
+        if (!Array.isArray(docs)) {
+          notify.error('Saved objects file format is invalid and cannot be imported.');
+          return;
+        }
 
-          if (!service) {
-            const msg = `Skipped import of "${doc._source.title}" (${doc._id})`;
-            const reason = `Invalid type: "${doc._type}"`;
-
-            notify.warning(`${msg}, ${reason}`, {
-              lifetime: 0,
-            });
-
-            return;
-          }
-
-          return service.get().then(function (obj) {
-            obj.id = doc._id;
-            return obj.applyESResp(doc).then(function () {
-              return obj.save({ confirmOverwrite : true });
-            });
-          });
+        return new Promise((resolve) => {
+          confirmModal(
+            `If any of the objects already exist, do you want to automatically overwrite them?`, {
+              confirmButtonText: `Yes, overwrite all`,
+              cancelButtonText: `No, prompt me for each one`,
+              onConfirm: () => resolve(true),
+              onCancel: () => resolve(false),
+            }
+          );
         })
-        .then(refreshIndex)
-        .then(refreshData)
-        .catch(notify.error);
+          .then((overwriteAll) => {
+            function importDocument(doc) {
+              const { service } = find($scope.services, { type: doc._type }) || {};
+
+              if (!service) {
+                const msg = `Skipped import of "${doc._source.title}" (${doc._id})`;
+                const reason = `Invalid type: "${doc._type}"`;
+
+                notify.warning(`${msg}, ${reason}`, {
+                  lifetime: 0,
+                });
+
+                return;
+              }
+
+              return service.get()
+                .then(function (obj) {
+                  obj.id = doc._id;
+                  return obj.applyESResp(doc)
+                    .then(() => {
+                      return obj.save({ confirmOverwrite : !overwriteAll });
+                    })
+                    .catch((err) => {
+                      // swallow errors here so that the remaining promise chain executes
+                      err.message = `Importing ${obj.title} (${obj.id}) failed: ${err.message}`;
+                      notify.error(err);
+                    });
+                });
+            }
+
+            function groupByType(docs) {
+              const defaultDocTypes = {
+                searches: [],
+                other: [],
+              };
+
+              return docs.reduce((types, doc) => {
+                switch (doc._type) {
+                  case 'search':
+                    types.searches.push(doc);
+                    break;
+                  default:
+                    types.other.push(doc);
+                }
+                return types;
+              }, defaultDocTypes);
+            }
+
+            const docTypes = groupByType(docs);
+
+            return Promise.map(docTypes.searches, importDocument)
+              .then(() => Promise.map(docTypes.other, importDocument))
+              .then(refreshIndex)
+              .then(refreshData)
+              .catch(notify.error);
+          });
       };
 
       function refreshIndex() {

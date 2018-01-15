@@ -1,4 +1,4 @@
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import heatmapOptionsTemplate from 'plugins/kbn_vislib_vis_types/controls/heatmap_options.html';
 import _ from 'lodash';
 const module = uiModules.get('kibana');
@@ -9,17 +9,17 @@ module.directive('heatmapOptions', function () {
     template: heatmapOptionsTemplate,
     replace: true,
     link: function ($scope) {
+      const verticalRotation = 270;
       $scope.showColorRange = false;
       $scope.showLabels = false;
       $scope.customColors = false;
+      $scope.valueAxis = $scope.vis.params.valueAxes[0];
       $scope.options = {
-        rotateLabels: false
+        rotateLabels: $scope.valueAxis.labels.rotate === verticalRotation
       };
 
-      $scope.valueAxis = $scope.vis.params.valueAxes[0];
-
       $scope.$watch('options.rotateLabels', rotate => {
-        $scope.vis.params.valueAxes[0].labels.rotate = rotate ? 270 : 0;
+        $scope.vis.params.valueAxes[0].labels.rotate = rotate ? verticalRotation : 0;
       });
 
       $scope.resetColors = function () {
@@ -36,7 +36,9 @@ module.directive('heatmapOptions', function () {
       $scope.toggleLabelSection = function (checkbox = false) {
         $scope.showLabels = !$scope.showLabels;
         if (checkbox && !$scope.valueAxis.labels.show) $scope.showLabels = false;
-        if ($scope.showLabels && !$scope.valueAxis.labels.show) $scope.valueAxis.labels.show = true;
+        if ($scope.showLabels && !$scope.valueAxis.labels.show) {
+          $scope.vis.params.valueAxes[0].labels.show = true;
+        }
       };
 
       $scope.getGreaterThan = function (index) {

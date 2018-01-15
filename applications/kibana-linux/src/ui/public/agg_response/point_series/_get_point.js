@@ -1,14 +1,15 @@
 import _ from 'lodash';
-export default function PointSeriesGetPoint() {
+
+export function PointSeriesGetPointProvider() {
   function unwrap(aggConfigResult, def) {
     return aggConfigResult ? aggConfigResult.value : def;
   }
 
   return function getPoint(x, series, yScale, row, y, z) {
-    let zRow = z && row[z.i];
-    let xRow = row[x.i];
+    const zRow = z && row[z.i];
+    const xRow = row[x.i];
 
-    let point = {
+    const point = {
       x: unwrap(xRow, '_all'),
       xi: xRow && xRow.$order,
       y: unwrap(row[y.i]),
@@ -40,4 +41,4 @@ export default function PointSeriesGetPoint() {
 
     return point;
   };
-};
+}

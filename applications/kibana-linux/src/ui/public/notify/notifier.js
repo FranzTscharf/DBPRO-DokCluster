@@ -1,23 +1,23 @@
 import _ from 'lodash';
 import angular from 'angular';
 import $ from 'jquery';
-import metadata from 'ui/metadata';
-import formatMsg from 'ui/notify/lib/_format_msg';
+import { metadata } from 'ui/metadata';
+import { formatMsg } from 'ui/notify/lib/_format_msg';
 import fatalSplashScreen from 'ui/notify/partials/fatal_splash_screen.html';
 import 'ui/render_directive';
 /* eslint no-console: 0 */
 
-let notifs = [];
-let version = metadata.version;
-let buildNum = metadata.buildNum;
-let consoleGroups = ('group' in window.console) && ('groupCollapsed' in window.console) && ('groupEnd' in window.console);
+const notifs = [];
+const version = metadata.version;
+const buildNum = metadata.buildNum;
+const consoleGroups = ('group' in window.console) && ('groupCollapsed' in window.console) && ('groupEnd' in window.console);
 
-let log = _.bindKey(console, 'log');
+const log = _.bindKey(console, 'log');
 
 // used to identify the first call to fatal, set to false there
 let firstFatal = true;
 
-let fatalToastTemplate = (function lazyTemplate(tmpl) {
+const fatalToastTemplate = (function lazyTemplate(tmpl) {
   let compiled;
   return function (vars) {
     return (compiled || (compiled = _.template(tmpl)))(vars);
@@ -34,7 +34,7 @@ function now() {
 function closeNotif(notif, cb = _.noop, key) {
   return function () {
     // this === notif
-    let i = notifs.indexOf(notif);
+    const i = notifs.indexOf(notif);
     if (i !== -1) notifs.splice(i, 1);
 
     cancelTimer(notif);
@@ -86,18 +86,18 @@ function restartNotifTimer(notif, cb) {
 }
 
 const typeToButtonClassMap = {
-  danger: 'btn-danger', // NOTE: `error` type is internally named as `danger`
-  warning: 'btn-warning',
-  info: 'btn-info',
-  banner: 'btn-banner'
+  danger: 'kuiButton--danger', // NOTE: `error` type is internally named as `danger`
+  warning: 'kuiButton--warning',
+  info: 'kuiButton--primary',
+  banner: 'kuiButton--basic'
 };
 const buttonHierarchyClass = (index) => {
   if (index === 0) {
     // first action: primary className
-    return 'btn-primary';
+    return 'kuiButton--primary';
   }
   // subsequent actions: secondary/default className
-  return 'btn-default';
+  return 'kuiButton--basic';
 };
 const typeToAlertClassMap = {
   danger: `alert-danger`,
@@ -121,6 +121,7 @@ function add(notif, cb) {
     notif.customActions = notif.customActions.map((action, index) => {
       return {
         key: action.text,
+        dataTestSubj: action.dataTestSubj,
         callback: closeNotif(notif, action.callback, action.text),
         getButtonClass() {
           const buttonTypeClass = typeToButtonClassMap[notif.type];
@@ -188,7 +189,7 @@ Notifier.prototype.add = add;
 Notifier.prototype.set = set;
 
 function formatInfo() {
-  let info = [];
+  const info = [];
 
   if (!_.isUndefined(version)) {
     info.push(`Version: ${version}`);
@@ -212,8 +213,8 @@ function formatStack(err) {
 /**
  * Functionality to check that
  */
-function Notifier(opts) {
-  let self = this;
+export function Notifier(opts) {
+  const self = this;
   opts = opts || {};
 
   // label type thing to say where notifications came from
@@ -291,7 +292,7 @@ Notifier.prototype.lifecycle = createGroupLogger('lifecycle', {
  * @return {function} - the wrapped function
  */
 Notifier.prototype.timed = function (name, fn) {
-  let self = this;
+  const self = this;
 
   if (typeof name === 'function') {
     fn = name;
@@ -299,8 +300,8 @@ Notifier.prototype.timed = function (name, fn) {
   }
 
   return function WrappedNotifierFunction() {
-    let cntx = this;
-    let args = arguments;
+    const cntx = this;
+    const args = arguments;
 
     return self.event(name, function () {
       return fn.apply(cntx, args);
@@ -336,7 +337,7 @@ Notifier.prototype._showFatal = function (err) {
     });
   }
 
-  let html = fatalToastTemplate({
+  const html = fatalToastTemplate({
     info: formatInfo(),
     msg: formatMsg(err, this.from),
     stack: formatStack(err)
@@ -576,7 +577,7 @@ if (log === _.noop) {
   Notifier.prototype.log = _.noop;
 } else {
   Notifier.prototype.log = function () {
-    let args = [].slice.apply(arguments);
+    const args = [].slice.apply(arguments);
     if (this.from) args.unshift(this.from + ':');
     log.apply(null, args);
   };
@@ -585,15 +586,15 @@ if (log === _.noop) {
 // general functionality used by .event() and .lifecycle()
 function createGroupLogger(type, opts) {
   // Track the groups managed by this logger
-  let groups = window[type + 'Groups'] = {};
+  const groups = window[type + 'Groups'] = {};
 
   return function logger(name, success) {
     let status; // status of the timer
     let exec; // function to execute and wrap
     let ret; // return value
 
-    let complete = function (val) { logger(name, true); return val; };
-    let failure = function (err) { logger(name, false); throw err; };
+    const complete = function (val) { logger(name, true); return val; };
+    const failure = function (err) { logger(name, false); throw err; };
 
     if (typeof success === 'function' || success === void 0) {
       // start
@@ -609,7 +610,7 @@ function createGroupLogger(type, opts) {
     }
     else {
       groups[name] = now() - (groups[name] || 0);
-      let time = ' in ' + groups[name].toFixed(2) + 'ms';
+      const time = ' in ' + groups[name].toFixed(2) + 'ms';
 
       // end
       if (success) {
@@ -662,4 +663,3 @@ function createGroupLogger(type, opts) {
   };
 }
 
-export default Notifier;

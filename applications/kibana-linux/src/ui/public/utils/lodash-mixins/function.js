@@ -1,4 +1,4 @@
-export default function (_) {
+export function lodashFunctionMixin(_) {
   _.mixin({
 
     /**
@@ -62,4 +62,4 @@ export default function (_) {
     }
 
   });
-};
+}

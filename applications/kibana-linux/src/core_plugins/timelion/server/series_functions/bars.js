@@ -1,8 +1,16 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var Chainable = require('../lib/classes/chainable');
-module.exports = new Chainable('bars', {
+var _alter = require('../lib/alter.js');
+
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('bars', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -17,7 +25,7 @@ module.exports = new Chainable('bars', {
   }],
   help: 'Show the seriesList as bars',
   fn: function barsFn(args) {
-    return alter(args, function (eachSeries, width, stack) {
+    return (0, _alter2.default)(args, function (eachSeries, width, stack) {
       eachSeries.bars = eachSeries.bars || {};
       eachSeries.bars.show = width == null ? 1 : width;
       eachSeries.bars.lineWidth = width == null ? 6 : width;

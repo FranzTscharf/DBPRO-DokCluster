@@ -1,25 +1,28 @@
 'use strict';
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+let addPluginConfig = (() => {
+  var _ref = _asyncToGenerator(function* (pluginCollection, plugin) {
+    var _pluginCollection$kbn = pluginCollection.kbnServer;
+    const config = _pluginCollection$kbn.config,
+          server = _pluginCollection$kbn.server,
+          settings = _pluginCollection$kbn.settings;
 
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-var addPluginConfig = _asyncToGenerator(function* (pluginCollection, plugin) {
-  var configSchema = yield plugin.getConfigSchema();
-  var config = pluginCollection.kbnServer.config;
+    const transformedSettings = (0, _transform_deprecations.transformDeprecations)(settings);
+    const pluginSettings = (0, _lodash.get)(transformedSettings, plugin.configPrefix);
+    const deprecations = plugin.getDeprecations();
+    const transformedPluginSettings = (0, _deprecation.createTransform)(deprecations)(pluginSettings, function (message) {
+      server.log(['warning', plugin.configPrefix, 'config', 'deprecation'], message);
+    });
 
-  config.extendSchema(plugin.configPrefix, configSchema);
-});
+    const configSchema = yield plugin.getConfigSchema();
+    config.extendSchema(configSchema, transformedPluginSettings, plugin.configPrefix);
+  });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { var callNext = step.bind(null, 'next'); var callThrow = step.bind(null, 'throw'); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(callNext, callThrow); } } callNext(); }); }; }
+  return function addPluginConfig(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+})();
 
 var _plugin_api = require('./plugin_api');
 
@@ -29,47 +32,56 @@ var _util = require('util');
 
 var _lodash = require('lodash');
 
-var _lodashInternalToPath = require('lodash/internal/toPath');
+var _collection = require('../../utils/collection');
 
-var _lodashInternalToPath2 = _interopRequireDefault(_lodashInternalToPath);
+var _collection2 = _interopRequireDefault(_collection);
 
-var _utilsCollection = require('../../utils/collection');
+var _transform_deprecations = require('../config/transform_deprecations');
 
-var _utilsCollection2 = _interopRequireDefault(_utilsCollection);
+var _deprecation = require('../../deprecation');
 
-var byIdCache = Symbol('byIdCache');
-var pluginApis = Symbol('pluginApis');
+var _joi = require('joi');
 
-function removePluginConfig(pluginCollection, plugin) {
-  var config = pluginCollection.kbnServer.config;
+var _joi2 = _interopRequireDefault(_joi);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+const byIdCache = Symbol('byIdCache');
+const pluginApis = Symbol('pluginApis');
+
+function disablePluginConfig(pluginCollection, plugin) {
+  // when disabling a plugin's config we remove the existing schema and
+  // replace it with a simple schema/config that only has enabled set to false
+  const config = pluginCollection.kbnServer.config;
 
   config.removeSchema(plugin.configPrefix);
+  const schema = _joi2.default.object({ enabled: _joi2.default.bool() });
+  config.extendSchema(schema, { enabled: false }, plugin.configPrefix);
 }
 
-module.exports = (function (_Collection) {
-  _inherits(Plugins, _Collection);
+module.exports = class Plugins extends _collection2.default {
 
-  function Plugins(kbnServer) {
-    _classCallCheck(this, Plugins);
-
-    _get(Object.getPrototypeOf(Plugins.prototype), 'constructor', this).call(this);
+  constructor(kbnServer) {
+    super();
     this.kbnServer = kbnServer;
     this[pluginApis] = new Set();
   }
 
-  _createClass(Plugins, [{
-    key: 'new',
-    value: _asyncToGenerator(function* (path) {
-      var api = new _plugin_api2['default'](this.kbnServer, path);
-      this[pluginApis].add(api);
+  new(path) {
+    var _this = this;
 
-      var output = [].concat(require(path)(api) || []);
-      var config = this.kbnServer.config;
+    return _asyncToGenerator(function* () {
+      const api = new _plugin_api2.default(_this.kbnServer, path);
+      _this[pluginApis].add(api);
+
+      const output = [].concat(require(path)(api) || []);
 
       if (!output.length) return;
 
       // clear the byIdCache
-      this[byIdCache] = null;
+      _this[byIdCache] = null;
 
       var _iteratorNormalCompletion = true;
       var _didIteratorError = false;
@@ -77,22 +89,22 @@ module.exports = (function (_Collection) {
 
       try {
         for (var _iterator = output[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var plugin = _step.value;
+          const plugin = _step.value;
 
           if (!plugin instanceof api.Plugin) {
             throw new TypeError('unexpected plugin export ' + (0, _util.inspect)(plugin));
           }
 
-          yield addPluginConfig(this, plugin);
-          this.add(plugin);
+          yield addPluginConfig(_this, plugin);
+          _this.add(plugin);
         }
       } catch (err) {
         _didIteratorError = true;
         _iteratorError = err;
       } finally {
         try {
-          if (!_iteratorNormalCompletion && _iterator['return']) {
-            _iterator['return']();
+          if (!_iteratorNormalCompletion && _iterator.return) {
+            _iterator.return();
           }
         } finally {
           if (_didIteratorError) {
@@ -100,24 +112,24 @@ module.exports = (function (_Collection) {
           }
         }
       }
-    })
-  }, {
-    key: 'disable',
-    value: _asyncToGenerator(function* (plugin) {
-      removePluginConfig(this, plugin);
-      this['delete'](plugin);
-    })
-  }, {
-    key: 'getPluginApis',
-    value: function getPluginApis() {
-      return this[pluginApis];
-    }
-  }, {
-    key: 'byId',
-    get: function get() {
-      return this[byIdCache] || (this[byIdCache] = (0, _lodash.indexBy)([].concat(_toConsumableArray(this)), 'id'));
-    }
-  }]);
+    })();
+  }
 
-  return Plugins;
-})(_utilsCollection2['default']);
+  disable(plugin) {
+    var _this2 = this;
+
+    return _asyncToGenerator(function* () {
+      disablePluginConfig(_this2, plugin);
+      _this2.delete(plugin);
+    })();
+  }
+
+  get byId() {
+    return this[byIdCache] || (this[byIdCache] = (0, _lodash.indexBy)([...this], 'id'));
+  }
+
+  getPluginApis() {
+    return this[pluginApis];
+  }
+
+};

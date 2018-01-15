@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('@spalger/numeral');
+module.exports = require('@elastic/numeral');

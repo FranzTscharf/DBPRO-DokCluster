@@ -1,9 +1,16 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
+var _alter = require('../lib/alter.js');
 
-var Chainable = require('../lib/classes/chainable');
-module.exports = new Chainable('legend', {
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('legend', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -18,7 +25,7 @@ module.exports = new Chainable('legend', {
   }],
   help: 'Set the position and style of the legend on the plot',
   fn: function legendFn(args) {
-    return alter(args, function (eachSeries, position, columns) {
+    return (0, _alter2.default)(args, function (eachSeries, position, columns) {
       eachSeries._global = eachSeries._global || {};
       eachSeries._global.legend = eachSeries._global.legend || {};
       eachSeries._global.legend.noColumns = columns;

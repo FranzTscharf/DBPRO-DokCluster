@@ -1,6 +1,5 @@
 let ace = require('ace');
 let x_json = require('./x_json_highlight_rules');
-let _ = require('lodash');
 
 var oop = ace.require("ace/lib/oop");
 var TextHighlightRules = ace.require("ace/mode/text_highlight_rules").TextHighlightRules;
@@ -16,8 +15,8 @@ var InputHighlightRules = function () {
       reg = reg.source;
     }
     return [
-      {token: tokens.concat(["whitespace"]), regex: reg + "(\\s*)$", next: nextIfEOL},
-      {token: tokens, regex: reg, next: normalNext}
+      { token: tokens.concat(["whitespace"]), regex: reg + "(\\s*)$", next: nextIfEOL },
+      { token: tokens, regex: reg, next: normalNext }
     ];
   }
 
@@ -26,8 +25,9 @@ var InputHighlightRules = function () {
   /*jshint -W015 */
   this.$rules = {
     "start": mergeTokens([
-        {token: "comment", regex: /^#.*$/},
-        {token: "paren.lparen", regex: "{", next: "json", push: true}
+        { "token": "warning", "regex": "#!.*$" },
+        { token: "comment", regex: /^#.*$/ },
+        { token: "paren.lparen", regex: "{", next: "json", push: true }
       ],
       addEOL(["method"], /([a-zA-Z]+)/, "start", "method_sep")
       ,

@@ -1,6 +1,6 @@
-import ReqStatusProvider from './req_status';
+import { ReqStatusProvider } from './req_status';
 
-export default function CourierFetchContinueIncompleteRequests(Private) {
+export function ContinueIncompleteProvider(Private) {
   const INCOMPLETE = Private(ReqStatusProvider).INCOMPLETE;
 
   function continueIncompleteRequests(strategy, requests, responses, fetchWithStrategy) {
@@ -24,4 +24,4 @@ export default function CourierFetchContinueIncompleteRequests(Private) {
   }
 
   return continueIncompleteRequests;
-};
+}

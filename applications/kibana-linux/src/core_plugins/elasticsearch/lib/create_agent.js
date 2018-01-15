@@ -1,10 +1,16 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+exports.default = function (config) {
+  const target = _url2.default.parse((0, _lodash.get)(config, 'url'));
+
+  if (!/^https/.test(target.protocol)) return new _http2.default.Agent();
+
+  return new _https2.default.Agent((0, _parse_config.parseConfig)(config).ssl);
+};
 
 var _url = require('url');
 
@@ -22,16 +28,6 @@ var _https2 = _interopRequireDefault(_https);
 
 var _parse_config = require('./parse_config');
 
-var readFile = function readFile(file) {
-  return require('fs').readFileSync(file, 'utf8');
-};
-
-exports['default'] = function (config) {
-  var target = _url2['default'].parse((0, _lodash.get)(config, 'url'));
-
-  if (!/^https/.test(target.protocol)) return new _http2['default'].Agent();
-
-  return new _https2['default'].Agent((0, _parse_config.parseConfig)(config).ssl);
-};
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = exports['default'];

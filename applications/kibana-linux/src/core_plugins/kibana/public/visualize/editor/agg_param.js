@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 uiModules
 .get('app/visualize')
-.directive('visAggParamEditor', function (config, $parse, Private) {
+.directive('visAggParamEditor', function (config) {
   return {
     restrict: 'E',
     scope: true,
@@ -14,7 +14,7 @@ uiModules
       pre: function ($scope, $el, attr) {
         $scope.$bind('aggParam', attr.aggParam);
       },
-      post: function ($scope, $el, attr) {
+      post: function ($scope) {
         $scope.config = config;
 
         $scope.optionEnabled = function (option) {

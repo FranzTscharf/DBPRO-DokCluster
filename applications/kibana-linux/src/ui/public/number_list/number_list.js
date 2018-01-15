@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import parseRange from 'ui/utils/range';
+import { parseRange } from 'ui/utils/range';
 import 'ui/number_list/number_list_input';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import numberListTemplate from 'ui/number_list/number_list.html';
 
 uiModules
@@ -13,7 +13,7 @@ uiModules
     controllerAs: 'numberListCntr',
     require: 'ngModel',
     controller: function ($scope, $attrs, $parse) {
-      let self = this;
+      const self = this;
 
       // Called from the pre-link function once we have the controllers
       self.init = function (modelCntr) {
@@ -25,11 +25,11 @@ uiModules
 
         self.getUnitName = _.partial($parse($attrs.unit), $scope);
 
-        let defaultRange = self.range = parseRange('[0,Infinity)');
+        const defaultRange = self.range = parseRange('[0,Infinity)');
 
         $scope.$watch(function () {
           return $attrs.range;
-        }, function (range, prev) {
+        }, function (range) {
           if (!range) {
             self.range = defaultRange;
             return;
@@ -48,7 +48,7 @@ uiModules
          * @return {undefined}
          */
         self.remove = function (index) {
-          let list = self.getList();
+          const list = self.getList();
           if (!list) return;
 
           list.splice(index, 1);
@@ -59,7 +59,7 @@ uiModules
          * @return {undefined}
          */
         self.add = function () {
-          let list = self.getList();
+          const list = self.getList();
           if (!list) return;
 
           list.push(_.last(list) + 1);

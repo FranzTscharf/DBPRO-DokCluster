@@ -1,6 +1,6 @@
 'use strict';
 
-var _ = require("lodash");
+let _ = require("lodash");
 
 var SPAN_QUERIES = {
   // TODO add one_of for objects
@@ -137,7 +137,7 @@ module.exports = function (api) {
       filter: {
         __scope_link: 'GLOBAL.filter'
       },
-      minimum_number_should_match: 1,
+      minimum_should_match: 1,
       boost: 1.0
     },
     boosting: {

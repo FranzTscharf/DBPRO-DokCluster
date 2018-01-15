@@ -1,17 +1,5 @@
 'use strict';
 
-var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { var callNext = step.bind(null, 'next'); var callThrow = step.bind(null, 'throw'); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(callNext, callThrow); } } callNext(); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
 var _lodash = require('lodash');
 
 var _lodash2 = _interopRequireDefault(_lodash);
@@ -26,13 +14,17 @@ var _bluebird2 = _interopRequireDefault(_bluebird);
 
 var _path = require('path');
 
-var _util = require('util');
+var _deprecation = require('../../deprecation');
 
-var extendInitFns = Symbol('extend plugin initialization');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var defaultConfigSchema = _joi2['default'].object({
-  enabled: _joi2['default'].boolean()['default'](true)
-})['default']();
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+const extendInitFns = Symbol('extend plugin initialization');
+
+const defaultConfigSchema = _joi2.default.object({
+  enabled: _joi2.default.boolean().default(true)
+}).default();
 
 /**
  * The server plugin class, used to extend the server
@@ -72,10 +64,8 @@ var defaultConfigSchema = _joi2['default'].object({
  *    the root of the plugin. Set this to false to disable exposure of a
  *    public directory
  */
-module.exports = (function () {
-  function Plugin(kbnServer, path, pkg, opts) {
-    _classCallCheck(this, Plugin);
-
+module.exports = class Plugin {
+  constructor(kbnServer, path, pkg, opts) {
     this.kbnServer = kbnServer;
     this.pkg = pkg;
     this.path = path;
@@ -89,13 +79,14 @@ module.exports = (function () {
     // the version of kibana down to the patch level. If these two versions need
     // to diverge, they can specify a kibana.version in the package to indicate the
     // version of kibana the plugin is intended to work with.
-    this.kibanaVersion = opts.kibanaVersion || _lodash2['default'].get(pkg, 'kibana.version', this.version);
-    this.externalPreInit = opts.preInit || _lodash2['default'].noop;
-    this.externalInit = opts.init || _lodash2['default'].noop;
+    this.kibanaVersion = opts.kibanaVersion || _lodash2.default.get(pkg, 'kibana.version', this.version);
+    this.externalPreInit = opts.preInit || _lodash2.default.noop;
+    this.externalInit = opts.init || _lodash2.default.noop;
     this.configPrefix = opts.configPrefix || this.id;
-    this.getExternalConfigSchema = opts.config || _lodash2['default'].noop;
-    this.preInit = _lodash2['default'].once(this.preInit);
-    this.init = _lodash2['default'].once(this.init);
+    this.getExternalConfigSchema = opts.config || _lodash2.default.noop;
+    this.getExternalDeprecations = opts.deprecations || _lodash2.default.noop;
+    this.preInit = _lodash2.default.once(this.preInit);
+    this.init = _lodash2.default.once(this.init);
     this[extendInitFns] = [];
 
     if (opts.publicDir === false) {
@@ -105,63 +96,94 @@ module.exports = (function () {
     } else {
       this.publicDir = opts.publicDir;
       if ((0, _path.basename)(this.publicDir) !== 'public') {
-        throw new Error('publicDir for plugin ' + this.id + ' must end with a "public" directory.');
+        throw new Error(`publicDir for plugin ${this.id} must end with a "public" directory.`);
       }
     }
   }
 
-  _createClass(Plugin, [{
-    key: 'getConfigSchema',
-    value: _asyncToGenerator(function* () {
-      var schema = yield this.getExternalConfigSchema(_joi2['default']);
-      return schema || defaultConfigSchema;
-    })
-  }, {
-    key: 'preInit',
-    value: _asyncToGenerator(function* () {
-      return yield this.externalPreInit(this.kbnServer.server);
-    })
-  }, {
-    key: 'init',
-    value: _asyncToGenerator(function* () {
-      var _this = this;
+  static scoped(kbnServer, path, pkg) {
+    return class ScopedPlugin extends Plugin {
+      constructor(opts) {
+        super(kbnServer, path, pkg, opts || {});
+      }
+    };
+  }
 
-      var id = this.id;
-      var version = this.version;
-      var kbnServer = this.kbnServer;
-      var configPrefix = this.configPrefix;
-      var config = kbnServer.config;
+  getConfigSchema() {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      const schema = yield _this.getExternalConfigSchema(_joi2.default);
+      return schema || defaultConfigSchema;
+    })();
+  }
+
+  getDeprecations() {
+    const rules = this.getExternalDeprecations(_deprecation.Deprecations);
+    return rules || [];
+  }
+
+  preInit() {
+    var _this2 = this;
+
+    return _asyncToGenerator(function* () {
+      return yield _this2.externalPreInit(_this2.kbnServer.server);
+    })();
+  }
+
+  init() {
+    var _this3 = this;
+
+    return _asyncToGenerator(function* () {
+      const id = _this3.id,
+            version = _this3.version,
+            kbnServer = _this3.kbnServer,
+            configPrefix = _this3.configPrefix;
+      const config = kbnServer.config;
 
       // setup the hapi register function and get on with it
-      var asyncRegister = _asyncToGenerator(function* (server, options) {
-        _this.server = server;
 
-        yield Promise.all(_this[extendInitFns].map(_asyncToGenerator(function* (fn) {
-          yield fn.call(_this, server, options);
-        })));
+      const asyncRegister = (() => {
+        var _ref = _asyncToGenerator(function* (server, options) {
+          _this3.server = server;
 
-        server.log(['plugins', 'debug'], {
-          tmpl: 'Initializing plugin <%= plugin.toString() %>',
-          plugin: _this
+          yield Promise.all(_this3[extendInitFns].map((() => {
+            var _ref2 = _asyncToGenerator(function* (fn) {
+              yield fn.call(_this3, server, options);
+            });
+
+            return function (_x3) {
+              return _ref2.apply(this, arguments);
+            };
+          })()));
+
+          server.log(['plugins', 'debug'], {
+            tmpl: 'Initializing plugin <%= plugin.toString() %>',
+            plugin: _this3
+          });
+
+          if (_this3.publicDir) {
+            server.exposeStaticDir(`/plugins/${id}/{path*}`, _this3.publicDir);
+          }
+
+          // Many of the plugins are simply adding static assets to the server and we don't need
+          // to track their "status". Since plugins must have an init() function to even set its status
+          // we shouldn't even create a status unless the plugin can use it.
+          if (_this3.externalInit !== _lodash2.default.noop) {
+            _this3.status = kbnServer.status.createForPlugin(_this3);
+            server.expose('status', _this3.status);
+          }
+
+          return yield (0, _bluebird.attempt)(_this3.externalInit, [server, options], _this3);
         });
 
-        if (_this.publicDir) {
-          server.exposeStaticDir('/plugins/' + id + '/{path*}', _this.publicDir);
-        }
+        return function asyncRegister(_x, _x2) {
+          return _ref.apply(this, arguments);
+        };
+      })();
 
-        // Many of the plugins are simply adding static assets to the server and we don't need
-        // to track their "status". Since plugins must have an init() function to even set its status
-        // we shouldn't even create a status unless the plugin can use it.
-        if (_this.externalInit !== _lodash2['default'].noop) {
-          _this.status = kbnServer.status.createForPlugin(_this);
-          server.expose('status', _this.status);
-        }
-
-        return yield (0, _bluebird.attempt)(_this.externalInit, [server, options], _this);
-      });
-
-      var register = function register(server, options, next) {
-        _bluebird2['default'].resolve(asyncRegister(server, options)).nodeify(next);
+      const register = function register(server, options, next) {
+        _bluebird2.default.resolve(asyncRegister(server, options)).nodeify(next);
       };
 
       register.attributes = { name: id, version: version };
@@ -175,41 +197,21 @@ module.exports = (function () {
 
       // Only change the plugin status to green if the
       // intial status has not been changed
-      if (this.status && this.status.state === 'uninitialized') {
-        this.status.green('Ready');
+      if (_this3.status && _this3.status.state === 'uninitialized') {
+        _this3.status.green('Ready');
       }
-    })
-  }, {
-    key: 'extendInit',
-    value: function extendInit(fn) {
-      this[extendInitFns].push(fn);
-    }
-  }, {
-    key: 'toJSON',
-    value: function toJSON() {
-      return this.pkg;
-    }
-  }, {
-    key: 'toString',
-    value: function toString() {
-      return this.id + '@' + this.version;
-    }
-  }], [{
-    key: 'scoped',
-    value: function scoped(kbnServer, path, pkg) {
-      return (function (_Plugin) {
-        _inherits(ScopedPlugin, _Plugin);
+    })();
+  }
 
-        function ScopedPlugin(opts) {
-          _classCallCheck(this, ScopedPlugin);
+  extendInit(fn) {
+    this[extendInitFns].push(fn);
+  }
 
-          _get(Object.getPrototypeOf(ScopedPlugin.prototype), 'constructor', this).call(this, kbnServer, path, pkg, opts || {});
-        }
+  toJSON() {
+    return this.pkg;
+  }
 
-        return ScopedPlugin;
-      })(Plugin);
-    }
-  }]);
-
-  return Plugin;
-})();
+  toString() {
+    return `${this.id}@${this.version}`;
+  }
+};

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
-import Binder from 'ui/binder';
-export default function AlertsFactory(Private) {
+
+export function VislibLibAlertsProvider() {
 
   /**
    * Adds allerts that float in front of a visualization
@@ -36,7 +36,7 @@ export default function AlertsFactory(Private) {
       const $closeDiv = $('<div>').addClass('vis-alerts-close').append($closeIcon);
 
       const $alert = $('<div>').addClass('vis-alert vis-alert-' + type).append([$icon, $text, $closeDiv]);
-      $closeDiv.on('click', e => {
+      $closeDiv.on('click', () => {
         $alert.remove();
       });
 

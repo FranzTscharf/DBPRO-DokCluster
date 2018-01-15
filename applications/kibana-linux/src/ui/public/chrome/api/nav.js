@@ -1,9 +1,13 @@
 import { parse, format } from 'url';
-import { startsWith, isString, find } from 'lodash';
+import { isString } from 'lodash';
 
-export default function (chrome, internals) {
+export function initChromeNavApi(chrome, internals) {
   chrome.getNavLinks = function () {
     return internals.nav;
+  };
+
+  chrome.navLinkExists = (id) => {
+    return !!internals.nav.find(link => link.id === id);
   };
 
   chrome.getNavLinkById = (id) => {
@@ -19,10 +23,10 @@ export default function (chrome, internals) {
   };
 
   chrome.addBasePath = function (url) {
-    let isUrl = url && isString(url);
+    const isUrl = url && isString(url);
     if (!isUrl) return url;
 
-    let parsed = parse(url, true, true);
+    const parsed = parse(url, true, true);
     if (!parsed.host && parsed.pathname) {
       if (parsed.pathname[0] === '/') {
         parsed.pathname = chrome.getBasePath() + parsed.pathname;
@@ -106,11 +110,42 @@ export default function (chrome, internals) {
     });
   }
 
+  function relativeToAbsolute(url) {
+    // convert all link urls to absolute urls
+    const a = document.createElement('a');
+    a.setAttribute('href', url);
+    return a.href;
+  }
+
+  /**
+   * Manually sets the last url for the given app. The last url for a given app is updated automatically during
+   * normal page navigation, so this should only need to be called to insert a last url that was not actually
+   * navigated to. For instance, when saving an object and redirecting to another page, the last url of the app
+   * should be the saved instance, but because of the redirect to a different page (e.g. `Save and Add to Dashboard`
+   * on visualize tab), it won't be tracked automatically and will need to be inserted manually. See
+   * https://github.com/elastic/kibana/pull/11932 for more background on why this was added.
+   * @param appId {String}
+   * @param url {String} The relative url for the app. Should not include the base path portion.
+   */
+  chrome.trackSubUrlForApp = (appId, url) => {
+    for (const link of internals.nav) {
+      if (link.id === appId) {
+        if (!url.startsWith('/')) {
+          url += '/';
+        }
+        url = `${chrome.getBasePath()}${url}`;
+        url = relativeToAbsolute(url);
+        setLastUrl(link, url);
+        return;
+      }
+    }
+  };
+
   internals.trackPossibleSubUrl = function (url) {
     const { appId, globalState: newGlobalState } = decodeKibanaUrl(url);
 
     for (const link of internals.nav) {
-      link.active = startsWith(url, link.url);
+      link.active = url.startsWith(link.subUrlBase);
       if (link.active) {
         setLastUrl(link, url);
         continue;
@@ -125,13 +160,11 @@ export default function (chrome, internals) {
   };
 
   internals.nav.forEach(link => {
-    // convert all link urls to absolute urls
-    let a = document.createElement('a');
-    a.setAttribute('href', link.url);
-    link.url = a.href;
+    link.url = relativeToAbsolute(link.url);
+    link.subUrlBase = relativeToAbsolute(link.subUrlBase);
   });
 
   // simulate a possible change in url to initialize the
   // link.active and link.lastUrl properties
   internals.trackPossibleSubUrl(document.location.href);
-};
+}

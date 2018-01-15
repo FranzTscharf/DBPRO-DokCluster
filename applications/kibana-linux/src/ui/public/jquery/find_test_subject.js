@@ -1,4 +1,4 @@
-import testSubjSelector from '@spalger/test-subj-selector';
+import testSubjSelector from '@elastic/test-subj-selector';
 
 module.exports = function bindToJquery($) {
 
@@ -45,13 +45,13 @@ module.exports = function bindToJquery($) {
 
   function findTestSubject(...subjectSelectors) {
     let $els = $();
-    let $context = this;
+    const $context = this;
 
     subjectSelectors.forEach(function (selector) {
       $els = $els.add($context.find(testSubjSelector(selector)));
     });
 
     return $els;
-  };
+  }
 
 };

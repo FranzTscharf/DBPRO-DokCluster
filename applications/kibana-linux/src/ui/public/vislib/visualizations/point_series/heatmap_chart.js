@@ -1,11 +1,9 @@
 import _ from 'lodash';
-import d3 from 'd3';
-import $ from 'jquery';
 import moment from 'moment';
-import VislibVisualizationsPointSeriesProvider from './_point_series';
-import getColor from 'ui/vislib/components/color/heatmap_color';
+import { VislibVisualizationsPointSeriesProvider } from './_point_series';
+import { getHeatmapColors } from 'ui/vislib/components/color/heatmap_color';
 
-export default function HeatmapChartFactory(Private) {
+export function VislibVisualizationsHeatmapChartProvider(Private) {
 
   const PointSeries = Private(VislibVisualizationsPointSeriesProvider);
 
@@ -44,16 +42,21 @@ export default function HeatmapChartFactory(Private) {
       const percentageMode = cfg.get('percentageMode');
       const colorsNumber = cfg.get('colorsNumber');
       const colorsRange = cfg.get('colorsRange');
+      const zAxisConfig = this.getValueAxis().axisConfig;
+      const zAxisFormatter = zAxisConfig.get('labels.axisFormatter');
       const zScale = this.getValueAxis().getScale();
       const [min, max] = zScale.domain();
       const labels = [];
       if (cfg.get('setColorRange')) {
         colorsRange.forEach(range => {
-          const from = range.from;
-          const to = range.to;
+          const from = isFinite(range.from) ? zAxisFormatter(range.from) : range.from;
+          const to = isFinite(range.to) ? zAxisFormatter(range.to) : range.to;
           labels.push(`${from} - ${to}`);
         });
       } else {
+        if (max === min) {
+          return [ min.toString() ];
+        }
         for (let i = 0; i < colorsNumber; i++) {
           let label;
           let val = i / colorsNumber;
@@ -69,6 +72,8 @@ export default function HeatmapChartFactory(Private) {
               val = Math.ceil(val);
               nextVal = Math.ceil(nextVal);
             }
+            if (isFinite(val)) val = zAxisFormatter(val);
+            if (isFinite(nextVal)) nextVal = zAxisFormatter(nextVal);
             label = `${val} - ${nextVal}`;
           }
 
@@ -88,7 +93,7 @@ export default function HeatmapChartFactory(Private) {
       for (const i in labels) {
         if (labels[i]) {
           const val = invertColors ? 1 - i / colorsNumber : i / colorsNumber;
-          colors[labels[i]] = getColor(val, colorSchema);
+          colors[labels[i]] = getHeatmapColors(val, colorSchema);
         }
       }
       return colors;
@@ -98,7 +103,6 @@ export default function HeatmapChartFactory(Private) {
       const xScale = this.getCategoryAxis().getScale();
       const yScale = this.handler.valueAxes[1].getScale();
       const zScale = this.getValueAxis().getScale();
-      const ordered = this.handler.data.get('ordered');
       const tooltip = this.baseChart.tooltip;
       const isTooltip = this.handler.visConfig.get('tooltip.show');
       const isHorizontal = this.getCategoryAxis().axisConfig.isHorizontal();
@@ -151,12 +155,14 @@ export default function HeatmapChartFactory(Private) {
         } else {
           if (isNaN(min) || isNaN(max)) {
             val = colorsNumber - 1;
+          } else if (min === max) {
+            val = 0;
           } else {
             val = (d.y - min) / (max - min); /* get val from 0 - 1 */
             val = Math.min(colorsNumber - 1, Math.floor(val * colorsNumber));
           }
         }
-        return val;
+        return !isNaN(val) ? val : -1;
       }
 
       function label(d) {
@@ -237,7 +243,7 @@ export default function HeatmapChartFactory(Private) {
             return `rotate(${rotate},${horizontalCenter},${verticalCenter})`;
           });
         if (hiddenLabels) {
-          this.baseChart.handler.alerts.show('Some labels were hidden due to size constrains');
+          this.baseChart.handler.alerts.show('Some labels were hidden due to size constraints');
         }
       }
 

@@ -1,9 +1,10 @@
-import AggTypesMetricsMetricAggTypeProvider from 'ui/agg_types/metrics/metric_agg_type';
-import AggTypesMetricsPercentilesProvider from 'ui/agg_types/metrics/percentiles';
-export default function AggTypeMetricMedianProvider(Private) {
+import { AggTypesMetricsMetricAggTypeProvider } from 'ui/agg_types/metrics/metric_agg_type';
+import { AggTypesMetricsPercentilesProvider } from 'ui/agg_types/metrics/percentiles';
 
-  let MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
-  let percentiles = Private(AggTypesMetricsPercentilesProvider);
+export function AggTypesMetricsMedianProvider(Private) {
+
+  const MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
+  const percentiles = Private(AggTypesMetricsPercentilesProvider);
 
   return new MetricAggType({
     name: 'median',
@@ -30,4 +31,4 @@ export default function AggTypeMetricMedianProvider(Private) {
     getResponseAggs: percentiles.getResponseAggs,
     getValue: percentiles.getValue
   });
-};
+}

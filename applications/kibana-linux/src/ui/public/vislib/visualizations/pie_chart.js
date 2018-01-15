@@ -1,9 +1,10 @@
 import d3 from 'd3';
 import _ from 'lodash';
 import $ from 'jquery';
-import errors from 'ui/errors';
-import VislibVisualizationsChartProvider from './_chart';
-export default function PieChartFactory(Private) {
+import { PieContainsAllZeros, ContainerTooSmall } from 'ui/errors';
+import { VislibVisualizationsChartProvider } from './_chart';
+
+export function VislibVisualizationsPieChartProvider(Private) {
 
   const Chart = Private(VislibVisualizationsChartProvider);
 
@@ -46,9 +47,9 @@ export default function PieChartFactory(Private) {
       });
 
       if (isAllZeros) {
-        throw new errors.PieContainsAllZeros();
+        throw new PieContainsAllZeros();
       }
-    };
+    }
 
     /**
      * Adds Events to SVG paths
@@ -64,7 +65,7 @@ export default function PieChartFactory(Private) {
       .call(events.addHoverEvent())
       .call(events.addMouseoutEvent())
       .call(events.addClickEvent());
-    };
+    }
 
     convertToPercentage(slices) {
       (function assignPercentages(slices) {
@@ -91,7 +92,7 @@ export default function PieChartFactory(Private) {
           }
         });
       }(slices));
-    };
+    }
 
     /**
      * Adds pie paths to SVG
@@ -169,16 +170,16 @@ export default function PieChartFactory(Private) {
       }
 
       return path;
-    };
+    }
 
     _validateContainerSize(width, height) {
       const minWidth = 20;
       const minHeight = 20;
 
       if (width <= minWidth || height <= minHeight) {
-        throw new errors.ContainerTooSmall();
+        throw new ContainerTooSmall();
       }
-    };
+    }
 
     /**
      * Renders d3 visualization
@@ -217,8 +218,8 @@ export default function PieChartFactory(Private) {
           return svg;
         });
       };
-    };
+    }
   }
 
   return PieChart;
-};
+}

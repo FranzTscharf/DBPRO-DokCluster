@@ -1,23 +1,27 @@
 'use strict';
 
-var _ = require('lodash');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Applies to unresolved arguments in the AST
 module.exports = function repositionArguments(functionDef, unorderedArgs) {
-  var args = [];
+  const args = [];
 
-  _.each(unorderedArgs, function (unorderedArg, i) {
-    var argDef;
-    var targetIndex;
-    var value;
-    var storeAsArray;
+  _lodash2.default.each(unorderedArgs, function (unorderedArg, i) {
+    let argDef;
+    let targetIndex;
+    let value;
+    let storeAsArray;
 
-    if (_.isObject(unorderedArg) && unorderedArg.type === 'namedArg') {
+    if (_lodash2.default.isObject(unorderedArg) && unorderedArg.type === 'namedArg') {
       argDef = functionDef.argsByName[unorderedArg.name];
 
       if (!argDef) {
         if (functionDef.extended) {
-          var namesIndex = functionDef.args.length;
+          const namesIndex = functionDef.args.length;
           targetIndex = functionDef.args.length + 1;
 
           args[namesIndex] = args[namesIndex] || [];
@@ -27,7 +31,7 @@ module.exports = function repositionArguments(functionDef, unorderedArgs) {
           storeAsArray = true;
         }
       } else {
-        targetIndex = _.findIndex(functionDef.args, function (orderedArg) {
+        targetIndex = _lodash2.default.findIndex(functionDef.args, function (orderedArg) {
           return unorderedArg.name === orderedArg.name;
         });
         storeAsArray = argDef.multi;

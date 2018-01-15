@@ -1,19 +1,25 @@
 'use strict';
 
-var _ = require('lodash');
-var processFunctionDefinition = require('./server/lib/process_function_definition');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _process_function_definition = require('./server/lib/process_function_definition');
+
+var _process_function_definition2 = _interopRequireDefault(_process_function_definition);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function (server) {
   //var config = server.config();
-
   require('./server/routes/run.js')(server);
   require('./server/routes/functions.js')(server);
   require('./server/routes/validate_es.js')(server);
 
-  var functions = require('./server/lib/load_functions')('series_functions');
+  const functions = require('./server/lib/load_functions')('series_functions');
 
   function addFunction(func) {
-    _.assign(functions, processFunctionDefinition(func));
+    _lodash2.default.assign(functions, (0, _process_function_definition2.default)(func));
   }
 
   function getFunction(name) {

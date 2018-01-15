@@ -1,7 +1,8 @@
 import _ from 'lodash';
-import UtilsDiffTimePickerValsProvider from 'ui/utils/diff_time_picker_vals';
-export default function diffTimeProvider(Private) {
-  let diff = Private(UtilsDiffTimePickerValsProvider);
+import { UtilsDiffTimePickerValsProvider } from 'ui/utils/diff_time_picker_vals';
+
+export function TimefilterLibDiffTimeProvider(Private) {
+  const diff = Private(UtilsDiffTimePickerValsProvider);
 
   return function (self) {
     let oldTime = _.clone(self.time);
@@ -13,4 +14,4 @@ export default function diffTimeProvider(Private) {
       oldTime = _.clone(self.time);
     };
   };
-};
+}

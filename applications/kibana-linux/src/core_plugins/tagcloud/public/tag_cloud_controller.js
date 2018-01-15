@@ -1,14 +1,14 @@
 import _ from 'lodash';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import TagCloud from 'plugins/tagcloud/tag_cloud';
 import AggConfigResult from 'ui/vis/agg_config_result';
-import FilterBarFilterBarClickHandlerProvider from 'ui/filter_bar/filter_bar_click_handler';
+import { FilterBarClickHandlerProvider } from 'ui/filter_bar/filter_bar_click_handler';
 
 const module = uiModules.get('kibana/tagcloud', ['kibana']);
 module.controller('KbnTagCloudController', function ($scope, $element, Private, getAppState) {
 
   const containerNode = $element[0];
-  const filterBarClickHandler = Private(FilterBarFilterBarClickHandlerProvider);
+  const filterBarClickHandler = Private(FilterBarClickHandlerProvider);
   const maxTagCount = 200;
   let truncated = false;
 
@@ -18,7 +18,7 @@ module.controller('KbnTagCloudController', function ($scope, $element, Private, 
     const clickHandler = filterBarClickHandler(appState);
     const aggs = $scope.vis.aggs.getResponseAggs();
     const aggConfigResult = new AggConfigResult(aggs[0], false, event, event);
-    clickHandler({point: {aggConfigResult: aggConfigResult}});
+    clickHandler({ point: { aggConfigResult: aggConfigResult } });
   });
   tagCloud.on('renderComplete', () => {
 
@@ -87,11 +87,11 @@ module.controller('KbnTagCloudController', function ($scope, $element, Private, 
 
   $scope.$watch(getContainerSize, _.debounce(() => {
     tagCloud.resize();
-  }, 1000, {trailing: true}), true);
+  }, 1000, { trailing: true }), true);
 
 
   function getContainerSize() {
-    return {width: $element.width(), height: $element.height()};
+    return { width: $element.width(), height: $element.height() };
   }
 
   function getValue(metricsAgg, bucket) {

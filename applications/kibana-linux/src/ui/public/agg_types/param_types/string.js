@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import editorHtml from 'ui/agg_types/controls/string.html';
-import AggTypesParamTypesBaseProvider from 'ui/agg_types/param_types/base';
-export default function FieldAggParamFactory(Private) {
+import { AggTypesParamTypesBaseProvider } from 'ui/agg_types/param_types/base';
 
-  let BaseAggParam = Private(AggTypesParamTypesBaseProvider);
+export function AggTypesParamTypesStringProvider(Private) {
+
+  const BaseAggParam = Private(AggTypesParamTypesBaseProvider);
 
   _.class(ScriptAggParam).inherits(BaseAggParam);
   function ScriptAggParam(config) {
@@ -29,4 +30,4 @@ export default function FieldAggParamFactory(Private) {
   };
 
   return ScriptAggParam;
-};
+}

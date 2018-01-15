@@ -1,6 +1,6 @@
 import { cloneDeep, isEqual, set, isPlainObject } from 'lodash';
 
-export default {
+export const stateMonitorFactory = {
   create: (state, customInitialState) => stateMonitor(state, customInitialState)
 };
 
@@ -44,15 +44,15 @@ function stateMonitor(state, customInitialState) {
 
   function dispatchFetch(keys) {
     dispatchChange('fetch_with_changes', keys);
-  };
+  }
 
   function dispatchSave(keys) {
     dispatchChange('save_with_changes', keys);
-  };
+  }
 
   function dispatchReset(keys) {
     dispatchChange('reset_with_changes', keys);
-  };
+  }
 
   return {
     setInitialState(customInitialState) {

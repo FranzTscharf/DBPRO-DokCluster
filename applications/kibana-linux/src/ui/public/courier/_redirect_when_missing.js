@@ -1,9 +1,7 @@
-import errors from 'ui/errors';
+import { SavedObjectNotFound } from 'ui/errors';
 
-export default function RedirectWhenMissingFn($location, kbnUrl, Notifier, Promise) {
-  let SavedObjectNotFound = errors.SavedObjectNotFound;
-
-  let notify = new Notifier();
+export function RedirectWhenMissingProvider($location, kbnUrl, Notifier, Promise) {
+  const notify = new Notifier();
 
   /**
    * Creates an error handler that will redirect to a url when a SavedObjectNotFound
@@ -32,4 +30,4 @@ export default function RedirectWhenMissingFn($location, kbnUrl, Notifier, Promi
       return Promise.halt();
     };
   };
-};
+}

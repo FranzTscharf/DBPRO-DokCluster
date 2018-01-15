@@ -1,26 +1,33 @@
 'use strict';
 
-var _ = require('lodash');
-var createDateAgg = require('./create_date_agg');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _create_date_agg = require('./create_date_agg');
+
+var _create_date_agg2 = _interopRequireDefault(_create_date_agg);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function buildRequest(config, tlConfig) {
 
-  var bool = { must: [], must_not: [] };
+  const bool = { must: [], must_not: [] };
 
-  var timeFilter = { range: {} };
+  const timeFilter = { range: {} };
   timeFilter.range[config.timefield] = { gte: tlConfig.time.from, lte: tlConfig.time.to, format: 'epoch_millis' };
   bool.must.push(timeFilter);
 
   // Use the kibana filter bar filters
   if (config.kibana) {
-    bool.filter = _.get(tlConfig, 'request.payload.extended.es.filter') || {};
+    bool.filter = _lodash2.default.get(tlConfig, 'request.payload.extended.es.filter') || {};
   }
 
-  var aggs = {
+  const aggs = {
     'q': {
       meta: { type: 'split' },
       filters: {
-        filters: _.chain(config.q).map(function (q) {
+        filters: _lodash2.default.chain(config.q).map(function (q) {
           return [q, { query_string: { query: q } }];
         }).zipObject().value()
       },
@@ -28,9 +35,9 @@ module.exports = function buildRequest(config, tlConfig) {
     }
   };
 
-  var aggCursor = aggs.q.aggs;
+  let aggCursor = aggs.q.aggs;
 
-  _.each(config.split, function (clause, i) {
+  _lodash2.default.each(config.split, function (clause) {
     clause = clause.split(':');
     if (clause[0] && clause[1]) {
       aggCursor[clause[0]] = {
@@ -47,7 +54,7 @@ module.exports = function buildRequest(config, tlConfig) {
     }
   });
 
-  _.assign(aggCursor, createDateAgg(config, tlConfig));
+  _lodash2.default.assign(aggCursor, (0, _create_date_agg2.default)(config, tlConfig));
 
   return {
     index: config.index,

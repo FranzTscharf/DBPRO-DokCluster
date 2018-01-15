@@ -1,80 +1,83 @@
-/*
-* Algorithms from
-* copyright(c) 2013 Tom Alexander
-* Licensed under the MIT license.
-*/
-
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.linear = linear;
 exports.log = log;
-var _ = require('lodash');
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function sum(data, fn) {
-  return _.reduce(data, function (sum, d) {
+  return _lodash2.default.reduce(data, function (sum, d) {
     return sum + (d[1] == null ? 0 : fn(d));
   }, 0);
-}
+} /*
+  * Algorithms from
+  * copyright(c) 2013 Tom Alexander
+  * Licensed under the MIT license.
+  */
 
 function count(data) {
-  return _.filter(data, function (d) {
+  return _lodash2.default.filter(data, function (d) {
     return d[1] == null ? false : true;
   }).length;
 }
 
 function mapTuples(data, fn) {
-  return _.map(data, function (d) {
+  return _lodash2.default.map(data, function (d) {
     return [d[0], fn(d)];
   });
 }
 
 function linear(data) {
-  var xSum = sum(data, function (d) {
+  const xSum = sum(data, d => {
     return d[0];
   });
-  var ySum = sum(data, function (d) {
+  const ySum = sum(data, d => {
     return d[1];
   });
-  var xSqSum = sum(data, function (d) {
+  const xSqSum = sum(data, d => {
     return d[0] * d[0];
   });
-  var xySum = sum(data, function (d) {
+  const xySum = sum(data, d => {
     return d[0] * d[1];
   });
-  var observations = count(data);
+  const observations = count(data);
 
-  var gradient = (observations * xySum - xSum * ySum) / (observations * xSqSum - xSum * xSum);
+  const gradient = (observations * xySum - xSum * ySum) / (observations * xSqSum - xSum * xSum);
 
-  var intercept = ySum / observations - gradient * xSum / observations;
+  const intercept = ySum / observations - gradient * xSum / observations;
 
-  return mapTuples(data, function (d) {
+  return mapTuples(data, d => {
     return d[0] * gradient + intercept;
   });
 }
 
 function log(data) {
-  var logXSum = sum(data, function (d) {
+  const logXSum = sum(data, d => {
     return Math.log(d[0]);
   });
-  var yLogXSum = sum(data, function (d) {
+  const yLogXSum = sum(data, d => {
     return d[1] * Math.log(d[0]);
   });
-  var ySum = sum(data, function (d) {
+  const ySum = sum(data, d => {
     return d[1];
   });
-  var logXsqSum = sum(data, function (d) {
+  const logXsqSum = sum(data, d => {
     return Math.pow(Math.log(d[0]), 2);
   });
-  var observations = count(data);
+  const observations = count(data);
 
-  var b = (observations * yLogXSum - ySum * logXSum) / (observations * logXsqSum - logXSum * logXSum);
+  const b = (observations * yLogXSum - ySum * logXSum) / (observations * logXsqSum - logXSum * logXSum);
 
-  var a = (ySum - b * logXSum) / observations;
+  const a = (ySum - b * logXSum) / observations;
 
-  return mapTuples(data, function (d) {
+  return mapTuples(data, d => {
     return a + b * Math.log(d[0]);
   });
 }

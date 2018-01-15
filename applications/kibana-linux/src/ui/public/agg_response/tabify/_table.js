@@ -1,6 +1,5 @@
-import _ from 'lodash';
-export default function TableProvider() {
 
+export function AggResponseTabifyTableProvider() {
   /**
    * Simple table class that is used to contain the rows and columns that create
    * a table. This is usually found at the root of the response or within a TableGroup
@@ -35,4 +34,4 @@ export default function TableProvider() {
 
 
   return Table;
-};
+}

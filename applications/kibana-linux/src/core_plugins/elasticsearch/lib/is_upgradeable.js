@@ -1,25 +1,25 @@
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
 var _semver = require('semver');
 
 var _semver2 = _interopRequireDefault(_semver);
 
-var rcVersionRegex = /(\d+\.\d+\.\d+)\-rc(\d+)/i;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const rcVersionRegex = /(\d+\.\d+\.\d+)\-rc(\d+)/i;
 
 module.exports = function (server, doc) {
-  var config = server.config();
+  const config = server.config();
   if (/alpha|beta|snapshot/i.test(doc._id)) return false;
   if (!doc._id) return false;
   if (doc._id === config.get('pkg.version')) return false;
 
-  var packageRcRelease = Infinity;
-  var rcRelease = Infinity;
-  var packageVersion = config.get('pkg.version');
-  var version = doc._id;
-  var matches = doc._id.match(rcVersionRegex);
-  var packageMatches = config.get('pkg.version').match(rcVersionRegex);
+  let packageRcRelease = Infinity;
+  let rcRelease = Infinity;
+  let packageVersion = config.get('pkg.version');
+  let version = doc._id;
+  const matches = doc._id.match(rcVersionRegex);
+  const packageMatches = config.get('pkg.version').match(rcVersionRegex);
 
   if (matches) {
     version = matches[1];
@@ -32,7 +32,7 @@ module.exports = function (server, doc) {
   }
 
   try {
-    if (_semver2['default'].gte(version, packageVersion) && rcRelease >= packageRcRelease) return false;
+    if (_semver2.default.gte(version, packageVersion) && rcRelease >= packageRcRelease) return false;
   } catch (e) {
     return false;
   }

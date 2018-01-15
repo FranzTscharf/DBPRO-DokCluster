@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import angular from 'angular';
 import moment from 'moment';
-import getSort from 'ui/doc_table/lib/get_sort';
+import { getSort } from 'ui/doc_table/lib/get_sort';
+import * as columnActions from 'ui/doc_table/actions/columns';
 import dateMath from '@elastic/datemath';
 import 'ui/doc_table';
 import 'ui/visualize';
@@ -13,20 +14,21 @@ import 'ui/courier';
 import 'ui/index_patterns';
 import 'ui/state_management/app_state';
 import 'ui/timefilter';
-import 'ui/highlight/highlight_tags';
 import 'ui/share';
-import VisProvider from 'ui/vis';
-import DocTitleProvider from 'ui/doc_title';
-import UtilsBrushEventProvider from 'ui/utils/brush_event';
+import { VisProvider } from 'ui/vis';
+import { DocTitleProvider } from 'ui/doc_title';
+import { UtilsBrushEventProvider } from 'ui/utils/brush_event';
 import PluginsKibanaDiscoverHitSortFnProvider from 'plugins/kibana/discover/_hit_sort_fn';
-import FilterBarQueryFilterProvider from 'ui/filter_bar/query_filter';
-import FilterManagerProvider from 'ui/filter_manager';
-import AggTypesBucketsIntervalOptionsProvider from 'ui/agg_types/buckets/_interval_options';
-import stateMonitorFactory  from 'ui/state_management/state_monitor_factory';
+import { FilterBarQueryFilterProvider } from 'ui/filter_bar/query_filter';
+import { FilterManagerProvider } from 'ui/filter_manager';
+import { AggTypesBucketsIntervalOptionsProvider } from 'ui/agg_types/buckets/_interval_options';
+import { stateMonitorFactory } from 'ui/state_management/state_monitor_factory';
 import uiRoutes from 'ui/routes';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import indexTemplate from 'plugins/kibana/discover/index.html';
-import StateProvider from 'ui/state_management/state';
+import { StateProvider } from 'ui/state_management/state';
+import { documentationLinks } from 'ui/documentation_links/documentation_links';
+import { getDefaultQuery } from 'ui/parse_query';
 
 const app = uiModules.get('apps/discover', [
   'kibana/notify',
@@ -89,7 +91,7 @@ app.directive('discoverApp', function () {
 });
 
 function discoverController($scope, config, courier, $route, $window, Notifier,
-  AppState, timefilter, Promise, Private, kbnUrl, highlightTags) {
+  AppState, timefilter, Promise, Private, kbnUrl) {
 
   const Vis = Private(VisProvider);
   const docTitle = Private(DocTitleProvider);
@@ -102,6 +104,7 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
     location: 'Discover'
   });
 
+  $scope.queryDocLinks = documentationLinks.query;
   $scope.intervalOptions = Private(AggTypesBucketsIntervalOptionsProvider);
   $scope.showInterval = false;
 
@@ -109,9 +112,6 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
     return interval.val !== 'custom';
   };
 
-  $scope.toggleInterval = function () {
-    $scope.showInterval = !$scope.showInterval;
-  };
   $scope.topNavMenu = [{
     key: 'new',
     description: 'New Search',
@@ -143,22 +143,27 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
   // the actual courier.SearchSource
   $scope.searchSource = savedSearch.searchSource;
   $scope.indexPattern = resolveIndexPatternLoading();
-  $scope.searchSource.set('index', $scope.indexPattern);
+  $scope.searchSource
+  .set('index', $scope.indexPattern)
+  .highlightAll(true)
+  .version(true);
 
   if (savedSearch.id) {
     docTitle.change(savedSearch.title);
   }
 
   let stateMonitor;
-  const $appStatus = $scope.appStatus = this.appStatus = {};
+  const $appStatus = $scope.appStatus = this.appStatus = {
+    dirty: !savedSearch.id
+  };
   const $state = $scope.state = new AppState(getStateDefaults());
   $scope.uiState = $state.makeStateful('uiState');
 
   function getStateDefaults() {
     return {
-      query: $scope.searchSource.get('query') || '',
+      query: $scope.searchSource.get('query') || getDefaultQuery(),
       sort: getSort.array(savedSearch.sort, $scope.indexPattern),
-      columns: savedSearch.columns.length > 0 ? savedSearch.columns : config.get('defaultColumns'),
+      columns: savedSearch.columns.length > 0 ? savedSearch.columns : config.get('defaultColumns').slice(),
       index: $scope.indexPattern.id,
       interval: 'auto',
       filters: _.cloneDeep($scope.searchSource.getOwn('filter'))
@@ -195,7 +200,7 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
 
     stateMonitor = stateMonitorFactory.create($state, getStateDefaults());
     stateMonitor.onChange((status) => {
-      $appStatus.dirty = status.dirty;
+      $appStatus.dirty = status.dirty || !savedSearch.id;
     });
     $scope.$on('$destroy', () => stateMonitor.destroy());
 
@@ -234,10 +239,7 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
         timefilter.enabled = !!timefield;
       });
 
-      $scope.$watch('state.interval', function (interval, oldInterval) {
-        if (interval !== oldInterval && interval === 'auto') {
-          $scope.showInterval = false;
-        }
+      $scope.$watch('state.interval', function () {
         $scope.fetch();
       });
 
@@ -248,9 +250,7 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
         const buckets = $scope.vis.aggs.bySchemaGroup.buckets;
 
         if (buckets && buckets.length === 1) {
-          $scope.intervalName = 'by ' + buckets[0].buckets.getInterval().description;
-        } else {
-          $scope.intervalName = 'auto';
+          $scope.bucketInterval = buckets[0].buckets.getInterval();
         }
       });
 
@@ -357,7 +357,6 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
   };
 
   $scope.searchSource.onBeginSegmentedFetch(function (segmented) {
-
     function flushResponseData() {
       $scope.hits = 0;
       $scope.faliures = [];
@@ -369,7 +368,6 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
 
     const sort = $state.sort;
     const timeField = $scope.indexPattern.timeFieldName;
-    const totalSize = $scope.size || $scope.opts.sampleSize;
 
     /**
      * Basically an emum.
@@ -475,28 +473,36 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
     kbnUrl.change('/discover');
   };
 
-  $scope.updateDataSource = Promise.method(function () {
+  $scope.updateDataSource = Promise.method(function updateDataSource() {
     $scope.searchSource
     .size($scope.opts.sampleSize)
     .sort(getSort($state.sort, $scope.indexPattern))
     .query(!$state.query ? null : $state.query)
     .set('filter', queryFilter.getFilters());
-
-    if (config.get('doc_table:highlight')) {
-      $scope.searchSource.highlight({
-        pre_tags: [highlightTags.pre],
-        post_tags: [highlightTags.post],
-        fields: {'*': {}},
-        require_field_match: false,
-        fragment_size: 2147483647 // Limit of an integer.
-      });
-    }
   });
+
+  $scope.setSortOrder = function setSortOrder(columnName, direction) {
+    $scope.state.sort = [columnName, direction];
+  };
 
   // TODO: On array fields, negating does not negate the combination, rather all terms
   $scope.filterQuery = function (field, values, operation) {
     $scope.indexPattern.popularizeField(field, 1);
     filterManager.add(field, values, operation, $state.index);
+  };
+
+  $scope.addColumn = function addColumn(columnName) {
+    $scope.indexPattern.popularizeField(columnName, 1);
+    columnActions.addColumn($scope.state.columns, columnName);
+  };
+
+  $scope.removeColumn = function removeColumn(columnName) {
+    $scope.indexPattern.popularizeField(columnName, 1);
+    columnActions.removeColumn($scope.state.columns, columnName);
+  };
+
+  $scope.moveColumn = function moveColumn(columnName, newIndex) {
+    columnActions.moveColumn($scope.state.columns, columnName, newIndex);
   };
 
   $scope.toTop = function () {
@@ -593,4 +599,4 @@ function discoverController($scope, config, courier, $route, $window, Notifier,
   }
 
   init();
-};
+}

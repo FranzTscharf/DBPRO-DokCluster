@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import angular from 'angular';
 let excludedAttributes;
 let comparators;
 
@@ -10,7 +9,7 @@ let comparators;
  * @param {object} comparatorOptions Parameters to use for comparison
  * @returns {bool} Filters are the same
  */
-export default function (first, second, comparatorOptions) {
+export function compareFilters(first, second, comparatorOptions) {
   excludedAttributes = ['$$hashKey', 'meta'];
   comparators = _.defaults(comparatorOptions || {}, {
     state: false,
@@ -21,10 +20,10 @@ export default function (first, second, comparatorOptions) {
   if (!comparators.state) excludedAttributes.push('$state');
 
   return _.isEqual(mapFilter(first), mapFilter(second));
-};
+}
 
 function mapFilter(filter) {
-  let cleaned = _.omit(filter, excludedAttributes);
+  const cleaned = _.omit(filter, excludedAttributes);
   if (comparators.negate) cleaned.negate = filter.meta && !!filter.meta.negate;
   if (comparators.disabled) cleaned.disabled = filter.meta && !!filter.meta.disabled;
   return cleaned;

@@ -1,5 +1,5 @@
-import uiModules from 'ui/modules';
-let module = uiModules.get('kibana');
+import { uiModules } from 'ui/modules';
+const module = uiModules.get('kibana');
 
 module.directive('inputNumber', function () {
   return {

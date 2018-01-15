@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import BaseObject from 'ui/utils/base_object';
+import { BaseObject } from 'ui/utils/base_object';
 
 /**
  * Simple event emitter class used in the vislib. Calls
@@ -8,7 +8,7 @@ import BaseObject from 'ui/utils/base_object';
  * @class
  */
 _.class(SimpleEmitter).inherits(BaseObject);
-function SimpleEmitter() {
+export function SimpleEmitter() {
   this._listeners = {};
 }
 
@@ -68,7 +68,7 @@ SimpleEmitter.prototype.removeAllListeners = function () {
  */
 SimpleEmitter.prototype.emit = _.restParam(function (name, args) {
   if (!this._listeners[name]) return this;
-  let listeners = this.listeners(name);
+  const listeners = this.listeners(name);
   let i = -1;
 
   while (++i < listeners.length) {
@@ -115,5 +115,3 @@ SimpleEmitter.prototype.listenerCount = function (name) {
   }, 0);
 };
 
-
-export default SimpleEmitter;

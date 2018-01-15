@@ -1,124 +1,147 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.analyzeArchive = analyzeArchive;
+exports._isDirectory = _isDirectory;
+exports.extractArchive = extractArchive;
 
-/**
- * Extracts files from a zip archive to a file path using a filter function
- * @param {string} zipPath - file path to a zip archive
- * @param {string} targetPath - directory path to where the files should
- *  extracted
- * @param {integer} strip - Number of nested directories within the archive
- *  that should be ignored when determining the target path of an archived
- *  file.
- * @param {function} filter - A function that accepts a single parameter 'file'
- *  and returns true if the file should be extracted from the archive
- */
+var _yauzl = require('yauzl');
 
-var extractFiles = _asyncToGenerator(function* (zipPath, targetPath, strip, filter) {
-  yield new Promise(function (resolve, reject) {
-    var unzipper = new _bigfungerDecompressZip2['default'](zipPath);
+var _yauzl2 = _interopRequireDefault(_yauzl);
 
-    unzipper.on('error', reject);
+var _path = require('path');
 
-    var options = {
-      path: targetPath,
-      strip: strip
-    };
-    if (filter) {
-      options.filter = extractFilter(filter);
-    }
+var _path2 = _interopRequireDefault(_path);
 
-    unzipper.extract(options);
+var _mkdirp = require('mkdirp');
 
-    unzipper.on('extract', resolve);
-  });
-}
+var _mkdirp2 = _interopRequireDefault(_mkdirp);
 
-/**
- * Returns all files within an archive
- * @param {string} zipPath - file path to a zip archive
- * @returns {array} all files within an archive with their relative paths
- */
-);
-
-exports.extractFiles = extractFiles;
-
-var listFiles = _asyncToGenerator(function* (zipPath) {
-  return yield new Promise(function (resolve, reject) {
-    var unzipper = new _bigfungerDecompressZip2['default'](zipPath);
-
-    unzipper.on('error', reject);
-
-    unzipper.on('list', function (files) {
-      files = files.map(function (file) {
-        return file.replace(/\\/g, '/');
-      });
-      resolve(files);
-    });
-
-    unzipper.list();
-  });
-});
-
-exports.listFiles = listFiles;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { var callNext = step.bind(null, 'next'); var callThrow = step.bind(null, 'throw'); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(callNext, callThrow); } } callNext(); }); }; }
+var _fs = require('fs');
 
 var _lodash = require('lodash');
 
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _bigfungerDecompressZip = require('@bigfunger/decompress-zip');
-
-var _bigfungerDecompressZip2 = _interopRequireDefault(_bigfungerDecompressZip);
-
-var SYMBOLIC_LINK = 'SymbolicLink';
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
- * Creates a filter function to be consumed by extractFiles that filters by
- *  an array of files
- * @param {array} files - an array of full file paths to extract. Should match
- *   exactly a value from listFiles
+ * Returns an array of package objects. There will be one for each of
+ *  package.json files in the archive
+ *
+ * @param {string} archive - path to plugin archive zip file
  */
-function extractFilterFromFiles(files) {
-  var filterFiles = files.map(function (file) {
-    return file.replace(/\\/g, '/');
-  });
-  return function filterByFiles(file) {
-    if (file.type === SYMBOLIC_LINK) return false;
 
-    var path = file.path.replace(/\\/g, '/');
-    return _lodash2['default'].includes(filterFiles, path);
-  };
-}
+function analyzeArchive(archive) {
+  const plugins = [];
+  const regExp = new RegExp('(kibana[\\\\/][^\\\\/]+)[\\\\/]package\.json', 'i');
 
-/**
- * Creates a filter function to be consumed by extractFiles that filters by
- *  an array of root paths
- * @param {array} paths - an array of root paths from the archive. All files and
- *   folders will be extracted recursively using these paths as roots.
- */
-function extractFilterFromPaths(paths) {
-  return function filterByRootPath(file) {
-    if (file.type === SYMBOLIC_LINK) return false;
+  return new Promise((resolve, reject) => {
+    _yauzl2.default.open(archive, { lazyEntries: true }, function (err, zipfile) {
+      if (err) {
+        return reject(err);
+      }
 
-    return paths.some(function (path) {
-      var regex = new RegExp(path + '($|/)', 'i');
-      return file.parent.match(regex);
+      zipfile.readEntry();
+      zipfile.on('entry', function (entry) {
+        const match = entry.fileName.match(regExp);
+
+        if (!match) {
+          return zipfile.readEntry();
+        }
+
+        zipfile.openReadStream(entry, function (err, readable) {
+          const chunks = [];
+
+          if (err) {
+            return reject(err);
+          }
+
+          readable.on('data', chunk => chunks.push(chunk));
+
+          readable.on('end', function () {
+            const contents = Buffer.concat(chunks).toString();
+            const pkg = JSON.parse(contents);
+
+            plugins.push(Object.assign(pkg, {
+              archivePath: match[1],
+              archive: archive,
+
+              // Plugins must specify their version, and by default that version should match
+              // the version of kibana down to the patch level. If these two versions need
+              // to diverge, they can specify a kibana.version to indicate the version of
+              // kibana the plugin is intended to work with.
+              kibanaVersion: (0, _lodash.get)(pkg, 'kibana.version', pkg.version)
+            }));
+
+            zipfile.readEntry();
+          });
+        });
+      });
+
+      zipfile.on('close', () => {
+        resolve(plugins);
+      });
     });
-  };
+  });
 }
 
-/**
- * Creates a filter function to be consumed by extractFiles
- * @param {object} filter - an object with either a files or paths property.
- */
-function extractFilter(filter) {
-  if (filter.files) return extractFilterFromFiles(filter.files);
-  if (filter.paths) return extractFilterFromPaths(filter.paths);
-  return _lodash2['default'].noop;
+const isDirectoryRegex = /(\/|\\)$/;
+function _isDirectory(filename) {
+  return isDirectoryRegex.test(filename);
+}
+
+function extractArchive(archive, targetDir, extractPath) {
+  return new Promise((resolve, reject) => {
+    _yauzl2.default.open(archive, { lazyEntries: true }, function (err, zipfile) {
+      if (err) {
+        return reject(err);
+      }
+
+      zipfile.readEntry();
+      zipfile.on('close', resolve);
+      zipfile.on('entry', function (entry) {
+        let fileName = entry.fileName;
+
+        if (extractPath && fileName.startsWith(extractPath)) {
+          fileName = fileName.substring(extractPath.length);
+        } else {
+          return zipfile.readEntry();
+        }
+
+        if (targetDir) {
+          fileName = _path2.default.join(targetDir, fileName);
+        }
+
+        if (_isDirectory(fileName)) {
+          (0, _mkdirp2.default)(fileName, function (err) {
+            if (err) {
+              return reject(err);
+            }
+
+            zipfile.readEntry();
+          });
+        } else {
+          // file entry
+          zipfile.openReadStream(entry, function (err, readStream) {
+            if (err) {
+              return reject(err);
+            }
+
+            // ensure parent directory exists
+            (0, _mkdirp2.default)(_path2.default.dirname(fileName), function (err) {
+              if (err) {
+                return reject(err);
+              }
+
+              readStream.pipe((0, _fs.createWriteStream)(fileName));
+              readStream.on('end', function () {
+                zipfile.readEntry();
+              });
+            });
+          });
+        }
+      });
+    });
+  });
 }

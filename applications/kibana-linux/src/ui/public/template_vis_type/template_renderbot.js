@@ -1,7 +1,8 @@
 import _ from 'lodash';
-import VisRenderbotProvider from 'ui/vis/renderbot';
-export default function TemplateRenderbotFactory(Private, $compile, $rootScope) {
-  let Renderbot = Private(VisRenderbotProvider);
+import { VisRenderbotProvider } from 'ui/vis/renderbot';
+
+export function TemplateRenderbotProvider(Private, $compile, $rootScope) {
+  const Renderbot = Private(VisRenderbotProvider);
 
   _.class(TemplateRenderbot).inherits(Renderbot);
   function TemplateRenderbot(vis, $el, uiState) {
@@ -23,4 +24,4 @@ export default function TemplateRenderbotFactory(Private, $compile, $rootScope) 
   };
 
   return TemplateRenderbot;
-};
+}

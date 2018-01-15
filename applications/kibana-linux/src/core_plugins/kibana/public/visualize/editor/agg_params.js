@@ -1,22 +1,18 @@
-import IndexedArray from 'ui/indexed_array';
+import { IndexedArray } from 'ui/indexed_array';
 import _ from 'lodash';
 import $ from 'jquery';
 import aggSelectHtml from 'plugins/kibana/visualize/editor/agg_select.html';
 import advancedToggleHtml from 'plugins/kibana/visualize/editor/advanced_toggle.html';
 import 'ui/filters/match_any';
 import 'plugins/kibana/visualize/editor/agg_param';
-import AggTypesIndexProvider from 'ui/agg_types/index';
-import uiModules from 'ui/modules';
+import { AggTypesIndexProvider } from 'ui/agg_types/index';
+import { uiModules } from 'ui/modules';
 import aggParamsTemplate from 'plugins/kibana/visualize/editor/agg_params.html';
 
 uiModules
 .get('app/visualize')
 .directive('visEditorAggParams', function ($compile, $parse, Private, Notifier, $filter) {
   const aggTypes = Private(AggTypesIndexProvider);
-
-  const notify = new Notifier({
-    location: 'visAggGroup'
-  });
 
   return {
     restrict: 'E',
@@ -29,23 +25,36 @@ uiModules
       $scope.aggTypeOptions = aggTypes.byType[$scope.groupName];
       $scope.advancedToggled = false;
 
+      // We set up this watch prior to adding the controls below, because when the controls are added,
+      // there is a possibility that the agg type can be automatically selected (if there is only one)
+      $scope.$watch('agg.type', updateAggParamEditor);
+
       // this will contain the controls for the schema (rows or columns?), which are unrelated to
       // controls for the agg, which is why they are first
-      const $schemaEditor = $('<div>').addClass('schemaEditors').appendTo($el);
-
-      if ($scope.agg.schema.editor) {
-        $schemaEditor.append($scope.agg.schema.editor);
-        $compile($schemaEditor)($scope.$new());
-      }
+      addSchemaEditor();
 
       // allow selection of an aggregation
-      const $aggSelect = $(aggSelectHtml).appendTo($el);
-      $compile($aggSelect)($scope);
+      addAggSelector();
+
+      function addSchemaEditor() {
+        const $schemaEditor = $('<div>').addClass('schemaEditors').appendTo($el);
+
+        if ($scope.agg.schema.editor) {
+          $schemaEditor.append($scope.agg.schema.editor);
+          $compile($schemaEditor)($scope.$new());
+        }
+      }
+
+      function addAggSelector() {
+        const $aggSelect = $(aggSelectHtml).appendTo($el);
+        $compile($aggSelect)($scope);
+      }
 
       // params for the selected agg, these are rebuilt every time the agg in $aggSelect changes
       let $aggParamEditors; //  container for agg type param editors
       let $aggParamEditorsScope;
-      $scope.$watch('agg.type', function updateAggParamEditor(newType, oldType) {
+
+      function updateAggParamEditor(newType, oldType) {
         if ($aggParamEditors) {
           $aggParamEditors.remove();
           $aggParamEditors = null;
@@ -82,11 +91,21 @@ uiModules
         // build collection of agg params html
         type.params.forEach(function (param, i) {
           let aggParam;
+          let fields;
+          if (agg.schema.hideCustomLabel && param.name === 'customLabel') {
+            return;
+          }
+          // if field param exists, compute allowed fields
+          if (param.name === 'field') {
+            fields = $aggParamEditorsScope.indexedFields;
+          } else if (param.type === 'field') {
+            fields = $aggParamEditorsScope[`${param.name}Options`] = getIndexedFields(param);
+          }
 
-          if ($aggParamEditorsScope.indexedFields) {
-            const hasIndexedFields = $aggParamEditorsScope.indexedFields.length > 0;
+          if (fields) {
+            const hasIndexedFields = fields.length > 0;
             const isExtraParam = i > 0;
-            if (!hasIndexedFields && isExtraParam) { // don't draw the rest of the options if their are no indexed fields.
+            if (!hasIndexedFields && isExtraParam) { // don't draw the rest of the options if there are no indexed fields.
               return;
             }
           }
@@ -111,7 +130,7 @@ uiModules
 
         $aggParamEditors = $(paramEditors).appendTo($el);
         $compile($aggParamEditors)($aggParamEditorsScope);
-      });
+      }
 
       // build HTML editor given an aggParam and index
       function getAggParamHTML(param, idx) {
@@ -132,6 +151,31 @@ uiModules
         .attr(attrs)
         .append(param.editor)
         .get(0);
+      }
+
+      function getIndexedFields(param) {
+        let fields = _.filter($scope.agg.vis.indexPattern.fields.raw, 'aggregatable');
+        const fieldTypes = param.filterFieldTypes;
+
+        if (fieldTypes) {
+          const filter = _.isFunction(fieldTypes) ? fieldTypes.bind(this, $scope.agg.vis) : fieldTypes;
+          fields = $filter('fieldType')(fields, filter);
+          fields = $filter('orderBy')(fields, ['type', 'name']);
+        }
+
+        return new IndexedArray({
+
+          /**
+           * @type {Array}
+           */
+          index: ['name'],
+
+          /**
+           * [group description]
+           * @type {Array}
+           */
+          initialSet: fields
+        });
       }
     }
   };

@@ -1,29 +1,35 @@
 'use strict';
 
-var _ = require('lodash');
+var _lodash = require('lodash');
 
-var buildTarget = require('../../lib/build_target.js');
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _build_target = require('../../lib/build_target.js');
+
+var _build_target2 = _interopRequireDefault(_build_target);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function (setup) {
-  var targetSeries;
+  let targetSeries;
 
-  var tlConfig = {
+  let tlConfig = {
     getTargetSeries: function getTargetSeries() {
-      return _.map(targetSeries, function (bucket) {
+      return _lodash2.default.map(targetSeries, function (bucket) {
         // eslint-disable-line no-use-before-define
         return [bucket, null];
       });
     },
     setTargetSeries: function setTargetSeries() {
-      targetSeries = buildTarget(this);
+      targetSeries = (0, _build_target2.default)(this);
     },
     writeTargetSeries: function writeTargetSeries(series) {
-      targetSeries = _.map(series, function (p) {
+      targetSeries = _lodash2.default.map(series, function (p) {
         return p[0];
       });
     }
   };
 
-  tlConfig = _.extend(tlConfig, setup);
+  tlConfig = _lodash2.default.extend(tlConfig, setup);
   return tlConfig;
 };

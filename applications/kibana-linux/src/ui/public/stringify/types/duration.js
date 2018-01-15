@@ -1,10 +1,9 @@
 import 'ui/stringify/editors/duration.less';
-import _ from 'lodash';
 import moment from 'moment';
-import IndexPatternsFieldFormatProvider from 'ui/index_patterns/_field_format/field_format';
+import { IndexPatternsFieldFormatProvider } from 'ui/index_patterns/_field_format/field_format';
 import durationTemplate from 'ui/stringify/editors/duration.html';
 
-export default function DurationFormatProvider(Private) {
+export function stringifyDuration(Private) {
   const ratioToSeconds = {
     picoseconds: 0.000000000001,
     nanoseconds: 0.000000001,
@@ -67,7 +66,7 @@ export default function DurationFormatProvider(Private) {
   Duration.editor = {
     template: durationTemplate,
     controllerAs: 'cntrl',
-    controller($scope, $interval) {
+    controller() {
       this.sampleInputs = [
         -123,
         1,
@@ -95,4 +94,4 @@ export default function DurationFormatProvider(Private) {
     const kind = inputFormat in ratioToSeconds ? 'seconds' : inputFormat;
     return moment.duration(val * ratio, kind);
   }
-};
+}

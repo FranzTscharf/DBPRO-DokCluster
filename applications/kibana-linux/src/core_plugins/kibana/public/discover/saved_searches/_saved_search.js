@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import 'ui/notify';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 
 const module = uiModules.get('discover/saved_searches', [
@@ -38,6 +38,9 @@ module.factory('SavedSearch', function (courier) {
     sort: 'string',
     version: 'integer'
   };
+
+  // Order these fields to the top, the rest are alphabetical
+  SavedSearch.fieldOrder = ['title', 'description'];
 
   SavedSearch.searchSource = true;
 

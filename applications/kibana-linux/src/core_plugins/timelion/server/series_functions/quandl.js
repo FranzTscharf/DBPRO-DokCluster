@@ -1,14 +1,29 @@
 'use strict';
 
-var _ = require('lodash');
-var fetch = require('node-fetch');
-var moment = require('moment');
-fetch.Promise = require('bluebird');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _nodeFetch = require('node-fetch');
+
+var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _datasource = require('../lib/classes/datasource');
+
+var _datasource2 = _interopRequireDefault(_datasource);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_nodeFetch2.default.Promise = require('bluebird');
+
 //var parseDateMath = require('../utils/date_math.js');
 
-var Datasource = require('../lib/classes/datasource');
 
-module.exports = new Datasource('quandl', {
+module.exports = new _datasource2.default('quandl', {
   dataSource: true,
   args: [{
     name: 'code',
@@ -19,16 +34,19 @@ module.exports = new Datasource('quandl', {
     types: ['number', 'null'],
     help: 'Some quandl sources return multiple series, which one should I use? 1 based index.'
   }],
-  help: '\n    [experimental]\n    Pull data from quandl.com using the quandl code. Set "timelion:quandl.key" to your free API key in Kibana\'s\n    Advanced Settings. The API has a really low rate limit without a key.',
+  help: `
+    [experimental]
+    Pull data from quandl.com using the quandl code. Set "timelion:quandl.key" to your free API key in Kibana's
+    Advanced Settings. The API has a really low rate limit without a key.`,
   fn: function quandlFn(args, tlConfig) {
-    var intervalMap = {
+    const intervalMap = {
       '1d': 'daily',
       '1w': 'weekly',
       '1M': 'monthly',
       '1y': 'annual'
     };
 
-    var config = _.defaults(args.byName, {
+    const config = _lodash2.default.defaults(args.byName, {
       code: 'WIKI/AAPL',
       position: 1,
       interval: intervalMap[tlConfig.time.interval],
@@ -36,12 +54,12 @@ module.exports = new Datasource('quandl', {
     });
 
     if (!config.interval) {
-      throw new Error('quandl() unsupported interval: ' + tlConfig.time.interval + '. quandl() supports: ' + _.keys(intervalMap).join(', '));
+      throw new Error('quandl() unsupported interval: ' + tlConfig.time.interval + '. quandl() supports: ' + _lodash2.default.keys(intervalMap).join(', '));
     }
 
-    var time = {
-      min: moment.utc(tlConfig.time.from).format('YYYY-MM-DD'),
-      max: moment.utc(tlConfig.time.to).format('YYYY-MM-DD')
+    const time = {
+      min: _moment2.default.utc(tlConfig.time.from).format('YYYY-MM-DD'),
+      max: _moment2.default.utc(tlConfig.time.to).format('YYYY-MM-DD')
     };
 
     // POSITIONS
@@ -51,13 +69,13 @@ module.exports = new Datasource('quandl', {
     // 4. close
     // 5. volume
 
-    var URL = 'https://www.quandl.com/api/v1/datasets/' + config.code + '.json' + '?sort_order=asc' + '&trim_start=' + time.min + '&trim_end=' + time.max + '&collapse=' + config.interval + '&auth_token=' + config.apikey;
+    const URL = 'https://www.quandl.com/api/v1/datasets/' + config.code + '.json' + '?sort_order=asc' + '&trim_start=' + time.min + '&trim_end=' + time.max + '&collapse=' + config.interval + '&auth_token=' + config.apikey;
 
-    return fetch(URL).then(function (resp) {
+    return (0, _nodeFetch2.default)(URL).then(function (resp) {
       return resp.json();
     }).then(function (resp) {
-      var data = _.map(resp.data, function (bucket) {
-        return [moment(bucket[0]).valueOf(), bucket[config.position]];
+      const data = _lodash2.default.map(resp.data, function (bucket) {
+        return [(0, _moment2.default)(bucket[0]).valueOf(), bucket[config.position]];
       });
 
       return {
@@ -69,7 +87,7 @@ module.exports = new Datasource('quandl', {
           label: resp.name
         }]
       };
-    })['catch'](function (e) {
+    }).catch(function (e) {
       throw e;
     });
   }

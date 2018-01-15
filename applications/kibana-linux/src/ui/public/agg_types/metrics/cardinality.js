@@ -1,9 +1,9 @@
-import AggTypesMetricsMetricAggTypeProvider from 'ui/agg_types/metrics/metric_agg_type';
-import RegistryFieldFormatsProvider from 'ui/registry/field_formats';
+import { AggTypesMetricsMetricAggTypeProvider } from 'ui/agg_types/metrics/metric_agg_type';
+import { RegistryFieldFormatsProvider } from 'ui/registry/field_formats';
 
-export default function AggTypeMetricCardinalityProvider(Private) {
-  let MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
-  let fieldFormats = Private(RegistryFieldFormatsProvider);
+export function AggTypesMetricsCardinalityProvider(Private) {
+  const MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
+  const fieldFormats = Private(RegistryFieldFormatsProvider);
 
   return new MetricAggType({
     name: 'cardinality',
@@ -20,4 +20,4 @@ export default function AggTypeMetricCardinalityProvider(Private) {
       }
     ]
   });
-};
+}

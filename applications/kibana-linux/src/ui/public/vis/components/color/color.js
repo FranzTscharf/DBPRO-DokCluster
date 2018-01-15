@@ -1,7 +1,8 @@
 import _ from 'lodash';
-import VislibComponentsColorMappedColorsProvider from './mapped_colors';
-export default function ColorUtilService(Private) {
-  const mappedColors = Private(VislibComponentsColorMappedColorsProvider);
+import { VisColorMappedColorsProvider } from './mapped_colors';
+
+export function VislibComponentsColorColorProvider(Private) {
+  const mappedColors = Private(VisColorMappedColorsProvider);
 
   /*
    * Accepts an array of strings or numbers that are used to create a
@@ -28,4 +29,4 @@ export default function ColorUtilService(Private) {
       return colorMapping[value] || mappedColors.get(value);
     };
   };
-};
+}

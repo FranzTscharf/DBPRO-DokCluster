@@ -1,7 +1,7 @@
-import AggTypesMetricsMetricAggTypeProvider from 'ui/agg_types/metrics/metric_agg_type';
+import { AggTypesMetricsMetricAggTypeProvider } from 'ui/agg_types/metrics/metric_agg_type';
 
-export default function AggTypeMetricSumProvider(Private) {
-  let MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
+export function AggTypesMetricsSumProvider(Private) {
+  const MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
 
   return new MetricAggType({
     name: 'sum',
@@ -16,4 +16,4 @@ export default function AggTypeMetricSumProvider(Private) {
       }
     ]
   });
-};
+}

@@ -1,3 +1,40 @@
+'use strict';
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Uh, I don't think this will work when you have nulls in the initial seasonal components
+function initSeasonalComponents(samplePoints, seasonLength) {
+  const sampledSeasonCount = samplePoints.length / seasonLength;
+  let currentSeason = [];
+  const seasonalAverages = _lodash2.default.reduce(samplePoints, (result, point, i) => {
+    currentSeason.push(point);
+    // If this is the end of the season, add it to the result;
+    if (i % seasonLength === seasonLength - 1) {
+      result.push(_lodash2.default.sum(currentSeason) / seasonLength);
+      currentSeason = [];
+    }
+
+    return result;
+  }, []);
+
+  const seasonals = _lodash2.default.times(seasonLength, i => {
+    let sumOfValsOverAvg = 0;
+    _lodash2.default.times(sampledSeasonCount, j => {
+      sumOfValsOverAvg += samplePoints[seasonLength * j + i] - seasonalAverages[j];
+    });
+
+    return sumOfValsOverAvg / sampledSeasonCount;
+  });
+
+  return seasonals;
+}
+
+// This is different from the DES method of establishing trend because it looks for
+// the difference in points between seasons
 // Frequency = number of points per season
 // Season = 1 hump
 
@@ -8,42 +45,9 @@ Hourly data might have:
  - Annual seasonality (frequency=24×365.25=8766)
 */
 
-'use strict';
-
-var _ = require('lodash');
-
-// Uh, I don't think this will work when you have nulls in the initial seasonal components
-function initSeasonalComponents(samplePoints, seasonLength) {
-  var sampledSeasonCount = samplePoints.length / seasonLength;
-  var currentSeason = [];
-  var seasonalAverages = _.reduce(samplePoints, function (result, point, i) {
-    currentSeason.push(point);
-    // If this is the end of the season, add it to the result;
-    if (i % seasonLength === seasonLength - 1) {
-      result.push(_.sum(currentSeason) / seasonLength);
-      currentSeason = [];
-    }
-
-    return result;
-  }, []);
-
-  var seasonals = _.times(seasonLength, function (i) {
-    var sumOfValsOverAvg = 0;
-    _.times(sampledSeasonCount, function (j) {
-      sumOfValsOverAvg += samplePoints[seasonLength * j + i] - seasonalAverages[j];
-    });
-
-    return sumOfValsOverAvg / sampledSeasonCount;
-  });
-
-  return seasonals;
-};
-
-// This is different from the DES method of establishing trend because it looks for
-// the difference in points between seasons
 function initTrend(samplePoints, seasonLength) {
-  var sum = 0;
-  _.times(seasonLength, function (i) {
+  let sum = 0;
+  _lodash2.default.times(seasonLength, i => {
     sum += (samplePoints[i + seasonLength] - samplePoints[i]) / seasonLength;
   });
   return sum / seasonLength;
@@ -51,16 +55,16 @@ function initTrend(samplePoints, seasonLength) {
 
 module.exports = function tes(points, alpha, beta, gamma, seasonLength, seasonsToSample) {
 
-  var samplePoints = points.slice(0, seasonLength * seasonsToSample);
-  var seasonals = initSeasonalComponents(samplePoints, seasonLength);
-  var level;
-  var prevLevel;
-  var trend;
-  var prevTrend;
-  var unknownCount = 0;
+  const samplePoints = points.slice(0, seasonLength * seasonsToSample);
+  const seasonals = initSeasonalComponents(samplePoints, seasonLength);
+  let level;
+  let prevLevel;
+  let trend;
+  let prevTrend;
+  let unknownCount = 0;
 
-  var result = _.map(points, function (point, i) {
-    var seasonalPosition = i % seasonLength;
+  const result = _lodash2.default.map(points, (point, i) => {
+    const seasonalPosition = i % seasonLength;
     // For the first samplePoints.length we use the actual points
     // After that we switch to the forecast
     if (i === 0) {

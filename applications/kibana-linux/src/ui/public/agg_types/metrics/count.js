@@ -1,9 +1,9 @@
-import AggTypesMetricsMetricAggTypeProvider from 'ui/agg_types/metrics/metric_agg_type';
-import RegistryFieldFormatsProvider from 'ui/registry/field_formats';
+import { AggTypesMetricsMetricAggTypeProvider } from 'ui/agg_types/metrics/metric_agg_type';
+import { RegistryFieldFormatsProvider } from 'ui/registry/field_formats';
 
-export default function AggTypeMetricCountProvider(Private) {
-  let MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
-  let fieldFormats = Private(RegistryFieldFormatsProvider);
+export function AggTypesMetricsCountProvider(Private) {
+  const MetricAggType = Private(AggTypesMetricsMetricAggTypeProvider);
+  const fieldFormats = Private(RegistryFieldFormatsProvider);
 
   return new MetricAggType({
     name: 'count',
@@ -19,4 +19,4 @@ export default function AggTypeMetricCountProvider(Private) {
       return bucket.doc_count;
     }
   });
-};
+}

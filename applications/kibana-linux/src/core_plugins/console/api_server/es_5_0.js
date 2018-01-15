@@ -1,8 +1,8 @@
 'use strict';
 
-var _ = require("lodash");
-var Api = require('./api');
-var parts = [require('./es_5_0/aliases'), require('./es_5_0/aggregations'), require('./es_5_0/cat'), require('./es_5_0/cluster'), require('./es_5_0/count'), require('./es_5_0/document'), require('./es_5_0/field_stats'), require('./es_5_0/filter'), require('./es_5_0/nodes'), require('./es_5_0/globals'), require('./es_5_0/indices'), require('./es_5_0/mappings'), require('./es_5_0/percolator'), require('./es_5_0/query'), require('./es_5_0/snapshot_restore'), require('./es_5_0/search'), require('./es_5_0/settings'), require('./es_5_0/templates')];
+let _ = require("lodash");
+let Api = require('./api');
+let parts = [require('./es_5_0/aliases'), require('./es_5_0/aggregations'), require('./es_5_0/cat'), require('./es_5_0/cluster'), require('./es_5_0/count'), require('./es_5_0/document'), require('./es_5_0/field_stats'), require('./es_5_0/filter'), require('./es_5_0/nodes'), require('./es_5_0/globals'), require('./es_5_0/indices'), require('./es_5_0/ingest'), require('./es_5_0/mappings'), require('./es_5_0/percolator'), require('./es_5_0/query'), require('./es_5_0/reindex'), require('./es_5_0/snapshot_restore'), require('./es_5_0/search'), require('./es_5_0/settings'), require('./es_5_0/templates')];
 
 function ES_5_0() {
   Api.call(this, "es_5_0");

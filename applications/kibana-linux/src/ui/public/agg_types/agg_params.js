@@ -1,16 +1,15 @@
 import 'ui/filters/label';
 import _ from 'lodash';
-import IndexedArray from 'ui/indexed_array';
-import AggTypesParamTypesFieldProvider from 'ui/agg_types/param_types/field';
-import AggTypesParamTypesOptionedProvider from 'ui/agg_types/param_types/optioned';
-import AggTypesParamTypesRegexProvider from 'ui/agg_types/param_types/regex';
-import AggTypesParamTypesStringProvider from 'ui/agg_types/param_types/string';
-import AggTypesParamTypesRawJsonProvider from 'ui/agg_types/param_types/raw_json';
-import AggTypesParamTypesBaseProvider from 'ui/agg_types/param_types/base';
-export default function AggParamsFactory(Private) {
+import { IndexedArray } from 'ui/indexed_array';
+import { AggTypesParamTypesFieldProvider } from 'ui/agg_types/param_types/field';
+import { AggTypesParamTypesOptionedProvider } from 'ui/agg_types/param_types/optioned';
+import { AggTypesParamTypesRegexProvider } from 'ui/agg_types/param_types/regex';
+import { AggTypesParamTypesStringProvider } from 'ui/agg_types/param_types/string';
+import { AggTypesParamTypesRawJsonProvider } from 'ui/agg_types/param_types/raw_json';
+import { AggTypesParamTypesBaseProvider } from 'ui/agg_types/param_types/base';
 
-
-  let paramTypeMap = {
+export function AggTypesAggParamsProvider(Private) {
+  const paramTypeMap = {
     field: Private(AggTypesParamTypesFieldProvider),
     optioned: Private(AggTypesParamTypesOptionedProvider),
     regex: Private(AggTypesParamTypesRegexProvider),
@@ -37,8 +36,8 @@ export default function AggParamsFactory(Private) {
     AggParams.Super.call(this, {
       index: ['name'],
       initialSet: params.map(function (config) {
-        let type = config.name === 'field' ? config.name : config.type;
-        let Class = paramTypeMap[type] || paramTypeMap._default;
+        const type = config.name === 'field' ? config.name : config.type;
+        const Class = paramTypeMap[type] || paramTypeMap._default;
         return new Class(config);
       })
     });
@@ -59,7 +58,7 @@ export default function AggParamsFactory(Private) {
    *         are dependent on the AggParam#write methods which should be studied for each AggType.
    */
   AggParams.prototype.write = function (aggConfig, locals) {
-    let output = { params: {} };
+    const output = { params: {} };
     locals = locals || {};
 
     this.forEach(function (param) {
@@ -74,4 +73,4 @@ export default function AggParamsFactory(Private) {
   };
 
   return AggParams;
-};
+}

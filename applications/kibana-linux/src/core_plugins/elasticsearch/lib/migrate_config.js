@@ -1,21 +1,21 @@
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+var _lodash = require('lodash');
 
 var _upgrade_config = require('./upgrade_config');
 
 var _upgrade_config2 = _interopRequireDefault(_upgrade_config);
 
-var _kibana_index_mappings = require('./kibana_index_mappings');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-module.exports = function (server) {
-  var config = server.config();
+module.exports = function (server, { mappings }) {
+  const config = server.config();
 
-  var _server$plugins$elasticsearch$getCluster = server.plugins.elasticsearch.getCluster('admin');
+  var _server$plugins$elast = server.plugins.elasticsearch.getCluster('admin');
 
-  var callWithInternalUser = _server$plugins$elasticsearch$getCluster.callWithInternalUser;
+  const callWithInternalUser = _server$plugins$elast.callWithInternalUser;
 
-  var options = {
+  const options = {
     index: config.get('kibana.index'),
     type: 'config',
     body: {
@@ -23,11 +23,11 @@ module.exports = function (server) {
       sort: [{
         buildNum: {
           order: 'desc',
-          unmapped_type: _kibana_index_mappings.mappings.config.properties.buildNum.type
+          unmapped_type: (0, _lodash.get)(mappings, 'config.properties.buildNum.type') || 'keyword'
         }
       }]
     }
   };
 
-  return callWithInternalUser('search', options).then((0, _upgrade_config2['default'])(server));
+  return callWithInternalUser('search', options).then((0, _upgrade_config2.default)(server));
 };

@@ -1,9 +1,9 @@
 import _ from 'lodash';
-import toEditableConfig from 'plugins/kibana/management/sections/settings/lib/to_editable_config';
+import { toEditableConfig } from 'plugins/kibana/management/sections/settings/lib/to_editable_config';
 import 'plugins/kibana/management/sections/settings/advanced_row';
-import management from 'ui/management';
+import { management } from 'ui/management';
 import uiRoutes from 'ui/routes';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import indexTemplate from 'plugins/kibana/management/sections/settings/index.html';
 
 uiRoutes
@@ -12,7 +12,7 @@ uiRoutes
 });
 
 uiModules.get('apps/management')
-.directive('kbnManagementAdvanced', function (config, Notifier, Private, $rootScope) {
+.directive('kbnManagementAdvanced', function (config) {
   return {
     restrict: 'E',
     link: function ($scope) {
@@ -22,7 +22,7 @@ uiModules.get('apps/management')
       // initial config setup
       changed();
 
-      function changed(values) {
+      function changed() {
         const all = config.getAll();
         const editable = _(all)
           .map((def, name) => toEditableConfig({

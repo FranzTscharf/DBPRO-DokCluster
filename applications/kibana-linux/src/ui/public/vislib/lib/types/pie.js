@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-export default function PieConfig(Private) {
+export function VislibPieConfigProvider() {
 
   return function (config) {
     if (!config.chart) {
@@ -10,4 +10,4 @@ export default function PieConfig(Private) {
     }
     return config;
   };
-};
+}

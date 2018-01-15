@@ -1,5 +1,4 @@
-import _ from 'lodash';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 uiModules.get('kibana')
 .run(function ($rootScope) {

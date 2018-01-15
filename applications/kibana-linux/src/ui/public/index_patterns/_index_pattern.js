@@ -1,25 +1,27 @@
 import _ from 'lodash';
-import errors from 'ui/errors';
+import { SavedObjectNotFound, DuplicateField, IndexPatternMissingIndices } from 'ui/errors';
 import angular from 'angular';
-import getComputedFields from 'ui/index_patterns/_get_computed_fields';
-import formatHit from 'ui/index_patterns/_format_hit';
-import RegistryFieldFormatsProvider from 'ui/registry/field_formats';
-import IndexPatternsGetIdsProvider from 'ui/index_patterns/_get_ids';
-import IndexPatternsMapperProvider from 'ui/index_patterns/_mapper';
-import IndexPatternsIntervalsProvider from 'ui/index_patterns/_intervals';
-import DocSourceProvider from 'ui/courier/data_source/admin_doc_source';
+import { RegistryFieldFormatsProvider } from 'ui/registry/field_formats';
+import { AdminDocSourceProvider } from 'ui/courier/data_source/admin_doc_source';
 import UtilsMappingSetupProvider from 'ui/utils/mapping_setup';
-import IndexPatternsFieldListProvider from 'ui/index_patterns/_field_list';
-import IndexPatternsFlattenHitProvider from 'ui/index_patterns/_flatten_hit';
-import IndexPatternsCalculateIndicesProvider from 'ui/index_patterns/_calculate_indices';
-import IndexPatternsPatternCacheProvider from 'ui/index_patterns/_pattern_cache';
+import { Notifier } from 'ui/notify';
 
-export default function IndexPatternFactory(Private, Notifier, config, kbnIndex, Promise, safeConfirm) {
+import { getComputedFields } from './_get_computed_fields';
+import { formatHit } from './_format_hit';
+import { IndexPatternsGetIdsProvider } from './_get_ids';
+import { IndexPatternsIntervalsProvider } from './_intervals';
+import { IndexPatternsFieldListProvider } from './_field_list';
+import { IndexPatternsFlattenHitProvider } from './_flatten_hit';
+import { IndexPatternsCalculateIndicesProvider } from './_calculate_indices';
+import { IndexPatternsPatternCacheProvider } from './_pattern_cache';
+import { FieldsFetcherProvider } from './fields_fetcher_provider';
+
+export function IndexPatternProvider(Private, $http, config, kbnIndex, Promise, confirmModalPromise) {
   const fieldformats = Private(RegistryFieldFormatsProvider);
   const getIds = Private(IndexPatternsGetIdsProvider);
-  const mapper = Private(IndexPatternsMapperProvider);
+  const fieldsFetcher = Private(FieldsFetcherProvider);
   const intervals = Private(IndexPatternsIntervalsProvider);
-  const DocSource = Private(DocSourceProvider);
+  const DocSource = Private(AdminDocSourceProvider);
   const mappingSetup = Private(UtilsMappingSetupProvider);
   const FieldList = Private(IndexPatternsFieldListProvider);
   const flattenHit = Private(IndexPatternsFlattenHitProvider);
@@ -47,29 +49,29 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
     fieldFormatMap: {
       type: 'string',
       _serialize(map = {}) {
-        const serialized = _.transform(map, serialize);
+        const serialized = _.transform(map, serializeFieldFormatMap);
         return _.isEmpty(serialized) ? undefined : angular.toJson(serialized);
       },
       _deserialize(map = '{}') {
-        return _.mapValues(angular.fromJson(map), deserialize);
+        return _.mapValues(angular.fromJson(map), deserializeFieldFormatMap);
       }
     }
   });
 
-  function serialize(flat, format, field) {
+  function serializeFieldFormatMap(flat, format, field) {
     if (format) {
       flat[field] = format;
     }
   }
 
-  function deserialize(mapping) {
+  function deserializeFieldFormatMap(mapping) {
     const FieldFormat = fieldformats.byId[mapping.id];
     return FieldFormat && new FieldFormat(mapping.params);
   }
 
   function updateFromElasticSearch(indexPattern, response) {
     if (!response.found) {
-      throw new errors.SavedObjectNotFound(type, indexPattern.id);
+      throw new SavedObjectNotFound(type, indexPattern.id);
     }
 
     _.forOwn(mapping, (fieldMapping, name) => {
@@ -95,9 +97,19 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
     return promise;
   }
 
-  function containsFieldCapabilities(fields) {
-    return _.any(fields, (field) => {
-      return _.has(field, 'aggregatable') && _.has(field, 'searchable');
+  function isFieldRefreshRequired(indexPattern) {
+    if (!indexPattern.fields) {
+      return true;
+    }
+
+    return indexPattern.fields.every(field => {
+      // See https://github.com/elastic/kibana/pull/8421
+      const hasFieldCaps = ('aggregatable' in field) && ('searchable' in field);
+
+      // See https://github.com/elastic/kibana/pull/11969
+      const hasDocValuesFlag = ('readFromDocValues' in field);
+
+      return !hasFieldCaps || !hasDocValuesFlag;
     });
   }
 
@@ -108,7 +120,7 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
       return promise;
     }
 
-    if (!indexPattern.fields || !containsFieldCapabilities(indexPattern.fields)) {
+    if (isFieldRefreshRequired(indexPattern)) {
       promise = indexPattern.refreshFields();
     }
     return promise.then(() => {initFields(indexPattern);});
@@ -146,8 +158,8 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
   }
 
   function fetchFields(indexPattern) {
-    return mapper
-    .getFieldsForIndexPattern(indexPattern, true)
+    return Promise.resolve()
+    .then(() => fieldsFetcher.fetch(indexPattern))
     .then(fields => {
       const scripted = indexPattern.getScriptedFields();
       const all = fields.concat(scripted);
@@ -212,7 +224,7 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
       const names = _.pluck(scriptedFields, 'name');
 
       if (_.contains(names, name)) {
-        throw new errors.DuplicateField(name);
+        throw new DuplicateField(name);
       }
 
       this.fields.push({
@@ -273,33 +285,47 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
 
     toDetailedIndexList(start, stop, sortDirection) {
       return Promise.resolve().then(() => {
-        const interval = this.getInterval();
-        if (interval) {
+        if (this.isTimeBasedInterval()) {
           return intervals.toIndexList(
-            this.id, interval, start, stop, sortDirection
+            this.id, this.getInterval(), start, stop, sortDirection
           );
         }
 
-        if (this.isWildcard() && this.hasTimeField() && this.canExpandIndices()) {
+        if (this.isTimeBasedWildcard() && this.isIndexExpansionEnabled()) {
           return calculateIndices(
             this.id, this.timeFieldName, start, stop, sortDirection
           );
         }
 
-        return {
-          index: this.id,
-          min: -Infinity,
-          max: Infinity
-        };
+        return [
+          {
+            index: this.id,
+            min: -Infinity,
+            max: Infinity
+          }
+        ];
       });
     }
 
-    canExpandIndices() {
+    isIndexExpansionEnabled() {
       return !this.notExpandable;
     }
 
-    hasTimeField() {
-      return !!(this.timeFieldName && this.fields.byName[this.timeFieldName]);
+    isTimeBased() {
+      return !!this.timeFieldName && (!this.fields || !!this.getTimeField());
+    }
+
+    isTimeBasedInterval() {
+      return this.isTimeBased() && !!this.getInterval();
+    }
+
+    isTimeBasedWildcard() {
+      return this.isTimeBased() && this.isWildcard();
+    }
+
+    getTimeField() {
+      if (!this.timeFieldName || !this.fields || !this.fields.byName) return;
+      return this.fields.byName[this.timeFieldName];
     }
 
     isWildcard() {
@@ -337,7 +363,7 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
         }
         const confirmMessage = 'Are you sure you want to overwrite this?';
 
-        return safeConfirm(confirmMessage)
+        return confirmModalPromise(confirmMessage, { confirmButtonText: 'Overwrite' })
         .then(() => Promise
           .try(() => {
             const cached = patternCache.get(this.id);
@@ -360,10 +386,22 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
     }
 
     refreshFields() {
-      return mapper
-      .clearCache(this)
-      .then(() => fetchFields(this))
-      .then(() => this.save());
+      return fetchFields(this)
+      .then(() => this.save())
+      .catch((err) => {
+        notify.error(err);
+        // https://github.com/elastic/kibana/issues/9224
+        // This call will attempt to remap fields from the matching
+        // ES index which may not actually exist. In that scenario,
+        // we still want to notify the user that there is a problem
+        // but we do not want to potentially make any pages unusable
+        // so do not rethrow the error here
+        if (err instanceof IndexPatternMissingIndices) {
+          return [];
+        }
+
+        throw err;
+      });
     }
 
     toJSON() {
@@ -383,4 +421,4 @@ export default function IndexPatternFactory(Private, Notifier, config, kbnIndex,
   }
 
   return IndexPattern;
-};
+}

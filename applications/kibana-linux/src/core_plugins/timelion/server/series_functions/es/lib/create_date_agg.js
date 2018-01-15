@@ -1,9 +1,13 @@
 'use strict';
 
-var _ = require('lodash');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = function createDateAgg(config, tlConfig) {
-  var dateAgg = {
+  const dateAgg = {
     time_buckets: {
       meta: { type: 'time_buckets' },
       date_histogram: {
@@ -20,7 +24,7 @@ module.exports = function createDateAgg(config, tlConfig) {
   };
 
   dateAgg.time_buckets.aggs = {};
-  _.each(config.metric, function (metric, i) {
+  _lodash2.default.each(config.metric, function (metric) {
     metric = metric.split(':');
     if (metric[0] === 'count') {
       // This is pretty lame, but its how the "doc_count" metric has to be implemented at the moment
@@ -32,7 +36,7 @@ module.exports = function createDateAgg(config, tlConfig) {
         }
       };
     } else if (metric[0] && metric[1]) {
-      var metricName = metric[0] + '(' + metric[1] + ')';
+      const metricName = metric[0] + '(' + metric[1] + ')';
       dateAgg.time_buckets.aggs[metricName] = {};
       dateAgg.time_buckets.aggs[metricName][metric[0]] = { field: metric[1] };
     } else {

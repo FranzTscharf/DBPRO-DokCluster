@@ -2,12 +2,12 @@ import _ from 'lodash';
 import 'plugins/kibana/visualize/editor/agg';
 import 'plugins/kibana/visualize/editor/agg_add';
 import 'plugins/kibana/visualize/editor/nesting_indicator';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import aggGroupTemplate from 'plugins/kibana/visualize/editor/agg_group.html';
 
 uiModules
 .get('app/visualize')
-.directive('visEditorAggGroup', function (Private) {
+.directive('visEditorAggGroup', function () {
 
   return {
     restrict: 'E',
@@ -42,8 +42,8 @@ uiModules
         });
       });
 
-      $scope.$on('agg-drag-start', e => $scope.dragging = true);
-      $scope.$on('agg-drag-end', e => {
+      $scope.$on('agg-drag-start', () => $scope.dragging = true);
+      $scope.$on('agg-drag-end', () => {
         $scope.dragging = false;
 
         //the aggs have been reordered in [group] and we need

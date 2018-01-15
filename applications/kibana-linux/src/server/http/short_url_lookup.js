@@ -1,121 +1,142 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+exports.default = function (server) {
+  let updateMetadata = (() => {
+    var _ref = _asyncToGenerator(function* (urlId, urlDoc, req) {
+      var _server$plugins$elast = server.plugins.elasticsearch.getCluster('admin');
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { var callNext = step.bind(null, 'next'); var callThrow = step.bind(null, 'throw'); function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(callNext, callThrow); } } callNext(); }); }; }
+      const callWithRequest = _server$plugins$elast.callWithRequest;
 
-var _crypto = require('crypto');
+      const kibanaIndex = server.config().get('kibana.index');
 
-var _crypto2 = _interopRequireDefault(_crypto);
-
-exports['default'] = function (server) {
-  var updateMetadata = _asyncToGenerator(function* (urlId, urlDoc, req) {
-    var _server$plugins$elasticsearch$getCluster = server.plugins.elasticsearch.getCluster('admin');
-
-    var callWithRequest = _server$plugins$elasticsearch$getCluster.callWithRequest;
-
-    var kibanaIndex = server.config().get('kibana.index');
-
-    try {
-      yield callWithRequest(req, 'update', {
-        index: kibanaIndex,
-        type: 'url',
-        id: urlId,
-        body: {
-          doc: {
-            'accessDate': new Date(),
-            'accessCount': urlDoc._source.accessCount + 1
+      try {
+        yield callWithRequest(req, 'update', {
+          index: kibanaIndex,
+          type: 'url',
+          id: urlId,
+          body: {
+            doc: {
+              'accessDate': new Date(),
+              'accessCount': urlDoc._source.accessCount + 1
+            }
           }
-        }
-      });
-    } catch (err) {
-      server.log('Warning: Error updating url metadata', err);
-      //swallow errors. It isn't critical if there is no update.
-    }
-  });
-
-  var getUrlDoc = _asyncToGenerator(function* (urlId, req) {
-    var urlDoc = yield new Promise(function (resolve, reject) {
-      var _server$plugins$elasticsearch$getCluster2 = server.plugins.elasticsearch.getCluster('admin');
-
-      var callWithRequest = _server$plugins$elasticsearch$getCluster2.callWithRequest;
-
-      var kibanaIndex = server.config().get('kibana.index');
-
-      callWithRequest(req, 'get', {
-        index: kibanaIndex,
-        type: 'url',
-        id: urlId
-      }).then(function (response) {
-        resolve(response);
-      })['catch'](function (err) {
-        resolve();
-      });
+        });
+      } catch (err) {
+        server.log('Warning: Error updating url metadata', err);
+        //swallow errors. It isn't critical if there is no update.
+      }
     });
 
-    return urlDoc;
-  });
+    return function updateMetadata(_x, _x2, _x3) {
+      return _ref.apply(this, arguments);
+    };
+  })();
 
-  var createUrlDoc = _asyncToGenerator(function* (url, urlId, req) {
-    var newUrlId = yield new Promise(function (resolve, reject) {
-      var _server$plugins$elasticsearch$getCluster3 = server.plugins.elasticsearch.getCluster('admin');
+  let getUrlDoc = (() => {
+    var _ref2 = _asyncToGenerator(function* (urlId, req) {
+      const urlDoc = yield new Promise(function (resolve) {
+        var _server$plugins$elast2 = server.plugins.elasticsearch.getCluster('admin');
 
-      var callWithRequest = _server$plugins$elasticsearch$getCluster3.callWithRequest;
+        const callWithRequest = _server$plugins$elast2.callWithRequest;
 
-      var kibanaIndex = server.config().get('kibana.index');
+        const kibanaIndex = server.config().get('kibana.index');
 
-      callWithRequest(req, 'index', {
-        index: kibanaIndex,
-        type: 'url',
-        id: urlId,
-        body: {
-          url: url,
-          'accessCount': 0,
-          'createDate': new Date(),
-          'accessDate': new Date()
-        }
-      }).then(function (response) {
-        resolve(response._id);
-      })['catch'](function (err) {
-        reject(err);
+        callWithRequest(req, 'get', {
+          index: kibanaIndex,
+          type: 'url',
+          id: urlId
+        }).then(function (response) {
+          resolve(response);
+        }).catch(function () {
+          resolve();
+        });
       });
+
+      return urlDoc;
     });
 
-    return newUrlId;
-  });
+    return function getUrlDoc(_x4, _x5) {
+      return _ref2.apply(this, arguments);
+    };
+  })();
+
+  let createUrlDoc = (() => {
+    var _ref3 = _asyncToGenerator(function* (url, urlId, req) {
+      const newUrlId = yield new Promise(function (resolve, reject) {
+        var _server$plugins$elast3 = server.plugins.elasticsearch.getCluster('admin');
+
+        const callWithRequest = _server$plugins$elast3.callWithRequest;
+
+        const kibanaIndex = server.config().get('kibana.index');
+
+        callWithRequest(req, 'index', {
+          index: kibanaIndex,
+          type: 'url',
+          id: urlId,
+          body: {
+            url,
+            'accessCount': 0,
+            'createDate': new Date(),
+            'accessDate': new Date()
+          }
+        }).then(function (response) {
+          resolve(response._id);
+        }).catch(function (err) {
+          reject(err);
+        });
+      });
+
+      return newUrlId;
+    });
+
+    return function createUrlDoc(_x6, _x7, _x8) {
+      return _ref3.apply(this, arguments);
+    };
+  })();
 
   function createUrlId(url) {
-    var urlId = _crypto2['default'].createHash('md5').update(url).digest('hex');
+    const urlId = _crypto2.default.createHash('md5').update(url).digest('hex');
 
     return urlId;
   }
 
   return {
-    generateUrlId: _asyncToGenerator(function* (url, req) {
-      var urlId = createUrlId(url);
-      var urlDoc = yield getUrlDoc(urlId, req);
-      if (urlDoc) return urlId;
+    generateUrlId(url, req) {
+      return _asyncToGenerator(function* () {
+        const urlId = createUrlId(url);
+        const urlDoc = yield getUrlDoc(urlId, req);
+        if (urlDoc) return urlId;
 
-      return createUrlDoc(url, urlId, req);
-    }),
-    getUrl: _asyncToGenerator(function* (urlId, req) {
-      try {
-        var urlDoc = yield getUrlDoc(urlId, req);
-        if (!urlDoc) throw new Error('Requested shortened url does not exist in kibana index');
+        return createUrlDoc(url, urlId, req);
+      })();
+    },
+    getUrl(urlId, req) {
+      return _asyncToGenerator(function* () {
+        try {
+          const urlDoc = yield getUrlDoc(urlId, req);
+          if (!urlDoc) throw new Error('Requested shortened url does not exist in kibana index');
 
-        updateMetadata(urlId, urlDoc, req);
+          updateMetadata(urlId, urlDoc, req);
 
-        return urlDoc._source.url;
-      } catch (err) {
-        return '/';
-      }
-    })
+          return urlDoc._source.url;
+        } catch (err) {
+          return '/';
+        }
+      })();
+    }
   };
 };
 
-;
+var _crypto = require('crypto');
+
+var _crypto2 = _interopRequireDefault(_crypto);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
 module.exports = exports['default'];

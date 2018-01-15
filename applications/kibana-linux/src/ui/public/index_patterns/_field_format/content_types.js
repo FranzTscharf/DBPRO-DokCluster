@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import angular from 'angular';
-import 'ui/highlight';
-export default function contentTypesProvider(highlightFilter) {
+import { getHighlightHtml } from 'ui/highlight';
 
-  let types = {
+export function IndexPatternsFieldFormatContentTypesProvider() {
+
+  const types = {
     html: function (format, convert) {
-      return function recurse(value, field, hit) {
+      function recurse(value, field, hit) {
         if (value == null) {
           return _.asPrettyString(value);
         }
@@ -14,14 +15,18 @@ export default function contentTypesProvider(highlightFilter) {
           return convert.call(format, value, field, hit);
         }
 
-        let subVals = value.map(function (v) {
+        const subVals = value.map(function (v) {
           return recurse(v, field, hit);
         });
-        let useMultiLine = subVals.some(function (sub) {
+        const useMultiLine = subVals.some(function (sub) {
           return sub.indexOf('\n') > -1;
         });
 
         return subVals.join(',' + (useMultiLine ? '\n' : ' '));
+      }
+
+      return function (...args) {
+        return `<span ng-non-bindable>${recurse(...args)}</span>`;
       };
     },
 
@@ -42,18 +47,18 @@ export default function contentTypesProvider(highlightFilter) {
   }
 
   function fallbackHtml(value, field, hit) {
-    let formatted = _.escape(this.convert(value, 'text'));
+    const formatted = _.escape(this.convert(value, 'text'));
 
     if (!hit || !hit.highlight || !hit.highlight[field.name]) {
       return formatted;
     } else {
-      return highlightFilter(formatted, hit.highlight[field.name]);
+      return getHighlightHtml(formatted, hit.highlight[field.name]);
     }
   }
 
   function setup(format) {
-    let src = format._convert || {};
-    let converters = format._convert = {};
+    const src = format._convert || {};
+    const converters = format._convert = {};
 
     converters.text = types.text(format, src.text || fallbackText);
     converters.html = types.html(format, src.html || fallbackHtml);
@@ -65,4 +70,4 @@ export default function contentTypesProvider(highlightFilter) {
     types: types,
     setup: setup
   };
-};
+}

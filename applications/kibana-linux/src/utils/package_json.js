@@ -1,24 +1,15 @@
 'use strict';
 
-var _fs = require('fs');
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.pkg = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _path = require('path');
 
-var packageDir = undefined;
-var packagePath = undefined;
-
-while (!packagePath || !(0, _fs.existsSync)(packagePath)) {
-  var prev = packageDir;
-  packageDir = prev ? (0, _path.join)(prev, '..') : __dirname;
-  packagePath = (0, _path.join)(packageDir, 'package.json');
-
-  if (prev === packageDir) {
-    // if going up a directory doesn't work, we
-    // are already at the root of the filesystem
-    throw new Error('unable to find package.json');
-  }
-}
-
-module.exports = require(packagePath);
-module.exports.__filename = packagePath;
-module.exports.__dirname = packageDir;
+const pkg = exports.pkg = _extends({
+  __filename: require.resolve('../../package.json'),
+  __dirname: (0, _path.dirname)(require.resolve('../../package.json'))
+}, require('../../package.json'));

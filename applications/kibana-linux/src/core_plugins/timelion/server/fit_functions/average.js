@@ -1,6 +1,10 @@
 'use strict';
 
-var _ = require('lodash');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Upsampling and down sampling of non-cummulative sets
 // Good: min, max, average
@@ -11,12 +15,12 @@ module.exports = function (dataTuples, targetTuples) {
   // Phase 1: Downsample
   // We nessecarily won't well match the dataSource here as we don't know how much data
   // they had when creating their own average
-  var resultTimes = _.pluck(targetTuples, 0);
-  var dataTuplesQueue = _.clone(dataTuples);
-  var resultValues = _.map(targetTuples, function (bucket) {
-    var time = bucket[0];
-    var i = 0;
-    var avgSet = [];
+  const resultTimes = _lodash2.default.pluck(targetTuples, 0);
+  const dataTuplesQueue = _lodash2.default.clone(dataTuples);
+  const resultValues = _lodash2.default.map(targetTuples, function (bucket) {
+    const time = bucket[0];
+    let i = 0;
+    const avgSet = [];
 
     // This is naive, it doesn't consider where the line is going next,
     // It simply writes the point and moves on once it hits <= time.
@@ -29,7 +33,7 @@ module.exports = function (dataTuples, targetTuples) {
 
     dataTuplesQueue.splice(0, i);
 
-    var sum = _.reduce(avgSet, function (sum, num) {
+    const sum = _lodash2.default.reduce(avgSet, function (sum, num) {
       return sum + num;
     }, 0);
 
@@ -39,16 +43,16 @@ module.exports = function (dataTuples, targetTuples) {
   // Phase 2: Upsample if needed
   // If we have any NaNs we are probably resampling from a big interval to a small one (eg, 1M as 1d)
   // So look for the missing stuff in the array, and smooth it out
-  var naNIndex = _.findIndex(resultValues, function (val) {
+  const naNIndex = _lodash2.default.findIndex(resultValues, function (val) {
     return isNaN(val);
   });
 
   if (naNIndex > -1) {
-    var i = 0;
-    var naNCount = 0;
-    var filledValues = [];
-    var previousRealNumber;
-    var stepSize;
+    let i = 0;
+    let naNCount = 0;
+    const filledValues = [];
+    let previousRealNumber;
+    let stepSize;
     while (i < resultValues.length) {
       if (isNaN(resultValues[i])) {
         if (i === 0) {
@@ -73,6 +77,6 @@ module.exports = function (dataTuples, targetTuples) {
     }
   }
 
-  var resultTuples = _.zip(resultTimes, resultValues);
+  const resultTuples = _lodash2.default.zip(resultTimes, resultValues);
   return resultTuples;
 };

@@ -1,10 +1,20 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+exports.default = function (kbnServer, server, config) {
+  // prevent relying on kbnServer so this can be used with other hapi servers
+  kbnServer = null;
+
+  return (0, _bluebird.fromNode)(function (cb) {
+    server.register({
+      register: _evenBetter2.default,
+      options: (0, _configuration2.default)(config)
+    }, cb);
+  });
+};
 
 var _bluebird = require('bluebird');
 
@@ -16,17 +26,6 @@ var _configuration = require('./configuration');
 
 var _configuration2 = _interopRequireDefault(_configuration);
 
-exports['default'] = function (kbnServer, server, config) {
-  // prevent relying on kbnServer so this can be used with other hapi servers
-  kbnServer = null;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  return (0, _bluebird.fromNode)(function (cb) {
-    server.register({
-      register: _evenBetter2['default'],
-      options: (0, _configuration2['default'])(config)
-    }, cb);
-  });
-};
-
-;
 module.exports = exports['default'];

@@ -1,6 +1,6 @@
 import _ from 'lodash';
-export default function AggResponseBucketsProvider() {
 
+export function AggResponseBucketsProvider() {
   function Buckets(aggResp) {
     aggResp = aggResp || false;
     this.buckets = aggResp.buckets || [];
@@ -15,7 +15,7 @@ export default function AggResponseBucketsProvider() {
   }
 
   Buckets.prototype.forEach = function (fn) {
-    let buckets = this.buckets;
+    const buckets = this.buckets;
 
     if (this.objectMode) {
       this._keys.forEach(function (key) {
@@ -29,4 +29,4 @@ export default function AggResponseBucketsProvider() {
   };
 
   return Buckets;
-};
+}

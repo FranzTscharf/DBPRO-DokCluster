@@ -2,12 +2,12 @@ import _ from 'lodash';
 import 'ui/typeahead/typeahead.less';
 import 'ui/typeahead/_input';
 import 'ui/typeahead/_items';
-import uiModules from 'ui/modules';
-let typeahead = uiModules.get('kibana/typeahead');
+import { uiModules } from 'ui/modules';
+const typeahead = uiModules.get('kibana/typeahead');
 
 
 typeahead.directive('kbnTypeahead', function () {
-  let keyMap = {
+  const keyMap = {
     ESC: 27,
     UP: 38,
     DOWN: 40,
@@ -18,13 +18,13 @@ typeahead.directive('kbnTypeahead', function () {
   return {
     restrict: 'A',
     scope: {
-      historyKey: '@kbnTypeahead'
+      historyKey: '@kbnTypeahead',
+      onSelect: '&'
     },
     controllerAs: 'typeahead',
 
-    controller: function ($scope, $element, $timeout, PersistedLog, config) {
-      let self = this;
-      self.form = $element.closest('form');
+    controller: function ($scope, PersistedLog, config) {
+      const self = this;
       self.query = '';
       self.hidden = true;
       self.focused = false;
@@ -112,15 +112,7 @@ typeahead.directive('kbnTypeahead', function () {
         self.persistEntry();
 
         if (ev && ev.type === 'click') {
-          $timeout(function () {
-            self.submitForm();
-          });
-        }
-      };
-
-      self.submitForm = function () {
-        if (self.form.length) {
-          self.form.submit();
+          $scope.onSelect();
         }
       };
 
@@ -138,7 +130,7 @@ typeahead.directive('kbnTypeahead', function () {
       };
 
       self.keypressHandler = function (ev) {
-        let keyCode = ev.which || ev.keyCode;
+        const keyCode = ev.which || ev.keyCode;
 
         if (self.focused) {
           self.hidden = false;
@@ -194,11 +186,11 @@ typeahead.directive('kbnTypeahead', function () {
         }
 
         // update the filteredItems using the query
-        let beginningMatches = $scope.items.filter(function (item) {
+        const beginningMatches = $scope.items.filter(function (item) {
           return item.indexOf(query) === 0;
         });
 
-        let otherMatches = $scope.items.filter(function (item) {
+        const otherMatches = $scope.items.filter(function (item) {
           return item.indexOf(query) > 0;
         });
 
@@ -210,7 +202,7 @@ typeahead.directive('kbnTypeahead', function () {
       };
 
       // handle updates to parent scope history
-      $scope.$watch('items', function (items) {
+      $scope.$watch('items', function () {
         if (self.query) {
           self.filterItemsByQuery(self.query);
         }
@@ -226,7 +218,10 @@ typeahead.directive('kbnTypeahead', function () {
       });
     },
 
-    link: function ($scope, $el, attr) {
+    link: function ($scope, $el, attrs) {
+      if (!_.has(attrs, 'onSelect')) {
+        throw new Error('on-select must be defined');
+      }
       // should be defined via setInput() method
       if (!$scope.inputModel) {
         throw new Error('kbn-typeahead-input must be defined');

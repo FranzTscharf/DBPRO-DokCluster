@@ -1,24 +1,22 @@
-import _ from 'lodash';
-
 import 'plugins/kibana/management/sections';
 import 'plugins/kibana/management/styles/main.less';
 import 'ui/filters/start_from';
 import 'ui/field_editor';
-import 'plugins/kibana/management/sections/indices/_indexed_fields';
-import 'plugins/kibana/management/sections/indices/_scripted_fields';
-import 'plugins/kibana/management/sections/indices/source_filters/source_filters';
-import 'ui/directives/bread_crumbs';
 import uiRoutes from 'ui/routes';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 import appTemplate from 'plugins/kibana/management/app.html';
 import landingTemplate from 'plugins/kibana/management/landing.html';
-import chrome from 'ui/chrome/chrome';
-import management from 'ui/management';
+import { management } from 'ui/management';
 import 'ui/kbn_top_nav';
 
 uiRoutes
 .when('/management', {
   template: landingTemplate
+});
+
+uiRoutes
+.when('/management/:section', {
+  redirectTo: '/management'
 });
 
 require('ui/index_patterns/route_setup/load_default')({
@@ -27,13 +25,14 @@ require('ui/index_patterns/route_setup/load_default')({
 
 uiModules
 .get('apps/management')
-.directive('kbnManagementApp', function (Private, $route, $location, timefilter, buildNum, buildSha) {
+.directive('kbnManagementApp', function (Private, $location, timefilter, buildNum, buildSha) {
   return {
     restrict: 'E',
     template: appTemplate,
     transclude: true,
     scope: {
-      sectionName: '@section'
+      sectionName: '@section',
+      omitPages: '@omitBreadcrumbPages'
     },
 
     link: function ($scope) {

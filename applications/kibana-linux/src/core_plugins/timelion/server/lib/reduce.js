@@ -1,7 +1,14 @@
 'use strict';
 
-var _ = require('lodash');
-var Promise = require('bluebird');
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Reduces multiple arrays into a single array using a function
@@ -14,16 +21,16 @@ var Promise = require('bluebird');
  * @return {seriesList}
  */
 module.exports = function reduce(args, fn) {
-  return Promise.all(args).then(function (args) {
+  return _bluebird2.default.all(args).then(function (args) {
 
-    var seriesList = args.shift();
-    var argument = args.shift();
+    const seriesList = args.shift();
+    let argument = args.shift();
 
     if (seriesList.type !== 'seriesList') {
       throw new Error('input must be a seriesList');
     }
 
-    if (_.isObject(argument) && argument.type === 'seriesList') {
+    if (_lodash2.default.isObject(argument) && argument.type === 'seriesList') {
       if (argument.list.length !== 1) {
         throw new Error('argument must be a seriesList with a single series');
       } else {
@@ -32,17 +39,17 @@ module.exports = function reduce(args, fn) {
     }
 
     function reduceSeries(series) {
-      return _.reduce(series, function (destinationObject, argument, i, p) {
+      return _lodash2.default.reduce(series, function (destinationObject, argument, i, p) {
 
-        var output = _.map(destinationObject.data, function (point, index) {
+        let output = _lodash2.default.map(destinationObject.data, function (point, index) {
 
-          var value = point[1];
+          const value = point[1];
 
           if (value == null) {
             return [point[0], null];
           }
 
-          if (_.isNumber(argument)) {
+          if (_lodash2.default.isNumber(argument)) {
             return [point[0], fn(value, argument, i, p)];
           }
 
@@ -57,15 +64,15 @@ module.exports = function reduce(args, fn) {
         output = {
           data: output
         };
-        output = _.defaults(output, destinationObject);
+        output = _lodash2.default.defaults(output, destinationObject);
         return output;
       });
     }
 
-    var reduced;
+    let reduced;
 
     if (argument != null) {
-      reduced = _.map(seriesList.list, function (series) {
+      reduced = _lodash2.default.map(seriesList.list, function (series) {
         return reduceSeries([series].concat(argument));
       });
     } else {
@@ -74,7 +81,7 @@ module.exports = function reduce(args, fn) {
 
     seriesList.list = reduced;
     return seriesList;
-  })['catch'](function (e) {
+  }).catch(function (e) {
     throw e;
   });
 };

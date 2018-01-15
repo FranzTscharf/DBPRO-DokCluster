@@ -1,9 +1,10 @@
 import d3 from 'd3';
 import _ from 'lodash';
-import dataLabel from 'ui/vislib/lib/_data_label';
-import VislibLibDispatchProvider from '../lib/dispatch';
-import TooltipProvider from 'ui/vis/components/tooltip';
-export default function ChartBaseClass(Private) {
+import { dataLabel } from 'ui/vislib/lib/_data_label';
+import { VislibLibDispatchProvider } from '../lib/dispatch';
+import { TooltipProvider } from 'ui/vis/components/tooltip';
+
+export function VislibVisualizationsChartProvider(Private) {
 
   const Dispatch = Private(VislibLibDispatchProvider);
   const Tooltip = Private(TooltipProvider);
@@ -48,7 +49,7 @@ export default function ChartBaseClass(Private) {
 
       selection.selectAll('*').remove();
       selection.call(this.draw());
-    };
+    }
 
     /**
      * Append the data label to the element
@@ -70,7 +71,7 @@ export default function ChartBaseClass(Private) {
         const label = resolveLabel(datum);
         if (label != null) dataLabel(this, label);
       });
-    };
+    }
 
     /**
      * Removes all DOM elements from the root element
@@ -84,8 +85,8 @@ export default function ChartBaseClass(Private) {
         tooltip.destroy();
       });
       selection.remove();
-    };
+    }
   }
 
   return Chart;
-};
+}

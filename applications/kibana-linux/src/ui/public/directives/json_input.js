@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import angular from 'angular';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 uiModules
 .get('kibana')
@@ -15,7 +15,7 @@ uiModules
       function fromJSON(value) {
         try {
           value = JSON.parse(value);
-          let validity = !scope.$eval(attrs.requireKeys) ? true : _.keys(value).length > 0;
+          const validity = !scope.$eval(attrs.requireKeys) ? true : _.keys(value).length > 0;
           ngModelCntrl.$setValidity('json', validity);
         } catch (e) {
           ngModelCntrl.$setValidity('json', false);

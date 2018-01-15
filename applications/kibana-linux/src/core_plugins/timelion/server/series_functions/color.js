@@ -1,10 +1,20 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var Chainable = require('../lib/classes/chainable');
-var tinygradient = require('tinygradient');
+var _alter = require('../lib/alter.js');
 
-module.exports = new Chainable('color', {
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+var _tinygradient = require('tinygradient');
+
+var _tinygradient2 = _interopRequireDefault(_tinygradient);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = new _chainable2.default('color', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -15,14 +25,14 @@ module.exports = new Chainable('color', {
   }],
   help: 'Change the color of the series',
   fn: function colorFn(args) {
-    var colors = args.byName.color.split(':');
+    let colors = args.byName.color.split(':');
 
     if (colors.length > 1 && args.byName.inputSeries.list.length > 1) {
-      colors = tinygradient(colors).rgb(args.byName.inputSeries.list.length);
+      colors = (0, _tinygradient2.default)(colors).rgb(args.byName.inputSeries.list.length);
     }
 
-    var i = 0;
-    return alter(args, function (eachSeries) {
+    let i = 0;
+    return (0, _alter2.default)(args, function (eachSeries) {
       if (colors.length === 1 || args.byName.inputSeries.list.length === 1) {
         eachSeries.color = colors[0];
       } else if (colors.length > 1) {

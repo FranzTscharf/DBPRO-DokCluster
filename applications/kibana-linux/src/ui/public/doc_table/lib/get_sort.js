@@ -6,8 +6,8 @@ import _ from 'lodash';
  * @param {object} indexPattern used for determining default sort
  * @returns {object} a sort object suitable for returning to elasticsearch
  */
-function getSort(sort, indexPattern) {
-  let sortObj = {};
+export function getSort(sort, indexPattern) {
+  const sortObj = {};
   let field;
   let direction;
 
@@ -39,4 +39,3 @@ getSort.array = function (sort, indexPattern) {
   return _(getSort(sort, indexPattern)).pairs().pop();
 };
 
-export default getSort;

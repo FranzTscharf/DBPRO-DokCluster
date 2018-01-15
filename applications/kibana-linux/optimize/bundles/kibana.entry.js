@@ -4,7 +4,7 @@
  *
  * This is programatically created and updated, do not modify
  *
- * context: {"env":"production","urlBasePath":"","sourceMaps":false,"kbnVersion":"5.2.2","buildNum":14723}
+ * context: {"env":"production","urlBasePath":"","kbnVersion":"5.5.2","buildNum":15443}
  * includes code from:
  *  - console@kibana
  *  - elasticsearch@kibana
@@ -12,8 +12,10 @@
  *  - kbn_vislib_vis_types@kibana
  *  - kibana@kibana
  *  - markdown_vis@kibana
- *  - metric_vis@kibana
+ *  - metrics@kibana
+ *  - region_map@kibana
  *  - spy_modes@kibana
+ *  - state_session_storage_redirect@kibana
  *  - status_page@kibana
  *  - table_vis@kibana
  *  - tagcloud@kibana
@@ -25,7 +27,8 @@ require('ui/chrome');
 require('plugins/kibana/kibana');
 require('plugins/kbn_vislib_vis_types/kbn_vislib_vis_types');
 require('plugins/markdown_vis/markdown_vis');
-require('plugins/metric_vis/metric_vis');
+require('plugins/metrics/kbn_vis_types');
+require('plugins/region_map/region_map_vis');
 require('plugins/table_vis/table_vis');
 require('plugins/tagcloud/tag_cloud_vis');
 require('plugins/timelion/vis');

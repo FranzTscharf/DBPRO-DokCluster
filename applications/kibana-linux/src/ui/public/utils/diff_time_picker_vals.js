@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import angular from 'angular';
-export default function DiffTimePickerValuesFn() {
 
-  let valueOf = function (o) {
+export function UtilsDiffTimePickerValsProvider() {
+
+  const valueOf = function (o) {
     if (o) return o.valueOf();
   };
 
@@ -22,4 +23,4 @@ export default function DiffTimePickerValuesFn() {
 
     return false;
   };
-};
+}

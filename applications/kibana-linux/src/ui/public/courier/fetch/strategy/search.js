@@ -3,7 +3,7 @@ import angular from 'angular';
 
 import { toJson } from 'ui/utils/aggressive_parse';
 
-export default function FetchStrategyForSearch(Private, Promise, timefilter, kbnIndex, sessionId) {
+export function SearchStrategyProvider(Private, Promise, timefilter, kbnIndex, sessionId) {
 
   return {
     clientMethod: 'msearch',
@@ -11,10 +11,13 @@ export default function FetchStrategyForSearch(Private, Promise, timefilter, kbn
     /**
      * Flatten a series of requests into as ES request body
      *
-     * @param  {array} requests - the requests to serialize
+     * @param  {array} reqsFetchParams - the requests to serialize
      * @return {Promise} - a promise that is fulfilled by the request body
      */
     reqsFetchParamsToBody: function (reqsFetchParams) {
+      const indexToListMapping = {};
+      const timeBounds = timefilter.getActiveBounds();
+
       return Promise.map(reqsFetchParams, function (fetchParams) {
         return Promise.resolve(fetchParams.index)
         .then(function (indexList) {
@@ -22,11 +25,19 @@ export default function FetchStrategyForSearch(Private, Promise, timefilter, kbn
             return indexList;
           }
 
-          const timeBounds = timefilter.getBounds();
-          return indexList.toIndexList(timeBounds.min, timeBounds.max);
+          if (!indexToListMapping[indexList.id]) {
+            indexToListMapping[indexList.id] = timeBounds
+              ? indexList.toIndexList(timeBounds.min, timeBounds.max)
+              : indexList.toIndexList();
+          }
+          return indexToListMapping[indexList.id].then(indexList => {
+            // Make sure the index list in the cache can't be subsequently updated.
+            return _.clone(indexList);
+          });
         })
         .then(function (indexList) {
           let body = fetchParams.body || {};
+          let index = [];
           // If we've reached this point and there are no indexes in the
           // index list at all, it means that we shouldn't expect any indexes
           // to contain the documents we're looking for, so we instead
@@ -36,11 +47,13 @@ export default function FetchStrategyForSearch(Private, Promise, timefilter, kbn
           // handle that request by querying *all* indexes, which is the
           // opposite of what we want in this case.
           if (_.isArray(indexList) && indexList.length === 0) {
-            indexList.push(kbnIndex);
+            index.push(kbnIndex);
             body = emptySearch();
+          } else {
+            index = indexList;
           }
           return angular.toJson({
-            index: indexList,
+            index,
             type: fetchParams.type,
             search_type: fetchParams.search_type,
             ignore_unavailable: true,
@@ -64,7 +77,7 @@ export default function FetchStrategyForSearch(Private, Promise, timefilter, kbn
       return resp.responses;
     }
   };
-};
+}
 
 function emptySearch() {
   return {

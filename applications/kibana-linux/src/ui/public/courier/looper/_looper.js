@@ -1,10 +1,10 @@
 import _ from 'lodash';
 
 import 'ui/promises';
-import Notifier from 'ui/notify/notifier';
+import { Notifier } from 'ui/notify/notifier';
 
-export default function LooperFactory($timeout, Promise) {
-  let notify = new Notifier();
+export function LooperProvider($timeout, Promise) {
+  const notify = new Notifier();
 
   function Looper(ms, fn) {
     this._fn = fn;
@@ -130,7 +130,7 @@ export default function LooperFactory($timeout, Promise) {
    * @return {undefined}
    */
   Looper.prototype._loopTheLoop = function () {
-    let self = this;
+    const self = this;
 
     if (self.active) {
       self.onHastyLoop();
@@ -184,4 +184,4 @@ export default function LooperFactory($timeout, Promise) {
   };
 
   return Looper;
-};
+}

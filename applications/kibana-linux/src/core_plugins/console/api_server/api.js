@@ -1,6 +1,10 @@
 "use strict";
 
-var _ = require("lodash");
+var _lodash = require("lodash");
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 'use strict';
 
@@ -25,8 +29,8 @@ function Api(name) {
     }
 
     var copiedDescription = {};
-    _.extend(copiedDescription, description || {});
-    _.defaults(copiedDescription, {
+    _lodash2.default.extend(copiedDescription, description || {});
+    _lodash2.default.defaults(copiedDescription, {
       id: endpoint,
       patterns: [endpoint],
       methods: ['GET']

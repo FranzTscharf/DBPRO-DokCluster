@@ -1,4 +1,4 @@
-export default function (_) {
+export function lodashOopMixin(_) {
 
   // create a property descriptor for properties
   // that won't change
@@ -41,4 +41,4 @@ export default function (_) {
       return Object.defineProperties(ClassConstructor, props);
     }
   });
-};
+}

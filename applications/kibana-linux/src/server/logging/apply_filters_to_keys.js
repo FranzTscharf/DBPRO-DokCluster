@@ -9,9 +9,9 @@ function replacer(match, group) {
 }
 
 function apply(obj, key, action) {
-  for (var k in obj) {
+  for (const k in obj) {
     if (obj.hasOwnProperty(k)) {
-      var val = obj[k];
+      let val = obj[k];
       if (k === key) {
         if (action === 'remove') {
           delete obj[k];
@@ -20,9 +20,9 @@ function apply(obj, key, action) {
         } else if (action === 'censor') {
           obj[k] = ('' + val).replace(/./g, 'X');
         } else if (/\/.+\//.test(action)) {
-          var matches = action.match(/\/(.+)\//);
+          const matches = action.match(/\/(.+)\//);
           if (matches) {
-            var regex = new RegExp(matches[1]);
+            const regex = new RegExp(matches[1]);
             obj[k] = ('' + val).replace(regex, replacer);
           }
         }
@@ -35,7 +35,7 @@ function apply(obj, key, action) {
 }
 
 module.exports = function (obj, actionsByKey) {
-  return Object.keys(actionsByKey).reduce(function (output, key) {
+  return Object.keys(actionsByKey).reduce((output, key) => {
     return apply(output, key, actionsByKey[key]);
   }, toPojo(obj));
 };

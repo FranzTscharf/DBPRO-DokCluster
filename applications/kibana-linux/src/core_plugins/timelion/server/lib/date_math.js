@@ -1,29 +1,36 @@
 'use strict';
 
-var _ = require('lodash');
-var moment = require('moment');
+var _lodash = require('lodash');
 
-var units = ['y', 'M', 'w', 'd', 'h', 'm', 's'];
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const units = ['y', 'M', 'w', 'd', 'h', 'm', 's'];
 
 /* This is a simplified version of elasticsearch's date parser */
 function parse(text, roundUp) {
   if (!text) {
     return undefined;
   }
-  if (moment.isMoment(text)) {
+  if (_moment2.default.isMoment(text)) {
     return text;
   }
-  if (_.isDate(text)) {
-    return moment(text);
+  if (_lodash2.default.isDate(text)) {
+    return (0, _moment2.default)(text);
   }
 
-  var time;
-  var mathString = '';
-  var index;
-  var parseString;
+  let time;
+  let mathString = '';
+  let index;
+  let parseString;
 
   if (text.substring(0, 3) === 'now') {
-    time = moment();
+    time = (0, _moment2.default)();
     mathString = text.substring('now'.length);
   } else {
     index = text.indexOf('||');
@@ -31,11 +38,11 @@ function parse(text, roundUp) {
       parseString = text;
       mathString = ''; // nothing else
     } else {
-        parseString = text.substring(0, index);
-        mathString = text.substring(index + 2);
-      }
+      parseString = text.substring(0, index);
+      mathString = text.substring(index + 2);
+    }
     // We're going to just require ISO8601 timestamps, k?
-    time = moment(parseString);
+    time = (0, _moment2.default)(parseString);
   }
 
   if (!mathString.length) {
@@ -46,13 +53,12 @@ function parse(text, roundUp) {
 }
 
 function parseDateMath(mathString, time, roundUp) {
-  var dateTime = time;
+  const dateTime = time;
 
-  for (var i = 0; i < mathString.length;) {
-    var c = mathString.charAt(i++);
-    var type;
-    var num;
-    var unit;
+  for (let i = 0; i < mathString.length;) {
+    const c = mathString.charAt(i++);
+    let type;
+    let num;
 
     if (c === '/') {
       type = 0;
@@ -69,7 +75,7 @@ function parseDateMath(mathString, time, roundUp) {
     } else if (mathString.length === 2) {
       num = mathString.charAt(i);
     } else {
-      var numFrom = i;
+      const numFrom = i;
       while (!isNaN(mathString.charAt(i))) {
         i++;
         if (i > 10) {
@@ -85,9 +91,9 @@ function parseDateMath(mathString, time, roundUp) {
         return undefined;
       }
     }
-    unit = mathString.charAt(i++);
+    const unit = mathString.charAt(i++);
 
-    if (!_.contains(units, unit)) {
+    if (!_lodash2.default.contains(units, unit)) {
       return undefined;
     } else {
       if (type === 0) {

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import IndexedArray from 'ui/indexed_array';
+import { IndexedArray } from 'ui/indexed_array';
 const notPropsOptNames = IndexedArray.OPT_NAMES.concat('constructor');
 
 /**
@@ -45,23 +45,23 @@ const notPropsOptNames = IndexedArray.OPT_NAMES.concat('constructor');
  *
  * @return {[type]}      [description]
  */
-export default function createRegistry(spec) {
+export function uiRegistry(spec) {
   spec = spec || {};
 
-  let constructor = _.has(spec, 'constructor') && spec.constructor;
-  let iaOpts = _.defaults(_.pick(spec, IndexedArray.OPT_NAMES), { index: ['name'] });
-  let props = _.omit(spec, notPropsOptNames);
-  let providers = [];
+  const constructor = _.has(spec, 'constructor') && spec.constructor;
+  const iaOpts = _.defaults(_.pick(spec, IndexedArray.OPT_NAMES), { index: ['name'] });
+  const props = _.omit(spec, notPropsOptNames);
+  const providers = [];
 
   /**
-   * This is the Private module that will be instanciated by
+   * This is the Private module that will be instantiated by
    *
    * @tag:PrivateModule
    * @return {IndexedArray} - an indexed array containing the values
    *                          that were registered, the registry spec
    *                          defines how things will be indexed.
    */
-  let registry = function (Private, $injector) {
+  const registry = function (Private, $injector) {
     // index all of the modules
     iaOpts.initialSet = providers.map(Private);
     let modules = new IndexedArray(iaOpts);
@@ -85,5 +85,5 @@ export default function createRegistry(spec) {
   };
 
   return registry;
-};
+}
 

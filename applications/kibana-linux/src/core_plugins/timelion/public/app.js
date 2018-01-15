@@ -1,6 +1,9 @@
-var _ = require('lodash');
-var logoUrl = require('./logo.png');
-var moment = require('moment-timezone');
+import _ from 'lodash';
+import moment from 'moment-timezone';
+
+import { DocTitleProvider } from 'ui/doc_title';
+import { SavedObjectRegistryProvider } from 'ui/saved_objects/saved_object_registry';
+import { notify } from 'ui/notify';
 
 require('plugins/timelion/directives/cells/cells');
 require('plugins/timelion/directives/fullscreen/fullscreen');
@@ -15,7 +18,7 @@ document.title = 'Timelion - Kibana';
 
 require('ui/chrome');
 
-var app = require('ui/modules').get('apps/timelion', []);
+const app = require('ui/modules').get('apps/timelion', []);
 
 require('plugins/timelion/services/saved_sheets');
 require('plugins/timelion/services/_saved_sheet');
@@ -24,10 +27,9 @@ require('plugins/kibana/visualize/saved_visualizations/saved_visualizations');
 require('plugins/kibana/discover/saved_searches/saved_searches');
 require('./vis');
 
-require('ui/saved_objects/saved_object_registry').register(require('plugins/timelion/services/saved_sheet_register'));
+SavedObjectRegistryProvider.register(require('plugins/timelion/services/saved_sheet_register'));
 
-// TODO: Expose an api for dismissing notifications
-var unsafeNotifications = require('ui/notify')._notifs;
+const unsafeNotifications = notify._notifs;
 
 require('ui/routes').enable();
 
@@ -47,21 +49,26 @@ require('ui/routes')
 
 app.controller('timelion', function (
     $scope, $http, timefilter, AppState, courier, $route, $routeParams,
-    kbnUrl, Notifier, config, $timeout, Private, savedVisualizations, safeConfirm) {
+    kbnUrl, Notifier, config, $timeout, Private, savedVisualizations, confirmModal) {
+
+  // Keeping this at app scope allows us to keep the current page when the user
+  // switches to say, the timepicker.
+  $scope.page = config.get('timelion:showTutorial', true) ? 1 : 0;
+  $scope.setPage = (page) => $scope.page = page;
 
   // TODO: For some reason the Kibana core doesn't correctly do this for all apps.
   moment.tz.setDefault(config.get('dateFormat:tz'));
 
   timefilter.enabled = true;
-  var notify = new Notifier({
+  const notify = new Notifier({
     location: 'Timelion'
   });
 
-  var timezone = Private(require('plugins/timelion/services/timezone'))();
-  var docTitle = Private(require('ui/doc_title'));
+  const timezone = Private(require('plugins/timelion/services/timezone'))();
+  const docTitle = Private(DocTitleProvider);
 
-  var defaultExpression = '.es(*)';
-  var savedSheet = $route.current.locals.savedSheet;
+  const defaultExpression = '.es(*)';
+  const savedSheet = $route.current.locals.savedSheet;
 
   $scope.topNavMenu = [{
     key: 'new',
@@ -85,13 +92,20 @@ app.controller('timelion', function (
       return !savedSheet.id;
     },
     run: function () {
-      var title = savedSheet.title;
-      safeConfirm('Are you sure you want to delete the sheet ' + title + ' ?').then(function () {
+      const title = savedSheet.title;
+      function doDelete() {
         savedSheet.delete().then(() => {
           notify.info('Deleted ' + title);
           kbnUrl.change('/');
         }).catch(notify.fatal);
-      });},
+      }
+
+      const confirmModalOptions = {
+        onConfirm: doDelete,
+        confirmButtonText: 'Delete sheet'
+      };
+      confirmModal(`Are you sure you want to delete the sheet ${title}?`, confirmModalOptions);
+    },
     testId: 'timelionDeleteButton',
   }, {
     key: 'open',
@@ -129,7 +143,7 @@ app.controller('timelion', function (
     };
   }
 
-  var init = function () {
+  const init = function () {
     $scope.running = false;
     $scope.search();
 
@@ -144,12 +158,13 @@ app.controller('timelion', function (
       search: $scope.search,
       dontShowHelp: function () {
         config.set('timelion:showTutorial', false);
+        $scope.setPage(0);
         $scope.kbnTopNav.close('docs');
       }
     };
   };
 
-  var refresher;
+  let refresher;
   $scope.$watchCollection('timefilter.refreshInterval', function (interval) {
     if (refresher) $timeout.cancel(refresher);
     if (interval.value > 0 && !interval.pause) {
@@ -158,7 +173,7 @@ app.controller('timelion', function (
           if (!$scope.running) $scope.search();
           startRefresh();
         }, interval.value);
-      };
+      }
       startRefresh();
     }
   });
@@ -212,7 +227,7 @@ app.controller('timelion', function (
       $scope.sheet = [];
       $scope.running = false;
 
-      var err = new Error(resp.message);
+      const err = new Error(resp.message);
       err.stack = resp.stack;
       notify.error(err);
 
@@ -230,14 +245,14 @@ app.controller('timelion', function (
       if (id) {
         notify.info('Saved sheet as "' + savedSheet.title + '"');
         if (savedSheet.id !== $routeParams.id) {
-          kbnUrl.change('/{{id}}', {id: savedSheet.id});
+          kbnUrl.change('/{{id}}', { id: savedSheet.id });
         }
       }
     });
-  };
+  }
 
   function saveExpression(title) {
-    savedVisualizations.get({type: 'timelion'}).then(function (savedExpression) {
+    savedVisualizations.get({ type: 'timelion' }).then(function (savedExpression) {
       savedExpression.visState.params = {
         expression: $scope.state.sheet[$scope.state.selected],
         interval: $scope.state.interval
@@ -248,7 +263,7 @@ app.controller('timelion', function (
         if (id) notify.info('Saved expression as "' + savedExpression.title + '"');
       });
     });
-  };
+  }
 
   function dismissNotifications() {
     unsafeNotifications.splice(0, unsafeNotifications.length);

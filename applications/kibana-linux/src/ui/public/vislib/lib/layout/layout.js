@@ -1,12 +1,15 @@
 import d3 from 'd3';
 import _ from 'lodash';
 import $ from 'jquery';
-import VislibLibLayoutLayoutTypesProvider from './layout_types';
-import AxisProvider from 'ui/vislib/lib/axis';
-export default function LayoutFactory(Private) {
+import { VislibLibLayoutLayoutTypesProvider } from './layout_types';
+import { VislibLibAxisProvider } from 'ui/vislib/lib/axis';
+import { VislibLibChartTitleProvider } from 'ui/vislib/lib/chart_title';
+
+export function VislibLibLayoutLayoutProvider(Private) {
 
   const layoutType = Private(VislibLibLayoutLayoutTypesProvider);
-  const Axis = Private(AxisProvider);
+  const Axis = Private(VislibLibAxisProvider);
+  const ChartTitle = Private(VislibLibChartTitleProvider);
   /**
    * Builds the visualization DOM layout
    *
@@ -45,7 +48,7 @@ export default function LayoutFactory(Private) {
       if (this.opts.get('type') === 'point_series') {
         this.updateCategoryAxisSize();
       }
-    };
+    }
 
     /**
      * Create the layout based on the json array provided
@@ -59,31 +62,34 @@ export default function LayoutFactory(Private) {
       return _.each(arr, (obj) => {
         this.layout(obj);
       });
-    };
+    }
 
     updateCategoryAxisSize() {
       const visConfig = this.opts;
       const axisConfig = visConfig.get('categoryAxes[0]');
       const axis = new Axis(visConfig, axisConfig);
       const position = axis.axisConfig.get('position');
+      const chartTitle = new ChartTitle(visConfig);
 
-      const el = $(this.el).find(`.axis-wrapper-${position}`);
+      const axisWrapperElement = $(this.el).find(`.axis-wrapper-${position}`);
 
-      el.css('visibility', 'hidden');
+      axisWrapperElement.css('visibility', 'hidden');
       axis.render();
-      const width = el.width();
-      const height = el.height();
+      chartTitle.render();
+      const width = axisWrapperElement.width();
+      const height = axisWrapperElement.height();
       axis.destroy();
-      el.css('visibility', '');
+      $(this.el).find('.chart-title svg').remove();
+      axisWrapperElement.css('visibility', '');
+
 
       if (axis.axisConfig.isHorizontal()) {
         const spacerNodes = $(this.el).find(`.y-axis-spacer-block-${position}`);
-        el.height(`${height}px`);
-        spacerNodes.height(el.height());
+        spacerNodes.height(`${height}px`);
       } else {
-        el.find('.y-axis-div-wrapper').width(`${width}px`);
+        axisWrapperElement.find('.y-axis-div-wrapper').width(`${width}px`);
       }
-    };
+    }
 
 
     /**
@@ -135,7 +141,7 @@ export default function LayoutFactory(Private) {
       }
 
       return childEl;
-    };
+    }
 
     /**
      * Appends a `type` of DOM element to `el` and gives it a class name attribute `className`
@@ -162,7 +168,7 @@ export default function LayoutFactory(Private) {
       return d3.select(el)
       .append(type)
       .attr('class', className);
-    };
+    }
 
     /**
      * Removes all DOM elements from DOM element
@@ -173,8 +179,8 @@ export default function LayoutFactory(Private) {
      */
     removeAll(el) {
       return d3.select(el).selectAll('*').remove();
-    };
+    }
   }
 
   return Layout;
-};
+}

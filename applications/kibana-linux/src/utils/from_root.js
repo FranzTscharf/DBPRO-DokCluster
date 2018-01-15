@@ -1,13 +1,14 @@
 'use strict';
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _lodash = require('lodash');
-
-var _lodash2 = _interopRequireDefault(_lodash);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fromRoot = fromRoot;
 
 var _package_json = require('./package_json');
 
 var _path = require('path');
 
-module.exports = _lodash2['default'].flow(_lodash2['default'].partial(_path.join, _package_json.__dirname), _path.normalize);
+function fromRoot(...args) {
+  return (0, _path.resolve)(_package_json.pkg.__dirname, ...args);
+}

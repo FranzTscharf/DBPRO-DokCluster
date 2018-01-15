@@ -1,35 +1,28 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.parseMilliseconds = parseMilliseconds;
 exports.parse = parse;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
 var _expiryJs = require('expiry-js');
 
 var _expiryJs2 = _interopRequireDefault(_expiryJs);
 
-var _lodash = require('lodash');
-
 var _path = require('path');
 
-var _os = require('os');
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function generateUrls(_ref) {
-  var version = _ref.version;
-  var plugin = _ref.plugin;
-
-  return [plugin, 'https://artifacts.elastic.co/downloads/kibana-plugins/' + plugin + '/' + plugin + '-' + version + '.zip'];
+function generateUrls({ version, plugin }) {
+  return [plugin, `https://artifacts.elastic.co/downloads/kibana-plugins/${plugin}/${plugin}-${version}.zip`];
 }
 
 function parseMilliseconds(val) {
-  var result = undefined;
+  let result;
 
   try {
-    var timeVal = (0, _expiryJs2['default'])(val);
+    const timeVal = (0, _expiryJs2.default)(val);
     result = timeVal.asMilliseconds();
   } catch (ex) {
     result = 0;
@@ -38,10 +31,8 @@ function parseMilliseconds(val) {
   return result;
 }
 
-;
-
 function parse(command, options, kbnPackage) {
-  var settings = {
+  const settings = {
     timeout: options.timeout || 0,
     quiet: options.quiet || false,
     silent: options.silent || false,
@@ -62,5 +53,3 @@ function parse(command, options, kbnPackage) {
 
   return settings;
 }
-
-;

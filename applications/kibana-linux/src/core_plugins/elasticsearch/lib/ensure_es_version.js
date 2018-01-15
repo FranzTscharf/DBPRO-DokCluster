@@ -1,16 +1,9 @@
-/**
- * ES and Kibana versions are locked, so Kibana should require that ES has the same version as
- * that defined in Kibana's package.json.
- */
-
 'use strict';
 
-Object.defineProperty(exports, '__esModule', {
+Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ensureEsVersion = ensureEsVersion;
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _lodash = require('lodash');
 
@@ -22,6 +15,8 @@ var _setup_error = require('./setup_error');
 
 var _setup_error2 = _interopRequireDefault(_setup_error);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * tracks the node descriptions that get logged in warnings so
  * that we don't spam the log with the same message over and over.
@@ -30,25 +25,29 @@ var _setup_error2 = _interopRequireDefault(_setup_error);
  * the server argument changes, so we must track the previous
  * node warnings per server
  */
-var lastWarnedNodesForServer = new WeakMap();
+const lastWarnedNodesForServer = new WeakMap(); /**
+                                                 * ES and Kibana versions are locked, so Kibana should require that ES has the same version as
+                                                 * that defined in Kibana's package.json.
+                                                 */
 
 function ensureEsVersion(server, kibanaVersion) {
-  var _server$plugins$elasticsearch$getCluster = server.plugins.elasticsearch.getCluster('admin');
+  var _server$plugins$elast = server.plugins.elasticsearch.getCluster('admin');
 
-  var callWithInternalUser = _server$plugins$elasticsearch$getCluster.callWithInternalUser;
+  const callWithInternalUser = _server$plugins$elast.callWithInternalUser;
+
 
   server.log(['plugin', 'debug'], 'Checking Elasticsearch version');
   return callWithInternalUser('nodes.info', {
     filterPath: ['nodes.*.version', 'nodes.*.http.publish_address', 'nodes.*.ip']
   }).then(function (info) {
     // Aggregate incompatible ES nodes.
-    var incompatibleNodes = [];
+    const incompatibleNodes = [];
 
     // Aggregate ES nodes which should prompt a Kibana upgrade.
-    var warningNodes = [];
+    const warningNodes = [];
 
-    (0, _lodash.forEach)(info.nodes, function (esNode) {
-      if (!(0, _is_es_compatible_with_kibana2['default'])(esNode.version, kibanaVersion)) {
+    (0, _lodash.forEach)(info.nodes, esNode => {
+      if (!(0, _is_es_compatible_with_kibana2.default)(esNode.version, kibanaVersion)) {
         // Exit early to avoid collecting ES nodes with newer major versions in the `warningNodes`.
         return incompatibleNodes.push(esNode);
       }
@@ -61,41 +60,39 @@ function ensureEsVersion(server, kibanaVersion) {
     });
 
     function getHumanizedNodeNames(nodes) {
-      return nodes.map(function (node) {
-        var publishAddress = (0, _lodash.get)(node, 'http.publish_address') ? (0, _lodash.get)(node, 'http.publish_address') + ' ' : '';
+      return nodes.map(node => {
+        const publishAddress = (0, _lodash.get)(node, 'http.publish_address') ? (0, _lodash.get)(node, 'http.publish_address') + ' ' : '';
         return 'v' + node.version + ' @ ' + publishAddress + '(' + node.ip + ')';
       });
     }
 
     if (warningNodes.length) {
-      var simplifiedNodes = warningNodes.map(function (node) {
-        return {
-          version: node.version,
-          http: {
-            publish_address: (0, _lodash.get)(node, 'http.publish_address')
-          },
-          ip: node.ip
-        };
-      });
+      const simplifiedNodes = warningNodes.map(node => ({
+        version: node.version,
+        http: {
+          publish_address: (0, _lodash.get)(node, 'http.publish_address')
+        },
+        ip: node.ip
+      }));
 
       // Don't show the same warning over and over again.
-      var warningNodeNames = getHumanizedNodeNames(simplifiedNodes).join(', ');
+      const warningNodeNames = getHumanizedNodeNames(simplifiedNodes).join(', ');
       if (lastWarnedNodesForServer.get(server) !== warningNodeNames) {
         lastWarnedNodesForServer.set(server, warningNodeNames);
         server.log(['warning'], {
-          tmpl: 'You\'re running Kibana ' + kibanaVersion + ' with some different versions of ' + 'Elasticsearch. Update Kibana or Elasticsearch to the same ' + ('version to prevent compatibility issues: ' + warningNodeNames),
-          kibanaVersion: kibanaVersion,
+          tmpl: `You're running Kibana ${kibanaVersion} with some different versions of ` + 'Elasticsearch. Update Kibana or Elasticsearch to the same ' + `version to prevent compatibility issues: ${warningNodeNames}`,
+          kibanaVersion,
           nodes: simplifiedNodes
         });
       }
     }
 
     if (incompatibleNodes.length) {
-      var incompatibleNodeNames = getHumanizedNodeNames(incompatibleNodes);
+      const incompatibleNodeNames = getHumanizedNodeNames(incompatibleNodes);
 
-      var errorMessage = 'This version of Kibana requires Elasticsearch v' + (kibanaVersion + ' on all nodes. I found ') + ('the following incompatible nodes in your cluster: ' + incompatibleNodeNames.join(', '));
+      const errorMessage = `This version of Kibana requires Elasticsearch v` + `${kibanaVersion} on all nodes. I found ` + `the following incompatible nodes in your cluster: ${incompatibleNodeNames.join(', ')}`;
 
-      throw new _setup_error2['default'](server, errorMessage);
+      throw new _setup_error2.default(server, errorMessage);
     }
 
     return true;

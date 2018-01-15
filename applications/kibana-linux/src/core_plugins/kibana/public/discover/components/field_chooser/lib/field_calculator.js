@@ -80,7 +80,7 @@ function _groupValues(allValues, params) {
     }
 
     _.each(k, function (key) {
-      if (_.has(groups, key)) {
+      if (groups.hasOwnProperty(key)) {
         groups[key].count++;
       } else {
         groups[key] = {
@@ -94,7 +94,7 @@ function _groupValues(allValues, params) {
   return groups;
 }
 
-export default {
+export const fieldCalculator = {
   _groupValues: _groupValues,
   _countMissing: _countMissing,
   getFieldValues: getFieldValues,

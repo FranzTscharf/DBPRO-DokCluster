@@ -1,13 +1,13 @@
 import _ from 'lodash';
 
-export default function DecorateQuery(config) {
+export function DecorateQueryProvider(config) {
   /**
    * Decorate queries with default parameters
    * @param {query} query object
    * @returns {object}
    */
   return function (query) {
-    let queryOptions = config.get('query:queryString:options');
+    const queryOptions = config.get('query:queryString:options');
 
     if (_.has(query, 'query_string.query')) {
       _.extend(query.query_string, queryOptions);
@@ -15,4 +15,4 @@ export default function DecorateQuery(config) {
 
     return query;
   };
-};
+}

@@ -1,16 +1,14 @@
 define(function (require) {
-  var html = require('../partials/docs/tutorial.html');
-  var app = require('ui/modules').get('apps/timelion', []);
-  var _ = require('lodash');
-  var moment = require('moment');
+  const html = require('../partials/docs/tutorial.html');
+  const app = require('ui/modules').get('apps/timelion', []);
+  const _ = require('lodash');
+  const moment = require('moment');
 
-  app.directive('timelionDocs', function (config, $http) {
+  app.directive('timelionDocs', function ($http) {
     return {
       restrict: 'E',
       template: html,
-      controller: function ($scope, config) {
-        $scope.section = config.get('timelion:showTutorial', true) ? 'tutorial' : 'functions';
-        $scope.page = 1;
+      controller: function ($scope) {
         $scope.functions = {
           list: [],
           details: null
@@ -22,7 +20,7 @@ define(function (require) {
           };
           getFunctions();
           checkElasticsearch();
-        };
+        }
 
         function getFunctions() {
           return $http.get('../api/timelion/functions').then(function (resp) {
@@ -50,7 +48,7 @@ define(function (require) {
               $scope.es.valid = false;
               $scope.es.invalidReason = (function () {
                 try {
-                  var esResp = JSON.parse(resp.data.resp.response);
+                  const esResp = JSON.parse(resp.data.resp.response);
                   return _.get(esResp, 'error.root_cause[0].reason');
                 } catch (e) {
                   if (_.get(resp, 'data.resp.message')) return _.get(resp, 'data.resp.message');
@@ -61,7 +59,7 @@ define(function (require) {
             }
             return $scope.es.valid;
           });
-        };
+        }
         init();
       }
     };

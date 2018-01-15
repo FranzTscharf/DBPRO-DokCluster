@@ -1,4 +1,4 @@
-export default function (_) {
+export function lodashLangMixin(_) {
   _.mixin(_, {
 
 
@@ -16,4 +16,4 @@ export default function (_) {
     },
 
   });
-};
+}

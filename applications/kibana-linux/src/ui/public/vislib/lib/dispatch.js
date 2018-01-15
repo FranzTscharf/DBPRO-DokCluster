@@ -1,9 +1,9 @@
 import d3 from 'd3';
 import _ from 'lodash';
 import $ from 'jquery';
-import SimpleEmitter from 'ui/utils/simple_emitter';
+import { SimpleEmitter } from 'ui/utils/simple_emitter';
 
-export default function DispatchClass(Private, config) {
+export function VislibLibDispatchProvider(Private, config) {
 
   /**
    * Handles event responses
@@ -40,7 +40,6 @@ export default function DispatchClass(Private, config) {
       const slices = isSlices ? data.slices : undefined;
       const handler = this.handler;
       const color = _.get(handler, 'data.color');
-      const isPercentage = (handler && handler.visConfig.get('mode', 'normal') === 'percentage');
 
       const eventData = {
         value: d.y,
@@ -58,12 +57,21 @@ export default function DispatchClass(Private, config) {
       };
 
       if (isSeries) {
-        // Find object with the actual d value and add it to the point object
-        const object = _.find(series, {'label': label});
+        let percentageMode = false;
+        //only series charts work in percentage mode.
+        if (handler.charts && handler.charts[0] && handler.charts[0].getSeries && d3.event.target.parentElement.__data__) {
+          const aggId = d3.event.target.parentElement.__data__.aggId;
+          const seriesFromAggId = handler.charts[0].getSeries(aggId);
+          if (seriesFromAggId && seriesFromAggId.getValueAxis) {
+            percentageMode = seriesFromAggId.getValueAxis().axisConfig.isPercentage();
+          }
+        }
+
+        const object = _.find(series, { 'label': label });
         if (object) {
           eventData.value = +object.values[i].y;
 
-          if (isPercentage) {
+          if (percentageMode) {
             // Add the formatted percentage to the point object
             eventData.percent = (100 * d.y).toFixed(1) + '%';
           }
@@ -71,7 +79,7 @@ export default function DispatchClass(Private, config) {
       }
 
       return eventData;
-    };
+    }
 
     /**
      * Returns a function that adds events and listeners to a D3 selection
@@ -91,7 +99,7 @@ export default function DispatchClass(Private, config) {
           }
         });
       };
-    };
+    }
 
     /**
      *
@@ -118,7 +126,7 @@ export default function DispatchClass(Private, config) {
       }
 
       return addEvent('mouseover', hover);
-    };
+    }
 
     /**
      *
@@ -138,7 +146,7 @@ export default function DispatchClass(Private, config) {
       }
 
       return addEvent('mouseout', mouseout);
-    };
+    }
 
     /**
      *
@@ -154,7 +162,7 @@ export default function DispatchClass(Private, config) {
       }
 
       return addEvent('click', click);
-    };
+    }
 
     /**
      * Determine if we will allow brushing
@@ -167,7 +175,7 @@ export default function DispatchClass(Private, config) {
 
       //Allow brushing for ordered axis - date histogram and histogram
       return Boolean(xAxis.ordered);
-    };
+    }
 
     /**
      * Determine if brushing is currently enabled
@@ -177,7 +185,7 @@ export default function DispatchClass(Private, config) {
      */
     isBrushable() {
       return this.allowBrushing() && this.listenerCount('brush') > 0;
-    };
+    }
 
     /**
      *
@@ -214,7 +222,7 @@ export default function DispatchClass(Private, config) {
       }
 
       return this.addEvent('mousedown', simulateClickWithBrushEnabled);
-    };
+    }
 
     /**
      * Mouseover Behavior
@@ -224,7 +232,7 @@ export default function DispatchClass(Private, config) {
      */
     addMousePointer() {
       return d3.select(this).style('cursor', 'pointer');
-    };
+    }
 
     /**
      * Highlight the element that is under the cursor
@@ -251,7 +259,7 @@ export default function DispatchClass(Private, config) {
      */
     unHighlight(element) {
       $('[data-label]', element.parentNode).css('opacity', 1);
-    };
+    }
 
     /**
      * Adds D3 brush to SVG and returns the brush function
@@ -263,7 +271,7 @@ export default function DispatchClass(Private, config) {
     createBrush(xScale, svg) {
       const self = this;
       const visConfig = self.handler.visConfig;
-      const {width, height} = svg.node().getBBox();
+      const { width, height } = svg.node().getBBox();
       const isHorizontal = self.handler.categoryAxes[0].axisConfig.isHorizontal();
 
       // Brush scale
@@ -318,7 +326,7 @@ export default function DispatchClass(Private, config) {
 
         return brush;
       }
-    };
+    }
   }
 
   /**
@@ -349,4 +357,4 @@ export default function DispatchClass(Private, config) {
   }
 
   return Dispatch;
-};
+}

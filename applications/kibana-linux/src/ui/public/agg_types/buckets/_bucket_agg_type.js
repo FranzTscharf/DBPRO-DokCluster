@@ -1,7 +1,8 @@
 import _ from 'lodash';
-import AggTypesAggTypeProvider from 'ui/agg_types/agg_type';
-export default function BucketAggTypeProvider(Private) {
-  let AggType = Private(AggTypesAggTypeProvider);
+import { AggTypesAggTypeProvider } from 'ui/agg_types/agg_type';
+
+export function AggTypesBucketsBucketAggTypeProvider(Private) {
+  const AggType = Private(AggTypesAggTypeProvider);
 
   _.class(BucketAggType).inherits(AggType);
   function BucketAggType(config) {
@@ -17,4 +18,4 @@ export default function BucketAggTypeProvider(Private) {
   };
 
   return BucketAggType;
-};
+}

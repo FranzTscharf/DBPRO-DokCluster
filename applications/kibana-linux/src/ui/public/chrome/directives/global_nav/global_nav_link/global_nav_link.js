@@ -1,7 +1,7 @@
 
 import globalNavLinkTemplate from './global_nav_link.html';
 import './global_nav_link.less';
-import uiModules from 'ui/modules';
+import { uiModules } from 'ui/modules';
 
 const module = uiModules.get('kibana');
 
@@ -14,16 +14,16 @@ module.directive('globalNavLink', chrome => {
       isDisabled: '=',
       tooltipContent: '=',
       onClick: '&',
-      href: '=',
+      url: '=',
       kbnRoute: '=',
       icon: '=',
-      title: '=',
+      label: '=',
     },
     template: globalNavLinkTemplate,
     link: scope => {
       scope.getHref = () => {
-        if (scope.href) {
-          return scope.href;
+        if (scope.url) {
+          return scope.url;
         }
 
         if (scope.kbnRoute) {

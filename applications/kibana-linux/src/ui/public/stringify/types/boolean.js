@@ -1,9 +1,9 @@
-import IndexPatternsFieldFormatProvider from 'ui/index_patterns/_field_format/field_format';
+import { IndexPatternsFieldFormatProvider } from 'ui/index_patterns/_field_format/field_format';
 import _ from 'lodash';
 
-export default function TruncateFormatProvider(Private) {
+export function stringifyBoolean(Private) {
 
-  let FieldFormat = Private(IndexPatternsFieldFormatProvider);
+  const FieldFormat = Private(IndexPatternsFieldFormatProvider);
 
   class Bool extends FieldFormat {
 
@@ -39,4 +39,4 @@ export default function TruncateFormatProvider(Private) {
   Bool.fieldType = ['boolean', 'number', 'string'];
 
   return Bool;
-};
+}

@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import 'ui/field_format_editor/samples/samples';
-import IndexPatternsFieldFormatProvider from 'ui/index_patterns/_field_format/field_format';
-export default function StringFormatProvider(Private) {
-  let FieldFormat = Private(IndexPatternsFieldFormatProvider);
+import { IndexPatternsFieldFormatProvider } from 'ui/index_patterns/_field_format/field_format';
+
+export function stringifyString(Private) {
+  const FieldFormat = Private(IndexPatternsFieldFormatProvider);
 
 
   _.class(_String).inherits(FieldFormat);
@@ -38,7 +39,7 @@ export default function StringFormatProvider(Private) {
     { id: 'upper', name: 'Upper Case' },
     { id: 'title', name: 'Title Case' },
     { id: 'short', name: 'Short Dots' },
-    { id: 'base64', name: 'Base64 Decode'}
+    { id: 'base64', name: 'Base64 Decode' }
   ];
 
   _String.sampleInputs = [
@@ -73,4 +74,4 @@ export default function StringFormatProvider(Private) {
   };
 
   return _String;
-};
+}

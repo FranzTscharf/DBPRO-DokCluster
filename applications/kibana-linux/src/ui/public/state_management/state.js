@@ -9,24 +9,24 @@
 import _ from 'lodash';
 import angular from 'angular';
 import rison from 'rison-node';
-import applyDiff from 'ui/utils/diff_object';
-import EventsProvider from 'ui/events';
-import Notifier from 'ui/notify/notifier';
+import { applyDiff } from 'ui/utils/diff_object';
+import { EventsProvider } from 'ui/events';
+import { Notifier } from 'ui/notify/notifier';
 
 import {
   createStateHash,
-  hashedItemStoreSingleton,
+  HashedItemStoreSingleton,
   isStateHash,
 } from './state_storage';
 
-export default function StateProvider(Private, $rootScope, $location, config) {
+export function StateProvider(Private, $rootScope, $location, config, kbnUrl) {
   const Events = Private(EventsProvider);
 
   _.class(State).inherits(Events);
   function State(
     urlParam,
     defaults,
-    hashedItemStore = hashedItemStoreSingleton,
+    hashedItemStore = HashedItemStoreSingleton,
     notifier = new Notifier()
   ) {
     State.Super.call(this);
@@ -121,7 +121,7 @@ export default function StateProvider(Private, $rootScope, $location, config) {
 
     _.defaults(stash, this._defaults);
     // apply diff to state from stash, will change state in place via side effect
-    let diffResults = applyDiff(this, stash);
+    const diffResults = applyDiff(this, stash);
 
     if (diffResults.keys.length) {
       this.emit('fetch_with_changes', diffResults.keys);
@@ -134,7 +134,7 @@ export default function StateProvider(Private, $rootScope, $location, config) {
    */
   State.prototype.save = function (replace) {
     let stash = this._readFromURL();
-    let state = this.toObject();
+    const state = this.toObject();
     replace = replace || false;
 
     if (!stash) {
@@ -143,14 +143,14 @@ export default function StateProvider(Private, $rootScope, $location, config) {
     }
 
     // apply diff to state from stash, will change state in place via side effect
-    let diffResults = applyDiff(stash, _.defaults({}, state, this._defaults));
+    const diffResults = applyDiff(stash, _.defaults({}, state, this._defaults));
 
     if (diffResults.keys.length) {
       this.emit('save_with_changes', diffResults.keys);
     }
 
     // persist the state in the URL
-    let search = $location.search();
+    const search = $location.search();
     search[this._urlParam] = this.toQueryParam(state);
     if (replace) {
       $location.search(search).replace();
@@ -173,9 +173,10 @@ export default function StateProvider(Private, $rootScope, $location, config) {
    * @returns {void}
    */
   State.prototype.reset = function () {
+    kbnUrl.removeParam(this.getQueryParamName());
     // apply diff to _attributes from defaults, this is side effecting so
     // it will change the state in place.
-    let diffResults = applyDiff(this, this._defaults);
+    const diffResults = applyDiff(this, this._defaults);
     if (diffResults.keys.length) {
       this.emit('reset_with_changes', diffResults.keys);
     }
@@ -275,4 +276,4 @@ export default function StateProvider(Private, $rootScope, $location, config) {
 
   return State;
 
-};
+}

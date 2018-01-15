@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import Scanner from 'ui/utils/scanner';
+import { Scanner } from 'ui/utils/scanner';
 import { StringUtils } from 'ui/utils/string_utils';
 
 export class SavedObjectLoader {
@@ -94,7 +94,7 @@ export class SavedObjectLoader {
 
     return this.esAdmin.search({
       index: this.kbnIndex,
-      type: this.type.toLowerCase(),
+      type: this.lowercaseType,
       body,
       size
     })

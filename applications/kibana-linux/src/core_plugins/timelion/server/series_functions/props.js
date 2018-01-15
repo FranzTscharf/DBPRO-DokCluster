@@ -1,18 +1,28 @@
 'use strict';
 
-var alter = require('../lib/alter.js');
-var Chainable = require('../lib/classes/chainable');
-var _ = require('lodash');
+var _alter = require('../lib/alter.js');
+
+var _alter2 = _interopRequireDefault(_alter);
+
+var _chainable = require('../lib/classes/chainable');
+
+var _chainable2 = _interopRequireDefault(_chainable);
+
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function unflatten(data) {
-  if (Object(data) !== data || _.isArray(data)) return data;
+  if (Object(data) !== data || _lodash2.default.isArray(data)) return data;
 
-  var regex = new RegExp(/\.?([^.\[\]]+)|\[(\d+)\]/g);
-  var result = {};
-  _.each(data, function (val, p) {
-    var cur = result;
-    var prop = '';
-    var m;
+  const regex = new RegExp(/\.?([^.\[\]]+)|\[(\d+)\]/g);
+  const result = {};
+  _lodash2.default.each(data, function (val, p) {
+    let cur = result;
+    let prop = '';
+    let m;
     while (m = regex.exec(p)) {
       cur = cur[prop] || (cur[prop] = m[2] ? [] : {});
       prop = m[2] || m[1];
@@ -21,9 +31,9 @@ function unflatten(data) {
   });
 
   return result[''] || result;
-};
+}
 
-module.exports = new Chainable('props', {
+module.exports = new _chainable2.default('props', {
   args: [{
     name: 'inputSeries',
     types: ['seriesList']
@@ -42,14 +52,14 @@ module.exports = new Chainable('props', {
   // They will be passed as args._extended:{}
   help: 'Use at your own risk, sets arbitrary properties on the series. For example .props(label=bears!)',
   fn: function firstFn(args) {
-    var properties = unflatten(_.omit(args.byName, 'inputSeries', 'global'));
+    const properties = unflatten(_lodash2.default.omit(args.byName, 'inputSeries', 'global'));
 
     if (args.byName.global) {
-      _.assign(args.byName.inputSeries, properties);
+      _lodash2.default.assign(args.byName.inputSeries, properties);
       return args.byName.inputSeries;
     } else {
-      return alter(args, function (eachSeries) {
-        _.assign(eachSeries, properties);
+      return (0, _alter2.default)(args, function (eachSeries) {
+        _lodash2.default.assign(eachSeries, properties);
         return eachSeries;
       });
     }

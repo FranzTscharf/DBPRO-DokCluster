@@ -8,13 +8,13 @@ function startsWith(str, test) {
 }
 
 function endsWith(str, test) {
-  let tooShort = str.length < test.length;
+  const tooShort = str.length < test.length;
   if (tooShort) return;
 
   return str.substr(str.length - test.length).toLowerCase() === test.toLowerCase();
 }
 
-function inflector(prefix, postfix) {
+export function inflector(prefix, postfix) {
   return function inflect(key) {
     let inflected;
 
@@ -40,5 +40,3 @@ function inflector(prefix, postfix) {
     return inflected;
   };
 }
-
-export default inflector;
