@@ -41,7 +41,7 @@ For More Infromations look at the documentation of the Tools.
 3. [carrot2](https://project.carrot2.org/)
 4. [zotero](https://www.zotero.org/)
 5. [Carrot2 plugin for ElasticSearch](https://github.com/carrot2/elasticsearch-carrot2)
-6. [json-to-es-bulk](https://github.com/mradamlacey/json-to-es-bulk)
+6. ~~json-to-es-bulk~~
 
 
 License
