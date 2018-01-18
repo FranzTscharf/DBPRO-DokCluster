@@ -65,7 +65,7 @@
                 <!-- Sales overview chart -->
                 <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-lg-8 col-md-12">
+                    <div class="col-lg-7 col-md-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex">
@@ -80,7 +80,7 @@
                     <!-- ============================================================== -->
                     <!-- visit charts-->
                     <!-- ============================================================== -->
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-5 col-md-12">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title"><span class="lstick">
