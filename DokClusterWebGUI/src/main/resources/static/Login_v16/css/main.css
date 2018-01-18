@@ -331,7 +331,7 @@ iframe {
 
 .input100:focus + .focus-input100::after {
   left: 23px;
-  color: #d41872;
+  color: #2f7b77;
 }
 
 .input100:focus + .focus-input100::before {
@@ -340,7 +340,7 @@ iframe {
 
 .has-val.input100 + .focus-input100::after {
   left: 23px;
-  color: #d41872;
+  color: #2f7b77;
 }
 
 .has-val.input100 + .focus-input100::before {
