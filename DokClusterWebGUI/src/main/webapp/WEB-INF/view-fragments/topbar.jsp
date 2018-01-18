@@ -4,7 +4,7 @@
     <!-- Logo -->
     <!-- ============================================================== -->
     <div class="navbar-header">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="./">
             <!-- Logo icon --><b>
             <img src="/resources/images/logo-icon.png" style="margin-top: -7px;height: 30px;margin-left: 2px;" alt="homepage" class="dark-logo" />
         </b>
@@ -42,7 +42,7 @@
             <!-- Profile -->
             <!-- ============================================================== -->
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-dark" href="#"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" /></a>
+                <a class="nav-link waves-effect waves-dark" href="./profile"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" /></a>
             </li>
         </ul>
     </div>
