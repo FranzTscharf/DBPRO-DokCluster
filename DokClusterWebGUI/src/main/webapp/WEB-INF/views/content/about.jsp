@@ -73,7 +73,7 @@
                         <p><a href="mailto:team@dokcluster.org">team@dokcluster.org</a> (not active!)</p>
                     </div>
                     <div class="col-sm-8">
-                        <img src="resources/images/tu-berlin.png" alt="c/o TU Berlin" height="150"
+                        <img class="pull-right" src="resources/images/tu-berlin.png" alt="c/o TU Berlin" height="100"
                              width="auto">
                     </div>
                 </div>
