@@ -1,3 +1,11 @@
+$("#algorithm-select").change(function (event) {
+    var newAlgorithm = $(this).val();
+    var searchStr = $("#search-with-cluster").val();
+    if(searchStr === ""){
+        searchStr = "digital";
+    }
+    set_search_graphic(searchStr, newAlgorithm);
+});
 function initializeFoamtree() {
     if($("#foamtree-area").length){
         foamtree = new CarrotSearchFoamTree({
@@ -49,9 +57,10 @@ function cluster_data_ajax_call(data){
  * function for forwarding search requests to the foamtree visualization and the kibana visualization
  * @param search_str the text string from the search field
  */
-function search_textfield_input(search_str) {
+function search_textfield_input(search_str, algorithm_str) {
+    console.log(algorithm_str);
     if($("#foamtree-area").length){
-        set_search_graphic(search_str);
+        set_search_graphic(search_str, algorithm_str);
     }
     if($(".kibana-visualization").length){
         set_kibana_graphic(search_str);
@@ -62,12 +71,13 @@ function search_textfield_input(search_str) {
  * makes an ajax call to the cluster endpoint of the elasticsearch endpoint and handles the response
  * @param search_str the text string form the search field.
  */
-function set_search_graphic(search_str) {
+function set_search_graphic(search_str, algorithm_str) {
     var data = {
         q : search_str,
         field_mapping_title : "_source.title",
         field_mapping_content : "_source.abstract",
-        size : "100"
+        size : "100",
+        algorithm: algorithm_str
     };
     var clusterAjaxCall = cluster_data_ajax_call(data);
     clusterAjaxCall.done(create_foam_tree);

@@ -37,10 +37,10 @@
                             Algorithm:
                         </td>
                         <td>
-                            <select class="form-control" id="algo">
-                                <option>Lingo</option>
-                                <option>STC</option>
-                                <option>k-means</option>
+                            <select class="form-control" id="algorithm-select">
+                                <option value="lingo">Lingo</option>
+                                <option value="stc">STC</option>
+                                <option value="kmeans">k-means</option>
                             </select>
                         </td>
                     </tr>
@@ -50,7 +50,7 @@
             <!-- Search -->
             <!-- ============================================================== -->
             <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                <form class="app-search" id="search_form" onkeypress="if(event.keyCode === 13){event.preventDefault();search_textfield_input($('#search-with-cluster').val());}">
+                <form class="app-search" id="search_form" onkeypress="if(event.keyCode === 13){event.preventDefault();search_textfield_input($('#search-with-cluster').val(),$('#algorithm-select').val());}">
                     <input type="text" class="form-control" placeholder="Search & enter" name="q" id="search-with-cluster"><a class="srh-btn"><i class="ti-close"></i></a>
                 </form>
             </li>

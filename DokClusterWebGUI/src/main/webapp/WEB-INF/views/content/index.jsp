@@ -8,7 +8,7 @@
 <!-- ============================================================== -->
 <!-- added onload on the body to show the default carrot graphic with 'digital'-->
 <!-- ============================================================== -->
-<body class="fix-header fix-sidebar card-no-border" onload="search_textfield_input('digital');">
+<body class="fix-header fix-sidebar card-no-border" onload="search_textfield_input('digital','lingo');">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
