@@ -30,6 +30,22 @@
         <!-- User profile and search -->
         <!-- ============================================================== -->
         <ul class="navbar-nav my-lg-0">
+            <div style="display:flex;align-items:center;">
+                <table>
+                    <tbody><tr>
+                        <td style="vertical-align:middle">
+                            Algorithm:
+                        </td>
+                        <td>
+                            <select class="form-control" id="algo">
+                                <option>Lingo</option>
+                                <option>STC</option>
+                                <option>k-means</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
             <!-- ============================================================== -->
             <!-- Search -->
             <!-- ============================================================== -->

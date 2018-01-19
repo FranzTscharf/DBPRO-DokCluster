@@ -59,7 +59,6 @@
                             <a href="" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">Back home</a>
                             -->
                         </div>
-                        <footer class="footer text-center">© 2017 Admin Pro.</footer>
                     </div>
                 </section>
                 <!-- ============================================================== -->
