@@ -33,8 +33,8 @@
             <div style="display:flex;align-items:center;">
                 <table>
                     <tbody><tr>
-                        <td>
-                            <label for="algo">Algorithm:</label>
+                        <td style="vertical-align:middle">
+                            Algorithm:
                         </td>
                         <td>
                             <select class="form-control" id="algo">
