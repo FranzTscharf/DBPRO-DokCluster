@@ -1,3 +1,4 @@
+var baseUrl = "http://localhost:9200";
 $("#algorithm-select").change(function (event) {
     var newAlgorithm = $(this).val();
     var searchStr = $("#search-with-cluster").val();
@@ -41,6 +42,13 @@ $(document).ready(function(){
 });
 
 /**
+ * sets the baseUrl for elasticsearch
+ * @param baseUrlString
+ */
+function setBaseUrl(baseUrlString) {
+    baseUrl = baseUrlString;
+}
+/**
  * creates a call to the elasticsearch instance running in the background for returning cluster
  * @param data a plain object with parameters for the endpoint call
  * @returns an ajax object for further usage with promises
@@ -48,7 +56,7 @@ $(document).ready(function(){
 function cluster_data_ajax_call(data){
         return $.ajax({
         method: "GET",
-        url : "http://localhost:9200/zotero/entry/_search_with_clusters",
+        url : baseUrl + "/zotero/entry/_search_with_clusters",
         data : data
     });
 }
@@ -90,11 +98,22 @@ function set_search_graphic(search_str, algorithm_str) {
 function show_error_message() {
     foamtree = null;
     var foamtreeArea = $("#foamtree-area");
-    foamtreeArea.empty();
-    var errorHeading = $("<h1>Something went wrong!</h1>").addClass("alert-heading");
-    foamtreeArea.css({"height":"360px","display":"flex","justify-content":"center","align-items":"center"});
-    foamtreeArea.addClass("alert alert-danger");
-    foamtreeArea.append(errorHeading);
+    foamtreeArea.children("canvas").css("display", "none");
+    var errorArea = foamtreeArea.children("div");
+    if(errorArea.length){
+        foamtreeArea.children("div").css("display", "flex");
+    }else {
+        var errorHeading = $("<h1>Something went wrong!</h1>").addClass("alert-heading");
+        errorArea = $("<div></div>");
+        errorArea.css({"height":"360px","display":"flex","justify-content":"center","align-items":"center"});
+        errorArea.addClass("alert alert-danger");
+        errorArea.append(errorHeading);
+        foamtreeArea.append(errorArea);
+
+    }
+    console.log(errorArea);
+}
+function show_no_result_message(){
 }
 
 /**
@@ -103,7 +122,7 @@ function show_error_message() {
  */
 function create_foam_tree(cluster_data){
     if (cluster_data.hits.total === 0){
-        alert("empty response");
+        show_error_message();
         return;
     }
     var groups_arr = [];
@@ -128,6 +147,11 @@ function create_foam_tree(cluster_data){
 
     });
     if(typeof foamtree !== "undefined"){
+        $("#foamtree-area").children("canvas").css("display","inherit");
+        var errorBox = $("#foamtree-area").children("div");
+        if(errorBox.length){
+            errorBox.css("display","none");
+        }
         foamtree.set({
             id: "foamtree-area",
             dataObject:{
@@ -165,7 +189,7 @@ function find_responding_document(server_response,document_id){
 function create_meta_data_ajax_call(entryId){
     return $.ajax({
         method: "GET",
-        url : "http://localhost:9200/zotero/entry/"+entryId
+        url : baseUrl + "/zotero/entry/"+entryId
     });
 }
 
