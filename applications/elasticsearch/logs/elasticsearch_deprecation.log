@@ -1668,6 +1668,7 @@
 [2017-12-10T16:31:44,028][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 =======
 >>>>>>> kibana_pie_chart
+<<<<<<< HEAD
 [2018-01-04T18:49:30,481][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 [2018-01-04T19:29:14,760][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
 [2018-01-04T19:29:18,079][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
@@ -1968,3 +1969,18 @@
 [2018-01-13T14:49:29,584][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 [2018-01-13T14:49:37,501][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
 [2018-01-13T14:49:52,851][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+=======
+[2018-01-13T18:17:23,850][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:20:47,409][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:21:00,500][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-13T18:21:06,596][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:21:35,945][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:21:45,914][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:21:59,544][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:22:22,151][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:22:29,855][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+[2018-01-13T18:22:36,930][WARN ][o.e.d.r.RestController   ] The Content-Type [application/x-ldjson] has been superseded by [application/x-ndjson] in the specification and should be used instead.
+>>>>>>> frontend
+[2018-01-20T16:18:15,105][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-20T16:18:16,491][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
+[2018-01-20T16:18:18,135][WARN ][o.e.d.r.a.RestFieldStatsAction] [_field_stats] endpoint is deprecated! Use [_field_caps] instead or run a min/max aggregations on the desired fields.
