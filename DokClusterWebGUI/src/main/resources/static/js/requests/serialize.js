@@ -1,4 +1,4 @@
-var baseUrl = "http://localhost:9200";
+var baseUrl = "http://tscharf.ddnss.de:9200/";
 $("#algorithm-select").change(function (event) {
     var newAlgorithm = $(this).val();
     var searchStr = $("#search-with-cluster").val();
