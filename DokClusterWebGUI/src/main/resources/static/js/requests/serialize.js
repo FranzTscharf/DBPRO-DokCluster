@@ -1,4 +1,4 @@
-var baseUrl = "http://tscharf.ddnss.de:9200/";
+var baseUrl = "http://tscharf.ddnss.de:9200";
 $("#algorithm-select").change(function (event) {
     var newAlgorithm = $(this).val();
     var searchStr = $("#search-with-cluster").val();
@@ -55,9 +55,9 @@ function setBaseUrl(baseUrlString) {
  */
 function cluster_data_ajax_call(data){
         return $.ajax({
-        method: "GET",
-        url : baseUrl + "/zotero/entry/_search_with_clusters",
-        data : data
+            method: "GET",
+            url : baseUrl + "/zotero/entry/_search_with_clusters",
+            data : data
     });
 }
 
