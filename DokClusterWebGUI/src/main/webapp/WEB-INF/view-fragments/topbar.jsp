@@ -58,7 +58,7 @@
             <!-- Profile -->
             <!-- ============================================================== -->
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-dark" href="./profile"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" /></a>
+                <a class="nav-link waves-effect waves-dark" href="./profile"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" style="position: relative; margin-bottom: 7px;"/></a>
             </li>
         </ul>
     </div>
