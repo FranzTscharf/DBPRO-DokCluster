@@ -36,6 +36,7 @@
 <!--[if lt IE 9]>
 
 <!-- do some visualisation throu carrot foamtree-->
+<script src="/resources/js/carrotsearch/hammer.min.js"></script>
 <script src="/resources/js/carrotsearch/carrotsearch.foamtree.js"></script>
 
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
