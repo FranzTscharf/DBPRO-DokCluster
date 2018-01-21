@@ -4,7 +4,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.*;
 
@@ -37,16 +36,17 @@ public class ZoteroToESBulk {
      * Converts the date-parts array in the Zotero CSL json file to a proper date String in the format
      * {@code yyyy-MM-dd}, {@code yyyy-MM} or {@code yyyy}
      * @param jsonObject A whole json entry from the Zotero library.
+     * @param objectKey
      */
-    private static void datePartsToDateString(JSONObject jsonObject){
-        JSONObject issued =(JSONObject) jsonObject.get("issued");
-        if(issued == null){
+    private static void datePartsToDateString(JSONObject jsonObject, String objectKey){
+        JSONObject objectValue =(JSONObject) jsonObject.get(objectKey);
+        if(objectValue == null){
             return;
         }
-        JSONArray dateParts = (JSONArray) issued.get("date-parts");
+        JSONArray dateParts = (JSONArray) objectValue.get("date-parts");
         JSONArray datePartsArray = (JSONArray) dateParts.get(0);
         String dateString = buildDateString(datePartsArray);
-        jsonObject.put("issued", dateString);
+        jsonObject.put(objectKey, dateString);
     }
 
     /**
@@ -106,7 +106,8 @@ public class ZoteroToESBulk {
                     JSONObject jsonObject = (JSONObject) obj;
                     jsonObject.put("id", id_counter);
 
-                    datePartsToDateString(jsonObject);
+                    datePartsToDateString(jsonObject, "issued");
+                    datePartsToDateString(jsonObject, "accessed");
                     reformatAuthorsObject(jsonObject);
 
                     file.append(jsonObject.toJSONString()).append("\n");
