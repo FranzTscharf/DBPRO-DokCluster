@@ -11,6 +11,7 @@
         <p>
             You have been logged out.
         </p>
+
     </c:if>
     <p>
         <label for="username">Username</label>
@@ -26,6 +27,7 @@
     <button type="submit" class="btn">Log in</button>
 </form>
 --%>
+<%--<div class="background-image" style="background-image: url('resources/Login_v16/images/Screenshot.png');"></div>--%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +61,7 @@
 <body>
 
 <div class="limiter">
-    <%--<div class="background-image" style="background-image: url('resources/Login_v16/images/Screenshot.png');"></div>--%>
+
     <div class="container-login100" style="background-image: url('resources/Login_v16/images/204_Gray_Uniformity.png');">
         <div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
@@ -68,6 +70,18 @@
             <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             <c:url value="/login" var="loginUrl"/>
             <form class="login100-form validate-form p-b-33 p-t-5" action="${loginUrl}" method="post">
+
+                <c:if test="${param.error != null}">
+                    <p style="text-align: center; font-weight: bold">
+                        Invalid username and password.
+                    </p>
+                </c:if>
+                <c:if test="${param.logout != null}">
+                    <p style="text-align: center; font-weight: bold">
+                        You have been logged out.
+                    </p>
+
+                </c:if>
 
                 <div class="wrap-input100 validate-input" data-validate = "Enter username">
                     <input class="input100" type="text" name="username" id="username" placeholder="User name">
@@ -79,7 +93,7 @@
                     <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                 </div>
 
-                <input type="hidden"                        6
+                <input type="hidden"
                        name="${_csrf.parameterName}"
                        value="${_csrf.token}"/>
 
@@ -116,4 +130,3 @@
 
 </body>
 </html>
-

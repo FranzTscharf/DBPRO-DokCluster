@@ -15,6 +15,7 @@
             <li> <a class="waves-effect waves-dark" href="./metadata" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Meta Data Carrot</span></a></li>
             <li> <a class="waves-effect waves-dark" href="./visualisations" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Kibana Visualisations</span></a></li>
             <li> <a class="waves-effect waves-dark" href="./about" aria-expanded="false"><i class="mdi mdi-information-variant"></i><span class="hide-menu">about</span></a></li>
+            <li> <a class="waves-effect waves-dark" href="./login?logout" aria-expanded="false"><i class="mdi mdi-logout"></i><span class="hide-menu">logout</span></a></li>
 <%--
             <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Map</span></a></li>
             <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Blank</span></a></li>
