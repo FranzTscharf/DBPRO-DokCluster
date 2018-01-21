@@ -33,7 +33,7 @@
             <div style="display:flex;align-items:center;">
                 <table>
                     <tbody><tr>
-                        <td style="vertical-align:middle;width: 90px;">
+                        <td class="hidden-xs-down" style="vertical-align:middle;width: 90px;">
                             Algorithm:
                         </td>
                         <td>
