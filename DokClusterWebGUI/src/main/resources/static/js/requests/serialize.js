@@ -1,4 +1,8 @@
 var baseUrl = "http://tscharf.ddnss.de:9200";
+/**
+ * an event listener that handles the algorithm select dropdown
+ * reloads the carrot2 visualization with the new algorithm on change
+ */
 $("#algorithm-select").change(function (event) {
     var newAlgorithm = $(this).val();
     var searchStr = $("#search-with-cluster").val();
@@ -7,6 +11,10 @@ $("#algorithm-select").change(function (event) {
     }
     set_search_graphic(searchStr, newAlgorithm);
 });
+/**
+ * method for initializing the foamtree visualization with our options
+ *
+ */
 function initializeFoamtree() {
     if($("#foamtree-area").length){
         foamtree = new CarrotSearchFoamTree({

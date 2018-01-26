@@ -33,7 +33,7 @@
             <div style="display:flex;align-items:center;">
                 <table>
                     <tbody><tr>
-                        <td style="vertical-align:middle;width: 90px;">
+                        <td class="hidden-xs-down" style="vertical-align:middle;width: 90px;">
                             Algorithm:
                         </td>
                         <td>
@@ -58,7 +58,7 @@
             <!-- Profile -->
             <!-- ============================================================== -->
             <li class="nav-item">
-                <a class="nav-link waves-effect waves-dark" href="./profile"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" /></a>
+                <a class="nav-link waves-effect waves-dark" href="./profile"><img src="/resources/images/users/henrik_quadrat.png" alt="user" class="profile-pic" style="position: relative; margin-bottom: 7px;"/></a>
             </li>
         </ul>
     </div>

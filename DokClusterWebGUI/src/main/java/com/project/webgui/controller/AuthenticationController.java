@@ -1,5 +1,7 @@
 package com.project.webgui.controller;
 
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,6 +43,7 @@ public class AuthenticationController {
         }
         if (logout != null) {
             model.addObject("msg", "You've been logged out successfully.");
+            SecurityContextHolder.clearContext();
         }
         model.setViewName("authentication/login");
         return model;
