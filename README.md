@@ -8,30 +8,20 @@ This Project is co-managed by the faculty of Informatic Technologie at the Techn
 Installation
 ============
 
-Prerequisites
+You can use the prepared Elasticsearch and Kibana server included in this project (in this case jump to point 6) or if you want to roll your own versions of the server:
 
-Installation
-============
-
-Prerequisites
--------------
-The Software requires the following components:
-
-* Here are the Dependencies
-* Here are the Dependencies
-* Here are the Dependencies
+1. Install [Elasticsearch v. 5.5.2](https://www.elastic.co/downloads/past-releases/elasticsearch-5-5-2)
+2. Install [Kibana v. 5.5.2](https://www.elastic.co/de/downloads/past-releases/kibana-5-5-2)
+3. [Follow the installation instruction of the Carrot2 plugin](https://github.com/carrot2/elasticsearch-carrot2/blob/master/README.md)
+4. run the `setup.sh` file in the doc folder
+5. open Kibana in the browser (while Kibana is open `localhost:5601`) and navigate to Management > Saved Objects > Import
+   and upload `ExportVisualitions.json` in the doc directory
+6. Now the two server can be run via the `run.sh` command (iOS and Linux only)
+7. run the Spring server via `java -jar DokClusterWebGUI/target/spring-boot-web-application-example-0.0.1-SNAPSHOT.war`
+8. open http://localhost:8800 to see if the server is running.
 
 It should run under Windows, Linux and on a Mac.
 
-Installation procedure
-----------------------
-
-After installing the required components, check out the source:
-```
-git clone https://github.com/FranzTscharf/DBPRO-DokCluster.git
-cd DBPRO-DokCluster
-./run.sh
-```
 
 More
 ====
