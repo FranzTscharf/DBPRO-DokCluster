@@ -1,0 +1,98 @@
+[2017-12-11T10:02:34,863][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-11T10:02:34,967][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [97.7gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-12-11T10:02:34,968][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-12-11T10:02:34,984][INFO ][o.e.n.Node               ] node name [MOYZMGk] derived from node ID [MOYZMGkARoi1m8dJlNyPMQ]; set [node.name] to override
+[2017-12-11T10:02:34,985][INFO ][o.e.n.Node               ] version[5.5.2], pid[14045], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-12-11T10:02:34,985][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-12-11T10:02:36,524][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [aggs-matrix-stats]
+[2017-12-11T10:02:36,524][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [ingest-common]
+[2017-12-11T10:02:36,525][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-expression]
+[2017-12-11T10:02:36,525][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-groovy]
+[2017-12-11T10:02:36,525][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-mustache]
+[2017-12-11T10:02:36,526][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-painless]
+[2017-12-11T10:02:36,526][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [parent-join]
+[2017-12-11T10:02:36,527][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [percolator]
+[2017-12-11T10:02:36,527][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [reindex]
+[2017-12-11T10:02:36,528][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty3]
+[2017-12-11T10:02:36,528][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty4]
+[2017-12-11T10:02:36,529][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded plugin [elasticsearch-carrot2]
+[2017-12-11T10:02:38,640][INFO ][o.e.d.DiscoveryModule    ] [MOYZMGk] using discovery type [zen]
+[2017-12-11T10:02:39,628][INFO ][o.e.n.Node               ] initialized
+[2017-12-11T10:02:39,629][INFO ][o.e.n.Node               ] [MOYZMGk] starting ...
+[2017-12-11T10:02:39,631][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:02:40,189][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-12-11T10:02:40,190][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-12-11T10:02:40,193][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:02:40,399][INFO ][o.e.t.TransportService   ] [MOYZMGk] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-11T10:02:40,414][WARN ][o.e.b.BootstrapChecks    ] [MOYZMGk] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-11T10:02:43,475][INFO ][o.e.c.s.ClusterService   ] [MOYZMGk] new_master {MOYZMGk}{MOYZMGkARoi1m8dJlNyPMQ}{2fCCoqwnQPmvyet1cb7cQA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-12-11T10:02:43,533][INFO ][o.e.h.n.Netty4HttpServerTransport] [MOYZMGk] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-11T10:02:43,534][INFO ][o.e.n.Node               ] [MOYZMGk] started
+[2017-12-11T10:02:43,780][INFO ][o.e.g.GatewayService     ] [MOYZMGk] recovered [2] indices into cluster_state
+[2017-12-11T10:02:44,127][INFO ][o.e.c.r.a.AllocationService] [MOYZMGk] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[zotero][2], [zotero][4]] ...]).
+[2017-12-11T10:05:23,499][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-11T10:05:23,591][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [97.7gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-12-11T10:05:23,591][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-12-11T10:05:23,607][INFO ][o.e.n.Node               ] node name [MOYZMGk] derived from node ID [MOYZMGkARoi1m8dJlNyPMQ]; set [node.name] to override
+[2017-12-11T10:05:23,607][INFO ][o.e.n.Node               ] version[5.5.2], pid[14300], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-12-11T10:05:23,608][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-12-11T10:05:25,207][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [aggs-matrix-stats]
+[2017-12-11T10:05:25,207][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [ingest-common]
+[2017-12-11T10:05:25,207][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-expression]
+[2017-12-11T10:05:25,207][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-groovy]
+[2017-12-11T10:05:25,207][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-mustache]
+[2017-12-11T10:05:25,208][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-painless]
+[2017-12-11T10:05:25,208][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [parent-join]
+[2017-12-11T10:05:25,209][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [percolator]
+[2017-12-11T10:05:25,209][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [reindex]
+[2017-12-11T10:05:25,209][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty3]
+[2017-12-11T10:05:25,210][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty4]
+[2017-12-11T10:05:25,210][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded plugin [elasticsearch-carrot2]
+[2017-12-11T10:05:27,439][INFO ][o.e.d.DiscoveryModule    ] [MOYZMGk] using discovery type [zen]
+[2017-12-11T10:05:28,182][INFO ][o.e.n.Node               ] initialized
+[2017-12-11T10:05:28,183][INFO ][o.e.n.Node               ] [MOYZMGk] starting ...
+[2017-12-11T10:05:28,183][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:05:28,615][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-12-11T10:05:28,615][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-12-11T10:05:28,615][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:05:28,780][INFO ][o.e.t.TransportService   ] [MOYZMGk] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-11T10:05:28,794][WARN ][o.e.b.BootstrapChecks    ] [MOYZMGk] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-11T10:05:31,849][INFO ][o.e.c.s.ClusterService   ] [MOYZMGk] new_master {MOYZMGk}{MOYZMGkARoi1m8dJlNyPMQ}{-nqN6nYJTTCWkJ8mJurZkw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-12-11T10:05:31,884][INFO ][o.e.h.n.Netty4HttpServerTransport] [MOYZMGk] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-11T10:05:31,885][INFO ][o.e.n.Node               ] [MOYZMGk] started
+[2017-12-11T10:05:32,072][INFO ][o.e.g.GatewayService     ] [MOYZMGk] recovered [2] indices into cluster_state
+[2017-12-11T10:05:32,404][INFO ][o.e.c.r.a.AllocationService] [MOYZMGk] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[zotero][0]] ...]).
+[2017-12-11T10:28:59,241][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-11T10:28:59,331][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [97.7gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-12-11T10:28:59,332][INFO ][o.e.e.NodeEnvironment    ] [MOYZMGk] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-12-11T10:28:59,347][INFO ][o.e.n.Node               ] node name [MOYZMGk] derived from node ID [MOYZMGkARoi1m8dJlNyPMQ]; set [node.name] to override
+[2017-12-11T10:28:59,348][INFO ][o.e.n.Node               ] version[5.5.2], pid[15128], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-12-11T10:28:59,348][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-12-11T10:29:00,937][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [aggs-matrix-stats]
+[2017-12-11T10:29:00,937][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [ingest-common]
+[2017-12-11T10:29:00,938][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-expression]
+[2017-12-11T10:29:00,938][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-groovy]
+[2017-12-11T10:29:00,938][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-mustache]
+[2017-12-11T10:29:00,938][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [lang-painless]
+[2017-12-11T10:29:00,939][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [parent-join]
+[2017-12-11T10:29:00,940][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [percolator]
+[2017-12-11T10:29:00,940][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [reindex]
+[2017-12-11T10:29:00,941][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty3]
+[2017-12-11T10:29:00,941][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded module [transport-netty4]
+[2017-12-11T10:29:00,942][INFO ][o.e.p.PluginsService     ] [MOYZMGk] loaded plugin [elasticsearch-carrot2]
+[2017-12-11T10:29:03,065][INFO ][o.e.d.DiscoveryModule    ] [MOYZMGk] using discovery type [zen]
+[2017-12-11T10:29:03,756][INFO ][o.e.n.Node               ] initialized
+[2017-12-11T10:29:03,756][INFO ][o.e.n.Node               ] [MOYZMGk] starting ...
+[2017-12-11T10:29:03,757][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:29:04,151][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-12-11T10:29:04,152][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-12-11T10:29:04,152][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-11T10:29:04,319][INFO ][o.e.t.TransportService   ] [MOYZMGk] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-11T10:29:04,332][WARN ][o.e.b.BootstrapChecks    ] [MOYZMGk] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-11T10:29:07,414][INFO ][o.e.c.s.ClusterService   ] [MOYZMGk] new_master {MOYZMGk}{MOYZMGkARoi1m8dJlNyPMQ}{KVSBGDqWRRyyX4CawdRsJw}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-12-11T10:29:07,440][INFO ][o.e.h.n.Netty4HttpServerTransport] [MOYZMGk] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-11T10:29:07,441][INFO ][o.e.n.Node               ] [MOYZMGk] started
+[2017-12-11T10:29:07,628][INFO ][o.e.g.GatewayService     ] [MOYZMGk] recovered [2] indices into cluster_state
+[2017-12-11T10:29:07,942][INFO ][o.e.c.r.a.AllocationService] [MOYZMGk] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[zotero][3]] ...]).
+[2017-12-11T10:34:30,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [MOYZMGk] Cannot find into field abstract from spec: abstract
+[2017-12-11T10:34:30,020][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [MOYZMGk] Cannot find into field abstract from spec: abstract

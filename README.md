@@ -9,6 +9,11 @@ Installation
 ============
 
 Prerequisites
+
+Installation
+============
+
+Prerequisites
 -------------
 The Software requires the following components:
 

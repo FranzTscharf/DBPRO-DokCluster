@@ -1,0 +1,866 @@
+[2017-11-26T17:59:16,067][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-26T17:59:16,174][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [99gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-11-26T17:59:16,174][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-11-26T17:59:16,197][INFO ][o.e.n.Node               ] node name [uHB_sEH] derived from node ID [uHB_sEHmTSOCwn_vt8uocw]; set [node.name] to override
+[2017-11-26T17:59:16,197][INFO ][o.e.n.Node               ] version[5.5.2], pid[4639], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-11-26T17:59:16,198][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-11-26T17:59:17,692][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [aggs-matrix-stats]
+[2017-11-26T17:59:17,692][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [ingest-common]
+[2017-11-26T17:59:17,693][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-expression]
+[2017-11-26T17:59:17,693][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-groovy]
+[2017-11-26T17:59:17,693][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-mustache]
+[2017-11-26T17:59:17,694][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-painless]
+[2017-11-26T17:59:17,695][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [parent-join]
+[2017-11-26T17:59:17,695][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [percolator]
+[2017-11-26T17:59:17,695][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [reindex]
+[2017-11-26T17:59:17,696][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty3]
+[2017-11-26T17:59:17,696][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty4]
+[2017-11-26T17:59:17,697][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded plugin [elasticsearch-carrot2]
+[2017-11-26T17:59:19,921][INFO ][o.e.d.DiscoveryModule    ] [uHB_sEH] using discovery type [zen]
+[2017-11-26T17:59:20,703][INFO ][o.e.n.Node               ] initialized
+[2017-11-26T17:59:20,703][INFO ][o.e.n.Node               ] [uHB_sEH] starting ...
+[2017-11-26T17:59:20,704][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-26T17:59:21,131][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-11-26T17:59:21,131][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-11-26T17:59:21,132][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-26T17:59:21,307][INFO ][o.e.t.TransportService   ] [uHB_sEH] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-26T17:59:21,326][WARN ][o.e.b.BootstrapChecks    ] [uHB_sEH] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-11-26T17:59:24,380][INFO ][o.e.c.s.ClusterService   ] [uHB_sEH] new_master {uHB_sEH}{uHB_sEHmTSOCwn_vt8uocw}{BQOeV_mBQta91eXDsd9bDQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-11-26T17:59:24,398][INFO ][o.e.h.n.Netty4HttpServerTransport] [uHB_sEH] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-26T17:59:24,398][INFO ][o.e.n.Node               ] [uHB_sEH] started
+[2017-11-26T17:59:24,645][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:24,645][INFO ][o.e.g.GatewayService     ] [uHB_sEH] recovered [3] indices into cluster_state
+[2017-11-26T17:59:24,744][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:24,940][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:25,055][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:25,172][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:25,186][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T17:59:25,188][INFO ][o.e.c.r.a.AllocationService] [uHB_sEH] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2017-11-26T17:59:25,204][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:08:45,910][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:30:41,032][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] create_mapping [entry]
+[2017-11-26T18:30:41,022][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][0] failed to execute bulk item (index) BulkShardRequest [[zotero][0]] containing [4] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T18:30:41,055][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] update_mapping [entry]
+[2017-11-26T18:30:41,077][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:30:41,103][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] update_mapping [entry]
+[2017-11-26T18:30:41,127][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:30:41,177][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] update_mapping [entry]
+[2017-11-26T18:30:41,202][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:30:41,274][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] update_mapping [entry]
+[2017-11-26T18:30:41,291][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:30:41,296][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][1] failed to execute bulk item (index) BulkShardRequest [[zotero][1]] containing [9] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T18:30:41,312][INFO ][o.e.c.m.MetaDataMappingService] [uHB_sEH] [zotero/sLdiB90AREunTQeiNxLwAg] update_mapping [entry]
+[2017-11-26T18:30:41,330][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-26T18:32:15,183][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,184][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,184][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,185][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,185][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,185][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:15,185][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,186][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,186][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,186][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,186][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,186][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,187][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,188][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:15,188][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,809][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,810][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,811][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,812][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:32:55,813][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:32:55,814][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,075][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,076][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,076][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,076][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,077][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,077][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,077][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,080][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,080][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,081][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,081][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,081][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,082][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,082][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,082][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,083][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:33:37,083][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,240][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:50:05,241][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,242][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,243][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,243][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,243][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:05,243][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T18:50:16,038][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,039][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,040][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T18:50:16,040][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,882][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,882][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field publisher from spec: publisher
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,883][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:02,890][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,834][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,835][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,835][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,836][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,837][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,838][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,839][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,840][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,840][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,840][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,840][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,840][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,841][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,842][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,843][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,844][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,845][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,849][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,849][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,849][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,849][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,850][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,851][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,852][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,852][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:06:58,852][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,030][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,031][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,031][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:07:24,031][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,219][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,220][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,221][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,222][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,223][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:09:03,224][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,007][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,008][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,009][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,011][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,012][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:14:19,013][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:16:04,257][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][0] failed to execute bulk item (index) BulkShardRequest [[zotero][0]] containing [4] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T19:16:04,284][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][1] failed to execute bulk item (index) BulkShardRequest [[zotero][1]] containing [9] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T19:16:37,313][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][0] failed to execute bulk item (index) BulkShardRequest [[zotero][0]] containing [4] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T19:16:37,363][DEBUG][o.e.a.b.TransportShardBulkAction] [uHB_sEH] [zotero][1] failed to execute bulk item (index) BulkShardRequest [[zotero][1]] containing [9] requests
+java.lang.IllegalArgumentException: mapper [accessed.date-parts] of different type, current_type [long], merged_type [text]
+	at org.elasticsearch.index.mapper.FieldMapper.doMerge(FieldMapper.java:347) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.NumberFieldMapper.doMerge(NumberFieldMapper.java:1097) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:333) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.FieldMapper.merge(FieldMapper.java:49) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.createDynamicUpdate(DocumentParser.java:210) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentParser.parseDocument(DocumentParser.java:78) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:277) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndex(IndexShard.java:529) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.prepareIndexOnPrimary(IndexShard.java:506) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.prepareIndexOperationOnPrimary(TransportShardBulkAction.java:450) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeIndexRequestOnPrimary(TransportShardBulkAction.java:458) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.executeBulkItemRequest(TransportShardBulkAction.java:143) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.bulk.TransportShardBulkAction.shardOperationOnPrimary(TransportShardBulkAction.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:939) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryShardReference.perform(TransportReplicationAction.java:908) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.ReplicationOperation.execute(ReplicationOperation.java:113) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:322) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.onResponse(TransportReplicationAction.java:264) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:888) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$1.onResponse(TransportReplicationAction.java:885) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShardOperationsLock.acquire(IndexShardOperationsLock.java:151) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.index.shard.IndexShard.acquirePrimaryOperationLock(IndexShard.java:1657) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.acquirePrimaryShardReference(TransportReplicationAction.java:897) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction.access$400(TransportReplicationAction.java:93) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$AsyncPrimaryAction.doRun(TransportReplicationAction.java:281) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:260) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.action.support.replication.TransportReplicationAction$PrimaryOperationTransportHandler.messageReceived(TransportReplicationAction.java:252) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.RequestHandlerRegistry.processMessageReceived(RequestHandlerRegistry.java:69) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.transport.TransportService$7.doRun(TransportService.java:644) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:638) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.5.2.jar:5.5.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,143][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,144][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,145][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,146][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,147][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-11-26T19:23:34,148][WARN ][o.c.e.ClusteringAction$TransportClusteringAction] [uHB_sEH] Cannot find into field abstract from spec: abstract
+[2017-12-03T20:36:51,493][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-12-03T20:36:51,572][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [99.2gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-12-03T20:36:51,573][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-12-03T20:36:51,591][INFO ][o.e.n.Node               ] node name [uHB_sEH] derived from node ID [uHB_sEHmTSOCwn_vt8uocw]; set [node.name] to override
+[2017-12-03T20:36:51,591][INFO ][o.e.n.Node               ] version[5.5.2], pid[17175], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-12-03T20:36:51,592][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-12-03T20:36:52,563][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [aggs-matrix-stats]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [ingest-common]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-expression]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-groovy]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-mustache]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-painless]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [parent-join]
+[2017-12-03T20:36:52,564][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [percolator]
+[2017-12-03T20:36:52,565][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [reindex]
+[2017-12-03T20:36:52,565][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty3]
+[2017-12-03T20:36:52,565][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty4]
+[2017-12-03T20:36:52,566][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded plugin [elasticsearch-carrot2]
+[2017-12-03T20:36:54,807][INFO ][o.e.d.DiscoveryModule    ] [uHB_sEH] using discovery type [zen]
+[2017-12-03T20:36:55,857][INFO ][o.e.n.Node               ] initialized
+[2017-12-03T20:36:55,858][INFO ][o.e.n.Node               ] [uHB_sEH] starting ...
+[2017-12-03T20:36:55,859][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-03T20:36:56,307][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-12-03T20:36:56,307][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-12-03T20:36:56,307][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-12-03T20:36:56,478][INFO ][o.e.t.TransportService   ] [uHB_sEH] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-12-03T20:36:56,490][WARN ][o.e.b.BootstrapChecks    ] [uHB_sEH] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-12-03T20:36:59,551][INFO ][o.e.c.s.ClusterService   ] [uHB_sEH] new_master {uHB_sEH}{uHB_sEHmTSOCwn_vt8uocw}{X297MXFHSXeVpiSytFiy1w}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-12-03T20:36:59,587][INFO ][o.e.h.n.Netty4HttpServerTransport] [uHB_sEH] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-12-03T20:36:59,588][INFO ][o.e.n.Node               ] [uHB_sEH] started
+[2017-12-03T20:36:59,932][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:36:59,932][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:36:59,932][INFO ][o.e.g.GatewayService     ] [uHB_sEH] recovered [3] indices into cluster_state
+[2017-12-03T20:37:00,156][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,156][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,519][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,519][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,665][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,666][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,789][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,789][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,831][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,831][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,874][INFO ][o.e.c.r.a.AllocationService] [uHB_sEH] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[zotero][3]] ...]).
+[2017-12-03T20:37:00,891][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:37:00,891][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/wcDjmoKpQRymRxj5N0FCGw]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-12-03T20:59:00,664][INFO ][o.e.n.Node               ] [uHB_sEH] stopping ...
+[2017-12-03T20:59:00,714][INFO ][o.e.n.Node               ] [uHB_sEH] stopped
+[2017-12-03T20:59:00,715][INFO ][o.e.n.Node               ] [uHB_sEH] closing ...
+[2017-12-03T20:59:00,729][INFO ][o.e.n.Node               ] [uHB_sEH] closed

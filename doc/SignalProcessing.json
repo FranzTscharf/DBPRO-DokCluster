@@ -1,0 +1,4434 @@
+[
+	{
+		"id": "24PU3BVG",
+		"type": "paper-conference",
+		"title": "Multichannel stabilized fast RLS algorithm for nonstationary signal processing",
+		"container-title": "2017 IEEE East-West Design Test Symposium (EWDTS)",
+		"page": "1-7",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE East-West Design Test Symposium (EWDTS)",
+		"abstract": "This paper presents the computational procedure of the most generalized version of the stabilized fast Recursive Least Squares (RLS) adaptive filtering algorithm. It is considered the algorithm for the adaptive filters with an unequal number of weights in channels. The using of the sliding window and dynamic regularization, when the correlation matrix is estimated, allows the algorithm to process nonstationary signals. The algorithm is presented in two forms: sequential and parallel. The simulation of the algorithm in an acoustic echo cancellation task demonstrates the algorithm efficiency.",
+		"DOI": "10.1109/EWDTS.2017.8110090",
+		"author": [
+			{
+				"family": "Djigan",
+				"given": "V. I."
+			},
+			{
+				"family": "Shakhtarin",
+				"given": "B. I."
+			},
+			{
+				"family": "Likhoedenko",
+				"given": "K. P."
+			},
+			{
+				"family": "Zhurakovskiy",
+				"given": "V. N."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "2FZXSHKM",
+		"type": "chapter",
+		"title": "2 - Signal processing and feature extraction",
+		"container-title": "Intelligent Fault Diagnosis and Remaining Useful Life Prediction of Rotating Machinery",
+		"publisher": "Butterworth-Heinemann",
+		"page": "17-66",
+		"source": "ScienceDirect",
+		"abstract": "This chapter mainly focuses on signal processing and feature extraction. In order to achieve intelligent fault diagnosis and remaining useful life prediction, it is essential to process the collected vibration signals from machinery and extract fault features by using signal processing techniques and methods, such as wavelet transform, Hilbert–Huang transform, empirical mode decomposition and Wigner–Ville distribution. Therefore, this chapter introduces common signal processing techniques from time to frequency domains, even to abundant time-frequency domain. In addition, the common statistical features in each domain are also introduced in this chapter to further achieve the fault diagnosis of rotating machinery.",
+		"URL": "https://www.sciencedirect.com/science/article/pii/B9780128115343000020",
+		"ISBN": "978-0-12-811534-3",
+		"note": "DOI: 10.1016/B978-0-12-811534-3.00002-0",
+		"author": [
+			{
+				"family": "Lei",
+				"given": "Yaguo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "2HJRUSIR",
+		"type": "paper-conference",
+		"title": "Doppler CW radar signal processing, implementation and analysis",
+		"container-title": "2017 International Symposium ELMAR",
+		"page": "103-106",
+		"source": "IEEE Xplore",
+		"event": "2017 International Symposium ELMAR",
+		"abstract": "In this paper the implementation of a signal processing string for real hardware based on PSoC 5LP microcontroller is presented for a Doppler CW radar. The impact of spectrum down-sampling using a zero pending technique for ability to find the correct Doppler frequency estimation is demonstrated. The OS-CFAR and CA-CFAR algorithms are tested for detection and threshold value estimation. Also the center of gravity, maximum peak detection and mean index position technique, are compared for correct speed estimation. All algorithms are tested on real hardware and compared for computation time, and ability to find measured velocity for a down-sampled spectrum.",
+		"DOI": "10.23919/ELMAR.2017.8124445",
+		"author": [
+			{
+				"family": "Reznicek",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "345U2393",
+		"type": "paper-conference",
+		"title": "Application of signal processing techniques for the generation of wind profiles dedicated to electrical system planning tools",
+		"container-title": "2016 51st International Universities Power Engineering Conference (UPEC)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2016 51st International Universities Power Engineering Conference (UPEC)",
+		"abstract": "This work addresses the problem of distribution system planning. Indeed, operators of such systems are particularly interested in obtaining a limited amount of representative trajectories of wind speed at different wind sites, as this information is crucial for the determination of optimal investment plans, and the stochastic nature of wind production significantly complicates the formulation and the resolution of the underlying optimization problem. To this end, various clustering techniques are implemented to generate synthetic representative days of wind. The parameters space of these algorithms is investigated, together with the dimensionality of the data representation space. While Principal Component Analysis proves to be efficient for reducing the dimensionality of the wind data and for decorrelating each dimension of the resulting data representation space, it provides at the same time a physical interpretation of each of its component. The generated wind speed profiles are finally assessed through a reliability analysis, based on a sequential Monte Carlo framework, performed on a test network.",
+		"DOI": "10.1109/UPEC.2016.8114133",
+		"author": [
+			{
+				"family": "Picart",
+				"given": "B."
+			},
+			{
+				"family": "Gosselin",
+				"given": "B."
+			},
+			{
+				"family": "Hupez",
+				"given": "M."
+			},
+			{
+				"family": "Greve",
+				"given": "Z. De"
+			},
+			{
+				"family": "Vallee",
+				"given": "F."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "346RQNAZ",
+		"type": "webpage",
+		"title": "Small and Midsize Companies Look to Make Big Gains With “Big Data,” According to Recent Poll Conducted on Behalf of SAP",
+		"container-title": "SAP",
+		"abstract": "Read the latest SAP press releases and newsbytes, view stories about SAP in the News, and access company videos.",
+		"URL": "http://global.sap.com/news-reader/index.epx?PressID=19188",
+		"author": [
+			{
+				"family": "26",
+				"given": "June"
+			},
+			{
+				"family": "Technology",
+				"given": "2012 | SAP-Database"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "36FJIZ8E",
+		"type": "article-journal",
+		"title": "Olfactory signal processing",
+		"container-title": "Digital Signal Processing",
+		"page": "84-92",
+		"volume": "48",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Olfaction, the sense of smell, has received scant attention from a signal processing perspective in comparison to audition and vision. In this paper, we develop a signal processing paradigm for olfactory signals based on new scientific discoveries including the psychophysics concept of olfactory white. We describe a framework for predicting the perception of odorant compounds from their physicochemical features and use the prediction as a foundation for several downstream processing tasks. We detail formulations for odor cancellation and food steganography, and provide real-world empirical examples for the two tasks. We also discuss adaptive filtering and other olfactory signal processing tasks at a high level.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S1051200415002808",
+		"DOI": "10.1016/j.dsp.2015.09.012",
+		"ISSN": "1051-2004",
+		"journalAbbreviation": "Digital Signal Processing",
+		"author": [
+			{
+				"family": "Varshney",
+				"given": "Kush R."
+			},
+			{
+				"family": "Varshney",
+				"given": "Lav R."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					1,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "3C6NN7HD",
+		"type": "paper-conference",
+		"title": "Design of an Elliptic Filter Using Multiple-Loop Feedback Structure in CMOS Technology for Analogue Signal Processing",
+		"container-title": "2017 IEEE 85th Vehicular Technology Conference (VTC Spring)",
+		"page": "1-5",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 85th Vehicular Technology Conference (VTC Spring)",
+		"abstract": "Abstract-Design of high-performance continuous- time filter (CTF) for analogue signal processing is presented in this paper. To demonstrate of using a novel voltage-mode multiple-loop feedback (MLF) approach for CTF design, a 5th-order elliptic lowpass filter (LPF) is implemented in a standard 0.18-µm CMOS technology. The LPF is based on an inverse-follow-the-leader feedback structure with an input distribution network to generate the required transmission zeros. The LPF consumes 35 mA from a single 1.8 V power supply and it has a cut-off frequency of 30 MHz with less than 0.7 dB passband ripple and more than 60 dB stopband attenuation. In addition, a 65 dB dynamic range is achieved.",
+		"DOI": "10.1109/VTCSpring.2017.8108421",
+		"author": [
+			{
+				"family": "Sun",
+				"given": "Y."
+			},
+			{
+				"family": "Bautista",
+				"given": "M. G."
+			},
+			{
+				"family": "Zhu",
+				"given": "F."
+			},
+			{
+				"family": "Dutkiewicz",
+				"given": "E."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "43ERFZK8",
+		"type": "paper-conference",
+		"title": "A Comparison Study on EEG Signal Processing Techniques Using Motor Imagery EEG Data",
+		"container-title": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"page": "781-786",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"abstract": "Brain-computer interfaces (BCIs) have been gaining momentum in making human-computer interaction more natural, especially for people with neuro-muscular disabilities. Among the existing solutions the systems relying on electroencephalograms (EEG) occupy the most prominent place due to their non-invasiveness. In this work, we provide a review of various existing techniques for the identification of motor imagery (MI) tasks. More specifically, we perform a comparison between Common Spatial Patterns (CSP) related features and features based on Power Spectral Density (PSD) techniques. Furthermore, for the identification of MI tasks, two well-known classifiers are used, the Linear Discriminant Analysis (LDA) and the Support Vector Machines (SVM). Our results confirm that PSD features demonstrate the most consistent robustness and effectiveness in extracting patterns for accurately discriminating between left and right MI tasks.",
+		"DOI": "10.1109/CBMS.2017.113",
+		"author": [
+			{
+				"family": "Oikonomou",
+				"given": "V. P."
+			},
+			{
+				"family": "Georgiadis",
+				"given": "K."
+			},
+			{
+				"family": "Liaros",
+				"given": "G."
+			},
+			{
+				"family": "Nikolopoulos",
+				"given": "S."
+			},
+			{
+				"family": "Kompatsiaris",
+				"given": "I."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "4AB7ZB98",
+		"type": "paper-conference",
+		"title": "An exploratory model of the hardware-software unit for adaptive digital time signal processing against the background of masking clutters",
+		"container-title": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"page": "55-58",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"abstract": "The paper describes an exploratory model (prototype) of the hardware-software unit for adaptive digital time processing of signals embedded in masking clutters. The prototype is built using the digital-signal-processor-based adaptive lattice filter. Results of pre-testing are given.",
+		"DOI": "10.1109/UKRCON.2017.8100458",
+		"author": [
+			{
+				"family": "Riabukha",
+				"given": "V. P."
+			},
+			{
+				"family": "Lekhovitskiy",
+				"given": "D. I."
+			},
+			{
+				"family": "Semenyaka",
+				"given": "A. V."
+			},
+			{
+				"family": "Katyushin",
+				"given": "E. A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "4B3TSJIC",
+		"type": "paper-conference",
+		"title": "Real-time signal processing of data from an ECG",
+		"container-title": "2017 Internet Technologies and Applications (ITA)",
+		"page": "334-338",
+		"source": "IEEE Xplore",
+		"event": "2017 Internet Technologies and Applications (ITA)",
+		"abstract": "Summary form only given. Strong light-matter coupling has been recently successfully explored in the GHz and THz [1] range with on-chip platforms. New and intriguing quantum optical phenomena have been predicted in the ultrastrong coupling regime [2], when the coupling strength Ω becomes comparable to the unperturbed frequency of the system ω. We recently proposed a new experimental platform where we couple the inter-Landau level transition of an high-mobility 2DEG to the highly subwavelength photonic mode of an LC meta-atom [3] showing very large Ω/ωc = 0.87. Our system benefits from the collective enhancement of the light-matter coupling which comes from the scaling of the coupling Ω ∝ √n, were n is the number of optically active electrons. In our previous experiments [3] and in literature [4] this number varies from 104-103 electrons per meta-atom. We now engineer a new cavity, resonant at 290 GHz, with an extremely reduced effective mode surface Seff = 4 × 10-14 m2 (FE simulations, CST), yielding large field enhancements above 1500 and allowing to enter the few (<;100) electron regime. It consist of a complementary metasurface with two very sharp metallic tips separated by a 60 nm gap (Fig.1(a, b)) on top of a single triangular quantum well. THz-TDS transmission experiments as a function of the applied magnetic field reveal strong anticrossing of the cavity mode with linear cyclotron dispersion. Measurements for arrays of only 12 cavities are reported in Fig.1(c). On the top horizontal axis we report the number of electrons occupying the topmost Landau level as a function of the magnetic field. At the anticrossing field of B=0.73 T we measure approximately 60 electrons ultra strongly coupled (Ω/ω- ||",
+		"DOI": "10.1109/ITECHA.2017.8101965",
+		"author": [
+			{
+				"family": "Iqbal",
+				"given": "M. N."
+			},
+			{
+				"family": "Bomhara",
+				"given": "M."
+			},
+			{
+				"family": "Khambashi",
+				"given": "M. A."
+			},
+			{
+				"family": "Alhassan",
+				"given": "H."
+			},
+			{
+				"family": "Abd-Alhameed",
+				"given": "R."
+			},
+			{
+				"family": "Eya",
+				"given": "N."
+			},
+			{
+				"family": "Qahwaji",
+				"given": "R."
+			},
+			{
+				"family": "Noras",
+				"given": "J. M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "4U75HHMA",
+		"type": "webpage",
+		"title": "Why Google - No Ops Applications",
+		"container-title": "Google Cloud Platform",
+		"abstract": "Just focusing on coding using Google Cloud Platform’s fully managed Platform as a Service (PaaS) offerings such as App Engine and Google Container Engine.",
+		"URL": "https://cloud.google.com/why-google/serverless/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "4XI5MRSQ",
+		"type": "article-journal",
+		"title": "Signal processing by the endosomal system",
+		"container-title": "Current Opinion in Cell Biology",
+		"collection-title": "Cell regulation",
+		"page": "53-60",
+		"volume": "39",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Cells need to decode chemical or physical signals from their environment in order to make decisions on their fate. In the case of signalling receptors, ligand binding triggers a cascade of chemical reactions but also the internalization of the activated receptors in the endocytic pathway. Here, we highlight recent studies revealing a new role of the endosomal network in signal processing. The diversity of entry pathways and endosomal compartments is exploited to regulate the kinetics of receptor trafficking, and interactions with specific signalling adaptors and effectors. By governing the spatio-temporal distribution of signalling molecules, the endosomal system functions analogously to a digital-analogue computer that regulates the specificity and robustness of the signalling response.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0955067416300096",
+		"DOI": "10.1016/j.ceb.2016.02.002",
+		"ISSN": "0955-0674",
+		"journalAbbreviation": "Current Opinion in Cell Biology",
+		"author": [
+			{
+				"family": "Villaseñor",
+				"given": "Roberto"
+			},
+			{
+				"family": "Kalaidzidis",
+				"given": "Yannis"
+			},
+			{
+				"family": "Zerial",
+				"given": "Marino"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					4,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "54DR3D6D",
+		"type": "paper-conference",
+		"title": "ASSP4MI2016: 2Nd International Workshop on Advancements in Social Signal Processing for Multimodal Interaction (Workshop Summary)",
+		"container-title": "Proceedings of the 18th ACM International Conference on Multimodal Interaction",
+		"collection-title": "ICMI 2016",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "591–592",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "This paper gives a summary of the 2nd International Workshop on Advancements in Social Signal Processing for Multimodal Interaction (ASSP4MI). Following our successful 1st International Workshop on Advancements in Social Signal Processing for Multimodal Interaction, held during ICMI-2015, we proposed the 2nd ASSP4MI workshop during ICMI-2016. The topics addressed and discussions fostered during last year's workshop are considered very relevant and alive in the research community. In this year's workshop, we continued addressing important topics and fostering fruitful discussions among researchers from different disciplines working in the fields of Social Signal Processing (SSP) and multimodal interaction.",
+		"URL": "http://doi.acm.org/10.1145/2993148.3007629",
+		"DOI": "10.1145/2993148.3007629",
+		"ISBN": "978-1-4503-4556-9",
+		"shortTitle": "ASSP4MI2016",
+		"author": [
+			{
+				"family": "Truong",
+				"given": "Khiet P."
+			},
+			{
+				"family": "Heylen",
+				"given": "Dirk"
+			},
+			{
+				"family": "Nishida",
+				"given": "Toyoaki"
+			},
+			{
+				"family": "Chetouani",
+				"given": "Mohamed"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016"
+				]
+			]
+		}
+	},
+	{
+		"id": "5BH7GEE8",
+		"type": "article-journal",
+		"title": "Enabling Phased Array Signal Processing for Mobile WiFi Devices",
+		"container-title": "IEEE Transactions on Mobile Computing",
+		"page": "1-1",
+		"volume": "PP",
+		"issue": "99",
+		"source": "IEEE Xplore",
+		"abstract": "Modern mobile devices are equipped with multiple antennas, which brings various wireless sensing applications such as accurate localization, contactless human detection and wireless human-device interaction. A key enabler for these applications is phased array signal processing, especially Angle of Arrival (AoA) estimation. However, accurate AoA estimation on commodity devices is non-trivial due to limited number of antennas and uncertain phase offsets. In this paper, we aim to enable practical AoA measurements on COTS mobile devices. The key insight is to involve users' natural rotation to conduce a relative incident signal of measurements at two orientations. Then by taking the differential phase, it is feasible to remove the phase offsets and derive the accurate AoA of the equivalent incoming signal, while the rotation angle can also be captured by built-in inertial sensors. On this basis, we propose Differential MUSIC (D-MUSIC), a relative form of the standard MUSIC algorithm that eliminates the unknown phase offsets and achieves accurate AoA estimation on COTS mobile devices with only one rotation. We further extend to 3-D space and fortify it in multipath-rich scenarios. We prototype D-MUSIC on commodity WiFi infrastructure and evaluate it in typical indoor environments. Experimental results demonstrate a superior performance with an average AoA estimation error of 13 degrees.",
+		"DOI": "10.1109/TMC.2017.2778155",
+		"ISSN": "1536-1233",
+		"author": [
+			{
+				"family": "Qian",
+				"given": "K."
+			},
+			{
+				"family": "Wu",
+				"given": "C."
+			},
+			{
+				"family": "Yang",
+				"given": "Z."
+			},
+			{
+				"family": "Zhou",
+				"given": "Z."
+			},
+			{
+				"family": "Wang",
+				"given": "X."
+			},
+			{
+				"family": "Liu",
+				"given": "Y."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "5J2KT83R",
+		"type": "book",
+		"title": "Theory and application of digital signal processing",
+		"source": "NASA ADS",
+		"abstract": "The book covers a wide range of elementary and advanced topics in digital signal processing, giving in-depth treatment to such areas as filter design techniques, hardware, and concrete applications. Subjects dealt with include the theory of discrete-time linear systems, the theory and design of finite-duration impulse response (FIR) and infinite impulse response (IIR) digital filters, the mathematics of quantization in digital filters, spectrum analysis, the fast Fourier transform, and the theory of two-dimensional signal processing. Other chapters discuss design procedures for digital hardware; special-purpose hardware for digital filtering, signal generation, and the fast Fourier transform; general-purpose hardware for signal processing facilities; and\napplications of digital signal processing to speech and radar.",
+		"URL": "http://adsabs.harvard.edu/abs/1975tads.book.....R",
+		"author": [
+			{
+				"family": "Rabiner",
+				"given": "L. R."
+			},
+			{
+				"family": "Gold",
+				"given": "B."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1975"
+				]
+			]
+		}
+	},
+	{
+		"id": "5TB9UKXE",
+		"type": "book",
+		"title": "Principles of big data: preparing, sharing, and analyzing complex information",
+		"publisher": "Elsevier, Morgan Kaufmann",
+		"publisher-place": "Amsterdam",
+		"number-of-pages": "261",
+		"source": "Library of Congress ISBN",
+		"event-place": "Amsterdam",
+		"ISBN": "978-0-12-404576-7",
+		"call-number": "QA76.9.D32 B47 2013",
+		"shortTitle": "Principles of big data",
+		"author": [
+			{
+				"family": "Berman",
+				"given": "Jules J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		}
+	},
+	{
+		"id": "5U2FGGRS",
+		"type": "paper-conference",
+		"title": "A novel transformation design of RNA to DNA for signal processing",
+		"container-title": "2017 2nd International Conference on Bio-engineering for Smart Technologies (BioSMART)",
+		"page": "1-4",
+		"source": "IEEE Xplore",
+		"event": "2017 2nd International Conference on Bio-engineering for Smart Technologies (BioSMART)",
+		"abstract": "This letter presents a single strand of ribonucleic acid (RNA) with the Kronecker product of double stochastic matrix becoming the deoxyribose nucleic acid (DNA) double helix for signal processing design. Inspired by this manner of the life science and employing the characteristics of the block circulant Jacket matrix (BCJM), a novel algorithm is investigated named RNA-DNA algorithm. The RNA matrix decomposition is the form of the Kronecker product of Hadamard and identity matrices based on its pair complementarity. The variants of kernel of the Kronecker families are produced by the permutations of the four letters, i.e., C, A, U and G on the positions in the matrix. Based on this manner, a novel DNA-RNA decomposition (DNA-RNA-D) is investigated by employing the clustered regularly interspaced short palindromic repeats (CRISPR) and the Kronecker product of the symmetrical genetic matrices which strictly follow the complementary principle.",
+		"DOI": "10.1109/BIOSMART.2017.8095320",
+		"author": [
+			{
+				"family": "Lee",
+				"given": "M. H."
+			},
+			{
+				"family": "Hai",
+				"given": "H."
+			},
+			{
+				"family": "Selvaprabhu",
+				"given": "P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "67DIE6RZ",
+		"type": "article-journal",
+		"title": "An enhanced fuzzy algorithm based on advanced signal processing for identification of stress",
+		"container-title": "Neurocomputing",
+		"page": "48-57",
+		"volume": "271",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Nowadays, it is crucial to promote and develop the autonomy of people, and specifically of individuals with some disability, in order to improve their life quality and achieve a better inclusion into socio-cultural life. Therefore, the identification of stress situations can be a suitable assistive tool for improving their socio-cultural inclusion. This work presents important enhancements and variations for an existing fuzzy logic stress detection system based on monitoring and processing different physiological signals (heart rate, galvanic skin response and breath). First, it proposes a method based on wavelet processing to improve the detection of R peaks of electrocardiograms. Afterwards, it proposes to decompose the galvanic response signal into two components: the average value and the variations. In addition, it proposes to extract information out the breath signal by analyzing its frequential composition. Finally, an improved response in detecting stress changes is shown in comparison with other previous works.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S092523121731216X",
+		"DOI": "10.1016/j.neucom.2016.08.153",
+		"ISSN": "0925-2312",
+		"journalAbbreviation": "Neurocomputing",
+		"author": [
+			{
+				"family": "Salazar-Ramirez",
+				"given": "A."
+			},
+			{
+				"family": "Irigoyen",
+				"given": "E."
+			},
+			{
+				"family": "Martinez",
+				"given": "R."
+			},
+			{
+				"family": "Zalabarria",
+				"given": "U."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					1,
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "68E6CZ3I",
+		"type": "article-journal",
+		"title": "Signal processing for TFR of synchro-phasor data",
+		"container-title": "Transmission Distribution IET Generation",
+		"page": "3881-3891",
+		"volume": "11",
+		"issue": "16",
+		"source": "IEEE Xplore",
+		"abstract": "With increased number of phasor measurement units (PMUs) deployment in the power system, there is growing interest in real-time event detection. The study in this paper presents post-processing approach to map the event occurrence for large sets of synchro-phasor data available from different regions/buses in the power network. The time-frequency representation (TFR) is applied to analyse the transients that contain rapid variations in amplitude or phase during the event occurrence against post-event conditions. This is based on reassigned smoothed-pseudo-Wigner-Ville distribution. The capability to correctly localise TF regions, where signals are locally coupled, is assessed on synthetic signal and PMUs signals. Important information such as time marginals is estimated to determine any event present in the analysed signal segment. Furthermore, the event localisation is enhanced applying Hough transform on TFR with calculation of group delay and reassignment vector. The developed procedure gives reasonable results for highlighting the distinct representation of events in study. The proposed approach can be easily implemented in real-time monitoring for event detection in the power system.",
+		"DOI": "10.1049/iet-gtd.2015.1566",
+		"ISSN": "1751-8687",
+		"author": [
+			{
+				"family": "Negi",
+				"given": "S. S."
+			},
+			{
+				"family": "Kishor",
+				"given": "N."
+			},
+			{
+				"family": "Kumar",
+				"given": "A."
+			},
+			{
+				"family": "Uhlen",
+				"given": "K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "6EEJ9KWV",
+		"type": "paper-conference",
+		"title": "SigMal: A Static Signal Processing Based Malware Triage",
+		"container-title": "Proceedings of the 29th Annual Computer Security Applications Conference",
+		"collection-title": "ACSAC '13",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "89–98",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "In this work, we propose SigMal, a fast and precise malware detection framework based on signal processing techniques. SigMal is designed to operate with systems that process large amounts of binary samples. It has been observed that many samples received by such systems are variants of previously-seen malware, and they retain some similarity at the binary level. Previous systems used this notion of malware similarity to detect new variants of previously-seen malware. SigMal improves the state-of-the-art by leveraging techniques borrowed from signal processing to extract noise-resistant similarity signatures from the samples. SigMal uses an efficient nearest-neighbor search technique, which is scalable to millions of samples. We evaluate SigMal on 1.2 million recent samples, both packed and unpacked, observed over a duration of three months. In addition, we also used a constant dataset of known benign executables. Our results show that SigMal can classify 50% of the recent incoming samples with above 99% precision. We also show that SigMal could have detected, on average, 70 malware samples per day before any antivirus vendor detected them.",
+		"URL": "http://doi.acm.org/10.1145/2523649.2523682",
+		"DOI": "10.1145/2523649.2523682",
+		"ISBN": "978-1-4503-2015-3",
+		"shortTitle": "SigMal",
+		"author": [
+			{
+				"family": "Kirat",
+				"given": "Dhilung"
+			},
+			{
+				"family": "Nataraj",
+				"given": "Lakshmanan"
+			},
+			{
+				"family": "Vigna",
+				"given": "Giovanni"
+			},
+			{
+				"family": "Manjunath",
+				"given": "B. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		}
+	},
+	{
+		"id": "6KVGBNC8",
+		"type": "article-journal",
+		"title": "Multiplication and convolution of distributions for signal processing theory",
+		"container-title": "Digital Signal Processing",
+		"page": "1-14",
+		"volume": "56",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "In the theory of signal processing, signals are usually classified either by determining whether their time domain is discrete or continuous, or by determining whether they are periodic. However, no comprehensive definitions of multiplication and convolution exist that are consistent with the theories behind all classes, although some important theorems in signal processing involve multiplication and convolution. In order to unite the theories behind these classifications, we will consider tempered distributions. In this paper, we propose an approach to the multiplication and convolution of distributions that is appropriate to signal processing theory, and prove a well-known theorem regarding the impulse response of continuous linear time-invariant systems of tempered distributions in the context of this new approach.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S1051200416300458",
+		"DOI": "10.1016/j.dsp.2016.05.008",
+		"ISSN": "1051-2004",
+		"journalAbbreviation": "Digital Signal Processing",
+		"author": [
+			{
+				"family": "Akita",
+				"given": "Dai"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					9,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "77ZFJRUQ",
+		"type": "article-journal",
+		"title": "How Statistical Signal Processing Was Used to Define the MH370 Search Zone",
+		"container-title": "IEEE Potentials",
+		"page": "32-37",
+		"volume": "36",
+		"issue": "6",
+		"source": "IEEE Xplore",
+		"abstract": "The search for MH370 is an operation on an unprecedented scale at a remote location several days travel by ship from the Australian coast. We have provided a high-level description of the method used to define the search area, and the full details are available in the open-access book, Bayesian Methods in the Search for MH370. The MH370 search team remains totally committed to finding the aircraft and helping find closure for the families involved.",
+		"DOI": "10.1109/MPOT.2016.2614823",
+		"ISSN": "0278-6648",
+		"author": [
+			{
+				"family": "Davey",
+				"given": "S."
+			},
+			{
+				"family": "Gordon",
+				"given": "N."
+			},
+			{
+				"family": "Holland",
+				"given": "I."
+			},
+			{
+				"family": "Rutten",
+				"given": "M."
+			},
+			{
+				"family": "Williams",
+				"given": "J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "7IVXJMAS",
+		"type": "article-journal",
+		"title": "Perspectives of using spin waves for computing and signal processing",
+		"container-title": "Physics Letters A",
+		"page": "1471-1476",
+		"volume": "381",
+		"issue": "17",
+		"source": "ScienceDirect",
+		"abstract": "Almost all the world's information is processed and transmitted by either electric currents or photons. Now they may get a serious contender: spin-wave-based devices may just perform some information-processing tasks in a lot more efficient and practical way. In this article, we give an engineering perspective of the potential of spin-wave-based devices. After reviewing various flavors for spin-wave-based processing devices, we argue that the niche for spin-wave-based devices is low-power, compact and high-speed signal-processing devices, where most traditional electronics show poor performance.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0375960116316486",
+		"DOI": "10.1016/j.physleta.2017.02.042",
+		"ISSN": "0375-9601",
+		"journalAbbreviation": "Physics Letters A",
+		"author": [
+			{
+				"family": "Csaba",
+				"given": "György"
+			},
+			{
+				"family": "Papp",
+				"given": "Ádám"
+			},
+			{
+				"family": "Porod",
+				"given": "Wolfgang"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5,
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "7RFTNMS6",
+		"type": "paper-conference",
+		"title": "Optimum silicon taper structures with minimum temporal walk-off for nonlinear optical signal processing applications",
+		"container-title": "2017 Conference on Lasers and Electro-Optics Europe European Quantum Electronics Conference (CLEO/Europe-EQEC)",
+		"page": "1-1",
+		"source": "IEEE Xplore",
+		"event": "2017 Conference on Lasers and Electro-Optics Europe European Quantum Electronics Conference (CLEO/Europe-EQEC)",
+		"abstract": "Summary form only given. Optical signal processing applications such as amplification, wavelength conversion and all-optical switching in silicon are usually based on short optical pulses with high peak power because these pulses provide a high peak intensity, which enables nonlinear Kerr interactions while keeping the average optical power small to avoid free carriers absorption [1, 2]. However, short optical pulses may have a limited interaction length due to a limited temporal walk-off (mismatch of the group velocities of pump and signal). In low loss waveguides, e.g. optical fibers, at a certain pump-signal detuning the Kerr induced phase shift would cancel out the group velocity dispersion, leading to a small walk-off over a long propagation length [3]. However, in silicon waveguides the loss is much larger which leads to the change of nonlinear phase shift along the waveguide. This severely limits the phase matched propagation distance [4]. Previously, silicon taper structures have been considered to reduce the pulse broadening [5]. In this paper we show that with certain optimally designed silicon taper structures it is also possible to reduce the walk-off for nonlinear pump-signal applications such as wavelength conversion.",
+		"DOI": "10.1109/CLEOE-EQEC.2017.8086579",
+		"author": [
+			{
+				"family": "Jazayerifar",
+				"given": "M."
+			},
+			{
+				"family": "Aminpour",
+				"given": "H."
+			},
+			{
+				"family": "Jamshidi",
+				"given": "K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "7UZN96FQ",
+		"type": "paper-conference",
+		"title": "Silicon-rich nitride waveguides for broadband nonlinear signal processing",
+		"container-title": "2017 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR)",
+		"page": "1-3",
+		"source": "IEEE Xplore",
+		"event": "2017 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR)",
+		"abstract": "Silicon nitride waveguides are among the most promising platforms for nonlinear optical processing applications. In this invited contribution we will highlight how the dispersion and Kerr coefficient (n2) can be tuned by precisely controlling the stoichiometry of the waveguide's core material.",
+		"DOI": "10.1109/CLEOPR.2017.8118972",
+		"author": [
+			{
+				"family": "Torres-Company",
+				"given": "V."
+			},
+			{
+				"family": "Krückel",
+				"given": "C. J."
+			},
+			{
+				"family": "Fülöp",
+				"given": "A."
+			},
+			{
+				"family": "Andrekson",
+				"given": "P. A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "8AVJBPIQ",
+		"type": "chapter",
+		"title": "Chapter 11 - Signal Processing",
+		"container-title": "Applied Underwater Acoustics",
+		"publisher": "Elsevier",
+		"page": "743-807",
+		"source": "ScienceDirect",
+		"abstract": "The goal of this chapter is to present the basic information necessary to apply signal processing concepts and algorithms to underwater acoustics applications. The chapter begins by defining signals and noise in underwater acoustics before describing how they are characterized in time, frequency, and in a probabilistic sense as random processes. The remainder of the chapter covers the core signal processing categories of filtering, detection, and estimation. Within each category the pertinent performance metrics, structured design approaches, implementation, and analysis techniques are discussed. Application of algorithms to many common problems in underwater acoustics applications is illustrated through examples and should be accessible to those with a basic understanding of engineering or data analysis. The tools necessary to develop basic detection or estimation algorithms for new problems are also presented, but generally require a greater familiarity with signal processing and mathematical statistics.",
+		"URL": "https://www.sciencedirect.com/science/article/pii/B9780128112403000114",
+		"ISBN": "978-0-12-811240-3",
+		"note": "DOI: 10.1016/B978-0-12-811240-3.00011-4",
+		"author": [
+			{
+				"family": "Abraham",
+				"given": "D. A."
+			}
+		],
+		"editor": [
+			{
+				"family": "Neighbors",
+				"given": "Thomas H."
+			},
+			{
+				"family": "Bradley",
+				"given": "David"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "9AC2HDFI",
+		"type": "paper-conference",
+		"title": "Spectral-polarimetric approach enhancement and signal processing operational techniques for remote sensing of the atmosphere: Brief overview",
+		"container-title": "2017 International Conference on Information and Telecommunication Technologies and Radio Electronics (UkrMiCo)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2017 International Conference on Information and Telecommunication Technologies and Radio Electronics (UkrMiCo)",
+		"abstract": "This paper presents a brief overview on the development of a new method for remote sensing that combines polarimetrie and spectral features of signals received from distant objects, providing spectral analysis of polarimetric variables. The detailed theory and math models are developed for the case rain observation, however generalization for other objects is provided, and some examples of spectral polarimetric approach application in different fields are presented. The enhancement of the models and signal processing operational techniques development is made and checked for the case of remote sensing of the atmosphere.",
+		"DOI": "10.1109/UkrMiCo.2017.8095361",
+		"shortTitle": "Spectral-polarimetric approach enhancement and signal processing operational techniques for remote sensing of the atmosphere",
+		"author": [
+			{
+				"family": "Yanovsky",
+				"given": "F. J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "ABCD2345",
+		"type": "webpage",
+		"title": "Schnelleinstieg",
+		"URL": "http://zotero.org/support/quick_start_guide",
+		"author": [
+			{
+				"literal": "Center for History and New Media"
+			}
+		]
+	},
+	{
+		"id": "AEKVG6WQ",
+		"type": "article-journal",
+		"title": "Synthesis of Saturation Arithmetic Architectures",
+		"container-title": "ACM Trans. Des. Autom. Electron. Syst.",
+		"page": "334–354",
+		"volume": "8",
+		"issue": "3",
+		"source": "ACM Digital Library",
+		"abstract": "This paper describes a synthesis technique for automating the design of linear Digital Signal Processing (DSP) systems such as digital filters. The proposed methodology makes optimized use of saturation arithmetic to produce a small design implemented directly in hardware. An analytical technique is proposed to estimate the saturation error resulting from a particular implementation, and an optimization procedure is introduced to aim for the smallest implementation satisfying user-specified bounds on saturation and roundoff error. Results are presented illustrating significant speedup and area reduction compared with standard DSP design techniques: up to 22% improvement in area and 28% improvement in speed have been obtained on Field Programmable Gate Array (FPGA) implementations.",
+		"URL": "http://doi.acm.org/10.1145/785411.785415",
+		"DOI": "10.1145/785411.785415",
+		"ISSN": "1084-4309",
+		"author": [
+			{
+				"family": "Constantinides",
+				"given": "G. A."
+			},
+			{
+				"family": "Cheung",
+				"given": "P. Y. K."
+			},
+			{
+				"family": "Luk",
+				"given": "W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2003",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "B6WFUN8R",
+		"type": "paper-conference",
+		"title": "Leveraging Interleaved Signal Edges for Concurrent Backscatter",
+		"container-title": "Proceedings of the 1st ACM Workshop on Hot Topics in Wireless",
+		"collection-title": "HotWireless '14",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "13–18",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "One of the central challenges in backscatter is how to enable concurrent transmissions. Most backscatter protocols operate in a sequential TDMA-like manner due to the fact that most nodes cannot overhear each other's transmissions, which is detrimental for throughout and energy consumption. Recent efforts to separate concurrent signals by inverting a system of linear equations is also problematic due to varying channel coefficients caused by system and environmental dynamics. In this paper, we introduce BST, a novel physical layer for backscatter communication that enables concurrent transmission by leveraging intra-bit multiplexing of OOK signals from multiple tags. The key idea underlying BST is that the reader can sample at considerably higher rates than the tags, hence it can extract time-domain signal edges that result from interleaved transmissions of several tags. Our preliminary experiment results show that BST can achieve 5× the throughput of Buzz and 10× the throughput of TDMA-based solutions, such as EPC Gen 2.",
+		"URL": "http://doi.acm.org/10.1145/2643614.2643617",
+		"DOI": "10.1145/2643614.2643617",
+		"ISBN": "978-1-4503-3076-3",
+		"author": [
+			{
+				"family": "Hu",
+				"given": "Pan"
+			},
+			{
+				"family": "Zhang",
+				"given": "Pengyu"
+			},
+			{
+				"family": "Ganesan",
+				"given": "Deepak"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	},
+	{
+		"id": "B7WG4NHQ",
+		"type": "article-journal",
+		"title": "Efficient signal processing technique for information extraction and its applications in power systems",
+		"container-title": "Electric Power Systems Research",
+		"page": "538-548",
+		"volume": "141",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "This paper describes a novel mathematical method for decomposing power system signals obtained from measurements and monitoring of power systems. The technique is characterized as a self-based decomposition since the own system signals generate the basis used in the analysis. The resulting decomposition is sensitive to the system operation and is strongly related to the system operating parameters and power consumption, even when signals are non-purely sinusoidal. Mathematical theory is carefully exposed and three potential applications in power systems are presented to prove the efficiency of the signal processing method: high-impedance fault detection in three-phase distribution systems, single-phase VAR and harmonic compensator and three-phase voltage filtering. The investigation demonstrates that the technique is an effective signal-processing tool for power system applications, such as signal filtering and nonlinear process detection.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0378779616303200",
+		"DOI": "10.1016/j.epsr.2016.08.019",
+		"ISSN": "0378-7796",
+		"journalAbbreviation": "Electric Power Systems Research",
+		"author": [
+			{
+				"family": "Liboni",
+				"given": "Luisa H. B."
+			},
+			{
+				"family": "Flauzino",
+				"given": "Rogério Andrade"
+			},
+			{
+				"family": "Silva",
+				"given": "Ivan Nunes",
+				"non-dropping-particle": "da"
+			},
+			{
+				"family": "Costa",
+				"given": "Eduardo C. Marques"
+			},
+			{
+				"family": "Suetake",
+				"given": "Marcelo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					12,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "B8NXW3VW",
+		"type": "article-journal",
+		"title": "An overview of ground-penetrating radar signal processing techniques for road inspections",
+		"container-title": "Signal Processing",
+		"page": "201-209",
+		"volume": "132",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Ground-penetrating radar (GPR) was firstly used in traffic infrastructure surveys during the first half of the Seventies for testing in tunnel applications. From that time onwards, such non-destructive testing (NDT) technique has found exactly in the field of road engineering one of the application areas of major interest for its capability in performing accurate continuous profiles of pavement layers and detecting major causes of structural failure at traffic speed. This work provides an overview on the main signal processing techniques employed in road engineering, and theoretical insights and instructions on the proper use of the processing in relation to the quality of the data acquired and the purposes of the surveys.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0165168416300792",
+		"DOI": "10.1016/j.sigpro.2016.05.016",
+		"ISSN": "0165-1684",
+		"journalAbbreviation": "Signal Processing",
+		"author": [
+			{
+				"family": "Benedetto",
+				"given": "Andrea"
+			},
+			{
+				"family": "Tosti",
+				"given": "Fabio"
+			},
+			{
+				"family": "Bianchini Ciampoli",
+				"given": "Luca"
+			},
+			{
+				"family": "D’Amico",
+				"given": "Fabrizio"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "BC28TP5C",
+		"type": "paper-conference",
+		"title": "Body Language Without a Body: Nonverbal Communication in Technology Mediated Settings",
+		"container-title": "Proceedings of the 1st ACM SIGCHI International Workshop on Investigating Social Interactions with Artificial Agents",
+		"collection-title": "ISIAA 2017",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "2–3",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Cognitive and psychological processes underlying social interaction are built around face-to-face interactions, the only possible and available communication setting during the long evolutionary process that has resulted into Homo Sapiens. As the fraction of interactions that take place in technology mediated settings keeps increasing, it is important to investigate how the cognitive and psychological processes mentioned above - ultimately grounded into neural structures - act in and react to the new interaction settings. In particular, it is important to investigate whether nonverbal communication - one of the main channels through which people convey socially and psychologically relevant information - still plays a role in settings where natural nonverbal cues (facial expressions, vocalisations, gestures, etc.) are no longer available. Addressing such an issue has important implications not only for what concerns the understanding of cognition and psychology, but also for what concerns the design of interaction technology and the analysis of phenomena like cyberbullyism and viral diffusion of content that play an important role in nowadays society.",
+		"URL": "http://doi.acm.org/10.1145/3139491.3139510",
+		"DOI": "10.1145/3139491.3139510",
+		"ISBN": "978-1-4503-5558-2",
+		"shortTitle": "Body Language Without a Body",
+		"author": [
+			{
+				"family": "Vinciarelli",
+				"given": "Alessandro"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "BW9QEUHE",
+		"type": "paper-conference",
+		"title": "Wide range electrically controlled CMOS transconductor for adaptive signal processing",
+		"container-title": "2017 International Semiconductor Conference (CAS)",
+		"page": "301-304",
+		"source": "IEEE Xplore",
+		"event": "2017 International Semiconductor Conference (CAS)",
+		"abstract": "A wide range current controlled CMOS transconductor is presented. The proposed circuit relies on a current controlled current amplifier that uses an unbalanced current mirror. A fifth-order Butterworth low pass filter based on the novel transconductor is also presented as application.",
+		"DOI": "10.1109/SMICND.2017.8101231",
+		"author": [
+			{
+				"family": "Bonteanu",
+				"given": "G."
+			},
+			{
+				"family": "Cracan",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "BX63SMNF",
+		"type": "article-journal",
+		"title": "Transaktionskostenansatz in der Organisationstheorie",
+		"container-title": "Die Betriebswirtschaft",
+		"page": "267-284",
+		"issue": "42",
+		"source": "epub.ub.uni-muenchen.de",
+		"URL": "https://epub.ub.uni-muenchen.de/6875/",
+		"ISSN": "0342-7064",
+		"author": [
+			{
+				"family": "Picot",
+				"given": "Arnold"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1982"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "C8PSWCAE",
+		"type": "article-journal",
+		"title": "Least Squares Based Coupling Cancelation for MLC NAND Flash Memory with a Small Number of Voltage Sensing Operations",
+		"container-title": "Journal of Signal Processing Systems",
+		"page": "189-200",
+		"volume": "71",
+		"issue": "3",
+		"source": "CrossRef",
+		"URL": "http://link.springer.com/10.1007/s11265-012-0716-0",
+		"DOI": "10.1007/s11265-012-0716-0",
+		"ISSN": "1939-8018, 1939-8115",
+		"language": "en",
+		"author": [
+			{
+				"family": "Lee",
+				"given": "Dong-hwan"
+			},
+			{
+				"family": "Sung",
+				"given": "Wonyong"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "CH52JZV2",
+		"type": "article-journal",
+		"title": "[Pneumoblastomas. Apropos of 2 cases]",
+		"container-title": "Schweizerische Medizinische Wochenschrift",
+		"page": "349-352",
+		"volume": "107",
+		"issue": "10",
+		"source": "PubMed",
+		"abstract": "Pulmonary blastomas, also referred to as embryonal carcinosarcomas or, in the past, embryomas, are rare tumors of which thirty cases have been described in English, German, and Italian publications. We present two typical pulmonary blastomas one in a 43-year-old man and the other in an infant of six months, the youngest case yet reported. Several arguments exist in favor of the embryonic origin of these neoplams: their histogenesis, their resemblance to nephroblastomas, their bifocal or multifocal presence in certain cases, and in about one third of all cases their discovery in patients under 20 years of age. Histologically the tumoral tissue contains two components: an epithelial component in which tubes resembiling fetal bronchi are found, and a loose mesenchymal component of an embryonic type containing various areas of differentiation. Although some tumors evolve slowly or have been known for years, most of the time the appearance of symptoms is soon followed by hematogenous dissemination and rapid demise. Our two patients died quickly: the infant from mediastinal compression with cardiorespiratory insufficiency, and the adult form metastatic dissemination.",
+		"ISSN": "0036-7672",
+		"note": "PMID: 847436",
+		"journalAbbreviation": "Schweiz Med Wochenschr",
+		"language": "FRE",
+		"author": [
+			{
+				"family": "Jayet",
+				"given": "A."
+			},
+			{
+				"family": "Bosic",
+				"given": "C."
+			},
+			{
+				"family": "Saegesser",
+				"given": "F."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1977",
+					3,
+					12
+				]
+			]
+		},
+		"PMID": "847436"
+	},
+	{
+		"id": "CKFIM6V6",
+		"type": "paper-conference",
+		"title": "Overlap Detection for a Genome Assembly Based on Genomic Signal Processing",
+		"container-title": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"page": "300-305",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"abstract": "Although the genome sequences of most studied organisms, like human, E. coli, and others are already known, de novo genome sequencing remains popular as a majority of genomes remains unknown. Unfortunately, sequencing machines are able to read only short fragments of DNA. Therefore, one of the basic steps in reconstructing novel genomes lies in putting these pieces of DNA, called reads, together into complete genome sequences using a process known as genome assembly. Reads joining, however, requires efficient detection of their overlaps. This is commonly performed by comparing the particular characters (A, C, G, T) of the reads using string processing techniques. In this paper, we present an alternative way of detecting overlaps using genomic signal processing. Unlike string comparison, numerical phase signals reflect the complementarity of double stranded DNA making the signal ideal for effective strand independent overlap detection using covariance with high accuracy.",
+		"DOI": "10.1109/CBMS.2017.140",
+		"author": [
+			{
+				"family": "Jugas",
+				"given": "R."
+			},
+			{
+				"family": "Sedlar",
+				"given": "K."
+			},
+			{
+				"family": "Vitek",
+				"given": "M."
+			},
+			{
+				"family": "Skutkova",
+				"given": "H."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "D5KW8VWJ",
+		"type": "webpage",
+		"title": "google/seesaw: Seesaw v2 is a Linux Virtual Server (LVS) based load balancing platform.",
+		"URL": "https://github.com/google/seesaw",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "E5EH23QQ",
+		"type": "webpage",
+		"title": "Fundamentals of statistical signal processing",
+		"container-title": "CERN Document Server",
+		"abstract": "A unified presentation of parameter estimation for those involved in the design and implementation of statistical signal processing algorithms. Covers important approaches to obtaining an optimal estimator and analyzing its performance; and includes numerous examples as well as applications to real- world problems. MARKETS: For practicing engineers and scientists who design and analyze signal processing systems, i.e., to extract information from noisy signals — radar engineer, sonar engineer, geophysicist, oceanographer, biomedical engineer, communications engineer, economist, statistician, physicist, etc.",
+		"URL": "http://cds.cern.ch/record/2012069",
+		"author": [
+			{
+				"family": "Kay",
+				"given": "Steven M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1993"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					26
+				]
+			]
+		}
+	},
+	{
+		"id": "EHGKSNT9",
+		"type": "article-journal",
+		"title": "Intracortical signal processing of periodontal ligament sensations in rat",
+		"container-title": "Neuroscience",
+		"page": "212-224",
+		"volume": "355",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "The somatosensory information from the orofacial region, including the periodontal ligament (PDL), is processed in a manner that differs from that used for other body somatosensory information in the related cortices. It was reported that electrical stimulation to rat PDL elicited activation of the insular oral region (IOR) and the primary (S1) and secondary (S2) somatosensory cortices. However, the physiological relationship between S1 and S2/IOR is not well understood. To address this issue, we performed in vivo optical imaging using a voltage-sensitive dye. Our results demonstrated that the electrical stimulation to the PDL of the mandibular incisor evoked the simultaneous activation of S1 and the S2/IOR. The stimulation to the initial response area of the S1 evoked responses in the S2/IOR, and vice versa. An injection of tetrodotoxin (TTX) to the cortical region between S1 and S2/IOR attenuated such elicited responses only in the non-stimulated cortical partner site. The cortico-cortical interaction between S1 and S2/IOR was suppressed by the application of TTX, indicating that these two cortical regions bi-directionally communicate the signal processing of PDL sensations. An injection of FluoroGold™ (FG) to the initial response area in S1 or the S2/IOR showed that FG-positive cells were scattered in the non-injected cortical counterpart. This morphological result demonstrated the presence of a bi-directional intracortical connection between the initial response areas in S1 and the S2/IOR. These findings suggest the presence of a mutual connection between S1 and the S2/IOR as an intracortical signal processing network for orofacial nociception.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0306452217303135",
+		"DOI": "10.1016/j.neuroscience.2017.04.045",
+		"ISSN": "0306-4522",
+		"journalAbbreviation": "Neuroscience",
+		"author": [
+			{
+				"family": "Minoda",
+				"given": "Aoi"
+			},
+			{
+				"family": "Mizoguchi",
+				"given": "Naoko"
+			},
+			{
+				"family": "Kobayashi",
+				"given": "Masayuki"
+			},
+			{
+				"family": "Suda",
+				"given": "Naoto"
+			},
+			{
+				"family": "Muramoto",
+				"given": "Kazuyo"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7,
+					4
+				]
+			]
+		}
+	},
+	{
+		"id": "EIA4ER8V",
+		"type": "paper-conference",
+		"title": "Tunable C-section phaser for dynamic analog signal processing",
+		"container-title": "2017 XXXIInd General Assembly and Scientific Symposium of the International Union of Radio Science (URSI GASS)",
+		"page": "1-3",
+		"source": "IEEE Xplore",
+		"event": "2017 XXXIInd General Assembly and Scientific Symposium of the International Union of Radio Science (URSI GASS)",
+		"abstract": "Summary form only given. Strong light-matter coupling has been recently successfully explored in the GHz and THz [1] range with on-chip platforms. New and intriguing quantum optical phenomena have been predicted in the ultrastrong coupling regime [2], when the coupling strength Ω becomes comparable to the unperturbed frequency of the system ω. We recently proposed a new experimental platform where we couple the inter-Landau level transition of an high-mobility 2DEG to the highly subwavelength photonic mode of an LC meta-atom [3] showing very large Ω/ωc = 0.87. Our system benefits from the collective enhancement of the light-matter coupling which comes from the scaling of the coupling Ω ∝ √n, were n is the number of optically active electrons. In our previous experiments [3] and in literature [4] this number varies from 104-103 electrons per meta-atom. We now engineer a new cavity, resonant at 290 GHz, with an extremely reduced effective mode surface Seff = 4 × 10-14 m2 (FE simulations, CST), yielding large field enhancements above 1500 and allowing to enter the few (<;100) electron regime. It consist of a complementary metasurface with two very sharp metallic tips separated by a 60 nm gap (Fig.1(a, b)) on top of a single triangular quantum well. THz-TDS transmission experiments as a function of the applied magnetic field reveal strong anticrossing of the cavity mode with linear cyclotron dispersion. Measurements for arrays of only 12 cavities are reported in Fig.1(c). On the top horizontal axis we report the number of electrons occupying the topmost Landau level as a function of the magnetic field. At the anticrossing field of B=0.73 T we measure approximately 60 electrons ultra strongly coupled (Ω/ω- ||",
+		"DOI": "10.23919/URSIGASS.2017.8105269",
+		"author": [
+			{
+				"family": "Wang",
+				"given": "X."
+			},
+			{
+				"family": "Zou",
+				"given": "L."
+			},
+			{
+				"family": "Caloz",
+				"given": "C."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "EIVUESPX",
+		"type": "paper-conference",
+		"title": "Application of optical frequency combs in extreme bandwidth signal processing",
+		"container-title": "2017 IEEE Photonics Conference (IPC)",
+		"page": "387-388",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE Photonics Conference (IPC)",
+		"abstract": "The application of high-count multi carrier optical sources (i.e. frequency combs) in real-time microwave/millimeter wave signal processing is discussed. The multi heterodyne sensing and classification of up to 110 GHz-wide radio frequency (RF) signals using two set of optical frequency combs is demonstrated.",
+		"DOI": "10.1109/IPCon.2017.8116152",
+		"author": [
+			{
+				"family": "Ataie",
+				"given": "V."
+			},
+			{
+				"family": "Myslivets",
+				"given": "E."
+			},
+			{
+				"family": "Wiberg",
+				"given": "A. O. J."
+			},
+			{
+				"family": "Radic",
+				"given": "S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "ESFGAUR2",
+		"type": "paper-conference",
+		"title": "Spectral Compression of Mesh Geometry",
+		"container-title": "Proceedings of the 27th Annual Conference on Computer Graphics and Interactive Techniques",
+		"collection-title": "SIGGRAPH '00",
+		"publisher": "ACM Press/Addison-Wesley Publishing Co.",
+		"publisher-place": "New York, NY, USA",
+		"page": "279–286",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "We show how spectral methods may be applied to 3D mesh data to obtain compact representations. This is achieved by projecting the mesh geometry onto an orthonormal basis derived from the mesh topology. To reduce complexity, the mesh is partitioned into a number of balanced submeshes with minimal interaction, each of which are compressed independently. Our methods may be used for compression and progressive transmission of 3D content, and are shown to be vastly superior to existing methods using spatial techniques, if slight loss can be tolerated.",
+		"URL": "http://dx.doi.org/10.1145/344779.344924",
+		"DOI": "10.1145/344779.344924",
+		"ISBN": "978-1-58113-208-3",
+		"author": [
+			{
+				"family": "Karni",
+				"given": "Zachi"
+			},
+			{
+				"family": "Gotsman",
+				"given": "Craig"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2000"
+				]
+			]
+		}
+	},
+	{
+		"id": "FEX2QXIX",
+		"type": "paper-conference",
+		"title": "Sensor networking and signal processing applications for heating efficiency maintenance in high-rise apartment buildings",
+		"container-title": "2017 IEEE 58th International Scientific Conference on Power and Electrical Engineering of Riga Technical University (RTUCON)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 58th International Scientific Conference on Power and Electrical Engineering of Riga Technical University (RTUCON)",
+		"abstract": "The main goal of the research is development and practical implementation of new methods for processing large amount of data in building automation, which will allow acquiring, storing and interpreting data about the urban environment as well as modelling its processes using high performance computation and next generation smart sensor infrastructure. This will ensure automatic or semi-automatic high level decision making to minimize losses and damages in case of any critical situation. In order to determine how much energy efficiency can be achieved through technological solutions described in EN 15232 standard, a number of experiments is carried out in this work.",
+		"DOI": "10.1109/RTUCON.2017.8124842",
+		"author": [
+			{
+				"family": "Kunicina",
+				"given": "N."
+			},
+			{
+				"family": "Zabasta",
+				"given": "A."
+			},
+			{
+				"family": "Koldisevs",
+				"given": "K."
+			},
+			{
+				"family": "Patlins",
+				"given": "A."
+			},
+			{
+				"family": "Kondratjevs",
+				"given": "K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "FFUN87Z7",
+		"type": "paper-conference",
+		"title": "Poster: Ziria: Language for Rapid Prototyping of Wireless PHY",
+		"container-title": "Proceedings of the 20th Annual International Conference on Mobile Computing and Networking",
+		"collection-title": "MobiCom '14",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "359–362",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Software-defined radio (SDR) brings the flexibility of software to the domain of wireless protocol design, promising an ideal platform both for research and innovation and rapid deployment of new protocols on existing hardware. However, existing SDR programming platforms require either careful hand-tuning of low-level code, negating many of the advantages of software, or are too slow to be useful in the real world. We present Ziria, the first software-defined radio programming platform that is both easily programmable and performant. Ziria introduces a novel programming model tailored to wireless physical layer tasks and captures the inherent and important distinction between data and control paths in this domain. Ziria provides the capability of implementing a real-time WiFi PHY running at 20 MHz.",
+		"URL": "http://doi.acm.org/10.1145/2639108.2642893",
+		"DOI": "10.1145/2639108.2642893",
+		"ISBN": "978-1-4503-2783-1",
+		"shortTitle": "Poster",
+		"author": [
+			{
+				"family": "Gowda",
+				"given": "Mahanth"
+			},
+			{
+				"family": "Stewart",
+				"given": "Gordon"
+			},
+			{
+				"family": "Mainland",
+				"given": "Geoffrey"
+			},
+			{
+				"family": "Radunović",
+				"given": "Bozidar"
+			},
+			{
+				"family": "Vytiniotis",
+				"given": "Dimitrios"
+			},
+			{
+				"family": "Patterson",
+				"given": "Doug"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	},
+	{
+		"id": "FM8PDH2M",
+		"type": "paper-conference",
+		"title": "Automatic Recognition of Coordination Level in an Imitation Task",
+		"container-title": "Proceedings of the 2011 Joint ACM Workshop on Human Gesture and Behavior Understanding",
+		"collection-title": "J-HGBU '11",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "25–26",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Automatic analysis of human-human degree of coordination bears challenging questions. In this paper, we propose to automatically predict the degree of coordination between dyadic partners performing an imitation task. A subjective evaluation of their coordination was obtained via a questionnaire addressed to human judges. We extracted features from speech, gestures segmentation and synchronized movements to predict the coordination status of each dyad. Several features discriminated perfectly the examples from the low and high coordination classes.",
+		"URL": "http://doi.acm.org/10.1145/2072572.2072582",
+		"DOI": "10.1145/2072572.2072582",
+		"ISBN": "978-1-4503-0998-1",
+		"author": [
+			{
+				"family": "Delaherche",
+				"given": "Emilie"
+			},
+			{
+				"family": "Chetouani",
+				"given": "Mohamed"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	},
+	{
+		"id": "G7JQS6W8",
+		"type": "article-journal",
+		"title": "Optimized Fundamental Signal Processing Operations For Energy Minimization on Heterogeneous Mobile Devices",
+		"container-title": "IEEE Transactions on Circuits and Systems I: Regular Papers",
+		"page": "1-14",
+		"volume": "PP",
+		"issue": "99",
+		"source": "IEEE Xplore",
+		"abstract": "Numerous signal processing applications are emerging on both mobile and high-performance computing systems. These applications are subject to responsiveness constraints for user interactivity and, at the same time, must be optimized for energy efficiency. The increasingly heterogeneous power-versus-performance profile of modern hardware introduces new opportunities for energy savings as well as challenges. In this line, recent systems-on-chip (SoC) composed of low-power multicore processors, combined with a small graphics accelerator (or GPU), yield a notable increment of the computational capacity while partially retaining the appealing low power consumption of embedded systems. This paper analyzes the potential of these new hardware systems to accelerate applications that involve a large number of floating-point arithmetic operations mainly in the form of convolutions. To assess the performance, a headphone-based spatial audio application for mobile devices based on a Samsung Exynos 5422 SoC has been developed. We discuss different implementations and analyze the tradeoffs between performance and energy efficiency for different scenarios and configurations. Our experimental results reveal that we can extend the battery lifetime of a device featuring such an architecture by a 238% by properly configuring and leveraging the computational resources.",
+		"DOI": "10.1109/TCSI.2017.2761909",
+		"ISSN": "1549-8328",
+		"author": [
+			{
+				"family": "Belloch",
+				"given": "J. A."
+			},
+			{
+				"family": "Badía",
+				"given": "J. M."
+			},
+			{
+				"family": "Igual",
+				"given": "F. D."
+			},
+			{
+				"family": "Gonzalez",
+				"given": "A."
+			},
+			{
+				"family": "Quintana-Ortí",
+				"given": "E. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "GNV6W294",
+		"type": "article-journal",
+		"title": "Signal conditioning and processing for metallic Hall sensors",
+		"container-title": "Fusion Engineering and Design",
+		"collection-title": "Proceedings of the 29th Symposium on Fusion Technology (SOFT-29) Prague, Czech Republic, September 5-9, 2016",
+		"page": "783-786",
+		"volume": "123",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Two electronics prototypes for the ITER outer vessel steady-state magnetic field Hall sensors based on a lock-in signal processing and current spinning technique were developed. The prototypes, the first using a rectangular lock-in signal processing with sensor offset cancellation and the second employing advanced lock-in signal processing with sensor and electronics offset cancellation, were compared with a DC technique and commercial lock-in amplifier. The influence of long interconnection cables, white noise, and interfering planar Hall effect to a measurement accuracy was evaluated. The planar Hall voltage suppression by the current spinning technique was investigated. Whilst the rectangular lock-in amplifier prototype failed to meet the ITER accuracy requirement, the advanced lock-in amplifier prototype demonstrated required functionality and accuracy.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0920379617305070",
+		"DOI": "10.1016/j.fusengdes.2017.04.106",
+		"ISSN": "0920-3796",
+		"journalAbbreviation": "Fusion Engineering and Design",
+		"author": [
+			{
+				"family": "Entler",
+				"given": "S."
+			},
+			{
+				"family": "Duran",
+				"given": "I."
+			},
+			{
+				"family": "Sladek",
+				"given": "P."
+			},
+			{
+				"family": "Vayakis",
+				"given": "G."
+			},
+			{
+				"family": "Kočan",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "GU4GA4PC",
+		"type": "article-journal",
+		"title": "The Mystery Curve: A Signal Processing Point of View [Lecture Notes]",
+		"container-title": "IEEE Signal Processing Magazine",
+		"page": "158-163",
+		"volume": "34",
+		"issue": "6",
+		"source": "IEEE Xplore",
+		"abstract": "In the first chapter of a recently published book on artful mathematics, a linear combination of harmonic signals called mystery curves were introduced. Although their Fourier-based analysis brings interesting results, this lecture note provides a different and important perspective, especially useful for our signal processing community. Based on polar coordinate systems and low-pass filtering approaches, the patterns of the curves can be designed by locally curve tracing instead of trial and error, including not only two-dimensional (2-D) but also three-dimensional (3-D) modeling. Concrete examples and online MATLAB codes are provided so that applications from art and logo design to amplitude modulation (AM)-frequency modulation (FM) signal analysis are realizable.",
+		"DOI": "10.1109/MSP.2017.2740457",
+		"ISSN": "1053-5888",
+		"shortTitle": "The Mystery Curve",
+		"author": [
+			{
+				"family": "Pei",
+				"given": "S. C."
+			},
+			{
+				"family": "Chang",
+				"given": "K. W."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					11
+				]
+			]
+		}
+	},
+	{
+		"id": "H3TJGH8A",
+		"type": "paper-conference",
+		"title": "The use of ART-2 neural network for processing information signals of non-destructive testing",
+		"container-title": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"page": "981-985",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"abstract": "Describes the universal approach to the intellectual automated system development of digital signal processing for acoustic testing devices with free vibrations method and the usage of artificial neural networks. The system solves the problem of defects recognition and classification, and enhances performance testing in comparison with traditional instruments.",
+		"DOI": "10.1109/UKRCON.2017.8100395",
+		"author": [
+			{
+				"family": "Galagan",
+				"given": "R. M."
+			},
+			{
+				"family": "Momot",
+				"given": "A. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "H6ZMNET2",
+		"type": "paper-conference",
+		"title": "Design considerations and performance of a variable gain, variable bandwidth signal processing circuit for acoustoelectric imaging",
+		"container-title": "2017 IEEE International Ultrasonics Symposium (IUS)",
+		"page": "1-4",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE International Ultrasonics Symposium (IUS)",
+		"abstract": "Acoustoelectric imaging (AEI) is a new technique for mapping current densities at high resolution depending on the size of the ultrasound (US) focus. The design and performance of the recording system is crucial for efficient AEI because the amplitude of the AE signal in biological tissue is on the order of a microvolt or less. In this direction, an AE signal processing circuit (AE-SPC), containing high voltage pulse suppressor, variable gain amplifiers, and variable frequency bandpass filters (BPF) is developed to minimize sources of noise and maximize sensitivity for signal detection. AE-SPC is tested and evaluated using both simulations and bench-top testing. The design may be optimal for AE mapping of weak electric currents in excitable tissue, such as the heart and brain.",
+		"DOI": "10.1109/ULTSYM.2017.8092068",
+		"author": [
+			{
+				"family": "Bera",
+				"given": "T. K."
+			},
+			{
+				"family": "Ingram",
+				"given": "P."
+			},
+			{
+				"family": "Qin",
+				"given": "Y."
+			},
+			{
+				"family": "Furenlid",
+				"given": "L. R."
+			},
+			{
+				"family": "Witte",
+				"given": "R. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "HCISG3RP",
+		"type": "paper-conference",
+		"title": "Machine learning using neural networks in digital signal processing for RF transceivers",
+		"container-title": "2017 IEEE AFRICON",
+		"page": "384-390",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE AFRICON",
+		"abstract": "Communication is changing to a wireless world. Any wireless communication system needs radio frontends (transceivers) to link higher layer signals to the air interface. The increasing standard and technology diversity require transceivers with high flexibility supporting many of frequencies, standards and signal requirements. Design to cost, the demand for highest energy efficiency and MIMO systems don't ease the challenges for transceiver designs. A change in paradigm can be an opener to face these challenges for future systems. This work presents the use of neural networks for signal processing, impairment mitigation, control and optimization in transceiver systems.",
+		"DOI": "10.1109/AFRCON.2017.8095513",
+		"author": [
+			{
+				"family": "Jueschke",
+				"given": "P."
+			},
+			{
+				"family": "Fischer",
+				"given": "G."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "HKFCT4U4",
+		"type": "paper-conference",
+		"title": "Harnessing mode-selective nonlinear optics for optical and microwave signal processing",
+		"container-title": "2017 Opto-Electronics and Communications Conference (OECC) and Photonics Global Conference (PGC)",
+		"page": "1-1",
+		"source": "IEEE Xplore",
+		"event": "2017 Opto-Electronics and Communications Conference (OECC) and Photonics Global Conference (PGC)",
+		"abstract": "We review recent work on developing an integrated photonic device in silicon photonics for performing simultaneous multi-channel optical and microwave signal processing by exciting nonlinear optical effects in a mode-selective manner.",
+		"DOI": "10.1109/OECC.2017.8114756",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "L. R."
+			},
+			{
+				"family": "Ma",
+				"given": "M."
+			},
+			{
+				"family": "Adam",
+				"given": "R."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "HQKA9ZFN",
+		"type": "paper-conference",
+		"title": "Design considerations and performance of a variable gain, variable bandwidth signal processing circuit for acoustoelectric imaging",
+		"container-title": "2017 IEEE International Ultrasonics Symposium (IUS)",
+		"page": "1-1",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE International Ultrasonics Symposium (IUS)",
+		"abstract": "Acoustoelectric (AE) imaging is a new technique for mapping current densities in the heart and brain at a high resolution determined by the size of the ultrasound (US) focus. Because the amplitude of the AE interaction signal in biological tissue is weak (on order of 1 μV), detection of small currents is challenging with poor signal-to-noise ratio (SNR). Because optimal detection depends on minimizing background noise, the design and performance of the recording system, especially amplifiers and filters, is crucial for efficient and sensitive AE imaging. The amplitude and bandwidth of the AE signal depends on a variety of factors, including the US bandwidth and beam pattern, distribution of current densities, properties of the recording electrodes, and amount of averaging/sampling. The primary goal of this work was to optimize the design and performance of the acoustoelectric differential amplifier, including signal processing circuits, to minimize noise and maximize sensitivity for detection of the AE signal. Variable gain, band-pass filter (BPF) cutoffs, and bandwidth are critical design parameters for optimizing the AE imaging platform for mapping weak electric currents in tissue.",
+		"DOI": "10.1109/ULTSYM.2017.8091674",
+		"author": [
+			{
+				"family": "Bera",
+				"given": "T. K."
+			},
+			{
+				"family": "Ingram",
+				"given": "P."
+			},
+			{
+				"family": "Qin",
+				"given": "Y."
+			},
+			{
+				"family": "Witte",
+				"given": "R. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "I7HVMIBB",
+		"type": "article-journal",
+		"title": "System Architecture and Signal Processing for Frequency-Modulated Continuous-Wave Radar using Active Backscatter Tags",
+		"container-title": "IEEE Transactions on Signal Processing",
+		"page": "1-1",
+		"volume": "PP",
+		"issue": "99",
+		"source": "IEEE Xplore",
+		"abstract": "In this paper, we study a frequency-modulated continuous-wave (FMCW) based radio-frequency identification (RFID) system, which is composed of a reader with single transmitter and multiple receiving antennas as well as multiple active backscatter tags. In particular, our contribution is twofold in this work. i) First, we construct a general architecture for achieving the functionality of wireless positioning based on the principle of the switched injection-locked oscillator (SILO). Unlike the previous SILO-based schemes, some limitations on the pulsed waveform generated by the tags are overcome. In addition, only one reader set up with multiple receiving antennas is used to precisely localize tags based on the delay and Direction-Of- Arrival (DOA) estimates. ii) Second, the developed algorithms make use of a shift invariant property among the baseband signal snapshots of intra- and/or inter-modulation intervals, i.e., snapshots in one modulation period and/or sets of snapshots in multiple modulation periods. A new joint singular value decomposition (JSVD) based ESPRIT algorithm is developed for determining the number of multiple active tags and their positions by implementing the matrix reconstruction and stacking techniques. The proposed method has its basic foundation on the processing of received data with global fusion scheme. In this way, this method can improve the performance of parameter estimates in terms of accuracy and resolution without suffering from the pair matching problem. System simulations and exper- imental validations are carried out to verify the proposed system architecture associated with the signal processing technique.",
+		"DOI": "10.1109/TSP.2017.2773421",
+		"ISSN": "1053-587X",
+		"author": [
+			{
+				"family": "Gu",
+				"given": "J. F."
+			},
+			{
+				"family": "Wang",
+				"given": "K."
+			},
+			{
+				"family": "Wu",
+				"given": "K."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "IMZCZEM2",
+		"type": "article-journal",
+		"title": "Biomimetic tactile sensors and signal processing with spike trains: A review",
+		"container-title": "Sensors and Actuators A: Physical",
+		"page": "41-52",
+		"volume": "269",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "The sense of touch plays a critical role in enabling human beings to interact with the surrounding environments. As robots move from laboratories to domestic environments, they are expected to be endowed with a similar tactile ability to perform complicated tasks such as manipulating objects with arbitrary unknown shapes. In the past decade, tremendous effort and progress have been made to mimic the sense of touch in human beings on robotic systems. Particularly, biomimetic tactile sensors and signal processing with spike trains have gained a growing interest. In this paper, we firstly review human sense of touch as it serves as a reference point in the case of biomimetic tactile sensing. Then, we focus on biomimetic tactile sensing technologies, which are primarily presented in two aspects: emulating the properties of mechanoreceptors using artificial tactile sensors, and biomimetic tactile signal processing with spike trains. Finally, we discuss the problems in current biomimetic tactile sensing techniques and deduce the future directions.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0924424717307689",
+		"DOI": "10.1016/j.sna.2017.09.035",
+		"ISSN": "0924-4247",
+		"shortTitle": "Biomimetic tactile sensors and signal processing with spike trains",
+		"journalAbbreviation": "Sensors and Actuators A: Physical",
+		"author": [
+			{
+				"family": "Yi",
+				"given": "Zhengkun"
+			},
+			{
+				"family": "Zhang",
+				"given": "Yilei"
+			},
+			{
+				"family": "Peters",
+				"given": "Jan"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					1,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "INRW95Z8",
+		"type": "article-journal",
+		"title": "Reconfigurable single-shot incoherent optical signal processing system for chirped microwave signal compression",
+		"container-title": "Science Bulletin",
+		"page": "242-248",
+		"volume": "62",
+		"issue": "4",
+		"source": "ScienceDirect",
+		"abstract": "We propose and demonstrate a reconfigurable and single-shot incoherent optical signal processing system for chirped microwave signal compression, using a programmable optical filter and a multi-wavelength laser (MWL). The system is implemented by temporally modulating a specially shaped MWL followed by a suitable linear dispersive medium. A microwave dispersion value up to 1.33ns/GHz over several GHz bandwidth is achieved based on this approach. Here we demonstrate a single-shot compression for different linearly chirped microwave signals over several GHz bandwidth. In addition, the robustness of the proposed system when input RF signals are largely distorted is also discussed.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S2095927317300397",
+		"DOI": "10.1016/j.scib.2017.01.021",
+		"ISSN": "2095-9273",
+		"journalAbbreviation": "Science Bulletin",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Ming"
+			},
+			{
+				"family": "Sun",
+				"given": "Shuqian"
+			},
+			{
+				"family": "Malacarne",
+				"given": "Antonio"
+			},
+			{
+				"family": "LaRochelle",
+				"given": "Sophie"
+			},
+			{
+				"family": "Yao",
+				"given": "Jianping"
+			},
+			{
+				"family": "Zhu",
+				"given": "Ninghua"
+			},
+			{
+				"family": "Azana",
+				"given": "Jose"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					2,
+					28
+				]
+			]
+		}
+	},
+	{
+		"id": "ITEDAX4U",
+		"type": "article-journal",
+		"title": "Air-coupled ultrasonic signal processing method for detection Stomata defects in materials",
+		"container-title": "NDT & E International",
+		"page": "167-176",
+		"volume": "92",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "In order to improve signal-to-noise ratio (SNR) of air-coupled ultrasonic signal in the detection Lithium Battery, and achieve detection of Stomata defects in this kind of materials, a new signal processing method is proposed. The new signal processed can effectively filter noise and significantly improve the amplitude of transmission signal. Furthermore, the selection principle of parameters for the new signal processing method is studied. Successful results are presented in Lithium Battery. An improvement in SNR up to 27.95 dB is attained compared with the original received signal. The quantitative accuracy of defects in C-scan image based on the new signal processing method is also very remarkable, and defects as small as Φ3mm can be easily identified.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0963869516302924",
+		"DOI": "10.1016/j.ndteint.2017.08.007",
+		"ISSN": "0963-8695",
+		"journalAbbreviation": "NDT & E International",
+		"author": [
+			{
+				"family": "Li",
+				"given": "Honggang"
+			},
+			{
+				"family": "Zhou",
+				"given": "Zhenggan"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					12,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "IXGJ4FAQ",
+		"type": "paper-conference",
+		"title": "Audio-visual Emotion Challenge 2012: A Simple Approach",
+		"container-title": "Proceedings of the 14th ACM International Conference on Multimodal Interaction",
+		"collection-title": "ICMI '12",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "473–476",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "The paper presents a small empirical study into emotion and affect recognition based on auditory and visual features, which was performed in the context of the Audio-Visual Emotion Challenge (AVEC) 2012. The goal of this competition is to predict continuous-valued affect ratings based on the provided auditory and visual features, e.g., local binary pattern (LBP) features extracted from aligned face images, and spectral audio features. Empirically, we found that there are only very weak (linear) relations between the features and the continuous-valued ratings: our best linear regressors employ the offset-feature to exploit the fact that the ratings have a dominant direction (more increasing than decreasing). Much to our surprise, only exploitation of this bias already leads to results that improve over the baseline system presented in [10]. The best performance we obtained on the AVEC 2012 test set (averaged over the test set and over four affective dimensions) is a correlation between predicted and ground-truth ratings of 0.2255 when making continuous predictions, and 0.1920 when making word-level predictions.",
+		"URL": "http://doi.acm.org/10.1145/2388676.2388779",
+		"DOI": "10.1145/2388676.2388779",
+		"ISBN": "978-1-4503-1467-1",
+		"shortTitle": "Audio-visual Emotion Challenge 2012",
+		"author": [
+			{
+				"family": "Maaten",
+				"given": "Laurens",
+				"non-dropping-particle": "van der"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012"
+				]
+			]
+		}
+	},
+	{
+		"id": "J4K6BNMX",
+		"type": "webpage",
+		"title": "Summary of the Amazon S3 Service Disruption in the Northern Virginia (US-EAST-1) Region",
+		"container-title": "Amazon Web Services, Inc.",
+		"URL": "//aws.amazon.com/message/41926/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "JEEXP8ZR",
+		"type": "paper-conference",
+		"title": "Few photon signal processing and detection in paramteric devices",
+		"container-title": "2017 IEEE Photonics Conference (IPC)",
+		"page": "407-407",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE Photonics Conference (IPC)",
+		"abstract": "We review recent advances in longitudinal fiber dispersion engineering that have enabled construction of efficient parametric devices operating at a few photon level. We outline principal physical processes and present operational demonstration of parametric devices for high speed signal processing and sensing.",
+		"DOI": "10.1109/IPCon.2017.8116161",
+		"author": [
+			{
+				"family": "Pejkic",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "JNUW594V",
+		"type": "paper-conference",
+		"title": "Cloud Computing Research and Development Trend",
+		"container-title": "2010 Second International Conference on Future Networks",
+		"page": "93-97",
+		"source": "IEEE Xplore",
+		"event": "2010 Second International Conference on Future Networks",
+		"abstract": "With the development of parallel computing, distributed computing, grid computing, a new computing model appeared. The concept of computing comes from grid, public computing and SaaS. It is a new method that shares basic framework. The basic principles of cloud computing is to make the computing be assigned in a great number of distributed computers, rather then local computer or remoter server. The running of the enterprise's data center is just like Internet. This makes the enterprise use the resource in the application that is needed, and access computer and storage system according to the requirement. This article introduces the background and principle of cloud computing, the character, style and actuality. This article also introduces the application field the merit of cloud computing, such as, it do not need user's high level equipment, so it reduces the user's cost. It provides secure and dependable data storage center, so user needn't do the awful things such storing data and killing virus, this kind of task can be done by professionals. It can realize data share through different equipments. It analyses some questions and hidden troubles, and puts forward some solutions, and discusses the future of cloud computing. Cloud computing is a computing style that provide power referenced with IT as a service. Users can enjoy the service even he knows nothing about the technology of cloud computing and the professional knowledge in this field and the power to control it.",
+		"DOI": "10.1109/ICFN.2010.58",
+		"author": [
+			{
+				"family": "Zhang",
+				"given": "S."
+			},
+			{
+				"family": "Zhang",
+				"given": "S."
+			},
+			{
+				"family": "Chen",
+				"given": "X."
+			},
+			{
+				"family": "Huo",
+				"given": "X."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010",
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "JX6565HA",
+		"type": "article-journal",
+		"title": "Big Questions for Social Media Big Data: Representativeness, Validity and Other Methodological Pitfalls",
+		"container-title": "arXiv:1403.7400 [physics]",
+		"source": "arXiv.org",
+		"abstract": "Large-scale databases of human activity in social media have captured scientific and policy attention, producing a flood of research and discussion. This paper considers methodological and conceptual challenges for this emergent field, with special attention to the validity and representativeness of social media big data analyses. Persistent issues include the over-emphasis of a single platform, Twitter, sampling biases arising from selection by hashtags, and vague and unrepresentative sampling frames. The socio-cultural complexity of user behavior aimed at algorithmic invisibility (such as subtweeting, mock-retweeting, use of \"screen captures\" for text, etc.) further complicate interpretation of big data social media. Other challenges include accounting for field effects, i.e. broadly consequential events that do not diffuse only through the network under study but affect the whole society. The application of network methods from other fields to the study of human social activity may not always be appropriate. The paper concludes with a call to action on practical steps to improve our analytic capacity in this promising, rapidly-growing field.",
+		"URL": "http://arxiv.org/abs/1403.7400",
+		"note": "arXiv: 1403.7400",
+		"shortTitle": "Big Questions for Social Media Big Data",
+		"author": [
+			{
+				"family": "Tufekci",
+				"given": "Zeynep"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					3,
+					28
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "KX4RWNU4",
+		"type": "article-journal",
+		"title": "Graph Signal Processing in Applications to Sensor Networks, Smart Grids, and Smart Cities",
+		"container-title": "IEEE Sensors Journal",
+		"page": "7659-7666",
+		"volume": "17",
+		"issue": "23",
+		"source": "IEEE Xplore",
+		"abstract": "This paper initiates a discussion on the application of the graph signal processing to exploration of complex and heterogeneous data and systems, and especially for the case of environmental monitoring in smart habitat of city, country, and continent. This emerging approach relates to the objects, which can be represented by a networked structure, but enables also the reconstruction of network-like associations from data when this kind of structured organization is not apparent. In this paper, the sensor network is perceived as the fundamental layer of the smart habitat, and inference is provided not only by direct operation on acquired signals, but also network model is identified for recorded ozone (O3) data in 100 measurement points deployed in Poland. It means that a graph as a mathematical representation of the complex network is generated, which links system features and behaviors coded in measured data sets. Results of multiscale projections are commented for ozone data sets. Furthermore, in opposite to the classical signal processing, the spectral analysis for graph signals is demonstrated, including reconstruction of graph Laplacian and Fourier transform calculation for signals spanned on graph vertices. Finally, local (related to the location of sensor in network) properties and behaviors are clustered based on spectral maps generated for graph signals.",
+		"DOI": "10.1109/JSEN.2017.2733767",
+		"ISSN": "1530-437X",
+		"author": [
+			{
+				"family": "Jabłoński",
+				"given": "I."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					12
+				]
+			]
+		}
+	},
+	{
+		"id": "MFHZU3CT",
+		"type": "article",
+		"title": "6875.pdf",
+		"URL": "https://epub.ub.uni-muenchen.de/6875/1/6875.pdf",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "MG2CIWH2",
+		"type": "paper-conference",
+		"title": "Estimation-correlation-compensation signal processing with optimization of antenna array spatial structure",
+		"container-title": "2017 Radiation and Scattering of Electromagnetic Waves (RSEMW)",
+		"page": "242-245",
+		"source": "IEEE Xplore",
+		"event": "2017 Radiation and Scattering of Electromagnetic Waves (RSEMW)",
+		"abstract": "The article investigates spatial signal processing in antenna arrays. The main attention is paid to optimization of spatial structure of antenna array to improve interference immunity and information parameters accuracy estimation. On the basis of statistical approximation the optimal spatial structure is estimated and the variance of estimation error is defined. The analysis of estimation-correlation-compensation signal processing algorithm in presence of both broadband Gaussian interferences and a non-Gaussian interference is carried out. It is assumed that the processing realized by optimizing amplitude-phase distribution at the aperture of antenna array, by optimizing the spatial structure of processing system, as well as by the subsequent non-linear compensation of non-Gaussian interference and by correlation processing. Analytical expression for signal-to-interference ratio (SIR) is obtained, thereby allowing optimization of spatial structure. Synthesis and analysis of algorithms for estimating the direction to the signal source under the influence of spatially correlated interfering signals in two-dimensional few-element antenna array have been carried out. The parameters of dispersion ellipses for estimated angular coordinates have been calculated.",
+		"DOI": "10.1109/RSEMW.2017.8103639",
+		"author": [
+			{
+				"family": "Parshin",
+				"given": "Y."
+			},
+			{
+				"family": "Gusev",
+				"given": "S."
+			},
+			{
+				"family": "Kolesnikov",
+				"given": "S."
+			},
+			{
+				"family": "Alexandrov",
+				"given": "P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "MHQ8VP4J",
+		"type": "paper-conference",
+		"title": "Advanced wireless digital baseband signal processing beyond 100 Gbit/s",
+		"container-title": "2017 IEEE International Workshop on Signal Processing Systems (SiPS)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE International Workshop on Signal Processing Systems (SiPS)",
+		"abstract": "The continuing trend towards higher data rates in wireless communication systems will, in addition to a higher spectral efficiency and lowest signal processing latencies, lead to throughput requirements for the digital baseband signal processing beyond 100 Gbit/s, which is at least one order of magnitude higher than the tens of Gbit/s targeted in the 5G standardization. At the same time, advances in silicon technology due to shrinking feature sizes and increased performance parameters alone won't provide the necessary gain, especially in energy efficiency for wireless transceivers, which have tightly constrained power and energy budgets. In this paper, we highlight the challenges for wireless digital baseband signal processing beyond 100 Gbit/s and the limitations of today's architectures. Our focus lies on the channel decoding and MIMO detection, which are major sources of complexity in digital baseband signal processing. We discuss techniques on algorithmic and architectural level, which aim to close this gap. For the first time we show Turbo-Code decoding techniques towards 100 Gbit/s and a complete MIMO receiver beyond 100 Gbit/s in 28 nm technology.",
+		"DOI": "10.1109/SiPS.2017.8109974",
+		"author": [
+			{
+				"family": "Weithoffer",
+				"given": "S."
+			},
+			{
+				"family": "Herrmann",
+				"given": "M."
+			},
+			{
+				"family": "Kestel",
+				"given": "C."
+			},
+			{
+				"family": "Wehn",
+				"given": "N."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "MJDKDZPM",
+		"type": "article-journal",
+		"title": "Beyond the hype: Big data concepts, methods, and analytics",
+		"container-title": "International Journal of Information Management",
+		"page": "137-144",
+		"volume": "35",
+		"issue": "2",
+		"source": "ScienceDirect",
+		"abstract": "Size is the first, and at times, the only dimension that leaps out at the mention of big data. This paper attempts to offer a broader definition of big data that captures its other unique and defining characteristics. The rapid evolution and adoption of big data by industry has leapfrogged the discourse to popular outlets, forcing the academic press to catch up. Academic journals in numerous disciplines, which will benefit from a relevant discussion of big data, have yet to cover the topic. This paper presents a consolidated description of big data by integrating definitions from practitioners and academics. The paper's primary focus is on the analytic methods used for big data. A particular distinguishing feature of this paper is its focus on analytics related to unstructured data, which constitute 95% of big data. This paper highlights the need to develop appropriate and efficient analytical methods to leverage massive volumes of heterogeneous data in unstructured text, audio, and video formats. This paper also reinforces the need to devise new tools for predictive analytics for structured big data. The statistical methods in practice were devised to infer from sample data. The heterogeneity, noise, and the massive size of structured big data calls for developing computationally efficient algorithms that may avoid big data pitfalls, such as spurious correlation.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0268401214001066",
+		"DOI": "10.1016/j.ijinfomgt.2014.10.007",
+		"ISSN": "0268-4012",
+		"shortTitle": "Beyond the hype",
+		"journalAbbreviation": "International Journal of Information Management",
+		"author": [
+			{
+				"family": "Gandomi",
+				"given": "Amir"
+			},
+			{
+				"family": "Haider",
+				"given": "Murtaza"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015",
+					4
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "MJQI6NDD",
+		"type": "paper-conference",
+		"title": "A model-based signal processing method for fault diagnosis in PMSM machine",
+		"container-title": "2017 IEEE Energy Conversion Congress and Exposition (ECCE)",
+		"page": "3160-3164",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE Energy Conversion Congress and Exposition (ECCE)",
+		"abstract": "In this paper, a model based signal processing method is proposed to diagnose two faults under different load condition for permanent magnet synchronous machines. This method captures the spectrum of stator current in a compact representation. Then, its dimensionality is reduced using the discriminant analysis. Finally a support vector machine automatically classifies the health state of the system. For testing the method, a customized test rig is built and data from different loads and faults are collected. An average accuracy of 93% in a 10-fold cross validation is obtained.",
+		"DOI": "10.1109/ECCE.2017.8096575",
+		"author": [
+			{
+				"family": "Heydarzadeh",
+				"given": "M."
+			},
+			{
+				"family": "Zafarani",
+				"given": "M."
+			},
+			{
+				"family": "Ugur",
+				"given": "E."
+			},
+			{
+				"family": "Akin",
+				"given": "B."
+			},
+			{
+				"family": "Nourani",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "MKACR77V",
+		"type": "paper-conference",
+		"title": "An Outline of Opportunities for Multimodal Research",
+		"container-title": "Proceedings of the 16th International Conference on Multimodal Interaction",
+		"collection-title": "ICMI '14",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "535–536",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "This paper summarizes the contributions to the Workshop \"Roadmapping the Future of Multimodal Interaction Research including Business Opportunities and Challenges\". We present major challenges and ideas for making progress in the field of social signal processing and related fields as presented by the contributors of the workshop.",
+		"URL": "http://doi.acm.org/10.1145/2663204.2668320",
+		"DOI": "10.1145/2663204.2668320",
+		"ISBN": "978-1-4503-2885-2",
+		"author": [
+			{
+				"family": "Heylen",
+				"given": "Dirk"
+			},
+			{
+				"family": "Vinciarelli",
+				"given": "Alessandro"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	},
+	{
+		"id": "MKAKFM8R",
+		"type": "paper-conference",
+		"title": "Using Adaptive Read Voltage Thresholds to Enhance the Reliability of MLC NAND Flash Memory Systems",
+		"container-title": "Proceedings of the 24th Edition of the Great Lakes Symposium on VLSI",
+		"collection-title": "GLSVLSI '14",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "151–156",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "NAND Flash memory is not only the ubiquitous storage medium in consumer applications, but has also started to appear in enterprise storage systems as well. MLC and TLC Flash technology made it possible to store multiple bits in the same silicon area as SLC, thus reducing the cost per amount of data stored. However, at current sub-20nm technology nodes, MLC Flash devices fail to provide the levels of raw reliability, mainly cycling endurance, that are required by typical enterprise applications. Advanced signal-processing and coding schemes are needed to improve the Flash bit error rate and thus elevate the device reliability to the desired level. In this paper, we report on the use of adaptive voltage thresholds in the read operation of NAND Flash devices. We discuss how the optimal read voltage thresholds can be determined, and assess the benefit of adapting the read voltage thresholds in terms of cycling endurance, data retention and resilience to read disturb.",
+		"URL": "http://doi.acm.org/10.1145/2591513.2591594",
+		"DOI": "10.1145/2591513.2591594",
+		"ISBN": "978-1-4503-2816-6",
+		"author": [
+			{
+				"family": "Papandreou",
+				"given": "Nikolaos"
+			},
+			{
+				"family": "Parnell",
+				"given": "Thomas"
+			},
+			{
+				"family": "Pozidis",
+				"given": "Haralampos"
+			},
+			{
+				"family": "Mittelholzer",
+				"given": "Thomas"
+			},
+			{
+				"family": "Eleftheriou",
+				"given": "Evangelos"
+			},
+			{
+				"family": "Camp",
+				"given": "Charles"
+			},
+			{
+				"family": "Griffin",
+				"given": "Thomas"
+			},
+			{
+				"family": "Tressler",
+				"given": "Gary"
+			},
+			{
+				"family": "Walls",
+				"given": "Andrew"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014"
+				]
+			]
+		}
+	},
+	{
+		"id": "MVIWKWUH",
+		"type": "paper-conference",
+		"title": "Detection and Management of Depression in Cancer Patients Using Augmented Reality Technologies, Multimodal Signal Processing and Persuasive Interfaces",
+		"container-title": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"page": "751-752",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 30th International Symposium on Computer-Based Medical Systems (CBMS)",
+		"abstract": "This visual paper aims at proposing a framework for detecting depression in cancer patients using prosodic and statistical features extracted by speech, while chatting with a virtual coach.",
+		"DOI": "10.1109/CBMS.2017.43",
+		"author": [
+			{
+				"family": "Roniotis",
+				"given": "A."
+			},
+			{
+				"family": "Kondylakis",
+				"given": "H."
+			},
+			{
+				"family": "Tsiknakis",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "MZRVJ2GG",
+		"type": "webpage",
+		"title": "Über Dropbox",
+		"container-title": "Dropbox",
+		"abstract": "Dropbox ist ein Technologieunternehmen, das einfache und leistungsstarke Produkte für Privatpersonen und Unternehmen entwickelt. Finden Sie mehr über uns und unsere Zukunftspläne heraus.",
+		"URL": "https://www.dropbox.com/about",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "NAQ6IGTR",
+		"type": "paper-conference",
+		"title": "Numerical method for processing frequency measuring signals from microelectronic sensors based on transistor structures with negative resistance",
+		"container-title": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"page": "721-725",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"abstract": "The application of the proposed mathematical tools, that can be used for signal processing self-generating transducers of physical quantities, are considered. Its operating mechanism is based on frequency modulation, when the frequency deviation depends on the intensity of exposure measurement parameter. It is shown that the action for leveling additive errors in the channel the signal generator is highly stable enough to use approximating second order polynomial.",
+		"DOI": "10.1109/UKRCON.2017.8100338",
+		"author": [
+			{
+				"family": "Osadchuk",
+				"given": "O."
+			},
+			{
+				"family": "Semenov",
+				"given": "A."
+			},
+			{
+				"family": "Zviahin",
+				"given": "O."
+			},
+			{
+				"family": "Savytskyi",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "NG3ZAVT2",
+		"type": "post-weblog",
+		"title": "Scaling to exabytes and beyond",
+		"container-title": "Dropbox Tech Blog",
+		"abstract": "We’re excited to announce that we’re now storing and serving over 90% of our users’ data on our custom-built infrastructure.",
+		"URL": "https://blogs.dropbox.com/tech/2016/03/magic-pocket-infrastructure/",
+		"author": [
+			{
+				"family": "Gupta",
+				"given": "Akhil"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "NJ7J2C6M",
+		"type": "article-journal",
+		"title": "Cyclostationarity Based Sonar Signal Processing",
+		"container-title": "Procedia Computer Science",
+		"collection-title": "Proceedings of the 6th International Conference on Advances in Computing and Communications",
+		"page": "683-689",
+		"volume": "93",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "This paper presents a reliable method for target vessel identification in passive sonar by exploiting the underlying periodicity of propeller noise signal, using the principles of cyclostationarity. In conventional signal processing methods, random signals are treated as statistically stationary and the parameters of the underlying physical mechanism that generates the signal would not vary in time. However, for most manmade signals, some parameters vary periodically with time and this requires that random signals be modeled as cyclostationary. In the field of sonar, the propeller noise signal generated by underwater vessels is cyclostationary. As a ship propagates in the sea, noise generated during the collapse of cavitation-induced bubbles are modulated by the rotating propeller shaft and this results in characteristic amplitude modulated random noise signal, which can be detected using passive sonar. Processing these signals, the number of blades and the shaft frequency of the propeller can be identified. In this work, cyclostationary processing technique is introduced for processing propeller noise signal and it is observed to provide better noise immunity. A detailed comparison with the conventional DEMON processing is also presented.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S1877050916315095",
+		"DOI": "10.1016/j.procs.2016.07.263",
+		"ISSN": "1877-0509",
+		"journalAbbreviation": "Procedia Computer Science",
+		"author": [
+			{
+				"family": "Rajan",
+				"given": "Reshma"
+			},
+			{
+				"family": "Deepa",
+				"given": "B."
+			},
+			{
+				"family": "Bhai",
+				"given": "D. Subhadra"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					1,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "NSDQKVAW",
+		"type": "article-journal",
+		"title": "Automatic detection of service initiation signals used in bars",
+		"container-title": "Frontiers in Psychology",
+		"volume": "4",
+		"source": "CrossRef",
+		"URL": "http://journal.frontiersin.org/article/10.3389/fpsyg.2013.00557/abstract",
+		"DOI": "10.3389/fpsyg.2013.00557",
+		"ISSN": "1664-1078",
+		"author": [
+			{
+				"family": "Loth",
+				"given": "Sebastian"
+			},
+			{
+				"family": "Huth",
+				"given": "Kerstin"
+			},
+			{
+				"family": "De Ruiter",
+				"given": "Jan P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		}
+	},
+	{
+		"id": "P4XG5DJP",
+		"type": "paper-conference",
+		"title": "Signal processing aspects of the sample clock frequency offset scheme for the SKA1 mid telescope array",
+		"container-title": "2017 XXXIInd General Assembly and Scientific Symposium of the International Union of Radio Science (URSI GASS)",
+		"page": "1-4",
+		"source": "IEEE Xplore",
+		"event": "2017 XXXIInd General Assembly and Scientific Symposium of the International Union of Radio Science (URSI GASS)",
+		"abstract": "In the proposed sample clock frequency offset (SCFO) scheme, the received signals at each antenna of the Square Kilometre Array Mid Telescope Array are sampled at slightly different sample rates. Subsequently, these sampled sequences are digitally re-sampled to a common sample rate prior to channelization and correlation/ beamforming. In this paper, the signal processing aspects of the SCFO scheme as it relates to the correlator and beamformer (CBF) of the SKA1 Mid Telescope are discussed. Here, it is shown that sample clock-related self-interference and out-of-band interference de-correlates improving the quality of correlated/ beamformed results.",
+		"DOI": "10.23919/URSIGASS.2017.8105156",
+		"author": [
+			{
+				"family": "Carlson",
+				"given": "B."
+			},
+			{
+				"family": "Gunaratne",
+				"given": "T."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "P7IGNV24",
+		"type": "paper-conference",
+		"title": "Modeling of signal processing from sensors in a probabilistic model in a network-oriented environment",
+		"container-title": "2017 Communication and Information Technologies (KIT)",
+		"page": "1-5",
+		"source": "IEEE Xplore",
+		"event": "2017 Communication and Information Technologies (KIT)",
+		"abstract": "Processing of information from the sensors and the resources available to the commander are very important for his decision-making process. Quality of information for decision-making process has a great importance. This article focuses on the description of the modeling of signal processing from sensors in a probabilistic model of recognition Custom / Foreign Identification Friendly or Foe and access to the current intelligence picture of the commander in the common operational picture for Command, Control, Communications, Computing, Intelligence and Information systems. This article describes the modelling of signal processing from sensors in a probabilistic model in a network-oriented environment. This view defines a comprehensive approach to modelling of signals processing from the sensors and the ability to use full access to information, to use of common communication and information environment within systems supporting command and control in the environment Network Enabled Capabilities for describing the relative information domination.",
+		"DOI": "10.23919/KIT.2017.8109455",
+		"author": [
+			{
+				"family": "Masnica",
+				"given": "R."
+			},
+			{
+				"family": "Štulrajter",
+				"given": "J."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "PAAWF2ZK",
+		"type": "webpage",
+		"title": "Quantifying the Impact of \"Cloudbleed\"",
+		"container-title": "Cloudflare Blog",
+		"abstract": "Last Thursday we released details on a bug in Cloudflare's parser impacting our customers. It was an extremely serious bug that caused data flowing through Cloudflare's network to be leaked onto the Internet. We fully patched the bug within hours of being notified. However, given the scale of Cloudflare, the",
+		"URL": "http://blog.cloudflare.com/quantifying-the-impact-of-cloudbleed/",
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					1
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					3
+				]
+			]
+		}
+	},
+	{
+		"id": "PH3Q3RHE",
+		"type": "chapter",
+		"title": "Preface A2  - Berman, Jules J.",
+		"container-title": "Principles of Big Data",
+		"publisher": "Morgan Kaufmann",
+		"publisher-place": "Boston",
+		"page": "xv-xviii",
+		"source": "ScienceDirect",
+		"event-place": "Boston",
+		"URL": "http://www.sciencedirect.com/science/article/pii/B9780124045767099792",
+		"ISBN": "978-0-12-404576-7",
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "PSQRN69W",
+		"type": "paper-conference",
+		"title": "Issues in Big Data Testing and Benchmarking",
+		"container-title": "Proceedings of the Sixth International Workshop on Testing Database Systems",
+		"collection-title": "DBTest '13",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "1:1–1:5",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "The academic community and industry are currently researching and building next generation data management systems. These systems are designed to analyze data sets of high volume with high data ingest rates and short response times executing complex data analysis algorithms on data that does not adhere to relational data models. As these big data systems differ from standard relational database systems with respect to data and workloads, the traditional benchmarks used by the database community are insufficient. In this paper, we describe initial solutions and challenges with respect to big data generation, methods for creating realistic, privacy-aware, and arbitrarily scalable data sets, workloads, and benchmarks from real world data. We will in particular discuss why we feel that workloads currently discussed in the testing and benchmarking community do not capture the real complexity of big data and highlight several research challenges with respect to massively-parallel data generation and data characterization.",
+		"URL": "http://doi.acm.org/10.1145/2479440.2482677",
+		"DOI": "10.1145/2479440.2482677",
+		"ISBN": "978-1-4503-2151-8",
+		"author": [
+			{
+				"family": "Alexandrov",
+				"given": "Alexander"
+			},
+			{
+				"family": "Brücke",
+				"given": "Christoph"
+			},
+			{
+				"family": "Markl",
+				"given": "Volker"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013"
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "Q3EJBNSC",
+		"type": "paper-conference",
+		"title": "Signal processing of oil detection in port area based on UV-induced fluorescence",
+		"container-title": "2017 4th International Conference on Information, Cybernetics and Computational Social Systems (ICCSS)",
+		"page": "32-35",
+		"source": "IEEE Xplore",
+		"event": "2017 4th International Conference on Information, Cybernetics and Computational Social Systems (ICCSS)",
+		"abstract": "The pollution of oil spill troubles people's health unquestionable seriously and restricts the development of coastal economy, severe oil spill will manipulate the ecological environment for quite a long period, and lead to some marine organism extinctions. Introduced an oil spills real-time monitoring system based on ultraviolet fluorescence, which can achieve the function in all weather, real-time and continuous automatic monitoring of oil spills, alarming, dynamic display electronic chart, statistical reports, emergency decision and so on. The development of this system increased the ability to oil spill monitoring management and protected the safety of the waters near the wharf. The moving average algorithm had been applied in this system in fluorescence signal processing, so that the analysis become more clear and accurate.",
+		"DOI": "10.1109/ICCSS.2017.8091378",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "P."
+			},
+			{
+				"family": "Li",
+				"given": "Y."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "Q6GVSB37",
+		"type": "paper-conference",
+		"title": "Fiber-optic signal processing using frequency conversion for optical node",
+		"container-title": "2017 IEEE Photonics Conference (IPC)",
+		"page": "375-376",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE Photonics Conference (IPC)",
+		"abstract": "A concept for optical frequency rearrangement using frequency conversion is presented which is expected to increase the flexibility of optical path and spectral usage in optical nodes. We review experiments of coherent optical subcarrier processing and optical frequency shifter achieved by using highly nonlinear fiber.",
+		"DOI": "10.1109/IPCon.2017.8116146",
+		"author": [
+			{
+				"family": "Kato",
+				"given": "T."
+			},
+			{
+				"family": "Watanabe",
+				"given": "S."
+			},
+			{
+				"family": "Richter",
+				"given": "T."
+			},
+			{
+				"family": "Elschner",
+				"given": "R."
+			},
+			{
+				"family": "Schmidt-Langhorst",
+				"given": "C."
+			},
+			{
+				"family": "Schubert",
+				"given": "C."
+			},
+			{
+				"family": "Hoshida",
+				"given": "T."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "QCNJ7BAW",
+		"type": "paper-conference",
+		"title": "Signal processing and classification for identification of clinically important parameters during neonatal resuscitation",
+		"container-title": "2017 IEEE International Conference on Signal and Image Processing Applications (ICSIPA)",
+		"page": "547-552",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE International Conference on Signal and Image Processing Applications (ICSIPA)",
+		"abstract": "Neonatal mortality is a global challenge. One million newborns die each year within their first 24 hours as a result of complications during labour and birth asphyxia. Most of these deaths happen in low resource settings. However, basic resuscitation at birth can increase newborn survival. Identification of initial factors and simple therapeutic strategies determinant for neonatal outcome can aid health care workers provide the best follow-up during resuscitation. In this work, the initial condition of the newborn, the treatment given, and early heart rate response from manual bag mask ventilation are parameterized. The features are investigated in a machine learning framework to identify which features are determinant for the different outcomes. Using a selection of the defined features, an identification rate of 89% for newborns in the normal group, and an identification rate of 74% for episodes ending in death was found. This points to the direction of identifying the important factors of newborn survival.",
+		"DOI": "10.1109/ICSIPA.2017.8120672",
+		"author": [
+			{
+				"family": "Urdal",
+				"given": "J."
+			},
+			{
+				"family": "Engan",
+				"given": "K."
+			},
+			{
+				"family": "Eftest⊘l",
+				"given": "T."
+			},
+			{
+				"family": "Kidanto",
+				"given": "H."
+			},
+			{
+				"family": "Yarrot",
+				"given": "L. B."
+			},
+			{
+				"family": "Eilevstj⊘nn",
+				"given": "J."
+			},
+			{
+				"family": "Ersdal",
+				"given": "H."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "QHR2J3NU",
+		"type": "article-journal",
+		"title": "Distance measures for signal processing and pattern recognition",
+		"container-title": "Signal Processing",
+		"page": "349-369",
+		"volume": "18",
+		"issue": "4",
+		"source": "ScienceDirect",
+		"abstract": "Some general tools for measuring distances either between two statistical models or between a parametric model (or signature) and a signal are presented. These tools are useful in a variety of signal processing applications such as detection, segmentation, classification, recognition and coding. After a section devoted to general distance measures between probability laws, the question of spectral distances between processes is investigated. Then results concerning AR and ARMA models are described. Problems related to the interaction between distances for parametric models and estimation of the parameters of these models are also mentioned. Also recalled (when necessary) are some classical results about error bounds in classification and feature selection for pattern recognition, which are obtained with the aid of properties of distance measures.\nZusammenfassung\nWir stellen einige allgemeine Werkzeuge zur Messung von Abständen zwischen zwei statistischen Modellen oder zwischen einem parametrischen Modell und einem Signal vor. Diese Werkzeuge sind hilfreich bei der Lösung einer Reihe von Signalverabeitungs-Aufgaben wie etwa der Detektion, der Segmentierung, der Klassifizierung, der Erkennung oder der Kodierung. Nach einem Abschnitt, der allgemeinen Abstandsmaßen zwischen Wahrscheinlichkeits-Gesetzen gewidmet ist, untersuchen wir die Frage spektraler Abstände zwischen Prozessen. Dann beschreiben wir Ergebnisse, die AR- und ARMA-Modelle betreffen; hierbei gehen wir auch auf das Problem der gegenseitigen Beeinflussung von Abstandsmessung für parametrische Modelle und Parameter-Schätzung für diese Modelle ein. Weiterhin erinnern wir (wo nötig) an einige klassische Ergebnisse bezüglich der Fehlergrenzen und der Merkmals-Auswahl bei der Mustererkennung, die man mit Hilfe der Eigenschaften von Abstandsmaßen gewinnen kann.\nRésumé\nOn se propose de présenter quelques outils généraux pour mesurer des distances soit entre deux modèles statistiques soit entre un modèle paramétrique et un signal. Ces outils sont utiles pour résoudre de nombreux problèmes en traitement du signal et notamment pour la détection, la segmentation, la classification, la reconnaissance ou le codage. Après un paragraphe consacré à des mesures générales de distances entre lois de probabilité, on considère le problème des distances spectrales entre processus. Puis on présente des résultats relatifs aux modèles AR ou ARMA, pour lesquels on mentionne aussi les problèmes liés à l'interaction entre distances de modèles paramétriques et estimation des paramètres de ces modèles. Sont également rappelés, lorsqu'il y a lieu, les résultats classiques concernant les bornes d'erreur de classification ou la sélection de traits caractéristiques pour la reconnaissance des formes, résultats obtenus à l'aide de propriétés de distances précisément.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/0165168489900790",
+		"DOI": "10.1016/0165-1684(89)90079-0",
+		"ISSN": "0165-1684",
+		"journalAbbreviation": "Signal Processing",
+		"author": [
+			{
+				"family": "Basseville",
+				"given": "Michèle"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"1989",
+					12,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "QINMKRA5",
+		"type": "paper-conference",
+		"title": "An EMG signal processing system for control of an ankle-foot orthosis",
+		"container-title": "2017 4th International Conference on Control, Decision and Information Technologies (CoDIT)",
+		"page": "0444-0449",
+		"source": "IEEE Xplore",
+		"event": "2017 4th International Conference on Control, Decision and Information Technologies (CoDIT)",
+		"abstract": "This paper presents an electromyographic (EMG)-based digital processing system for estimating foot direction of motion and force exerted from muscles of the human lower leg. This information can be used in the control frameworks of ankle-foot orthoses (AFOs). In essence, it is usually necessary to estimate the ankle's muscles voluntary contraction (VC) and user's intention of motion in order to control an AFO in a reliable and effective way. Consequently, a data processing system is developed that can designate these parameters from EMG signals. The voluntary contraction is calculated based on the root mean square (RMS) of EMG signals, and the direction of motion is estimated by using a feature-based classifier. The experiments are performed on five healthy, sitting subjects and the methodology consists of selecting discriminative features and using basic classifiers. The results of this work show that the direction of motion can be estimated in real-time with high accuracy.",
+		"DOI": "10.1109/CoDIT.2017.8102632",
+		"author": [
+			{
+				"family": "Gmerek",
+				"given": "A. J."
+			},
+			{
+				"family": "Davoodi",
+				"given": "M."
+			},
+			{
+				"family": "Meskin",
+				"given": "N."
+			},
+			{
+				"family": "Jaber",
+				"given": "F."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					4
+				]
+			]
+		}
+	},
+	{
+		"id": "QMEUSFNM",
+		"type": "paper-conference",
+		"title": "Digital signal processing in real time in multi signal monitoring systems with high risk of application",
+		"container-title": "2017 IEEE 58th International Scientific Conference on Power and Electrical Engineering of Riga Technical University (RTUCON)",
+		"page": "1-8",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE 58th International Scientific Conference on Power and Electrical Engineering of Riga Technical University (RTUCON)",
+		"abstract": "Article considers the establishing requirements of digital signal processing in real-time systems with high risk of application on which execution the system has added by signs of safe system. In addition, article considers the analysis of a technical solution for the analog front end (AFE) for multi signal system and based on results of analysis designed a node of signals preprocessing in paralleled channel. Creation of AFE in relation to multi signal systems is considered. Article contains results of multi signal analysis and testing results of the specialized diagnostic measuring tool for the multi signal monitoring system used in railway automatic.",
+		"DOI": "10.1109/RTUCON.2017.8124812",
+		"author": [
+			{
+				"family": "Karevs",
+				"given": "V."
+			},
+			{
+				"family": "Mezitis",
+				"given": "M."
+			},
+			{
+				"family": "Nikolajevs",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "QZJFGTSU",
+		"type": "article-journal",
+		"title": "Uncertainty-based combination of signal processing techniques for the identification of rotor imbalance",
+		"container-title": "Measurement",
+		"page": "409-416",
+		"volume": "114",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "This paper describes a method for the uncertainty-based combination of signal processing techniques for the identification of rotor imbalance. The main idea of the proposed method is to compute the imbalance with different algorithms and to average the different algorithms’ results. The method is based on the data fusion at feature level and uses the measurement uncertainty of the imbalance as a figure of merit for the weight computation. A static, a dynamic, and a hybrid implementation are presented. In the static one, the weights are computed in a dedicated training phase, in which four algorithms (Fourier transform and quasi-harmonic fitting of signal denoised with Hilbert-Huang Transform, Hilbert Vibration decomposition, and Wavelet Packet decomposition) have been used to estimate the known imbalance of car wheels. In the dynamic one, the weights are computed at runtime by estimating the difference between each predictor and the actual signal. The hybrid approach is the combination of the two algorithms. Results of simulations and experiments evidenced the validity of the data fusion, with uncertainty reductions between 10 and 40%, with larger benefits in presence of non-stationary disturbances.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0263224117306309",
+		"DOI": "10.1016/j.measurement.2017.10.006",
+		"ISSN": "0263-2241",
+		"journalAbbreviation": "Measurement",
+		"author": [
+			{
+				"family": "Tarabini",
+				"given": "Marco"
+			},
+			{
+				"family": "Scaccabarozzi",
+				"given": "Diego"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					1,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "R26WA3TG",
+		"type": "webpage",
+		"title": "Impressum | Zoo Leipzig",
+		"URL": "http://www.zoo-leipzig.de/impressum/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "RG6PI8M2",
+		"type": "paper-conference",
+		"title": "Characterization of Coordination in an Imitation Task: Human Evaluation and Automatically Computable Cues",
+		"container-title": "Proceedings of the 13th International Conference on Multimodal Interfaces",
+		"collection-title": "ICMI '11",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "343–350",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Understanding the ability to coordinate with a partner constitutes a great challenge in social signal processing and social robotics. In this paper, we designed a child-adult imitation task to investigate how automatically computable cues on turn-taking and movements can give insight into high-level perception of coordination. First we collected a human questionnaire to evaluate the perceived coordination of the dyads. Then, we extracted automatically computable cues and information on dialog acts from the video clips. The automatic cues characterized speech and gestural turn-takings and coordinated movements of the dyad. We finally confronted human scores with automatic cues to search which cues could be informative on the perception of coordination during the task. We found that the adult adjusted his behavior according to the child need and that a disruption of the gestural turn-taking rhythm was badly perceived by the judges. We also found, that judges rated negatively the dyads that talked more as speech intervenes when the child had difficulties to imitate. Finally, coherence measures between the partners' movement features seemed more adequate than correlation to characterize their coordination.",
+		"URL": "http://doi.acm.org/10.1145/2070481.2070546",
+		"DOI": "10.1145/2070481.2070546",
+		"ISBN": "978-1-4503-0641-6",
+		"shortTitle": "Characterization of Coordination in an Imitation Task",
+		"author": [
+			{
+				"family": "Delaherche",
+				"given": "Emilie"
+			},
+			{
+				"family": "Chetouani",
+				"given": "Mohamed"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2011"
+				]
+			]
+		}
+	},
+	{
+		"id": "RHNR2PVP",
+		"type": "article-journal",
+		"title": "PRUNE: Dynamic and Decidable Dataflow for Signal Processing on Heterogeneous Platforms",
+		"container-title": "IEEE Transactions on Signal Processing",
+		"page": "1-1",
+		"volume": "PP",
+		"issue": "99",
+		"source": "IEEE Xplore",
+		"abstract": "The majority of contemporary mobile devices and personal computers are based on heterogeneous computing platforms that consist of a number of CPU cores and one or more Graphics Processing Units (GPUs). Despite the high volume of these devices, there are few existing programming frameworks that target full and simultaneous utilization of all CPU and GPU devices of the platform. This article presents a dataflow-flavored Model of Computation (MoC) that has been developed for deploying signal processing applications to heterogeneous platforms. The presented MoC is dynamic and allows describing applications with data dependent run-time behavior. On top of the MoC, formal design rules are presented that enable application descriptions to be simultaneously dynamic and decidable. Decidability guarantees compile-time application analyzability for deadlock freedom and bounded memory. The presented MoC and the design rules are realized in a novel Open Source programming environment “PRUNE” and demonstrated with representative application examples from the domains of image processing, computer vision and wireless communications. Experimental results show that the proposed approach outperforms the state-of-the-art in analyzability, flexibility and performance.",
+		"DOI": "10.1109/TSP.2017.2773424",
+		"ISSN": "1053-587X",
+		"shortTitle": "PRUNE",
+		"author": [
+			{
+				"family": "Boutellier",
+				"given": "J."
+			},
+			{
+				"family": "Wu",
+				"given": "J."
+			},
+			{
+				"family": "Huttunen",
+				"given": "H."
+			},
+			{
+				"family": "Bhattacharyya",
+				"given": "S. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "RI6HVDPM",
+		"type": "paper-conference",
+		"title": "FAUST Tutorial for Functional Programmers",
+		"container-title": "Proceedings of the 5th ACM SIGPLAN International Workshop on Functional Art, Music, Modeling, and Design",
+		"collection-title": "FARM 2017",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "20–27",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "This paper is an introduction to FAUST, a functional programming language for sound synthesis and audio processing. We assume that the reader has some familiarity with functional programming, but no previous knowledge in signal processing. The text describes several examples that the reader will be able to try online using a web browser. These examples are preceded by two more technical sections presenting some aspects of the language.",
+		"URL": "http://doi.acm.org/10.1145/3122938.3122941",
+		"DOI": "10.1145/3122938.3122941",
+		"ISBN": "978-1-4503-5180-5",
+		"author": [
+			{
+				"family": "Orlarey",
+				"given": "Yann"
+			},
+			{
+				"family": "Letz",
+				"given": "Stéphane"
+			},
+			{
+				"family": "Fober",
+				"given": "Dominique"
+			},
+			{
+				"family": "Michon",
+				"given": "Romain"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "RZGC39Z5",
+		"type": "article-journal",
+		"title": "Design and Development of a Speech therapy Module Using Signal Processing Techniques",
+		"container-title": "Energy Procedia",
+		"collection-title": "\"First International Conference on Power Engineering Computing and CONtrol (PECCON-2017 ) 2nd -4th March .2017.\" Organized by School of Electrical Engineering, VIT University, Chennai, Tamil Nadu, India.",
+		"page": "901-908",
+		"volume": "117",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "The people who have speech and language problems and have undergone surgery, trauma, etc. need the help of the speech language pathologists to improve their speech process. The pathologists many a times find it difficult to analyze the progress of the patients. So, in order to objectively evaluate the patient a system has been developed which can help the speech pathologists in analysis of the patient. A special hardware is developed for glottal vibration acquisition which is an MFCC based speech recognizer. This speech therapy module can take inputs either from the glottal vibrations or speech. All the signal processing has been done in MATLAB environment. Further, this module can extend and be used to train children to improve their vocabulary, to learn alphabets, numbers, etc.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S1876610217324505",
+		"DOI": "10.1016/j.egypro.2017.05.209",
+		"ISSN": "1876-6102",
+		"journalAbbreviation": "Energy Procedia",
+		"author": [
+			{
+				"family": "Mahalakshmi",
+				"given": "P."
+			},
+			{
+				"family": "Dhawan",
+				"given": "Ritwik"
+			},
+			{
+				"family": "Ashish",
+				"given": "Ujjwal"
+			},
+			{
+				"family": "Sharmila",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					6,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "S2482JWQ",
+		"type": "article-journal",
+		"title": "Vibrational signal processing for characterization of fluid flows in pipes",
+		"container-title": "Measurement",
+		"page": "196-204",
+		"volume": "113",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "The main idea of this paper is to assess a simpler and faster procedure leading to the evaluation of the fluid flow rate through a pipe. Currently, several methods are available and they involve ad-hoc instruments. All these methods are characterized by high accuracies and dynamic responses, but they are intended to be inserted within the pipe under investigation, bringing to well-known insertion effects, compromising the reliability of the measurements performed. The authors illustrate a newer methodology for the measurement of flow rates by means of the processing of the vibration signals of pipe walls, inferred by the flow turbulence. Previous studies of the same authors showed a linear dependence between the amplitude of the most prominent peak of the vibration spectra and the flow rate. In this work, the authors relate the power content of the processed signals (by introducing the signal Root Mean Square value) to the flow rate.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0263224117304268",
+		"DOI": "10.1016/j.measurement.2017.06.040",
+		"ISSN": "0263-2241",
+		"journalAbbreviation": "Measurement",
+		"author": [
+			{
+				"family": "Dinardo",
+				"given": "Giuseppe"
+			},
+			{
+				"family": "Fabbiano",
+				"given": "Laura"
+			},
+			{
+				"family": "Vacca",
+				"given": "Gaetano"
+			},
+			{
+				"family": "Lay-Ekuakille",
+				"given": "Aimé"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					1,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "SUST3GVM",
+		"type": "article-journal",
+		"title": "Bridging the Gap between Social Animal and Unsocial Machine: A Survey of Social Signal Processing",
+		"container-title": "IEEE Transactions on Affective Computing",
+		"page": "69-87",
+		"volume": "3",
+		"issue": "1",
+		"source": "CrossRef",
+		"URL": "http://ieeexplore.ieee.org/document/5989788/",
+		"DOI": "10.1109/T-AFFC.2011.27",
+		"ISSN": "1949-3045",
+		"shortTitle": "Bridging the Gap between Social Animal and Unsocial Machine",
+		"author": [
+			{
+				"family": "Vinciarelli",
+				"given": "Alessandro"
+			},
+			{
+				"family": "Pantic",
+				"given": "M."
+			},
+			{
+				"family": "Heylen",
+				"given": "D."
+			},
+			{
+				"family": "Pelachaud",
+				"given": "C."
+			},
+			{
+				"family": "Poggi",
+				"given": "I."
+			},
+			{
+				"family": "D'Errico",
+				"given": "F."
+			},
+			{
+				"family": "Schroeder",
+				"given": "M."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2012",
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "T7VDCGP6",
+		"type": "article-journal",
+		"title": "Improve ordinary low alpha particle detector by digital filter signal processing",
+		"container-title": "Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms",
+		"collection-title": "Proceedings of the 20th International Conference on Ion Beam Modification of Materials (IBMM 2016)",
+		"page": "76-80",
+		"volume": "409",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "In this article, we focus on certain digital filter signal process with the capacity in both reducing the environmental noise and improving the efficiency of the ordinary low alpha particle detector. Through specific digital filter technique, noise used to be recognized as current signals could be successfully removed. Which could be quite practical in conducting the ordinary low alpha particle detector in a general environment as in an electric power clean environment.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0168583X17305803",
+		"DOI": "10.1016/j.nimb.2017.05.011",
+		"ISSN": "0168-583X",
+		"journalAbbreviation": "Nuclear Instruments and Methods in Physics Research Section B: Beam Interactions with Materials and Atoms",
+		"author": [
+			{
+				"family": "Hsiao",
+				"given": "Tung Yuan"
+			},
+			{
+				"family": "Chen",
+				"given": "C. H."
+			},
+			{
+				"family": "Niu",
+				"given": "Huan"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "TD7UN88M",
+		"type": "paper-conference",
+		"title": "Synthetic aperture radar based on photonic-assisted signal generation and processing",
+		"container-title": "2017 Opto-Electronics and Communications Conference (OECC) and Photonics Global Conference (PGC)",
+		"page": "1-3",
+		"source": "IEEE Xplore",
+		"event": "2017 Opto-Electronics and Communications Conference (OECC) and Photonics Global Conference (PGC)",
+		"abstract": "A microwave photonic synthetic aperture radar is proposed. Photonic-assisted microwave frequency doubling is used to generate a linearly-frequency-modulated radar signal in the transmitter end. In the receiver end, photonic de-chirping is employed to process the reflection signal. The proposed coherent microwave photonic radar is experimentally demonstrated and evaluated in a microwave anechoic chamber through a series of imaging experiments. The imaging results verify that the microwave photonic synthetic aperture radar works well and show a potential of microwave photonic techniques for high-resolution and fast radar imaging in the future.",
+		"DOI": "10.1109/OECC.2017.8114844",
+		"author": [
+			{
+				"family": "Li",
+				"given": "R."
+			},
+			{
+				"family": "Li",
+				"given": "W."
+			},
+			{
+				"family": "Wen",
+				"given": "Z."
+			},
+			{
+				"family": "Ding",
+				"given": "M."
+			},
+			{
+				"family": "Zhou",
+				"given": "L."
+			},
+			{
+				"family": "Yu",
+				"given": "S."
+			},
+			{
+				"family": "Xing",
+				"given": "T."
+			},
+			{
+				"family": "Li",
+				"given": "Y."
+			},
+			{
+				"family": "Gao",
+				"given": "B."
+			},
+			{
+				"family": "Tian",
+				"given": "Y."
+			},
+			{
+				"family": "Luan",
+				"given": "Y."
+			},
+			{
+				"family": "Guo",
+				"given": "P."
+			},
+			{
+				"family": "Liang",
+				"given": "X."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "TFV6E8BS",
+		"type": "paper-conference",
+		"title": "Eye Movement Synthesis",
+		"container-title": "Proceedings of the Ninth Biennial ACM Symposium on Eye Tracking Research & Applications",
+		"collection-title": "ETRA '16",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "147–154",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "A convolution-filtering technique is introduced for the synthesis of eye gaze data. Its purpose is to produce, in a controlled manner, a synthetic stream of raw gaze position coordinates, suitable for: (1) testing event detection filters, and (2) rendering synthetic eye movement animations for testing eye tracking gaze estimation algorithms. Synthetic gaze data is parameterized by sampling rate, microsaccadic jitter, and simulated measurement error. Sampled synthetic gaze data is compared against real data captured by an eye tracker showing similar signal characteristics.",
+		"URL": "http://doi.acm.org/10.1145/2857491.2857528",
+		"DOI": "10.1145/2857491.2857528",
+		"ISBN": "978-1-4503-4125-7",
+		"author": [
+			{
+				"family": "Duchowski",
+				"given": "Andrew T."
+			},
+			{
+				"family": "Jörg",
+				"given": "Sophie"
+			},
+			{
+				"family": "Allen",
+				"given": "Tyler N."
+			},
+			{
+				"family": "Giannopoulos",
+				"given": "Ioannis"
+			},
+			{
+				"family": "Krejtz",
+				"given": "Krzysztof"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016"
+				]
+			]
+		}
+	},
+	{
+		"id": "U2VEFKWK",
+		"type": "article-journal",
+		"title": "Signal processing for coal layer thickness estimation using high-resolution time delay estimation methods",
+		"container-title": "IET Science, Measurement Technology",
+		"page": "1022-1031",
+		"volume": "11",
+		"issue": "8",
+		"source": "IEEE Xplore",
+		"abstract": "The coal mining research technology is gaining popularity in terms of thickness measurement of coal mining horizon. The main challenge is to improve a robust sensing method for estimating the coal layer thickness left on mine-haulage way roofs for mine safety. This study addresses this challenge by step frequency continuous wave ground penetrating radar (GPR), whose resolution is dependent on bandwidth. To improve the time resolution of GPR signal, this study adopted four high-resolution algorithms, which are also known as subspace methods, namely, estimation of signal parameter via rotational invariance techniques, multiple-signal classification (MUSIC) algorithm, polynomial version of MUSIC, i.e. root-MUSIC and root-Min-Norm. The performance of all these algorithms is compared with synthetic data generated by the plane wave model and full wave model. The results are presented in terms of resolution power as well as relative root-mean-square error on the estimated thickness.",
+		"DOI": "10.1049/iet-smt.2017.0136",
+		"ISSN": "1751-8822",
+		"author": [
+			{
+				"family": "Thomas",
+				"given": "S. B."
+			},
+			{
+				"family": "Roy",
+				"given": "L. P."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "UEAST5MQ",
+		"type": "article-journal",
+		"title": "Passive silicon photonic devices for microwave photonic signal processing",
+		"container-title": "Optics Communications",
+		"collection-title": "SI: Microwave photonics",
+		"page": "44-52",
+		"volume": "373",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "We present our recent progress on microwave signal processing (MSP) using on-chip passive silicon photonic devices, including tunable microwave notch filtering/millimeter-wave (MMW) signal generation based on self-coupled micro-resonators (SCMRs), and tunable radio-frequency (RF) phase shifting implemented by a micro-disk resonator (MDR). These schemes can provide improved flexibility and performances of MSP. The experimental results are in good agreement with theoretical predictions, which validate the effectiveness of the proposed schemes.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0030401815006409",
+		"DOI": "10.1016/j.optcom.2015.07.045",
+		"ISSN": "0030-4018",
+		"journalAbbreviation": "Optics Communications",
+		"author": [
+			{
+				"family": "Wu",
+				"given": "Jiayang"
+			},
+			{
+				"family": "Peng",
+				"given": "Jizong"
+			},
+			{
+				"family": "Liu",
+				"given": "Boyu"
+			},
+			{
+				"family": "Pan",
+				"given": "Ting"
+			},
+			{
+				"family": "Zhou",
+				"given": "Huanying"
+			},
+			{
+				"family": "Mao",
+				"given": "Junming"
+			},
+			{
+				"family": "Yang",
+				"given": "Yuxing"
+			},
+			{
+				"family": "Qiu",
+				"given": "Ciyuan"
+			},
+			{
+				"family": "Su",
+				"given": "Yikai"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2016",
+					8,
+					15
+				]
+			]
+		}
+	},
+	{
+		"id": "UH3U2ERH",
+		"type": "paper-conference",
+		"title": "Toward Accurate and Efficient Feature Selection for Speaker Recognition on Wearables",
+		"container-title": "Proceedings of the 2017 Workshop on Wearable Systems and Applications",
+		"collection-title": "WearSys '17",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "41–46",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "Due to the user-interface limitations of wearable devices, voice-based interfaces are becoming more common; speaker recognition may then address the authentication requirements of wearable applications. Wearable devices have small form factor, limited energy budget and limited computational capacity. In this paper, we examine the challenge of computing speaker recognition on small wearable platforms, and specifically, reducing resource use (energy use, response time) by trimming the input through careful feature selections. For our experiments, we analyze four different feature-selection algorithms and three different feature sets for speaker identification and speaker verification. Our results show that Principal Component Analysis (PCA) with frequency-domain features had the highest accuracy, Pearson Correlation (PC) with time-domain features had the lowest energy use, and recursive feature elimination (RFE) with frequency-domain features had the least latency. Our results can guide developers to choose feature sets and configurations for speaker-authentication algorithms on wearable platforms.",
+		"URL": "http://doi.acm.org/10.1145/3089351.3089352",
+		"DOI": "10.1145/3089351.3089352",
+		"ISBN": "978-1-4503-4959-8",
+		"author": [
+			{
+				"family": "Liu",
+				"given": "Rui"
+			},
+			{
+				"family": "Rawassizadeh",
+				"given": "Reza"
+			},
+			{
+				"family": "Kotz",
+				"given": "David"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "UIIC7XAQ",
+		"type": "paper-conference",
+		"title": "Mobile Social Signal Processing: Vision and Research Issues",
+		"container-title": "Proceedings of the 12th International Conference on Human Computer Interaction with Mobile Devices and Services",
+		"collection-title": "MobileHCI '10",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "513–516",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "This paper introduces the First International Workshop on Mobile Social Signal Processing (SSP). The Workshop aims at bringing together the Mobile HCI and Social Signal Processing research communities. The former investigates approaches for effective interaction with mobile and wearable devices, while the latter focuses on modeling, analysis and synthesis of nonverbal behavior in human{human and human-machine interactions. While dealing with similar problems, the two domains have different goals and methodologies. However, mutual exchange of expertise is likely to raise new research questions as well as to improve approaches in both domains. After providing a brief survey of Mobile HCI and SSP, the paper introduces general aspects of the workshop (including topics, keynote speakers and dissemination means).",
+		"URL": "http://doi.acm.org/10.1145/1851600.1851731",
+		"DOI": "10.1145/1851600.1851731",
+		"ISBN": "978-1-60558-835-3",
+		"shortTitle": "Mobile Social Signal Processing",
+		"author": [
+			{
+				"family": "Vinciarelli",
+				"given": "Alessandro"
+			},
+			{
+				"family": "Murray-Smith",
+				"given": "Roderick"
+			},
+			{
+				"family": "Bourlard",
+				"given": "Hervé"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010"
+				]
+			]
+		}
+	},
+	{
+		"id": "UPE7P95G",
+		"type": "paper-conference",
+		"title": "MM'10 Workshop Summary for SSPW: ACM Workshop on Social Signal Processing 2010",
+		"container-title": "Proceedings of the 18th ACM International Conference on Multimedia",
+		"collection-title": "MM '10",
+		"publisher": "ACM",
+		"publisher-place": "New York, NY, USA",
+		"page": "1765–1766",
+		"source": "ACM Digital Library",
+		"event-place": "New York, NY, USA",
+		"abstract": "The Workshop on Social Signal Processing (SSPW) is the yearly event of the Social Signal Processing Network (EU-FP7 SSPNet project). This year's workshop programme consists of 4 premium Key Note Talks by Jeff Cohn, Alex Pentland. Justine Cassell, and Toyoaki Nishida, an oral session with 4 presentations, a poster session with 7 posters, and a panel session where the panelists will be the Key Note Speakers and the workshop organizers.",
+		"URL": "http://doi.acm.org/10.1145/1873951.1874360",
+		"DOI": "10.1145/1873951.1874360",
+		"ISBN": "978-1-60558-933-6",
+		"shortTitle": "MM'10 Workshop Summary for SSPW",
+		"author": [
+			{
+				"family": "Pantic",
+				"given": "Maja"
+			},
+			{
+				"family": "Vinciarelli",
+				"given": "Alessandro"
+			},
+			{
+				"family": "Pentland",
+				"given": "Alex"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010"
+				]
+			]
+		}
+	},
+	{
+		"id": "UQK3BZCC",
+		"type": "article-journal",
+		"title": "A biological inspired fuzzy adaptive window median filter (FAWMF) for enhancing DNA signal processing",
+		"container-title": "Computer Methods and Programs in Biomedicine",
+		"page": "11-17",
+		"volume": "149",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Digital signal processing techniques commonly employ fixed length window filters to process the signal contents. DNA signals differ in characteristics from common digital signals since they carry nucleotides as contents. The nucleotides own genetic code context and fuzzy behaviors due to their special structure and order in DNA strand. Employing conventional fixed length window filters for DNA signal processing produce spectral leakage and hence results in signal noise. A biological context aware adaptive window filter is required to process the DNA signals. This paper introduces a biological inspired fuzzy adaptive window median filter (FAWMF) which computes the fuzzy membership strength of nucleotides in each slide of window and filters nucleotides based on median filtering with a combination of s-shaped and z-shaped filters. Since coding regions cause 3-base periodicity by an unbalanced nucleotides' distribution producing a relatively high bias for nucleotides' usage, such fundamental characteristic of nucleotides has been exploited in FAWMF to suppress the signal noise. Along with adaptive response of FAWMF, a strong correlation between median nucleotides and the Π shaped filter was observed which produced enhanced discrimination between coding and non-coding regions contrary to fixed length conventional window filters. The proposed FAWMF attains a significant enhancement in coding regions identification i.e. 40% to 125% as compared to other conventional window filters tested over more than 250 benchmarked and randomly taken DNA datasets of different organisms. This study proves that conventional fixed length window filters applied to DNA signals do not achieve significant results since the nucleotides carry genetic code context. The proposed FAWMF algorithm is adaptive and outperforms significantly to process DNA signal contents. The algorithm applied to variety of DNA datasets produced noteworthy discrimination between coding and non-coding regions contrary to fixed window length conventional filters.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0169260716303728",
+		"DOI": "10.1016/j.cmpb.2017.06.021",
+		"ISSN": "0169-2607",
+		"journalAbbreviation": "Computer Methods and Programs in Biomedicine",
+		"author": [
+			{
+				"family": "Ahmad",
+				"given": "Muneer"
+			},
+			{
+				"family": "Jung",
+				"given": "Low Tan"
+			},
+			{
+				"family": "Bhuiyan",
+				"given": "Al-Amin"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					10,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "UR5REVWW",
+		"type": "webpage",
+		"title": "Cloud Services - Bereitstellen von Web-Apps und APIs | Microsoft Azure",
+		"abstract": "Erhalten Sie Informationen zu Azure Cloud Services, die Ihnen bei der Bereitstellung und Skalierung leistungsstarker Webanwendungen und APIs helfen. Unterstützt Java, Node.js, PHP, Python, .NET und viele mehr.",
+		"URL": "https://azure.microsoft.com/de-de/services/cloud-services/",
+		"accessed": {
+			"date-parts": [
+				[
+					"2017",
+					3,
+					2
+				]
+			]
+		}
+	},
+	{
+		"id": "VHTAZNVG",
+		"type": "article-journal",
+		"title": "Big Data and Its Technical Challenges",
+		"container-title": "Commun. ACM",
+		"page": "86–94",
+		"volume": "57",
+		"issue": "7",
+		"source": "ACM Digital Library",
+		"abstract": "Exploring the inherent technical challenges in realizing the potential of Big Data.",
+		"URL": "http://doi.acm.org/10.1145/2611567",
+		"DOI": "10.1145/2611567",
+		"ISSN": "0001-0782",
+		"author": [
+			{
+				"family": "Jagadish",
+				"given": "H. V."
+			},
+			{
+				"family": "Gehrke",
+				"given": "Johannes"
+			},
+			{
+				"family": "Labrinidis",
+				"given": "Alexandros"
+			},
+			{
+				"family": "Papakonstantinou",
+				"given": "Yannis"
+			},
+			{
+				"family": "Patel",
+				"given": "Jignesh M."
+			},
+			{
+				"family": "Ramakrishnan",
+				"given": "Raghu"
+			},
+			{
+				"family": "Shahabi",
+				"given": "Cyrus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2014",
+					7
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "W4JU8XHA",
+		"type": "article-journal",
+		"title": "Algorithm 820: A Flexible Implementation of Matching Pursuit for Gabor Functions on the Interval",
+		"container-title": "ACM Trans. Math. Softw.",
+		"page": "337–353",
+		"volume": "28",
+		"issue": "3",
+		"source": "ACM Digital Library",
+		"abstract": "In digital signal processing it is often advantageous to analyze a given signal using an adaptive method. The signal is approximated or represented as a superposition of \"basic\" waveforms chosen from a dictionary of such waveforms so as to best match the signal. The matching pursuit algorithm of Mallat and Zhang is such a method and is discussed in the context of discretized Gabor functions on an interval. We describe two software implementations based on these dictionaries. Both implementations rely on functions defined on an interval to avoid edge effects. One implementation allows for users to have great flexibility in the Gabor dictionary to be used. This is a useful improvement over other implementations, which only allow for a fixed dictionary. The other implementation takes advantage of the FFT algorithm and is faster. These implementations are written in C++, and can be used in practical applications.",
+		"URL": "http://doi.acm.org/10.1145/569147.569151",
+		"DOI": "10.1145/569147.569151",
+		"ISSN": "0098-3500",
+		"shortTitle": "Algorithm 820",
+		"author": [
+			{
+				"family": "Ferrando",
+				"given": "Sebastian E."
+			},
+			{
+				"family": "Kolasa",
+				"given": "Lawrence A."
+			},
+			{
+				"family": "Kovačević",
+				"given": "Natasha"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002",
+					9
+				]
+			]
+		}
+	},
+	{
+		"id": "WHT32TF4",
+		"type": "article-journal",
+		"title": "A Time-Vertex Signal Processing Framework",
+		"container-title": "IEEE Transactions on Signal Processing",
+		"page": "1-1",
+		"volume": "PP",
+		"issue": "99",
+		"source": "IEEE Xplore",
+		"abstract": "An emerging way to deal with high-dimensional non-euclidean data is to assume that the underlying structure can be captured by a graph. Recently, ideas have begun to emerge related to the analysis of time-varying graph signals. This work aims to elevate the notion of joint harmonic analysis to a full-fledged framework denoted as Time-Vertex Signal Processing, that links together the time-domain signal processing techniques with the new tools of graph signal processing. This entails three main contributions: (a) We provide a formal motivation for harmonic time-vertex analysis as an analysis tool for the state evolution of simple Partial Differential Equations on graphs. (b) We improve the accuracy of joint filtering operators by up-to two orders of magnitude. (c) Using our joint filters, we construct time-vertex dictionaries analyzing the different scales and the local time-frequency content of a signal. The utility of our tools is illustrated in numerous applications and datasets, such as dynamic mesh denoising and classification, still-video inpainting, and source localization in seismic events. Our results suggest that joint analysis of time-vertex signals can bring benefits to regression and learning.",
+		"DOI": "10.1109/TSP.2017.2775589",
+		"ISSN": "1053-587X",
+		"author": [
+			{
+				"family": "Grassi",
+				"given": "F."
+			},
+			{
+				"family": "Loukas",
+				"given": "A."
+			},
+			{
+				"family": "Perraudin",
+				"given": "N."
+			},
+			{
+				"family": "Ricaud",
+				"given": "B."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "X3SQ343U",
+		"type": "post-weblog",
+		"title": "Big Data, Genetics, and Re-Identification",
+		"container-title": "Bill of Health",
+		"genre": "Educational",
+		"URL": "http://blogs.harvard.edu/billofhealth/2015/09/24/big-data-genetics-and-re-identification/",
+		"language": "Englisch",
+		"author": [
+			{
+				"family": "Shapiro",
+				"given": "Zachary"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2015",
+					9,
+					24
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "X7CX2UXF",
+		"type": "article-journal",
+		"title": "A View of Cloud Computing",
+		"container-title": "Commun. ACM",
+		"page": "50–58",
+		"volume": "53",
+		"issue": "4",
+		"source": "ACM Digital Library",
+		"abstract": "Clearing the clouds away from the true potential and obstacles posed by this computing capability.",
+		"URL": "http://doi.acm.org/10.1145/1721654.1721672",
+		"DOI": "10.1145/1721654.1721672",
+		"ISSN": "0001-0782",
+		"author": [
+			{
+				"family": "Armbrust",
+				"given": "Michael"
+			},
+			{
+				"family": "Fox",
+				"given": "Armando"
+			},
+			{
+				"family": "Griffith",
+				"given": "Rean"
+			},
+			{
+				"family": "Joseph",
+				"given": "Anthony D."
+			},
+			{
+				"family": "Katz",
+				"given": "Randy"
+			},
+			{
+				"family": "Konwinski",
+				"given": "Andy"
+			},
+			{
+				"family": "Lee",
+				"given": "Gunho"
+			},
+			{
+				"family": "Patterson",
+				"given": "David"
+			},
+			{
+				"family": "Rabkin",
+				"given": "Ariel"
+			},
+			{
+				"family": "Stoica",
+				"given": "Ion"
+			},
+			{
+				"family": "Zaharia",
+				"given": "Matei"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2010",
+					4
+				]
+			]
+		},
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					10,
+					27
+				]
+			]
+		}
+	},
+	{
+		"id": "X7NTQ954",
+		"type": "paper-conference",
+		"title": "A Design of Analog C-Matrix Circuits Used for Signal/Data Processing",
+		"container-title": "Proceedings of the 2002 Asia and South Pacific Design Automation Conference",
+		"collection-title": "ASP-DAC '02",
+		"publisher": "IEEE Computer Society",
+		"publisher-place": "Washington, DC, USA",
+		"page": "355–",
+		"source": "ACM Digital Library",
+		"event-place": "Washington, DC, USA",
+		"abstract": "Various calculation of matrices and vectors has been used in many digital signal processing systems. Although the calculation simply repeats multiplication and addition, the reiteration processing are usually heavy. Therefore, in order to calculate them with high speed, it is necessary to apply parallel proceccing. Although there is another issue that a circuit area becomes large in the case of digital LSI, a proposal analog circuit can realize multiplication and addition simultaneously with the simple structure which arranges capacitors in a matrix form. Furthermore, the vowel speech recognition system is designed using this circuit.",
+		"URL": "http://dl.acm.org/citation.cfm?id=832284.835489",
+		"ISBN": "978-0-7695-1441-3",
+		"author": [
+			{
+				"family": "Sugawara",
+				"given": "Takayuki"
+			},
+			{
+				"family": "Miyanaga",
+				"given": "Yoshikazu"
+			},
+			{
+				"family": "Yoshida",
+				"given": "Norinobu"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2002"
+				]
+			]
+		}
+	},
+	{
+		"id": "X8XFIEKZ",
+		"type": "paper-conference",
+		"title": "A systematic method to compose over complete dictionaries for the processing of partial discharge signals",
+		"container-title": "2017 2nd International Symposium on Instrumentation Systems, Circuits and Transducers (INSCIT)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2017 2nd International Symposium on Instrumentation Systems, Circuits and Transducers (INSCIT)",
+		"abstract": "On-site measurement of partial discharges (PD) can provide valuable information about electrical equipment insulation degradation. Classical signal processing techniques have been used for PD signal denoising, but few approaches evaluate or present effective methods to attenuate impulsive and amplitude modulated (AM) noises, which are commonly found in on-site measurements. In this paper, a PD denoising method based on an over complete wavelet dictionary and Basis Pursuit Denoising (BPD) is presented. We describe the overall denoising algorithm and propose a methodology to compose the over complete dictionaries, starting from candidate wavelet families. The procedure starts by identifying the best families, followed by a method to define the number of families and their best combination. We show that the procedure gives better results when compared to a random choice of families, and present several processing cases based on simulated and measured signals.",
+		"DOI": "10.1109/INSCIT.2017.8103524",
+		"author": [
+			{
+				"family": "Silva",
+				"given": "F. T. d A."
+			},
+			{
+				"family": "Vasconcelos",
+				"given": "F. H."
+			},
+			{
+				"family": "Mota",
+				"given": "H. de Oliveira"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "X98VDP8A",
+		"type": "paper-conference",
+		"title": "A study of distance/similarity measurements in the context of signal processing (density estimation)",
+		"container-title": "2017 2nd International Symposium on Instrumentation Systems, Circuits and Transducers (INSCIT)",
+		"page": "1-6",
+		"source": "IEEE Xplore",
+		"event": "2017 2nd International Symposium on Instrumentation Systems, Circuits and Transducers (INSCIT)",
+		"abstract": "Currently the number of applications where the data generation function is not known has been growing, making necessary the use of non-parametric estimation techniques to describe such model. Therefore, relevant questions emerge regarding the quality of the model that represents some dataset and how to quantify this quality. This article aims to evaluate some of the measurements presented in the literature used for this purpose, evaluating different pdf regions in the context of goodness of fit.",
+		"DOI": "10.1109/INSCIT.2017.8103517",
+		"author": [
+			{
+				"family": "Souza",
+				"given": "D. M."
+			},
+			{
+				"family": "Costa",
+				"given": "I. A."
+			},
+			{
+				"family": "Nóbrega",
+				"given": "R. A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					8
+				]
+			]
+		}
+	},
+	{
+		"id": "XE3K9SCG",
+		"type": "paper-conference",
+		"title": "Analysis of quantization noises in multistage signal processing systems: A case study of digital down converters (DDC)",
+		"container-title": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"page": "822-825",
+		"source": "IEEE Xplore",
+		"event": "2017 IEEE First Ukraine Conference on Electrical and Computer Engineering (UKRCON)",
+		"abstract": "This paper describes a new method of analyzing the effects of the quantization noise in cascaded multirate filter structure based on a calculation of Power Spectral Density (PSD) of quantization noise at the output of the digital system with the consideration of the filtering action of all its multiple cascades and multiple decimations. The results include the mathematical expression used for finding the PSD quantization noise at the output of each cascade of the filter chain. These expressions provide means for the choice of internal codes bit capacity that satisfy to desirable performance of the system.",
+		"DOI": "10.1109/UKRCON.2017.8100360",
+		"shortTitle": "Analysis of quantization noises in multistage signal processing systems",
+		"author": [
+			{
+				"family": "Pavlenko",
+				"given": "M."
+			},
+			{
+				"family": "Kalyuzhny",
+				"given": "A."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					5
+				]
+			]
+		}
+	},
+	{
+		"id": "XEW78DTE",
+		"type": "article-journal",
+		"title": "Reproducibility of a new signal processing technique to assess joint sway during standing",
+		"container-title": "Journal of Biomechanics",
+		"page": "133-136",
+		"volume": "51",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Postural control strategies can be investigated by kinematic analysis of joint movements. However, current research is focussing mainly on the analysis of centre of pressure excursion and lacks consensus on how to assess joint movement during postural control tasks. This study introduces a new signal processing technique to comprehensively quantify joint sway during standing and evaluates its reproducibility. Fifteen patients with non-specific low back pain and ten asymptomatic participants performed three repetitions of a 60-second standing task on foam surface. This procedure was repeated on a second day. Lumbar spine movement was recorded using an inertial measurement system. The signal was temporally divided into six sections. Two outcome variables (mean absolute sway and sways per second) were calculated for each section. The reproducibility of single and averaged measurements was quantified with linear mixed-effects models and the generalizability theory. A single measurement of ten seconds duration revealed reliability coefficients of .75 for mean absolute sway and .76 for sways per second. Averaging a measurement of 40 seconds duration on two different days revealed reliability coefficients higher than .90 for both outcome variables. The outcome variables’ reliability compares favourably to previously published results using different signal processing techniques or centre of pressure excursion. The introduced signal processing technique with two outcome variables to quantify joint sway during standing proved to be a highly reliable method. Since different populations, tasks or measurement tools could influence reproducibility, further investigation in other settings is still necessary. Nevertheless, the presented method has been shown to be highly promising.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0021929016312337",
+		"DOI": "10.1016/j.jbiomech.2016.11.054",
+		"ISSN": "0021-9290",
+		"journalAbbreviation": "Journal of Biomechanics",
+		"author": [
+			{
+				"family": "Rast",
+				"given": "Fabian Marcel"
+			},
+			{
+				"family": "Graser",
+				"given": "Judith Verena"
+			},
+			{
+				"family": "Meichtry",
+				"given": "André"
+			},
+			{
+				"family": "Ernst",
+				"given": "Markus Josef"
+			},
+			{
+				"family": "Bauer",
+				"given": "Christoph Michael"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					1,
+					25
+				]
+			]
+		}
+	},
+	{
+		"id": "XGX2HMC4",
+		"type": "article-journal",
+		"title": "Research Progress of The Algebraic and Geometric Signal Processing",
+		"container-title": "Defence Technology",
+		"page": "40-47",
+		"volume": "9",
+		"issue": "1",
+		"source": "ScienceDirect",
+		"abstract": "The investigation of novel signal processing tools is one of the hottest research topics in modern signal processing community. Among them, the algebraic and geometric signal processing methods are shown to be one of the most powerful tools for the representation of the classical signal processing method. In this paper, we provide an overview of recent contributions pertaining to the algebraic and geometric signal processing. Specifically, the paper focuses on the mathematical structures behind the signal processing by emphasizing the algebraic and geometric structure of the signal processing. The two major topics were discussed. First, the classical signal processing concepts are related to the algebraic structures, and the recent results associated with the algebraic signal processing theory are introduced. Second, the recent progress of the geometric signal and information processing representations associated with the geometric structure are discussed. From these discussions, it is concluded that the research on the algebraic and geometric structure of signal processing can help the researchers to understand the signal processing tools deeply, and also help us to find novel signal processing methods in signal processing community. Its practical applications are expected to grow significantly in years to come, given that the algebraic and geometric structure of signal processing offer many advantages over the traditional signal processing.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S2214914713000251",
+		"DOI": "10.1016/j.dt.2013.03.002",
+		"ISSN": "2214-9147",
+		"journalAbbreviation": "Defence Technology",
+		"author": [
+			{
+				"family": "Tao",
+				"given": "Ran"
+			},
+			{
+				"family": "Li",
+				"given": "Bing-zhao"
+			},
+			{
+				"family": "Sun",
+				"given": "Hua-fei"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2013",
+					3,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "XI3TA2T6",
+		"type": "chapter",
+		"title": "Chapter 15 - Signal Processing",
+		"container-title": "Essential MATLAB for Engineers and Scientists (Sixth Edition)",
+		"publisher": "Academic Press",
+		"page": "325-335",
+		"source": "ScienceDirect",
+		"abstract": "The objective of this chapter is to introduce signal processing. We apply two methods, of the many available methods, to examine large data sets. They are harmonic analysis and fast-Fourier transform (FFT) analysis.",
+		"URL": "https://www.sciencedirect.com/science/article/pii/B9780081008775000177",
+		"ISBN": "978-0-08-100877-5",
+		"note": "DOI: 10.1016/B978-0-08-100877-5.00017-7",
+		"author": [
+			{
+				"family": "Hahn",
+				"given": "Brian H."
+			},
+			{
+				"family": "Valentine",
+				"given": "Daniel T."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017"
+				]
+			]
+		}
+	},
+	{
+		"id": "Z4K55STQ",
+		"type": "paper-conference",
+		"title": "Channel-independent signal processing for high-speed VLC systems",
+		"container-title": "2017 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR)",
+		"page": "1-3",
+		"source": "IEEE Xplore",
+		"event": "2017 Conference on Lasers and Electro-Optics Pacific Rim (CLEO-PR)",
+		"abstract": "In this paper, we will review our recent works on advanced signal processing for VLC, particularly the orthogonal circulant matrix transform (OCT) precoding that requires no channel state information. The benefits of OCT precoding in SISO-, MIMO-VLC, and the inherent reason of performance improvement, will be discussed. In addition, comparisons of the existing solutions to combat the limited modulation bandwidth of VLC systems will be presented. Potential applications of the OCT precoding in other systems will be given.",
+		"DOI": "10.1109/CLEOPR.2017.8119015",
+		"author": [
+			{
+				"family": "Chen",
+				"given": "L. K."
+			},
+			{
+				"family": "Hong",
+				"given": "Y."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					7
+				]
+			]
+		}
+	},
+	{
+		"id": "ZDIUIN72",
+		"type": "article-journal",
+		"title": "Discrete Sine and Cosine Transforms for Signal Processing Spectral Overlap Saliencies of Induction Machine",
+		"container-title": "IEEE Transactions on Industrial Electronics",
+		"page": "189-199",
+		"volume": "65",
+		"issue": "1",
+		"source": "IEEE Xplore",
+		"abstract": "A novel separation procedure applied to overlap condition of saliencies in induction machine is presented. The machine's current reaction to voltage step excitation is used to obtain saliency signals. The proposed procedure is based on a digital signal processing implementation of the discrete sine and cosine transforms for extracting the slotting saliency signal at close and equal frequencies of the slotting and saturation saliencies under heavy load operation. The proposed algorithms are processed based on an online adaptive threshold. Using the proposed separation algorithm guarantees precise estimation of rotor/flux angle and efficient sensorless control of the induction machine. A sensorless induction motor drive is implemented in the laboratory. Extensive experimental results are presented. A performance comparison between the proposed algorithm and previous works is provided. The robustness and effectiveness of the applied signal processing algorithms for sensorless torque control are verified at low speed and heavy load.",
+		"DOI": "10.1109/TIE.2017.2714124",
+		"ISSN": "0278-0046",
+		"author": [
+			{
+				"family": "Metwaly",
+				"given": "M. K."
+			},
+			{
+				"family": "Elkalashy",
+				"given": "N. I."
+			},
+			{
+				"family": "Zaky",
+				"given": "M. S."
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2018",
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "ZKQCA4K2",
+		"type": "article-journal",
+		"title": "Diagnosis of attention deficit hyperactivity disorder using imaging and signal processing techniques",
+		"container-title": "Computers in Biology and Medicine",
+		"page": "93-99",
+		"volume": "88",
+		"issue": "Supplement C",
+		"source": "ScienceDirect",
+		"abstract": "Attention Deficit Hyperactivity Disorder (ADHD) is the most common childhood psychiatric disorder that may continue through adolescence and adulthood. Hyperactivity, inattention and impulsivity are the key behavioral features observed in children with ADHD. ADHD is normally diagnosed only when a child continues to have symptoms of hyperactivity, impulsivity and inattention at a greater degree than the normal for six months or more. In recent years there has been significant research to diagnose ADHD in a quantitative way using medical imaging and signal processing techniques. This paper presents a review of recent research on diagnosis of ADHD using medical imaging and signal processing techniques. This research is especially valuable for early diagnosis of ADHD.",
+		"URL": "http://www.sciencedirect.com/science/article/pii/S0010482517302342",
+		"DOI": "10.1016/j.compbiomed.2017.07.009",
+		"ISSN": "0010-4825",
+		"journalAbbreviation": "Computers in Biology and Medicine",
+		"author": [
+			{
+				"family": "Sridhar",
+				"given": "Chaitra"
+			},
+			{
+				"family": "Bhat",
+				"given": "Shreya"
+			},
+			{
+				"family": "Acharya",
+				"given": "U. Rajendra"
+			},
+			{
+				"family": "Adeli",
+				"given": "Hojjat"
+			},
+			{
+				"family": "Bairy",
+				"given": "G. Muralidhar"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"2017",
+					9,
+					1
+				]
+			]
+		}
+	},
+	{
+		"id": "ZTX3UZWI",
+		"type": "webpage",
+		"title": "The Chicago Manual of Style Online: Chicago-Style Citation Quick Guide",
+		"URL": "http://www.chicagomanualofstyle.org/tools_citationguide.html",
+		"accessed": {
+			"date-parts": [
+				[
+					"2016",
+					11,
+					7
+				]
+			]
+		}
+	}
+]

@@ -1,0 +1,111 @@
+[2017-11-27T18:35:07,946][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-27T18:35:08,058][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] using [1] data paths, mounts [[/ (/dev/sda2)]], net usable_space [98.8gb], net total_space [172.5gb], spins? [no], types [ext4]
+[2017-11-27T18:35:08,059][INFO ][o.e.e.NodeEnvironment    ] [uHB_sEH] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-11-27T18:35:08,086][INFO ][o.e.n.Node               ] node name [uHB_sEH] derived from node ID [uHB_sEHmTSOCwn_vt8uocw]; set [node.name] to override
+[2017-11-27T18:35:08,087][INFO ][o.e.n.Node               ] version[5.5.2], pid[11186], build[b2f0c09/2017-08-14T12:33:14.154Z], OS[Linux/4.4.8-040408-generic/amd64], JVM[Oracle Corporation/OpenJDK 64-Bit Server VM/1.8.0_131/25.131-b11]
+[2017-11-27T18:35:08,087][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPath=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch]
+[2017-11-27T18:35:09,709][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [aggs-matrix-stats]
+[2017-11-27T18:35:09,709][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [ingest-common]
+[2017-11-27T18:35:09,709][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-expression]
+[2017-11-27T18:35:09,710][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-groovy]
+[2017-11-27T18:35:09,710][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-mustache]
+[2017-11-27T18:35:09,710][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [lang-painless]
+[2017-11-27T18:35:09,711][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [parent-join]
+[2017-11-27T18:35:09,711][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [percolator]
+[2017-11-27T18:35:09,712][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [reindex]
+[2017-11-27T18:35:09,712][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty3]
+[2017-11-27T18:35:09,713][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded module [transport-netty4]
+[2017-11-27T18:35:09,714][INFO ][o.e.p.PluginsService     ] [uHB_sEH] loaded plugin [elasticsearch-carrot2]
+[2017-11-27T18:35:11,987][INFO ][o.e.d.DiscoveryModule    ] [uHB_sEH] using discovery type [zen]
+[2017-11-27T18:35:12,974][INFO ][o.e.n.Node               ] initialized
+[2017-11-27T18:35:12,975][INFO ][o.e.n.Node               ] [uHB_sEH] starting ...
+[2017-11-27T18:35:12,976][INFO ][p.carrot2                ] Configuration files at: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-27T18:35:13,493][INFO ][p.carrot2                ] Available clustering components: lingo, stc, kmeans, byurl
+[2017-11-27T18:35:13,494][INFO ][p.carrot2                ] Unavailable clustering components: lingo3g
+[2017-11-27T18:35:13,494][INFO ][p.carrot2                ] Lexical resources dir: /home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/config/elasticsearch-carrot2
+[2017-11-27T18:35:13,730][INFO ][o.e.t.TransportService   ] [uHB_sEH] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2017-11-27T18:35:13,748][WARN ][o.e.b.BootstrapChecks    ] [uHB_sEH] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2017-11-27T18:35:16,811][INFO ][o.e.c.s.ClusterService   ] [uHB_sEH] new_master {uHB_sEH}{uHB_sEHmTSOCwn_vt8uocw}{oPYo046LT9y1c092pww1gA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2017-11-27T18:35:16,851][INFO ][o.e.h.n.Netty4HttpServerTransport] [uHB_sEH] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2017-11-27T18:35:16,852][INFO ][o.e.n.Node               ] [uHB_sEH] started
+[2017-11-27T18:35:17,071][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,071][INFO ][o.e.g.GatewayService     ] [uHB_sEH] recovered [3] indices into cluster_state
+[2017-11-27T18:35:17,180][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,434][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,510][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,607][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,629][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T18:35:17,631][INFO ][o.e.c.r.a.AllocationService] [uHB_sEH] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.kibana][0]] ...]).
+[2017-11-27T18:35:17,642][WARN ][o.e.g.DanglingIndicesState] [uHB_sEH] [[.kibana/vGAVxKplRnWjJjxrpNWMuQ]] can not be imported as a dangling index, as index with same name already exists in cluster metadata
+[2017-11-27T20:20:11,758][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-27T20:20:11,814][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) [elasticsearch-5.5.2.jar:5.5.2]
+[2017-11-27T20:20:11,824][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:127) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.5.2.jar:5.5.2]
+Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) ~[elasticsearch-5.5.2.jar:5.5.2]
+	... 6 more
+[2017-11-27T20:20:24,000][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-27T20:20:24,041][ERROR][o.e.b.Bootstrap          ] Exception
+java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) [elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) [elasticsearch-5.5.2.jar:5.5.2]
+[2017-11-27T20:20:24,048][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:127) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:114) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:67) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:122) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.cli.Command.main(Command.java:88) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:91) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:84) ~[elasticsearch-5.5.2.jar:5.5.2]
+Caused by: java.lang.IllegalStateException: failed to obtain node locks, tried [[/home/eric/Projects/elasticsearch/DBPRO-DokCluster/applications/elasticsearch/data/elasticsearch]] with lock id [0]; maybe these locations are not writable or multiple nodes were started without increasing [node.max_local_storage_nodes] (was [1])?
+	at org.elasticsearch.env.NodeEnvironment.<init>(NodeEnvironment.java:261) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:264) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.node.Node.<init>(Node.java:244) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:232) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:351) ~[elasticsearch-5.5.2.jar:5.5.2]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:123) ~[elasticsearch-5.5.2.jar:5.5.2]
+	... 6 more
+[2017-11-27T20:20:29,814][INFO ][o.e.n.Node               ] [uHB_sEH] stopping ...
+[2017-11-27T20:20:30,049][INFO ][o.e.n.Node               ] [uHB_sEH] stopped
+[2017-11-27T20:20:30,049][INFO ][o.e.n.Node               ] [uHB_sEH] closing ...
+[2017-11-27T20:20:30,133][INFO ][o.e.n.Node               ] [uHB_sEH] closed
