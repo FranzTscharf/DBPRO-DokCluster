@@ -74,7 +74,6 @@ function cluster_data_ajax_call(data){
  * @param search_str the text string from the search field
  */
 function search_textfield_input(search_str, algorithm_str) {
-    console.log(algorithm_str);
     if($("#foamtree-area").length){
         set_search_graphic(search_str, algorithm_str);
     }
@@ -119,11 +118,7 @@ function show_error_message() {
         foamtreeArea.append(errorArea);
 
     }
-    console.log(errorArea);
 }
-function show_no_result_message(){
-}
-
 /**
  * sets the foamtree and visualizes the cluster.
  * @param cluster_data the data of the cluster
